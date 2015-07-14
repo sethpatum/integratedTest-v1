@@ -13,6 +13,7 @@
 		1BA4A9D21B5556D800E3FBD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */; };
 		1BA4A9D51B5556D800E3FBD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */; };
 		1BA4A9E11B5556D800E3FBD4 /* Integrated_test_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */; };
+		1BCEE8B21B555A53002AEE37 /* NamingPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		1BA4A9DA1B5556D800E3FBD4 /* Integrated test v1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Integrated test v1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA4A9DF1B5556D800E3FBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrated_test_v1Tests.swift; sourceTree = "<group>"; };
+		1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingPicturesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				1BA4A9CA1B5556D800E3FBD4 /* AppDelegate.swift */,
 				1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */,
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
+				1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */,
 				1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */,
 				1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */,
 				1BA4A9C81B5556D800E3FBD4 /* Supporting Files */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BCEE8B21B555A53002AEE37 /* NamingPicturesViewController.swift in Sources */,
 				1BA4A9CD1B5556D800E3FBD4 /* ViewController.swift in Sources */,
 				1BA4A9CB1B5556D800E3FBD4 /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +415,7 @@
 				1BA4A9E61B5556D800E3FBD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BA4A9E71B5556D800E3FBD4 /* Build configuration list for PBXNativeTarget "Integrated test v1Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				1BA4A9E91B5556D800E3FBD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
