@@ -400,6 +400,7 @@
         <!--Root View Controller-->
         <scene sceneID="COd-NJ-gqj">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8on-D5-4l5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="brF-PV-uxq" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BOV-43-r3u">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -418,11 +419,18 @@
                             <outlet property="delegate" destination="brF-PV-uxq" id="ece-ok-BDe"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Tests" id="cw6-Ja-TKt">
+                            <connections>
+                                <segue destination="d7F-55-Zey" kind="show" id="DGK-TD-797"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Root View Controller" id="2Cp-rw-xlF"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8on-D5-4l5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-756" y="1529"/>
+            <point key="canvasLocation" x="616" y="677"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fSr-O9-6aq">
@@ -438,10 +446,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkG-BX-Op5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637" y="1422"/>
+            <point key="canvasLocation" x="1734" y="1499"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Pw7-lv-Wb0"/>
+        <segue reference="DGK-TD-797"/>
     </inferredMetricsTieBreakers>
 </document>
