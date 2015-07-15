@@ -24,7 +24,7 @@ class NamingPicturesViewController: UIViewController {
         imageName = "Volcano"
         resultLabel.text = ""
         
-        var imageView4 = UIImageView(frame:CGRectMake(45.0, 93.0, 904.0, 678.0))
+        var imageView4 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
         var image4 = UIImage(named: imageName)
         imageView4.image = image4
@@ -44,7 +44,7 @@ class NamingPicturesViewController: UIViewController {
         
         imageName = getImageName()
         
-        var imageView1 = UIImageView(frame:CGRectMake(45.0, 93.0, 904.0, 678.0))
+        var imageView1 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
         var image1 = UIImage(named: imageName)
         imageView1.image = image1
@@ -63,7 +63,7 @@ class NamingPicturesViewController: UIViewController {
         
         imageName = getImageName()
         
-        var imageView2 = UIImageView(frame:CGRectMake(45.0, 93.0, 904.0, 678.0))
+        var imageView2 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
         var image2 = UIImage(named: imageName)
         imageView2.image = image2
@@ -80,7 +80,7 @@ class NamingPicturesViewController: UIViewController {
         
         imageName = getImageName()
         
-        var imageView3 = UIImageView(frame:CGRectMake(45.0, 93.0, 904.0, 678.0))
+        var imageView3 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
         var image3 = UIImage(named: imageName)
         imageView3.image = image3
@@ -91,13 +91,7 @@ class NamingPicturesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var imageView = UIImageView(frame:CGRectMake(45.0, 93.0, view.bounds.height-120, ((view.bounds.height-120)*3/4)))
-        
-        println(view.bounds.height-120)
-        println((view.bounds.height-120)*3/4)
-        println(view.bounds.width)
-        
-        
+        var imageView = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
         var image = UIImage(named: imageName)
         imageView.image = image
