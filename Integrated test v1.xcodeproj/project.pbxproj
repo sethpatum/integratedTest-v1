@@ -19,6 +19,10 @@
 		1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */; };
 		1BCEE8BA1B555E92002AEE37 /* TrailsAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */; };
 		1BCEE8BC1B555EA5002AEE37 /* TrailsBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */; };
+		E1EF6D271B559D8E001037C6 /* DrawingViewCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */; };
+		E1EF6D2A1B559DE0001037C6 /* Circles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D291B559DE0001037C6 /* Circles.swift */; };
+		E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D2E1B56A0A2001037C6 /* DrawingViewLetters.swift */; };
+		E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D301B56A10E001037C6 /* Letters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsAViewController.swift; sourceTree = "<group>"; };
 		1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsBViewController.swift; sourceTree = "<group>"; };
+		E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewCircles.swift; sourceTree = "<group>"; };
+		E1EF6D291B559DE0001037C6 /* Circles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circles.swift; sourceTree = "<group>"; };
+		E1EF6D2E1B56A0A2001037C6 /* DrawingViewLetters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawingViewLetters.swift; path = ../DrawingViewLetters.swift; sourceTree = "<group>"; };
+		E1EF6D301B56A10E001037C6 /* Letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Letters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +102,8 @@
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
 				1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */,
 				1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */,
-				1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */,
-				1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */,
+				E1EF6D281B559DA3001037C6 /* Circles */,
+				E1EF6D2B1B56A05F001037C6 /* Letters */,
 				1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */,
 				1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */,
 				1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */,
@@ -128,6 +136,26 @@
 				1BA4A9DF1B5556D800E3FBD4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1EF6D281B559DA3001037C6 /* Circles */ = {
+			isa = PBXGroup;
+			children = (
+				1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */,
+				E1EF6D291B559DE0001037C6 /* Circles.swift */,
+				E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */,
+			);
+			name = Circles;
+			sourceTree = "<group>";
+		};
+		E1EF6D2B1B56A05F001037C6 /* Letters */ = {
+			isa = PBXGroup;
+			children = (
+				1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */,
+				E1EF6D301B56A10E001037C6 /* Letters.swift */,
+				E1EF6D2E1B56A0A2001037C6 /* DrawingViewLetters.swift */,
+			);
+			name = Letters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,12 +260,16 @@
 			files = (
 				1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */,
 				1BCEE8BA1B555E92002AEE37 /* TrailsAViewController.swift in Sources */,
+				E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */,
+				E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */,
 				1BCEE8B21B555A53002AEE37 /* NamingPicturesViewController.swift in Sources */,
 				1BCEE8B61B555C9B002AEE37 /* LetterCancellationViewController.swift in Sources */,
 				1BA4A9CD1B5556D800E3FBD4 /* ViewController.swift in Sources */,
 				1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */,
 				1BCEE8BC1B555EA5002AEE37 /* TrailsBViewController.swift in Sources */,
+				E1EF6D271B559D8E001037C6 /* DrawingViewCircles.swift in Sources */,
 				1BA4A9CB1B5556D800E3FBD4 /* AppDelegate.swift in Sources */,
+				E1EF6D2A1B559DE0001037C6 /* Circles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
