@@ -19,6 +19,7 @@
 		1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */; };
 		1BCEE8BA1B555E92002AEE37 /* TrailsAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */; };
 		1BCEE8BC1B555EA5002AEE37 /* TrailsBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */; };
+		1BCEE8BE1B56A183002AEE37 /* PatientInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8BD1B56A183002AEE37 /* PatientInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsAViewController.swift; sourceTree = "<group>"; };
 		1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsBViewController.swift; sourceTree = "<group>"; };
+		1BCEE8BD1B56A183002AEE37 /* PatientInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */,
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
 				1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */,
+				1BCEE8BD1B56A183002AEE37 /* PatientInfoViewController.swift */,
 				1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */,
 				1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */,
 				1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */,
@@ -237,6 +240,7 @@
 				1BA4A9CD1B5556D800E3FBD4 /* ViewController.swift in Sources */,
 				1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */,
 				1BCEE8BC1B555EA5002AEE37 /* TrailsBViewController.swift in Sources */,
+				1BCEE8BE1B56A183002AEE37 /* PatientInfoViewController.swift in Sources */,
 				1BA4A9CB1B5556D800E3FBD4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

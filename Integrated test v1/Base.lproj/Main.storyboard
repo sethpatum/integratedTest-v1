@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omX-H3-pod">
-                                <rect key="frame" x="277" y="338" width="33" height="30"/>
+                                <rect key="frame" x="284" y="169" width="33" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cLF-Kx-Eej" kind="show" id="pdT-QP-2SB"/>
+                                    <segue destination="8LV-H7-0SE" kind="show" id="mFR-im-uC4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3G-rw-Ysr">
-                                <rect key="frame" x="270" y="429" width="32" height="30"/>
+                                <rect key="frame" x="284" y="302" width="32" height="30"/>
                                 <state key="normal" title="Help">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-928" y="306"/>
+            <point key="canvasLocation" x="-1510" y="306"/>
         </scene>
         <!--Test Selection-->
         <scene sceneID="7CP-gZ-Hkw">
@@ -446,7 +446,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkG-BX-Op5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-938" y="1057"/>
+            <point key="canvasLocation" x="-1510" y="1057"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pX2-93-CRM">
+            <objects>
+                <viewController id="8LV-H7-0SE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fFZ-k9-eVo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pbc-6E-Yf8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u4e-yX-EA7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRp-co-Pr2">
+                                <rect key="frame" x="315" y="490" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cLF-Kx-Eej" kind="show" id="xew-dN-Tz1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYv-oL-632" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="306"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
