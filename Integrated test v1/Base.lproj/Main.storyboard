@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omX-H3-pod">
-                                <rect key="frame" x="277" y="338" width="33" height="30"/>
+                                <rect key="frame" x="284" y="169" width="33" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cLF-Kx-Eej" kind="show" id="pdT-QP-2SB"/>
+                                    <segue destination="8LV-H7-0SE" kind="show" id="mFR-im-uC4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3G-rw-Ysr">
-                                <rect key="frame" x="270" y="429" width="32" height="30"/>
+                                <rect key="frame" x="284" y="302" width="32" height="30"/>
                                 <state key="normal" title="Help">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-768" y="306"/>
+            <point key="canvasLocation" x="-1510" y="306"/>
         </scene>
         <!--Test Selection-->
         <scene sceneID="7CP-gZ-Hkw">

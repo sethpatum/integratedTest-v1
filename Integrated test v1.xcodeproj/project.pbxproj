@@ -101,6 +101,7 @@
 				1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */,
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
 				1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */,
+				1BCEE8BD1B56A183002AEE37 /* PatientInfoViewController.swift */,
 				1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */,
 				E1EF6D281B559DA3001037C6 /* Circles */,
 				E1EF6D2B1B56A05F001037C6 /* Letters */,
