@@ -1,20 +1,21 @@
 //
-//  DrawingViewTrails.swift
+//  DrawingViewTrailsB.swift
 //  Integrated test v1
 //
 //  Created by School on 7/16/15.
 //  Copyright (c) 2015 sunspot. All rights reserved.
 //
+
 import Foundation
 
 import UIKit
 
-class DrawingViewTrails: UIView {
+class DrawingViewTrailsB: UIView {
     private var currPath = UIBezierPath()
     
     var mainPath = UIBezierPath()
     
-    var bubbles = BubblesA()
+    private var bubbles = BubblesB()
     
     var countSinceCorrect = 0
     var canDraw = true

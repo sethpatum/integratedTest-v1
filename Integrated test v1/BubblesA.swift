@@ -21,31 +21,31 @@ class BubblesA {
     
     
     init() {
-        bubblelist.append((720, 340, "1"))
-        bubblelist.append((800, 370, "2"))
-        bubblelist.append((820, 190, "3"))
-        bubblelist.append((300, 170, "4"))
-        bubblelist.append((375, 470, "5"))
-        bubblelist.append((550, 290, "6"))
-        bubblelist.append((400, 600, "7"))
-        bubblelist.append((800, 590, "8"))
-        bubblelist.append((875, 550, "9"))
-        bubblelist.append((810, 490, "10"))
-        bubblelist.append((950, 390, "11"))
-        bubblelist.append((975, 670, "12"))
-        bubblelist.append((510, 610, "13"))
-        bubblelist.append((590, 665, "14"))
-        bubblelist.append((100, 665, "15"))
-        bubblelist.append((310, 610, "16"))
-        bubblelist.append((60, 500, "17"))
-        bubblelist.append((280, 415, "18"))
-        bubblelist.append((190, 270, "19"))
-        bubblelist.append((170, 390, "20"))
-        bubblelist.append((40, 335, "21"))
-        bubblelist.append((75, 90, "22"))
-        bubblelist.append((925, 80, "23"))
-        bubblelist.append((500, 125, "24"))
-        bubblelist.append((970, 145, "25"))
+        bubblelist.append((720, 240, "1"))
+        bubblelist.append((800, 270, "2"))
+        bubblelist.append((820, 140, "3"))
+        bubblelist.append((300, 120, "4"))
+        bubblelist.append((375, 370, "5"))
+        bubblelist.append((550, 190, "6"))
+        bubblelist.append((385, 480, "7"))
+        bubblelist.append((700, 470, "8"))
+        bubblelist.append((775, 430, "9"))
+        bubblelist.append((710, 370, "10"))
+        bubblelist.append((950, 290, "11"))
+        bubblelist.append((970, 555, "12"))
+        bubblelist.append((500, 570, "13"))
+        bubblelist.append((580, 515, "14"))
+        bubblelist.append((110, 530, "15"))
+        bubblelist.append((290, 510, "16"))
+        bubblelist.append((70, 440, "17"))
+        bubblelist.append((280, 315, "18"))
+        bubblelist.append((190, 170, "19"))
+        bubblelist.append((170, 290, "20"))
+        bubblelist.append((40, 235, "21"))
+        bubblelist.append((75, 40, "22"))
+        bubblelist.append((925, 30, "23"))
+        bubblelist.append((560, 80, "24"))
+        bubblelist.append((970, 95, "25"))
         
     }
     
@@ -91,12 +91,17 @@ class BubblesA {
             nextBubble += 1
             
             if nextBubble == bubblelist.count {
+                
+                timedConnectionsA.append(timePassedTrailsA)
+                
                 println("Done")
                 nextBubble = 0
                 stopTrailsA = true
+                displayImgTrailsA = true
                 screenShotMethod()
             }
             
+            timedConnectionsA.append(timePassedTrailsA)
             return true
             
         }
