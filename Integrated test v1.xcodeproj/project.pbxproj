@@ -24,6 +24,8 @@
 		E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D2E1B56A0A2001037C6 /* DrawingViewLetters.swift */; };
 		E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D301B56A10E001037C6 /* Letters.swift */; };
 		E1EF6D351B56E36A001037C6 /* TapInOrderBackwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D341B56E36A001037C6 /* TapInOrderBackwardsViewController.swift */; };
+		E1EF6D381B5764D9001037C6 /* BubblesA.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D371B5764D9001037C6 /* BubblesA.swift */; };
+		E1EF6D3A1B57651E001037C6 /* DrawingViewTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D391B57651E001037C6 /* DrawingViewTrails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		E1EF6D2E1B56A0A2001037C6 /* DrawingViewLetters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawingViewLetters.swift; path = ../DrawingViewLetters.swift; sourceTree = "<group>"; };
 		E1EF6D301B56A10E001037C6 /* Letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Letters.swift; sourceTree = "<group>"; };
 		E1EF6D341B56E36A001037C6 /* TapInOrderBackwardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapInOrderBackwardsViewController.swift; sourceTree = "<group>"; };
+		E1EF6D371B5764D9001037C6 /* BubblesA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubblesA.swift; sourceTree = "<group>"; };
+		E1EF6D391B57651E001037C6 /* DrawingViewTrails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewTrails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */,
+				E1EF6D391B57651E001037C6 /* DrawingViewTrails.swift */,
+				E1EF6D371B5764D9001037C6 /* BubblesA.swift */,
 			);
 			name = TrailsA;
 			sourceTree = "<group>";
@@ -270,10 +276,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */,
+				E1EF6D3A1B57651E001037C6 /* DrawingViewTrails.swift in Sources */,
 				1BCEE8BA1B555E92002AEE37 /* TrailsAViewController.swift in Sources */,
 				E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */,
 				E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */,
 				1BCEE8B21B555A53002AEE37 /* NamingPicturesViewController.swift in Sources */,
+				E1EF6D381B5764D9001037C6 /* BubblesA.swift in Sources */,
 				1BCEE8B61B555C9B002AEE37 /* LetterCancellationViewController.swift in Sources */,
 				1BA4A9CD1B5556D800E3FBD4 /* ViewController.swift in Sources */,
 				1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */,
