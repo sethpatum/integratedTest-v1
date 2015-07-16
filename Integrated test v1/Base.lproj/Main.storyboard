@@ -34,9 +34,6 @@
                                     <segue destination="hP3-kU-7be" kind="show" id="sVD-R5-z6Q"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cnbs" translatesAutoresizingMaskIntoConstraints="NO" id="r43-it-lSO">
-                                <rect key="frame" x="39" y="62" width="523" height="139"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -714,9 +711,6 @@
             <point key="canvasLocation" x="-816" y="306"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="cnbs" width="612" height="89"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sVD-R5-z6Q"/>
         <segue reference="DGK-TD-797"/>
