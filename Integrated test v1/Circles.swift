@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 import Darwin
 
+
 class Circles{
     
     var circlelist = [(Int, Int, Int)]()
     var resultListIndexes = [Int]()
     var resultListCircles = [(Int, Int, Int)]()
-    
-    var resultListTimes = [Double]()
+    var resultListTimesCircles = [Double]()
     
     init(){
         
@@ -159,7 +159,7 @@ class Circles{
         resultListCircles.append(circlelist[curr])
         resultListIndexes.append(curr)
         
-        resultListTimes.append(timePassedCircles)
+        resultListTimesCircles.append(timePassedCircles)
         
         
     }
@@ -214,13 +214,13 @@ class Circles{
         
         resultTextCircles = "\(correctOnLeft) out of 12 semicircles crossed off on left half; \(correctOnRight) out of 12 semicircles crossed off on right half. \n\(leftSemiCircles) out of 12 left-halved semicircles crossed off; \(rightSemiCircles) out of 12 right-halved semicircles crossed off. \n\(incorrect) full circles incorrectly crossed off."
         
-        println(resultListTimes)
+        println(resultListTimesCircles)
         
-        for var k = 1; k < resultListTimes.count; ++k{
+        for var k = 1; k < resultListTimesCircles.count; ++k{
             
             let (a, b, c) = resultListCircles[k-1]
             let (x, y, z) = resultListCircles[k]
-            let i = resultListTimes[k] - resultListTimes[k-1]
+            let i = resultListTimesCircles[k] - resultListTimesCircles[k-1]
             
             println("From x = \(a), y = \(b) to x = \(x), y = \(y), time = \(i)")
             
@@ -230,7 +230,7 @@ class Circles{
         
         resultListIndexes = [Int]()
         resultListCircles = [(Int, Int, Int)]()
-        resultListTimes = [Double]()
+        resultListTimesCircles = [Double]()
         
     }
     

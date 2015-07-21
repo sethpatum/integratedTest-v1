@@ -9,19 +9,20 @@ import UIKit
 
 class NamingPicturesViewController: UIViewController {
     
-    var imageName = "Volcano"
+    var imageName = "House"
     var count = 0
     var corr = 0
-    var wasCorrect = true
+    
+    var order = [Bool]()
     
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBAction func reset(sender: AnyObject) {
         
+        order = [Bool]()
         count = 0
         corr = 0
-        wasCorrect = true
-        imageName = "Volcano"
+        imageName = "House"
         resultLabel.text = ""
         
         var imageView4 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
@@ -36,7 +37,6 @@ class NamingPicturesViewController: UIViewController {
         
         count += 1
         corr += 1
-        wasCorrect = true
         
         if(count==15){
             resultLabel.text = "\(corr) correct out of 15"
@@ -50,12 +50,13 @@ class NamingPicturesViewController: UIViewController {
         imageView1.image = image1
         self.view.addSubview(imageView1)
         
+        order.append(true)
+        
     }
     
     @IBAction func incorrect(sender: AnyObject) {
         
         count += 1
-        wasCorrect = false
         
         if(count==15){
             resultLabel.text = "\(corr) correct out of 15"
@@ -69,13 +70,19 @@ class NamingPicturesViewController: UIViewController {
         imageView2.image = image2
         self.view.addSubview(imageView2)
         
+        order.append(false)
+        
     }
     
     @IBAction func back(sender: AnyObject) {
         
         count -= 1
-        if (wasCorrect==true){
-            corr -= 1
+        if order.count > 0 {
+            if order[order.count-1] == true {
+                corr -= 1
+            }
+            
+            order.removeAtIndex(order.count-1)
         }
         
         imageName = getImageName()
@@ -111,49 +118,49 @@ class NamingPicturesViewController: UIViewController {
     func getImageName()->String{
         
         if(count == 0){
-            return "Volcano"
+            return "House"//"Volcano"
         }
         if(count == 1){
-            return "Cactus"
+            return "Comb"//"Cactus"
         }
         if(count == 2){
-            return "Park Bench"
+            return "Toothbrush"//"Park Bench"
         }
         if(count == 3){
-            return "Stethoscope"
+            return "Park Bench"//"Stethoscope"
         }
         if(count == 4){
-            return "Mushroom"
+            return "Volcano"//"Mushroom"
         }
         if(count == 5){
-            return "House"
+            return "Mushroom"//"House" mushroom NOT in original order
         }
         if(count == 6){
-            return "Comb"
+            return "Canoe"//"Comb"
         }
         if(count == 7){
-            return "Unicorn"
+            return "Cactus"//"Unicorn"
         }
         if(count == 8){
-            return "Camera Tripod"
+            return "Rhino"//"Camera Tripod" rhino NOT in original order
         }
         if(count == 9){
-            return "Rhino"
+            return "Hammock"//"Rhino"
         }
         if(count == 10){
-            return "Sphynx"
+            return "Stethoscope"//"Sphynx"
         }
         if(count == 11){
-            return "Canoe"
+            return "Unicorn"//"Canoe"
         }
         if(count == 12){
-            return "Toothbrush"
+            return "Camera Tripod"//"Toothbrush"
         }
         if(count == 13){
-            return "Palette"
+            return "Sphynx"
         }
         else{
-            return "Hammock"
+            return "Palette"
         }
         
     }

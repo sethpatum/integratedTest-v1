@@ -53,6 +53,7 @@ class TrailsAViewController: UIViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
+        timedConnectionsA = [Double]()
         stopTrailsA = false
         displayImgTrailsA = false
         

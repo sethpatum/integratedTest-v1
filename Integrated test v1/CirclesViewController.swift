@@ -43,9 +43,15 @@ class CirclesViewController: UIViewController {
             
             imageView.removeFromSuperview()
             imageView.image = nil
-            timedConnections = [(Int, Int, Int, Int, Double)]()
             
         }
+        
+        timedConnections = [(Int, Int, Int, Int, Double)]()
+        circles.resultListTimesCircles = [Double]()
+        circles.resultListCircles = [(Int, Int, Int)]()
+        
+        println("TIMED CONNEXTIONS ARE \(timedConnections)")
+        println("RESULT LIST TIMES CIRCLES ARE \(circles.resultListTimesCircles)")
         
         let drawViewFrame = CGRect(x: 0.0, y: 130.0, width: view.bounds.width, height: view.bounds.height-130.0)
         
@@ -61,7 +67,7 @@ class CirclesViewController: UIViewController {
         
         let aSelector : Selector = "update"
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         stopCircles = false
@@ -218,13 +224,14 @@ class CirclesViewController: UIViewController {
         UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
     }
     
-    func update() {
+    func update(timer: NSTimer) {
         
         if stopCircles == false{
             var currTime = NSDate.timeIntervalSinceReferenceDate()
             var diff: NSTimeInterval = currTime - startTime
             
             timePassedCircles = diff
+            println(timePassedCircles)
             
             let minutes = UInt8(diff / 60.0)
             
@@ -238,6 +245,9 @@ class CirclesViewController: UIViewController {
             let strSeconds = seconds > 9 ? String(seconds):"0"+String(seconds)
             
             timerLabel.text = "\(strMinutes) : \(strSeconds)"
+        }
+        else{
+            timer.invalidate()
         }
         
     }
