@@ -5,6 +5,7 @@
 //  Created by Seth Amarasinghe on 7/14/15.
 //  Copyright (c) 2015 sunspot. All rights reserved.
 //
+
 import UIKit
 
 var resultTextCircles = ""
