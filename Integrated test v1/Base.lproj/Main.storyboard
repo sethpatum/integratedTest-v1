@@ -701,7 +701,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exg-QB-8CK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="204"/>
+            <point key="canvasLocation" x="80" y="306"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="COd-NJ-gqj">
