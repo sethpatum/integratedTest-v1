@@ -103,11 +103,16 @@ class TapInOrderViewController: UIViewController {
         
         super.viewDidLoad()
         
+    }
+    
+    
+    @IBAction func StartTest(sender: AnyObject) {
+        
         randomizeOrder()
         
         drawsequence()
+        
     }
-    
     
     //light up the right # of buttons (numplaces+1) for current sequence; buttons enabled AFTER all light up
     func drawsequence() {
