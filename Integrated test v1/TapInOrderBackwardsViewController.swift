@@ -22,6 +22,8 @@ class TapInOrderBackwardsViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    @IBOutlet weak var StartButton: UIButton!
+    
     @IBOutlet weak var dateLabel: UILabel!
     
     //start from 1st button; reset all info
@@ -102,12 +104,14 @@ class TapInOrderBackwardsViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+       
+    }
+    
+    @IBAction func StartTest(sender: AnyObject) {
         randomizeOrder()
         
         drawsequence()
     }
-    
     
     //light up the right # of buttons (numplaces+1) for current sequence; buttons enabled AFTER all light up
     func drawsequence() {
