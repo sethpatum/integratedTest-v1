@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -568,10 +568,10 @@
             </objects>
             <point key="canvasLocation" x="3075" y="292"/>
         </scene>
-        <!--Tap In Order Backwards View Controller-->
+        <!--Tap In Order Backwards-->
         <scene sceneID="7eY-Lg-n3b">
             <objects>
-                <viewController id="3ez-fa-Egv" customClass="TapInOrderBackwardsViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Tap In Order Backwards" id="3ez-fa-Egv" customClass="TapInOrderBackwardsViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n0u-dI-7Dj"/>
                         <viewControllerLayoutGuide type="bottom" id="oOy-mh-Xor"/>
@@ -762,10 +762,10 @@
             </objects>
             <point key="canvasLocation" x="-1593" y="1207"/>
         </scene>
-        <!--Test Selection-->
+        <!--Test Selection Nav-->
         <scene sceneID="vNo-T1-laZ">
             <objects>
-                <navigationController title="Test Selection" id="cLF-Kx-Eej" sceneMemberID="viewController">
+                <navigationController title="Test Selection Nav" id="cLF-Kx-Eej" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uuQ-Ye-mDR">
@@ -780,10 +780,10 @@
             </objects>
             <point key="canvasLocation" x="-444" y="298"/>
         </scene>
-        <!--View Controller-->
+        <!--Credits-->
         <scene sceneID="t6L-Ty-LJl">
             <objects>
-                <viewController id="rSh-c4-bd9" sceneMemberID="viewController">
+                <viewController title="Credits" id="rSh-c4-bd9" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OnR-nZ-JNf"/>
                         <viewControllerLayoutGuide type="bottom" id="pYu-KC-tzq"/>
@@ -898,12 +898,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwj-rA-Hzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2730" y="1195"/>
+            <point key="canvasLocation" x="-2730" y="1207"/>
         </scene>
-        <!--View Controller-->
+        <!--Letter Cancellation Help-->
         <scene sceneID="h4e-I6-4fZ">
             <objects>
-                <viewController id="n4n-Q1-TJy" sceneMemberID="viewController">
+                <viewController title="Letter Cancellation Help" id="n4n-Q1-TJy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UMK-1B-sfz"/>
                         <viewControllerLayoutGuide type="bottom" id="N4z-md-j2g"/>
@@ -939,10 +939,10 @@
             </objects>
             <point key="canvasLocation" x="7542" y="1207"/>
         </scene>
-        <!--View Controller-->
+        <!--Trails B Help-->
         <scene sceneID="1j1-bW-u3v">
             <objects>
-                <viewController id="AaW-sI-DMo" sceneMemberID="viewController">
+                <viewController title="Trails B Help" id="AaW-sI-DMo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cL6-4p-FxY"/>
                         <viewControllerLayoutGuide type="bottom" id="crb-Rk-euN"/>
@@ -1161,10 +1161,10 @@
             </objects>
             <point key="canvasLocation" x="720" y="1207"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Help Nav-->
         <scene sceneID="ARP-28-3r3">
             <objects>
-                <navigationController id="TVi-xE-qQ2" sceneMemberID="viewController">
+                <navigationController title="Help Nav" id="TVi-xE-qQ2" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t3S-72-bTI">
@@ -1179,10 +1179,10 @@
             </objects>
             <point key="canvasLocation" x="-444" y="1207"/>
         </scene>
-        <!--View Controller-->
+        <!--Trails A Help-->
         <scene sceneID="1b6-cM-sbe">
             <objects>
-                <viewController id="Qve-Dv-dg3" sceneMemberID="viewController">
+                <viewController title="Trails A Help" id="Qve-Dv-dg3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L32-Xh-EP6"/>
                         <viewControllerLayoutGuide type="bottom" id="Hgr-fZ-jMW"/>
@@ -1221,10 +1221,10 @@
             </objects>
             <point key="canvasLocation" x="1990" y="1207"/>
         </scene>
-        <!--View Controller-->
+        <!--Circles Help-->
         <scene sceneID="XyF-0F-apI">
             <objects>
-                <viewController id="ZYE-ki-VFT" sceneMemberID="viewController">
+                <viewController title="Circles Help" id="ZYE-ki-VFT" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vOW-2a-dTj"/>
                         <viewControllerLayoutGuide type="bottom" id="C81-4G-jHB"/>
@@ -1254,10 +1254,10 @@
             </objects>
             <point key="canvasLocation" x="8661" y="1195"/>
         </scene>
-        <!--View Controller-->
+        <!--Tap In Order Backwards Help-->
         <scene sceneID="fVM-dY-Olu">
             <objects>
-                <viewController id="HDC-iK-Prx" sceneMemberID="viewController">
+                <viewController title="Tap In Order Backwards Help" id="HDC-iK-Prx" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OpX-Gw-cMk"/>
                         <viewControllerLayoutGuide type="bottom" id="Pi4-m4-WJE"/>
@@ -1296,10 +1296,10 @@
             </objects>
             <point key="canvasLocation" x="3075" y="1207"/>
         </scene>
-        <!--View Controller-->
+        <!--Tap In Order Help-->
         <scene sceneID="qYG-g1-Sof">
             <objects>
-                <viewController id="LJW-cf-FV7" sceneMemberID="viewController">
+                <viewController title="Tap In Order Help" id="LJW-cf-FV7" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="95I-0B-o2J"/>
                         <viewControllerLayoutGuide type="bottom" id="O8w-4y-B9Q"/>
@@ -1340,10 +1340,10 @@
             </objects>
             <point key="canvasLocation" x="4184" y="1207"/>
         </scene>
-        <!--View Controller-->
+        <!--Naming Pictures Help-->
         <scene sceneID="gCF-OP-gQ7">
             <objects>
-                <viewController id="coY-Nj-Caq" sceneMemberID="viewController">
+                <viewController title="Naming Pictures Help" id="coY-Nj-Caq" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Fx-TQ-XC6"/>
                         <viewControllerLayoutGuide type="bottom" id="MgT-65-jKu"/>
@@ -1484,14 +1484,14 @@
         <image name="photo-seth" width="980" height="1322"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="31h-M1-QQK"/>
-        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="mFR-im-uC4"/>
         <segue reference="HW9-8Y-uG3"/>
         <segue reference="bFb-zp-0B9"/>
         <segue reference="dgF-2V-gAS"/>
-        <segue reference="HE1-1j-NTJ"/>
+        <segue reference="k5O-0U-7Tk"/>
         <segue reference="neN-op-hGA"/>
-        <segue reference="5uv-Oe-pqP"/>
         <segue reference="ShD-fn-Xek"/>
+        <segue reference="fBL-JN-2XU"/>
+        <segue reference="Ud1-Nd-Hgw"/>
     </inferredMetricsTieBreakers>
 </document>
