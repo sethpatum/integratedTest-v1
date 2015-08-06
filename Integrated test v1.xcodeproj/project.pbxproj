@@ -28,6 +28,7 @@
 		E1EF6D3A1B57651E001037C6 /* DrawingViewTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D391B57651E001037C6 /* DrawingViewTrails.swift */; };
 		E1EF6D3D1B5768A0001037C6 /* DrawingViewTrailsB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D3C1B5768A0001037C6 /* DrawingViewTrailsB.swift */; };
 		E1EF6D3F1B5768C9001037C6 /* BubblesB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D3E1B5768C9001037C6 /* BubblesB.swift */; };
+		F2DA21D01B74249D0048C068 /* PatientUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		E1EF6D391B57651E001037C6 /* DrawingViewTrails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewTrails.swift; sourceTree = "<group>"; };
 		E1EF6D3C1B5768A0001037C6 /* DrawingViewTrailsB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewTrailsB.swift; sourceTree = "<group>"; };
 		E1EF6D3E1B5768C9001037C6 /* BubblesB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubblesB.swift; sourceTree = "<group>"; };
+		F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				1BA4A9CA1B5556D800E3FBD4 /* AppDelegate.swift */,
 				1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */,
+				F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */,
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
 				E1EF6D3B1B57680A001037C6 /* TrailsB */,
 				E1EF6D361B56E83C001037C6 /* TrailsA */,
@@ -295,6 +298,7 @@
 				E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */,
 				E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */,
 				1BCEE8B21B555A53002AEE37 /* NamingPicturesViewController.swift in Sources */,
+				F2DA21D01B74249D0048C068 /* PatientUIViewController.swift in Sources */,
 				E1EF6D381B5764D9001037C6 /* BubblesA.swift in Sources */,
 				E1EF6D3F1B5768C9001037C6 /* BubblesB.swift in Sources */,
 				1BCEE8B61B555C9B002AEE37 /* LetterCancellationViewController.swift in Sources */,
