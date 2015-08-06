@@ -40,7 +40,7 @@
                                     <segue destination="TVi-xE-qQ2" kind="show" id="DYu-A0-SQ0"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cnbs" translatesAutoresizingMaskIntoConstraints="NO" id="gzh-35-JNZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cnbs" translatesAutoresizingMaskIntoConstraints="NO" id="gzh-35-JNZ">
                                 <rect key="frame" x="16" y="94" width="992" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h01-wl-2Cf">
@@ -66,6 +66,7 @@
                         <constraints>
                             <constraint firstItem="2GX-KW-ODm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="181" id="0oX-h8-oBO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2GX-KW-ODm" secondAttribute="trailing" constant="181" id="HAP-JV-8hC"/>
+                            <constraint firstItem="gzh-35-JNZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="NOD-Mg-g4d"/>
                             <constraint firstItem="gzh-35-JNZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cLI-Lf-Ujy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="V3G-rw-Ysr" secondAttribute="trailing" constant="122" id="gfZ-YN-eta"/>
                             <constraint firstItem="gzh-35-JNZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mFf-zn-dTK"/>
