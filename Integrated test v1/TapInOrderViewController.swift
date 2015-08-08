@@ -10,7 +10,7 @@ import UIKit
 
 import Darwin
 
-class TapInOrderViewController: UIViewController {
+class TapInOrderViewController: ViewController {
     
     
     var buttonList = [UIButton]()

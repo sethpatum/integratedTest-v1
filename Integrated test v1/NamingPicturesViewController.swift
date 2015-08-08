@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class NamingPicturesViewController: UIViewController {
+class NamingPicturesViewController: ViewController {
     
     var imageName = "House"
     var count = 0

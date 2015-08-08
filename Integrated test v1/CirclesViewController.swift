@@ -15,7 +15,7 @@ var timePassedCircles = 0.0
 //[(Circle 1's x value, y value, circle 2's x, y, time between crosses)]
 var timedConnections = [(Int, Int, Int, Int, Double)]()
 
-class CirclesViewController: UIViewController {
+class CirclesViewController: ViewController {
     
     var drawingView: DrawingViewCircles!
     var imageView: UIImageView!
