@@ -8,7 +8,7 @@
 import UIKit
 
 var stopTrailsB:Bool = false
-class TrailsBViewController: UIViewController {
+class TrailsBViewController: ViewController {
     
     var drawingView: DrawingViewTrailsB!
     var startTime = NSTimeInterval()

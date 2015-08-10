@@ -12,10 +12,12 @@ var resultTextCircles = ""
 var stopCircles:Bool = false
 var timePassedCircles = 0.0
 
+var results = CirclesResults()
+
 //[(Circle 1's x value, y value, circle 2's x, y, time between crosses)]
 var timedConnections = [(Int, Int, Int, Int, Double)]()
 
-class CirclesViewController: UIViewController {
+class CirclesViewController: ViewController {
     
     var drawingView: DrawingViewCircles!
     var imageView: UIImageView!
@@ -34,6 +36,7 @@ class CirclesViewController: UIViewController {
         println("start button clicked")
         
         resultLabel.text = ""
+        results.startTime = NSDate()
         
         if drawingView !== nil {
             
@@ -85,6 +88,7 @@ class CirclesViewController: UIViewController {
         
         let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
         DateLabel.text = timestamp
+        results.endTime = NSDate()
         
         screenShotMethod()
         

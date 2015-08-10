@@ -13,7 +13,7 @@ var timePassedTrailsA = 0.0
 var timedConnectionsA = [Double]()
 var displayImgTrailsA = false
 
-class TrailsAViewController: UIViewController {
+class TrailsAViewController: ViewController {
     
     var drawingView: DrawingViewTrails!
     

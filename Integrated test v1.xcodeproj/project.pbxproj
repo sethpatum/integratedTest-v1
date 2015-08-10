@@ -29,6 +29,8 @@
 		E1EF6D3D1B5768A0001037C6 /* DrawingViewTrailsB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D3C1B5768A0001037C6 /* DrawingViewTrailsB.swift */; };
 		E1EF6D3F1B5768C9001037C6 /* BubblesB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D3E1B5768C9001037C6 /* BubblesB.swift */; };
 		F2DA21D01B74249D0048C068 /* PatientUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */; };
+		F2DA21D61B7646420048C068 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21D51B7646420048C068 /* Results.swift */; };
+		F2DA21DA1B764CD80048C068 /* CirclesResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21D91B764CD80048C068 /* CirclesResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		E1EF6D3C1B5768A0001037C6 /* DrawingViewTrailsB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewTrailsB.swift; sourceTree = "<group>"; };
 		E1EF6D3E1B5768C9001037C6 /* BubblesB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubblesB.swift; sourceTree = "<group>"; };
 		F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientUIViewController.swift; sourceTree = "<group>"; };
+		F2DA21D51B7646420048C068 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		F2DA21D91B764CD80048C068 /* CirclesResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +117,13 @@
 				1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */,
 				F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */,
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
+				F2DA21D51B7646420048C068 /* Results.swift */,
+				F2DA21D71B76469F0048C068 /* TapInOrder */,
 				E1EF6D3B1B57680A001037C6 /* TrailsB */,
 				E1EF6D361B56E83C001037C6 /* TrailsA */,
 				E1EF6D281B559DA3001037C6 /* Circles */,
 				E1EF6D2B1B56A05F001037C6 /* Letters */,
-				1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */,
-				E1EF6D341B56E36A001037C6 /* TapInOrderBackwardsViewController.swift */,
-				1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */,
+				F2DA21D81B7646E40048C068 /* NamingPictures */,
 				1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */,
 				1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */,
 				1BA4A9C81B5556D800E3FBD4 /* Supporting Files */,
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */,
+				F2DA21D91B764CD80048C068 /* CirclesResults.swift */,
 				E1EF6D291B559DE0001037C6 /* Circles.swift */,
 				E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */,
 			);
@@ -190,6 +195,23 @@
 				E1EF6D3E1B5768C9001037C6 /* BubblesB.swift */,
 			);
 			name = TrailsB;
+			sourceTree = "<group>";
+		};
+		F2DA21D71B76469F0048C068 /* TapInOrder */ = {
+			isa = PBXGroup;
+			children = (
+				1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */,
+				E1EF6D341B56E36A001037C6 /* TapInOrderBackwardsViewController.swift */,
+			);
+			name = TapInOrder;
+			sourceTree = "<group>";
+		};
+		F2DA21D81B7646E40048C068 /* NamingPictures */ = {
+			isa = PBXGroup;
+			children = (
+				1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */,
+			);
+			name = NamingPictures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,10 +316,12 @@
 			files = (
 				1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */,
 				E1EF6D3A1B57651E001037C6 /* DrawingViewTrails.swift in Sources */,
+				F2DA21DA1B764CD80048C068 /* CirclesResults.swift in Sources */,
 				1BCEE8BA1B555E92002AEE37 /* TrailsAViewController.swift in Sources */,
 				E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */,
 				E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */,
 				1BCEE8B21B555A53002AEE37 /* NamingPicturesViewController.swift in Sources */,
+				F2DA21D61B7646420048C068 /* Results.swift in Sources */,
 				F2DA21D01B74249D0048C068 /* PatientUIViewController.swift in Sources */,
 				E1EF6D381B5764D9001037C6 /* BubblesA.swift in Sources */,
 				E1EF6D3F1B5768C9001037C6 /* BubblesB.swift in Sources */,
