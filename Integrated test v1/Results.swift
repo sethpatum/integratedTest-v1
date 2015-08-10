@@ -10,8 +10,8 @@ import UIKit
 
 class Results: NSObject {
     var name:String?
-    var startTime:String?
-    var endTime:String?
+    var startTime:NSDate?
+    var endTime:NSDate?
     
     func output() {
         

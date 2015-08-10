@@ -10,7 +10,7 @@ import UIKit
 
 var firstTimeThrough = true
 
-class PatientUIViewController: UIViewController {
+class PatientUIViewController: ViewController {
     
     @IBAction func StartTesting(sender: AnyObject) {
         if firstTimeThrough == true {
