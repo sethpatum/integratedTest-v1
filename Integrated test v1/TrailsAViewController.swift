@@ -59,6 +59,10 @@ class TrailsAViewController: ViewController {
         
     }
     
+    @IBAction func StopButton(sender: AnyObject) {
+        stopTrailsA = true
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

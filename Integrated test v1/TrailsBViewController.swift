@@ -39,8 +39,13 @@ class TrailsBViewController: ViewController {
         startTime = NSDate.timeIntervalSinceReferenceDate()
         stopTrailsB = false
         
-        
     }
+    
+    
+    @IBAction func StopButton(sender: AnyObject) {
+        stopTrailsB = true
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
