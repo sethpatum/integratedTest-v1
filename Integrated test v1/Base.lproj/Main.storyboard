@@ -1484,14 +1484,14 @@
         <image name="photo-seth" width="980" height="1322"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="31h-M1-QQK"/>
-        <segue reference="k5O-0U-7Tk"/>
-        <segue reference="HW9-8Y-uG3"/>
-        <segue reference="bFb-zp-0B9"/>
         <segue reference="dgF-2V-gAS"/>
+        <segue reference="HW9-8Y-uG3"/>
         <segue reference="HE1-1j-NTJ"/>
-        <segue reference="neN-op-hGA"/>
-        <segue reference="5uv-Oe-pqP"/>
         <segue reference="ShD-fn-Xek"/>
+        <segue reference="31h-M1-QQK"/>
+        <segue reference="fBL-JN-2XU"/>
+        <segue reference="xQt-Dq-QtI"/>
+        <segue reference="DXj-KH-ajy"/>
+        <segue reference="fs4-pa-L87"/>
     </inferredMetricsTieBreakers>
 </document>
