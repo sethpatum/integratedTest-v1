@@ -18,6 +18,13 @@ class Results: NSObject {
     var longDescription : NSMutableArray = NSMutableArray()
     var screenshot : UIImage?
     
+    // Constructor
+    func Results(nm:String, st:NSDate, en:NSDate) {
+        name = nm
+        startTime = st
+        endTime = en
+    }
+    
     // Return the string function to put on the header
     func header() -> String {
         let elapsedTime = endTime!.timeIntervalSinceDate(startTime!)

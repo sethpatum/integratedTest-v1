@@ -203,6 +203,15 @@ class TrailsAViewController: ViewController {
     
     func getColor(i: Double) ->CGColor{
         
+        if i < 10.0 {
+            let i2 = CGFloat(i / 10.0)
+            return UIColor(hue: i2, saturation: 1.0, brightness: 1.0, alpha: 1.0).CGColor
+        } else {
+            return UIColor(hue: 1.0, saturation: 1.0, brightness: 1.0, alpha: 1.0).CGColor
+        }
+        
+        /*
+        
         if i < 2.0 {
             
             return UIColor(red: 1.0, green: (CGFloat(i)/2.0), blue: 0.0, alpha: 1.0).CGColor
@@ -218,6 +227,7 @@ class TrailsAViewController: ViewController {
             return UIColor(red: 0.0, green: (CGFloat(i-6.0)/3.0), blue: 1.0, alpha: 1.0).CGColor
         }
         return UIColor.blueColor().CGColor
+      */
         
     }
     

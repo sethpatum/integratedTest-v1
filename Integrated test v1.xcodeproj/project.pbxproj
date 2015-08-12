@@ -117,7 +117,7 @@
 				1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */,
 				F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */,
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
-				F2DA21D51B7646420048C068 /* Results.swift */,
+				F2DA21E71B7BFCE20048C068 /* Results */,
 				F2DA21D71B76469F0048C068 /* TapInOrder */,
 				E1EF6D3B1B57680A001037C6 /* TrailsB */,
 				E1EF6D361B56E83C001037C6 /* TrailsA */,
@@ -212,6 +212,14 @@
 				1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */,
 			);
 			name = NamingPictures;
+			sourceTree = "<group>";
+		};
+		F2DA21E71B7BFCE20048C068 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				F2DA21D51B7646420048C068 /* Results.swift */,
+			);
+			name = Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
