@@ -27,6 +27,7 @@ class LetterCancellationViewController: ViewController {
     var imageView: UIImageView!
     
     var startTime = NSTimeInterval()
+    var startTime2 = NSDate()
     
     
     @IBAction func sizeChanged(sender: UISlider) {
@@ -69,6 +70,7 @@ class LetterCancellationViewController: ViewController {
         drawingView.reset()
         
         var timer = NSTimer()
+        startTime2 = NSDate()
         
         let aSelector : Selector = "update"
         
@@ -80,10 +82,11 @@ class LetterCancellationViewController: ViewController {
     }
     
     @IBAction func StopButton(sender: AnyObject) {
+        let result = Results()
         
         stopLetters = true
         
-        letters.checkResultListLetters()
+        letters.checkResultListLetters(result)
         resultLabel.text = resultTextLetters
         
         let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
@@ -106,6 +109,13 @@ class LetterCancellationViewController: ViewController {
         self.view.addSubview(imageView)
         let image = drawCustomImage(imageSize)
         imageView.image = image
+        
+        // add to results
+        result.name = "Letter Cancellation"
+        result.startTime = startTime2
+        result.endTime = NSDate()
+        result.screenshot = image
+        resultsArray.addObject(result)
         
     }
     

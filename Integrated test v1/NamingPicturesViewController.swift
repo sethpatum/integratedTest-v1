@@ -14,10 +14,14 @@ class NamingPicturesViewController: ViewController {
     var corr = 0
     
     var order = [Bool]()
+     var startTime2 = NSDate()
     
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBAction func reset(sender: AnyObject) {
+        if(count > 0) {
+            done()
+        }
         
         order = [Bool]()
         count = 0
@@ -34,12 +38,16 @@ class NamingPicturesViewController: ViewController {
     }
     
     @IBAction func correct(sender: AnyObject) {
+        if(count == 0) {
+            startTime2 = NSDate()
+        }
         
         count += 1
         corr += 1
         
         if(count==15){
             resultLabel.text = "\(corr) correct out of 15"
+            done()
         }
         
         imageName = getImageName()
@@ -55,11 +63,15 @@ class NamingPicturesViewController: ViewController {
     }
     
     @IBAction func incorrect(sender: AnyObject) {
+        if(count == 0) {
+            startTime2 = NSDate()
+        }
         
         count += 1
         
         if(count==15){
             resultLabel.text = "\(corr) correct out of 15"
+            done()
         }
         
         imageName = getImageName()
@@ -93,6 +105,15 @@ class NamingPicturesViewController: ViewController {
         imageView3.image = image3
         self.view.addSubview(imageView3)
         
+    }
+    
+    func done() {
+        let result = Results()
+        result.name = "Naming Pictures"
+        result.startTime = startTime2
+        result.endTime = NSDate()
+        result.longDescription.addObject("\(corr) correct out of \(count)")
+        resultsArray.addObject(result)
     }
     
     override func viewDidLoad() {

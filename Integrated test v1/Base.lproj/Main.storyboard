@@ -347,8 +347,8 @@
                                     <navigationItem title="Results" id="cMS-pS-OaP"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-Of-b1y">
-                                <rect key="frame" x="0.0" y="82" width="1024" height="686"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-Of-b1y">
+                                <rect key="frame" x="16" y="82" width="992" height="686"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hTf-BP-e2o" id="kXN-cY-WDV"/>
@@ -358,6 +358,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UzU-Of-b1y" firstAttribute="leading" secondItem="ZF7-Ov-H9g" secondAttribute="leadingMargin" id="04o-N7-EXC"/>
                             <constraint firstItem="gfr-TF-myy" firstAttribute="leading" secondItem="ZF7-Ov-H9g" secondAttribute="leadingMargin" constant="-16" id="0gE-eT-ts5"/>
                             <constraint firstItem="UzU-Of-b1y" firstAttribute="top" secondItem="gfr-TF-myy" secondAttribute="bottom" id="3W0-r9-LiH"/>
                             <constraint firstItem="UzU-Of-b1y" firstAttribute="top" secondItem="gfr-TF-myy" secondAttribute="bottom" id="7YD-0j-H4q"/>
@@ -366,10 +367,9 @@
                             <constraint firstItem="UzU-Of-b1y" firstAttribute="top" secondItem="gfr-TF-myy" secondAttribute="bottom" id="BRE-jO-roQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gfr-TF-myy" secondAttribute="trailing" constant="-16" id="MU7-rp-7oU"/>
                             <constraint firstItem="gfr-TF-myy" firstAttribute="leading" secondItem="ZF7-Ov-H9g" secondAttribute="leadingMargin" constant="-16" id="OQ1-Cw-g9G"/>
+                            <constraint firstItem="UzU-Of-b1y" firstAttribute="trailing" secondItem="ZF7-Ov-H9g" secondAttribute="trailingMargin" id="RET-hT-rJc"/>
                             <constraint firstItem="UzU-Of-b1y" firstAttribute="top" secondItem="gfr-TF-myy" secondAttribute="bottom" id="ctu-15-6je"/>
-                            <constraint firstItem="UzU-Of-b1y" firstAttribute="leading" secondItem="ZF7-Ov-H9g" secondAttribute="leadingMargin" constant="-16" id="dhP-gc-orL"/>
                             <constraint firstItem="0ap-2i-jGT" firstAttribute="top" secondItem="UzU-Of-b1y" secondAttribute="bottom" id="eIm-ln-KS7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UzU-Of-b1y" secondAttribute="trailing" constant="-16" id="l6d-as-ZwX"/>
                             <constraint firstItem="gfr-TF-myy" firstAttribute="top" secondItem="bgP-rH-uJ2" secondAttribute="bottom" constant="18" id="mBR-4l-oYD"/>
                         </constraints>
                         <variation key="default">

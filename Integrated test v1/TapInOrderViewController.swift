@@ -21,6 +21,9 @@ class TapInOrderViewController: ViewController {
     var currpressed = 0 //order of button that is about to be pressed
     var numRepeats = 0 //how many times user messed up on the same numplaces, calling repeat()
     
+    var startTime2 = NSDate()
+
+    
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -34,6 +37,7 @@ class TapInOrderViewController: ViewController {
         
         randomizeOrder()
         drawsequence()
+        startTime2 = NSDate()
         currpressed = 0
         
         resultLabel.text = ""
@@ -111,7 +115,25 @@ class TapInOrderViewController: ViewController {
         randomizeOrder()
         
         drawsequence()
-        
+        startTime2 = NSDate()
+    }
+    
+    func donetest() {
+        delay(0.5) {
+            let result = Results()
+            result.name = "Tap in Order"
+            result.startTime = self.startTime2
+            result.endTime = NSDate()
+            for (index, i) in enumerate(self.order) {
+                self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
+                //self.resultLabel.text = "Spatial span: \(self.numplaces)"
+                result.longDescription.addObject("Spatial span: \(self.numplaces)")
+                
+                let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+                self.dateLabel.text = timestamp
+            }
+            resultsArray.addObject(result)
+        }
     }
     
     //light up the right # of buttons (numplaces+1) for current sequence; buttons enabled AFTER all light up
@@ -169,16 +191,8 @@ class TapInOrderViewController: ViewController {
                 }
                 */
                 //account for delay when changing black back to red for most recently pressed button
-                delay(0.5) {
-                    for (index, i) in enumerate(self.order) {
-                        self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
-                        self.resultLabel.text = "Spatial span: \(self.numplaces)"
-                        
-                        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-                        self.dateLabel.text = timestamp
-                    }
+                    donetest()
                 }
-            }
             
         }
             //true means user finished the sequence correctly up to numplaces
@@ -195,14 +209,7 @@ class TapInOrderViewController: ViewController {
                 }
                 */
                 //account for delay when changing black back to red for most recently pressed button
-                delay(0.5) {
-                    for (index, i) in enumerate(self.order) {
-                        self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
-                        self.resultLabel.text = "Spatial span: \(self.numplaces+1)"
-                        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-                        self.dateLabel.text = timestamp
-                    }
-                }
+                donetest()
             }
             
         }

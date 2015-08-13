@@ -12,6 +12,8 @@ class TrailsBViewController: ViewController {
     
     var drawingView: DrawingViewTrailsB!
     var startTime = NSTimeInterval()
+    var startTime2 = NSDate()
+
     
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -31,6 +33,8 @@ class TrailsBViewController: ViewController {
         drawingView.reset()
         
         var timer = NSTimer()
+        startTime2 = NSDate()
+
         
         let aSelector : Selector = "update"
         

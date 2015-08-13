@@ -177,7 +177,7 @@ class Letters{
         
     }
     
-    func checkResultListLetters(){
+    func checkResultListLetters(result:Results){
         
         for var j = 0; j < resultListLetters.count; ++j {
             println(resultListLetters[j])
@@ -206,7 +206,11 @@ class Letters{
             
         }
         
-        resultTextLetters = "\(correctOnRight) correct out of 5 on right; \(correctOnLeft) correct out of 5 on left; \(incorrect) incorrect."
+        //resultTextLetters = "\(correctOnRight) correct out of 5 on right; \(correctOnLeft) correct out of 5 on left; \(incorrect) incorrect."
+        result.longDescription.addObject("\(correctOnRight) correct out of 5 on right;")
+        result.longDescription.addObject("\(correctOnLeft) correct out of 5 on left;")
+        result.longDescription.addObject("\(incorrect) incorrect.")
+
         
         for var k = 1; k < resultListTimes.count; ++k{
             

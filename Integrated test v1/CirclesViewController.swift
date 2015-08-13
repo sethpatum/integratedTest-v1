@@ -12,7 +12,6 @@ var resultTextCircles = ""
 var stopCircles:Bool = false
 var timePassedCircles = 0.0
 
-var results = CirclesResults()
 
 //[(Circle 1's x value, y value, circle 2's x, y, time between crosses)]
 var timedConnections = [(Int, Int, Int, Int, Double)]()
@@ -29,14 +28,13 @@ class CirclesViewController: ViewController {
     @IBOutlet weak var timerLabel: UILabel!
     
     var startTime = NSTimeInterval()
-    
+     var startTime2 = NSDate()
     
     @IBAction func StartButton(sender: AnyObject) {
         
         println("start button clicked")
         
         resultLabel.text = ""
-        results.startTime = NSDate()
         
         if drawingView !== nil {
             
@@ -68,6 +66,7 @@ class CirclesViewController: ViewController {
         drawingView.reset()
         
         var timer = NSTimer()
+        startTime2 = NSDate()
         
         let aSelector : Selector = "update"
         
@@ -79,16 +78,17 @@ class CirclesViewController: ViewController {
     }
     
     @IBAction func StopButton(sender: AnyObject) {
+        let result = Results()
+
         
         stopCircles = true
         
-        circles.checkResultList()
+        circles.checkResultList(result)
         
         resultLabel.text = resultTextCircles
         
         let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
         DateLabel.text = timestamp
-        results.endTime = NSDate()
         
         screenShotMethod()
         
@@ -107,6 +107,13 @@ class CirclesViewController: ViewController {
         self.view.addSubview(imageView)
         let image = drawCustomImage(imageSize)
         imageView.image = image
+        
+        // add to results
+        result.name = "Circles"
+        result.startTime = startTime2
+        result.endTime = NSDate()
+        result.screenshot = image
+        resultsArray.addObject(result)
         
     }
     
@@ -184,6 +191,13 @@ class CirclesViewController: ViewController {
     
     func getColor(i: Double) ->CGColor{
         
+        if i < 10.0 {
+            let i2 = CGFloat(i / 10.0)
+            return UIColor(hue: i2, saturation: 1.0, brightness: 1.0, alpha: 1.0).CGColor
+        } else {
+            return UIColor(hue: 1.0, saturation: 1.0, brightness: 1.0, alpha: 1.0).CGColor
+        }
+        /*
         if i < 2.0 {
             return UIColor(red: 1.0, green: (CGFloat(i)/2.0), blue: 0.0, alpha: 1.0).CGColor
         }
@@ -197,7 +211,7 @@ class CirclesViewController: ViewController {
             return UIColor(red: 0.0, green: (CGFloat(i-6.0)/3.0), blue: 1.0, alpha: 1.0).CGColor
         }
         return UIColor.blueColor().CGColor
-        
+        */
     }
     
     override func viewDidLoad() {

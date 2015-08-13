@@ -164,7 +164,7 @@ class Circles{
         
     }
     
-    func checkResultList(){
+    func checkResultList(result:Results){
         
         for (index, circle) in enumerate(resultListCircles){
             
@@ -209,10 +209,12 @@ class Circles{
             
         }
         
-        println("\(correctOnLeft) out of 12 semicircles crossed off on left half; \(correctOnRight) out of 12 semicircles crossed off on right half.\n\(leftSemiCircles) out of 12 left-halved semicircles crossed off; \(rightSemiCircles) out of 12 right-halved semicircles crossed off.\n\(incorrect) full circles incorrectly crossed off.")
-        
-        
-        resultTextCircles = "\(correctOnLeft) out of 12 semicircles crossed off on left half; \(correctOnRight) out of 12 semicircles crossed off on right half. \n\(leftSemiCircles) out of 12 left-halved semicircles crossed off; \(rightSemiCircles) out of 12 right-halved semicircles crossed off. \n\(incorrect) full circles incorrectly crossed off."
+        result.longDescription.addObject("\(correctOnLeft) out of 12 semicircles crossed off on left half;")
+        result.longDescription.addObject("\(correctOnRight) out of 12 semicircles crossed off on right half.")
+        result.longDescription.addObject("\(leftSemiCircles) out of 12 left-halved semicircles crossed off;")
+        result.longDescription.addObject("\(rightSemiCircles) out of 12 right-halved semicircles crossed off.")
+        result.longDescription.addObject("\(incorrect) full circles incorrectly crossed off.")
+        //resultTextCircles = "\(correctOnLeft) out of 12 semicircles crossed off on left half; \(correctOnRight) out of 12 semicircles crossed off on right half. \n\(leftSemiCircles) out of 12 left-halved semicircles crossed off; \(rightSemiCircles) out of 12 right-halved semicircles crossed off. \n\(incorrect) full circles incorrectly crossed off."
         
         println(resultListTimesCircles)
         

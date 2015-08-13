@@ -30,7 +30,6 @@
 		E1EF6D3F1B5768C9001037C6 /* BubblesB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D3E1B5768C9001037C6 /* BubblesB.swift */; };
 		F2DA21D01B74249D0048C068 /* PatientUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */; };
 		F2DA21D61B7646420048C068 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21D51B7646420048C068 /* Results.swift */; };
-		F2DA21DA1B764CD80048C068 /* CirclesResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21D91B764CD80048C068 /* CirclesResults.swift */; };
 		F2DA21E91B7C11210048C068 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21E81B7C11210048C068 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +71,6 @@
 		E1EF6D3E1B5768C9001037C6 /* BubblesB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubblesB.swift; sourceTree = "<group>"; };
 		F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientUIViewController.swift; sourceTree = "<group>"; };
 		F2DA21D51B7646420048C068 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
-		F2DA21D91B764CD80048C068 /* CirclesResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesResults.swift; sourceTree = "<group>"; };
 		F2DA21E81B7C11210048C068 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */,
-				F2DA21D91B764CD80048C068 /* CirclesResults.swift */,
 				E1EF6D291B559DE0001037C6 /* Circles.swift */,
 				E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */,
 			);
@@ -327,7 +324,6 @@
 			files = (
 				1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */,
 				E1EF6D3A1B57651E001037C6 /* DrawingViewTrails.swift in Sources */,
-				F2DA21DA1B764CD80048C068 /* CirclesResults.swift in Sources */,
 				1BCEE8BA1B555E92002AEE37 /* TrailsAViewController.swift in Sources */,
 				E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */,
 				E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */,
