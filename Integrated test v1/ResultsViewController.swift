@@ -105,7 +105,7 @@ class ResultsViewController: UIViewController {
         cell = self.tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell
         
         if (res.collapsed) {
-            //  cell.textLabel.text = @"click to enlarge";
+            cell.textLabel?.text = "click to enlarge"
         }
         else{
             res.setRow(indexPath.row, cell:cell)
