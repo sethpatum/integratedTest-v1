@@ -48,6 +48,7 @@ class TrailsAViewController: ViewController {
         drawingView.reset()
         
         var timer = NSTimer()
+        startTime2 = NSDate()
         
         let aSelector : Selector = "update"
         
