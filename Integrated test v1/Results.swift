@@ -18,18 +18,24 @@ class Results: NSObject {
     var longDescription : NSMutableArray = NSMutableArray()
     var screenshot : UIImage?
     
+    var collapsed : Bool = true // for use by the View Controller
+    
     // Constructor
-    func Results(nm:String, st:NSDate, en:NSDate) {
+    func Results(nm:String, startTime:NSDate, endTime:NSDate) {
         name = nm
-        startTime = st
-        endTime = en
+        self.startTime = startTime
+        self.endTime = endTime
     }
     
     // Return the string function to put on the header
     func header() -> String {
         let elapsedTime = endTime!.timeIntervalSinceDate(startTime!)
         let duration = Int(elapsedTime)
-        return name! + " (" + String(duration) + "): " + shortDescription!
+        if shortDescription == nil {
+            return name! + " (" + String(duration) + " secs): "
+        } else {
+            return name! + " (" + String(duration) + " secs): " + shortDescription!
+        }
     }
     
     
@@ -44,12 +50,12 @@ class Results: NSObject {
     
     
     // All rows are same height, except the screeshot
-    func heightForRaw(i:Int) -> Int {
+    func heightForRow(i:Int) -> Int {
         if i < longDescription.count {
             return 100
         }
         if i == longDescription.count && screenshot != nil {
-            return 1000
+            return 500
         }
         return 0
     }

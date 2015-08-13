@@ -31,6 +31,7 @@
 		F2DA21D01B74249D0048C068 /* PatientUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */; };
 		F2DA21D61B7646420048C068 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21D51B7646420048C068 /* Results.swift */; };
 		F2DA21DA1B764CD80048C068 /* CirclesResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21D91B764CD80048C068 /* CirclesResults.swift */; };
+		F2DA21E91B7C11210048C068 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21E81B7C11210048C068 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientUIViewController.swift; sourceTree = "<group>"; };
 		F2DA21D51B7646420048C068 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		F2DA21D91B764CD80048C068 /* CirclesResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesResults.swift; sourceTree = "<group>"; };
+		F2DA21E81B7C11210048C068 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				F2DA21D51B7646420048C068 /* Results.swift */,
+				F2DA21E81B7C11210048C068 /* ResultsViewController.swift */,
 			);
 			name = Results;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				1BCEE8BC1B555EA5002AEE37 /* TrailsBViewController.swift in Sources */,
 				E1EF6D3D1B5768A0001037C6 /* DrawingViewTrailsB.swift in Sources */,
 				E1EF6D271B559D8E001037C6 /* DrawingViewCircles.swift in Sources */,
+				F2DA21E91B7C11210048C068 /* ResultsViewController.swift in Sources */,
 				E1EF6D351B56E36A001037C6 /* TapInOrderBackwardsViewController.swift in Sources */,
 				1BA4A9CB1B5556D800E3FBD4 /* AppDelegate.swift in Sources */,
 				E1EF6D2A1B559DE0001037C6 /* Circles.swift in Sources */,

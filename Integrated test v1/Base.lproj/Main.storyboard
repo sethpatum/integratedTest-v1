@@ -224,6 +224,32 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pj4-l7-34O">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pj4-l7-34O" id="cPj-tt-MNZ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sJ-bd-ADN">
+                                                    <rect key="frame" x="465" y="3" width="94" height="36.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <state key="normal" title="Results">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="hTf-BP-e2o" kind="show" id="pQc-UX-ph2"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1uL-EN-LZf">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1uL-EN-LZf" id="LL4-NS-uaZ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -302,6 +328,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NM3-Pp-f9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6433" y="292"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="mpW-Ug-Cmc">
+            <objects>
+                <viewController id="hTf-BP-e2o" customClass="ResultsViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bgP-rH-uJ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ap-2i-jGT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZF7-Ov-H9g">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-Of-b1y">
+                                <rect key="frame" x="0.0" y="82" width="1024" height="686"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hTf-BP-e2o" id="kXN-cY-WDV"/>
+                                    <outlet property="delegate" destination="hTf-BP-e2o" id="XyE-gL-Ol6"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-TF-myy">
+                                <rect key="frame" x="0.0" y="38" width="1024" height="44"/>
+                                <items>
+                                    <navigationItem title="Results" id="cMS-pS-OaP"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gfr-TF-myy" firstAttribute="leading" secondItem="ZF7-Ov-H9g" secondAttribute="leadingMargin" constant="-16" id="0gE-eT-ts5"/>
+                            <constraint firstItem="UzU-Of-b1y" firstAttribute="top" secondItem="gfr-TF-myy" secondAttribute="bottom" id="3W0-r9-LiH"/>
+                            <constraint firstItem="UzU-Of-b1y" firstAttribute="top" secondItem="gfr-TF-myy" secondAttribute="bottom" id="7YD-0j-H4q"/>
+                            <constraint firstItem="0ap-2i-jGT" firstAttribute="top" secondItem="UzU-Of-b1y" secondAttribute="bottom" id="8pa-hA-Hlm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gfr-TF-myy" secondAttribute="trailing" constant="-16" id="BIZ-D6-KVC"/>
+                            <constraint firstItem="UzU-Of-b1y" firstAttribute="top" secondItem="gfr-TF-myy" secondAttribute="bottom" id="BRE-jO-roQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gfr-TF-myy" secondAttribute="trailing" constant="-16" id="MU7-rp-7oU"/>
+                            <constraint firstItem="gfr-TF-myy" firstAttribute="leading" secondItem="ZF7-Ov-H9g" secondAttribute="leadingMargin" constant="-16" id="OQ1-Cw-g9G"/>
+                            <constraint firstItem="UzU-Of-b1y" firstAttribute="top" secondItem="gfr-TF-myy" secondAttribute="bottom" id="ctu-15-6je"/>
+                            <constraint firstItem="UzU-Of-b1y" firstAttribute="leading" secondItem="ZF7-Ov-H9g" secondAttribute="leadingMargin" constant="-16" id="dhP-gc-orL"/>
+                            <constraint firstItem="0ap-2i-jGT" firstAttribute="top" secondItem="UzU-Of-b1y" secondAttribute="bottom" id="eIm-ln-KS7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UzU-Of-b1y" secondAttribute="trailing" constant="-16" id="l6d-as-ZwX"/>
+                            <constraint firstItem="gfr-TF-myy" firstAttribute="top" secondItem="bgP-rH-uJ2" secondAttribute="bottom" constant="18" id="mBR-4l-oYD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MU7-rp-7oU"/>
+                                <exclude reference="OQ1-Cw-g9G"/>
+                                <exclude reference="7YD-0j-H4q"/>
+                                <exclude reference="BRE-jO-roQ"/>
+                                <exclude reference="ctu-15-6je"/>
+                                <exclude reference="eIm-ln-KS7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="tableView" destination="UzU-Of-b1y" id="InS-mG-JT4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uh5-YZ-sQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="-608"/>
         </scene>
         <!--Trails A-->
         <scene sceneID="8cD-Kf-I6U">

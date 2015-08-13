@@ -20,6 +20,7 @@ class TrailsAViewController: ViewController {
     var imageView: UIImageView!
     
     var startTime = NSTimeInterval()
+    var startTime2 = NSDate()
     
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -61,7 +62,7 @@ class TrailsAViewController: ViewController {
     
     @IBAction func StopButton(sender: AnyObject) {
         stopTrailsA = true
-        
+        displayImgTrailsA = true        
     }
     
     override func viewDidLoad() {
@@ -110,9 +111,16 @@ class TrailsAViewController: ViewController {
             self.view.addSubview(imageView)
             let image = drawCustomImage(imageSize)
             imageView.image = image
-            
+           
+            // add to results
+            let result = Results()
+            result.name = "Trails A"
+            result.startTime = startTime2
+            result.endTime = NSDate()
+            result.screenshot = image
+            resultsArray.addObject(result)
+
             displayImgTrailsA = false
-            
         }
         
     }
