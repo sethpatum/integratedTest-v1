@@ -70,6 +70,12 @@ class TrailsAViewController: ViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+         if(selectedTest == "Trails A") {
+            self.title = "Trails A"
+         } else {
+            self.title = "Trails B"
+        }
+        
     }
     
     override func supportedInterfaceOrientations() -> Int {
@@ -115,7 +121,7 @@ class TrailsAViewController: ViewController {
            
             // add to results
             let result = Results()
-            result.name = "Trails A"
+            result.name = self.title
             result.startTime = startTime2
             result.endTime = NSDate()
             result.screenshot = image

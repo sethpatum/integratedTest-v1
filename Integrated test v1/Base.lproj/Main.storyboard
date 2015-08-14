@@ -85,7 +85,7 @@
         <!--Test Selection-->
         <scene sceneID="7CP-gZ-Hkw">
             <objects>
-                <tableViewController title="Test Selection" id="d7F-55-Zey" sceneMemberID="viewController">
+                <tableViewController title="Test Selection" id="d7F-55-Zey" customClass="TestSelectionTableViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8ak-p9-mBL">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="34v-JF-kvs" kind="show" id="QiM-jf-6BP"/>
+                                                        <segue destination="34v-JF-kvs" kind="show" identifier="Naming Pictures" id="QiM-jf-6BP"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -132,7 +132,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="aMc-eE-pqC" kind="show" id="Gdd-ap-LTk"/>
+                                                        <segue destination="aMc-eE-pqC" kind="show" identifier="Tap In Order" id="Gdd-ap-LTk"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -150,7 +150,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="3ez-fa-Egv" kind="show" id="bWf-cg-5Hp"/>
+                                                        <segue destination="3ez-fa-Egv" kind="show" identifier="Tap In Order Backwards" id="bWf-cg-5Hp"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -167,7 +167,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="V47-eX-aHh" kind="show" id="2D2-4D-zMh"/>
+                                                        <segue destination="V47-eX-aHh" kind="show" identifier="Letter Cancellation" id="2D2-4D-zMh"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -184,7 +184,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="76o-Z3-r7u" kind="show" id="FSy-R5-zu5"/>
+                                                        <segue destination="76o-Z3-r7u" kind="show" identifier="Circles" id="FSy-R5-zu5"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -201,7 +201,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="rGF-LE-KyD" kind="show" id="V8q-qM-EbC"/>
+                                                        <segue destination="rGF-LE-KyD" kind="show" identifier="Trails A" id="V8q-qM-EbC"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -218,7 +218,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="av6-Ju-a29" kind="show" id="Tsq-3l-q08"/>
+                                                        <segue destination="rGF-LE-KyD" kind="show" identifier="Trails B" id="MHg-ok-Ccm"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -393,10 +393,10 @@
             </objects>
             <point key="canvasLocation" x="720" y="-608"/>
         </scene>
-        <!--Trails A-->
+        <!--Trails-->
         <scene sceneID="8cD-Kf-I6U">
             <objects>
-                <viewController title="Trails A" id="rGF-LE-KyD" customClass="TrailsAViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Trails" id="rGF-LE-KyD" customClass="TrailsAViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hdW-ur-mNy"/>
                         <viewControllerLayoutGuide type="bottom" id="TmG-Ix-urm"/>
@@ -1594,14 +1594,15 @@
         <image name="photo-seth" width="980" height="1322"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="MHg-ok-Ccm"/>
         <segue reference="31h-M1-QQK"/>
         <segue reference="Ud1-Nd-Hgw"/>
         <segue reference="fs4-pa-L87"/>
         <segue reference="fBL-JN-2XU"/>
-        <segue reference="xQt-Dq-QtI"/>
         <segue reference="DXj-KH-ajy"/>
         <segue reference="2d6-rS-Zy4"/>
         <segue reference="HW9-8Y-uG3"/>
         <segue reference="ShD-fn-Xek"/>
+        <segue reference="xQt-Dq-QtI"/>
     </inferredMetricsTieBreakers>
 </document>
