@@ -13,7 +13,7 @@
 		1BA4A9D21B5556D800E3FBD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */; };
 		1BA4A9D51B5556D800E3FBD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */; };
 		1BA4A9E11B5556D800E3FBD4 /* Integrated_test_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */; };
-		1BCEE8B21B555A53002AEE37 /* NamingPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */; };
+		1BCEE8B21B555A53002AEE37 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */; };
 		1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */; };
 		1BCEE8B61B555C9B002AEE37 /* LetterCancellationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */; };
 		1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */; };
@@ -55,7 +55,7 @@
 		1BA4A9DA1B5556D800E3FBD4 /* Integrated test v1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Integrated test v1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA4A9DF1B5556D800E3FBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrated_test_v1Tests.swift; sourceTree = "<group>"; };
-		1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingPicturesViewController.swift; sourceTree = "<group>"; };
+		1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapInOrderViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCancellationViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				E1EF6D361B56E83C001037C6 /* Trails */,
 				E1EF6D281B559DA3001037C6 /* Circles */,
 				E1EF6D2B1B56A05F001037C6 /* Letters */,
-				F2DA21D81B7646E40048C068 /* NamingPictures */,
+				F2DA21D81B7646E40048C068 /* Pictures */,
 				1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */,
 				1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */,
 				1BA4A9C81B5556D800E3FBD4 /* Supporting Files */,
@@ -208,12 +208,12 @@
 			name = TapInOrder;
 			sourceTree = "<group>";
 		};
-		F2DA21D81B7646E40048C068 /* NamingPictures */ = {
+		F2DA21D81B7646E40048C068 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				1BCEE8B11B555A53002AEE37 /* NamingPicturesViewController.swift */,
+				1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */,
 			);
-			name = NamingPictures;
+			name = Pictures;
 			sourceTree = "<group>";
 		};
 		F2DA21E71B7BFCE20048C068 /* Results */ = {
@@ -331,7 +331,7 @@
 				1BCEE8BA1B555E92002AEE37 /* TrailsViewController.swift in Sources */,
 				E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */,
 				E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */,
-				1BCEE8B21B555A53002AEE37 /* NamingPicturesViewController.swift in Sources */,
+				1BCEE8B21B555A53002AEE37 /* PicturesViewController.swift in Sources */,
 				F2DA21D61B7646420048C068 /* Results.swift in Sources */,
 				F2DA21D01B74249D0048C068 /* PatientUIViewController.swift in Sources */,
 				E1EF6D381B5764D9001037C6 /* Bubbles.swift in Sources */,

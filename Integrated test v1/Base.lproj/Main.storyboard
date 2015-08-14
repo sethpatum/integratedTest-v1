@@ -121,6 +121,24 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wIc-sg-1fC">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wIc-sg-1fC" id="rNn-DM-aEH">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G70-gH-ndg">
+                                                    <rect key="frame" x="53" y="7" width="136" height="30"/>
+                                                    <state key="normal" title="Famous Faces Task">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="34v-JF-kvs" kind="show" identifier="Famous Faces" id="DsW-ql-KM7"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pzo-se-lt4">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pzo-se-lt4" id="krF-qi-eTd">
@@ -341,13 +359,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-TF-myy">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-TF-myy">
                                 <rect key="frame" x="0.0" y="38" width="1024" height="44"/>
                                 <items>
                                     <navigationItem title="Results" id="cMS-pS-OaP"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-Of-b1y">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" pagingEnabled="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-Of-b1y">
                                 <rect key="frame" x="16" y="82" width="992" height="686"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -747,10 +765,10 @@
             </objects>
             <point key="canvasLocation" x="4184" y="292"/>
         </scene>
-        <!--Naming Pictures-->
+        <!--Pictures-->
         <scene sceneID="kDn-YC-7pR">
             <objects>
-                <viewController title="Naming Pictures" id="34v-JF-kvs" customClass="NamingPicturesViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pictures" id="34v-JF-kvs" customClass="PicturesViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pp4-qe-ZeA"/>
                         <viewControllerLayoutGuide type="bottom" id="j5L-Wi-dfa"/>
@@ -766,7 +784,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="coY-Nj-Caq" kind="show" id="fBL-JN-2XU"/>
+                                    <action selector="HelpButton:" destination="34v-JF-kvs" eventType="touchUpInside" id="yc0-Tt-Zdj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGr-qg-ue7">
@@ -1028,7 +1046,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letter Cancellation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yof-Vo-1qV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Letter Cancellation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yof-Vo-1qV">
                                 <rect key="frame" x="212" y="80" width="601" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1121,6 +1139,21 @@
                                                     <connections>
                                                         <segue destination="coY-Nj-Caq" kind="show" id="5uv-Oe-pqP"/>
                                                     </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OWJ-H5-Poj">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OWJ-H5-Poj" id="MOq-lF-Dfw">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEY-6O-i9D">
+                                                    <rect key="frame" x="295" y="5" width="137" height="30"/>
+                                                    <state key="normal" title="Famous Faces Help">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1343,7 +1376,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Circles Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFU-BW-JhS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Circles Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFU-BW-JhS">
                                 <rect key="frame" x="230" y="80" width="565" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1453,7 +1486,7 @@
         <!--Naming Pictures Help-->
         <scene sceneID="gCF-OP-gQ7">
             <objects>
-                <viewController title="Naming Pictures Help" id="coY-Nj-Caq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Naming Pictures Help" title="Naming Pictures Help" id="coY-Nj-Caq" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Fx-TQ-XC6"/>
                         <viewControllerLayoutGuide type="bottom" id="MgT-65-jKu"/>
@@ -1471,7 +1504,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naming Pictures Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-Nq-u7W">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Naming Pictures Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-Nq-u7W">
                                 <rect key="frame" x="204" y="80" width="616" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1586,6 +1619,52 @@
             </objects>
             <point key="canvasLocation" x="-1593" y="306"/>
         </scene>
+        <!--Famous People Help-->
+        <scene sceneID="ubB-og-Yva">
+            <objects>
+                <viewController storyboardIdentifier="Famous Faces Help" title="Famous People Help" id="XQU-MM-VSg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dff-5X-0I9"/>
+                        <viewControllerLayoutGuide type="bottom" id="niw-rJ-8du"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R6K-mZ-ux7">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-wQ-vIS">
+                                <rect key="frame" x="49" y="103" width="927" height="301"/>
+                                <string key="text">The naming pictures task consists of 15 different images in order of difficulty to recognize. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Famous Faces Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFD-Vz-guJ">
+                                <rect key="frame" x="204" y="80" width="616" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oFD-Vz-guJ" firstAttribute="leading" secondItem="R6K-mZ-ux7" secondAttribute="leadingMargin" constant="188" id="9GO-qK-SDP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oFD-Vz-guJ" secondAttribute="trailing" constant="188" id="QPZ-EO-Woi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pbe-wQ-vIS" secondAttribute="trailing" constant="32" id="R02-8Y-22q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oFD-Vz-guJ" secondAttribute="trailing" constant="188" id="eP8-l7-RZD"/>
+                            <constraint firstItem="oFD-Vz-guJ" firstAttribute="leading" secondItem="R6K-mZ-ux7" secondAttribute="leadingMargin" constant="188" id="mQB-es-X6H"/>
+                            <constraint firstItem="pbe-wQ-vIS" firstAttribute="leading" secondItem="R6K-mZ-ux7" secondAttribute="leadingMargin" constant="33" id="mkC-9E-JvL"/>
+                            <constraint firstItem="oFD-Vz-guJ" firstAttribute="top" secondItem="Dff-5X-0I9" secondAttribute="bottom" constant="60" id="z9B-uH-vmi"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fH2-fq-ZJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5301" y="2051"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cnbs" width="612" height="89"/>
@@ -1597,13 +1676,13 @@
     <inferredMetricsTieBreakers>
         <segue reference="MHg-ok-Ccm"/>
         <segue reference="Db8-gX-wha"/>
-        <segue reference="31h-M1-QQK"/>
-        <segue reference="Ud1-Nd-Hgw"/>
-        <segue reference="fs4-pa-L87"/>
-        <segue reference="fBL-JN-2XU"/>
-        <segue reference="DXj-KH-ajy"/>
+        <segue reference="mFR-im-uC4"/>
         <segue reference="Okh-or-2Qq"/>
         <segue reference="ShD-fn-Xek"/>
+        <segue reference="QiM-jf-6BP"/>
+        <segue reference="Ud1-Nd-Hgw"/>
+        <segue reference="fs4-pa-L87"/>
+        <segue reference="DXj-KH-ajy"/>
         <segue reference="xQt-Dq-QtI"/>
     </inferredMetricsTieBreakers>
 </document>

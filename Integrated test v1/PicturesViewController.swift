@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class NamingPicturesViewController: ViewController {
+class PicturesViewController: ViewController {
     
     var imageName = "House"
     var count = 0
@@ -18,6 +18,18 @@ class NamingPicturesViewController: ViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    
+    @IBAction func HelpButton(sender: AnyObject) {
+        if(selectedTest == "Naming Pictures") {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Naming Pictures Help") as! UIViewController
+            navigationController?.pushViewController(vc, animated:true)
+        } else {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Famous Faces Help") as! UIViewController
+            navigationController?.pushViewController(vc, animated:true)
+        }
+    }
+    
+    
     @IBAction func reset(sender: AnyObject) {
         if(count > 0) {
             done()
@@ -26,7 +38,7 @@ class NamingPicturesViewController: ViewController {
         order = [Bool]()
         count = 0
         corr = 0
-        imageName = "House"
+        imageName = getImageName()
         resultLabel.text = ""
         
         var imageView4 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
@@ -109,7 +121,7 @@ class NamingPicturesViewController: ViewController {
     
     func done() {
         let result = Results()
-        result.name = "Naming Pictures"
+        result.name = self.title
         result.startTime = startTime2
         result.endTime = NSDate()
         result.longDescription.addObject("\(corr) correct out of \(count)")
@@ -118,6 +130,17 @@ class NamingPicturesViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(selectedTest)
+        if(selectedTest == "Naming Pictures") {
+            self.title = "Naming Pictures"
+        } else {
+            self.title = "Famous People"
+        }
+        
+        count = 0
+        corr = 0
+        imageName = getImageName()
         
         var imageView = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
@@ -138,50 +161,56 @@ class NamingPicturesViewController: ViewController {
     
     func getImageName()->String{
         
-        if(count == 0){
-            return "House"//"Volcano"
-        }
-        if(count == 1){
-            return "Comb"//"Cactus"
-        }
-        if(count == 2){
-            return "Toothbrush"//"Park Bench"
-        }
-        if(count == 3){
-            return "Park Bench"//"Stethoscope"
-        }
-        if(count == 4){
-            return "Volcano"//"Mushroom"
-        }
-        if(count == 5){
-            return "Mushroom"//"House" mushroom NOT in original order
-        }
-        if(count == 6){
-            return "Canoe"//"Comb"
-        }
-        if(count == 7){
-            return "Cactus"//"Unicorn"
-        }
-        if(count == 8){
-            return "Rhino"//"Camera Tripod" rhino NOT in original order
-        }
-        if(count == 9){
-            return "Hammock"//"Rhino"
-        }
-        if(count == 10){
-            return "Stethoscope"//"Sphynx"
-        }
-        if(count == 11){
-            return "Unicorn"//"Canoe"
-        }
-        if(count == 12){
-            return "Camera Tripod"//"Toothbrush"
-        }
-        if(count == 13){
-            return "Sphynx"
-        }
-        else{
-            return "Palette"
+        
+        if(selectedTest == "Naming Pictures") {
+            if(count == 0){
+                return "House"//"Volcano"
+            }
+            if(count == 1){
+                return "Comb"//"Cactus"
+            }
+            if(count == 2){
+                return "Toothbrush"//"Park Bench"
+            }
+            if(count == 3){
+                return "Park Bench"//"Stethoscope"
+            }
+            if(count == 4){
+                return "Volcano"//"Mushroom"
+            }
+            if(count == 5){
+                return "Mushroom"//"House" mushroom NOT in original order
+            }
+            if(count == 6){
+                return "Canoe"//"Comb"
+            }
+            if(count == 7){
+                return "Cactus"//"Unicorn"
+            }
+            if(count == 8){
+                return "Rhino"//"Camera Tripod" rhino NOT in original order
+            }
+            if(count == 9){
+                return "Hammock"//"Rhino"
+            }
+            if(count == 10){
+                return "Stethoscope"//"Sphynx"
+            }
+            if(count == 11){
+                return "Unicorn"//"Canoe"
+            }
+            if(count == 12){
+                return "Camera Tripod"//"Toothbrush"
+            }
+            if(count == 13){
+                return "Sphynx"
+            }
+            else{
+                return "Palette"
+            }
+        } else {
+            let c = count + 1
+            return "FP" + String(c)
         }
         
     }
