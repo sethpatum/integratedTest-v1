@@ -98,7 +98,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <segue destination="8LV-H7-0SE" kind="showDetail" id="31h-M1-QQK"/>
+                                <segue destination="8LV-H7-0SE" kind="showDetail" identifier="DONE" id="31h-M1-QQK"/>
                             </connections>
                         </button>
                         <sections>
@@ -1579,6 +1579,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <segue destination="Oao-cI-byD" kind="show" identifier="toDisclaimer" id="gxL-oI-zvu"/>
+                        <segue destination="cLF-Kx-Eej" kind="show" identifier="toTestSelection" id="Db8-gX-wha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYv-oL-632" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1595,12 +1596,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MHg-ok-Ccm"/>
+        <segue reference="Db8-gX-wha"/>
         <segue reference="31h-M1-QQK"/>
         <segue reference="Ud1-Nd-Hgw"/>
         <segue reference="fs4-pa-L87"/>
         <segue reference="fBL-JN-2XU"/>
         <segue reference="DXj-KH-ajy"/>
-        <segue reference="HW9-8Y-uG3"/>
+        <segue reference="Okh-or-2Qq"/>
         <segue reference="ShD-fn-Xek"/>
         <segue reference="xQt-Dq-QtI"/>
     </inferredMetricsTieBreakers>
