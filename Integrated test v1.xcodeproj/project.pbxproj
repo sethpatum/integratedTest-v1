@@ -17,7 +17,7 @@
 		1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */; };
 		1BCEE8B61B555C9B002AEE37 /* LetterCancellationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */; };
 		1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */; };
-		1BCEE8BA1B555E92002AEE37 /* TrailsAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */; };
+		1BCEE8BA1B555E92002AEE37 /* TrailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B91B555E92002AEE37 /* TrailsViewController.swift */; };
 		1BCEE8BC1B555EA5002AEE37 /* TrailsBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */; };
 		E1EF6D271B559D8E001037C6 /* DrawingViewCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */; };
 		E1EF6D2A1B559DE0001037C6 /* Circles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D291B559DE0001037C6 /* Circles.swift */; };
@@ -59,7 +59,7 @@
 		1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapInOrderViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCancellationViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
-		1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsAViewController.swift; sourceTree = "<group>"; };
+		1BCEE8B91B555E92002AEE37 /* TrailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsViewController.swift; sourceTree = "<group>"; };
 		1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsBViewController.swift; sourceTree = "<group>"; };
 		E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewCircles.swift; sourceTree = "<group>"; };
 		E1EF6D291B559DE0001037C6 /* Circles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circles.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		E1EF6D361B56E83C001037C6 /* Trails */ = {
 			isa = PBXGroup;
 			children = (
-				1BCEE8B91B555E92002AEE37 /* TrailsAViewController.swift */,
+				1BCEE8B91B555E92002AEE37 /* TrailsViewController.swift */,
 				E1EF6D391B57651E001037C6 /* DrawingViewTrails.swift */,
 				E1EF6D371B5764D9001037C6 /* Bubbles.swift */,
 			);
@@ -328,7 +328,7 @@
 				1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */,
 				E1EF6D3A1B57651E001037C6 /* DrawingViewTrails.swift in Sources */,
 				F2DA21ED1B7D61E80048C068 /* TestSelectionTableViewController.swift in Sources */,
-				1BCEE8BA1B555E92002AEE37 /* TrailsAViewController.swift in Sources */,
+				1BCEE8BA1B555E92002AEE37 /* TrailsViewController.swift in Sources */,
 				E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */,
 				E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */,
 				1BCEE8B21B555A53002AEE37 /* NamingPicturesViewController.swift in Sources */,
