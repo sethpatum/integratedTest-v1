@@ -228,15 +228,4 @@ class TrailsAViewController: ViewController {
         return image
     }
     
-    func getColor(i: Double) ->CGColor{
-        
-        if i < 5.0 {
-            let i2 = CGFloat(0.3 - i / 15.0)
-            return UIColor(hue: i2, saturation: 1.0, brightness: 1.0, alpha: 1.0).CGColor
-        } else {
-            return UIColor(hue: 0, saturation: 1.0, brightness: 1.0, alpha: 1.0).CGColor
-        }
-        
-    }
-    
 }
