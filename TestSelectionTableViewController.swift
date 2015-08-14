@@ -32,7 +32,6 @@ class TestSelectionTableViewController: UITableViewController {
         if(selectedTest == "DONE") {
             resultsArray.removeAllObjects()
         }
-        print(selectedTest)
     }
 
     // MARK: - Table view data source
