@@ -66,6 +66,18 @@ class TrailsAViewController: ViewController {
         displayImgTrailsA = true        
     }
     
+    
+    @IBAction func HelpButton(sender: AnyObject) {
+         if(selectedTest == "Trails A") {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Trails A Help") as! UIViewController
+            navigationController?.pushViewController(vc, animated:true)
+        } else {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Trails B Help") as! UIViewController
+            navigationController?.pushViewController(vc, animated:true)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -418,7 +418,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Qve-Dv-dg3" kind="show" id="2d6-rS-Zy4"/>
+                                    <action selector="HelpButton:" destination="rGF-LE-KyD" eventType="touchUpInside" id="oMO-dn-8U0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G06-RH-wg0">
@@ -1052,7 +1052,7 @@
         <!--Trails B Help-->
         <scene sceneID="1j1-bW-u3v">
             <objects>
-                <viewController title="Trails B Help" id="AaW-sI-DMo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Trails B Help" title="Trails B Help" id="AaW-sI-DMo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cL6-4p-FxY"/>
                         <viewControllerLayoutGuide type="bottom" id="crb-Rk-euN"/>
@@ -1292,7 +1292,7 @@
         <!--Trails A Help-->
         <scene sceneID="1b6-cM-sbe">
             <objects>
-                <viewController title="Trails A Help" id="Qve-Dv-dg3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Trails A Help" title="Trails A Help" id="Qve-Dv-dg3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L32-Xh-EP6"/>
                         <viewControllerLayoutGuide type="bottom" id="Hgr-fZ-jMW"/>
@@ -1600,7 +1600,6 @@
         <segue reference="fs4-pa-L87"/>
         <segue reference="fBL-JN-2XU"/>
         <segue reference="DXj-KH-ajy"/>
-        <segue reference="2d6-rS-Zy4"/>
         <segue reference="HW9-8Y-uG3"/>
         <segue reference="ShD-fn-Xek"/>
         <segue reference="xQt-Dq-QtI"/>
