@@ -21,6 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omX-H3-pod">
                                 <rect key="frame" x="239" y="472" width="546" height="56"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="omX-H3-pod" secondAttribute="height" multiplier="39:4" id="09k-p0-oME"/>
                                     <constraint firstAttribute="width" secondItem="omX-H3-pod" secondAttribute="height" multiplier="39:4" id="pXx-T2-w9q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -56,6 +57,7 @@
                                 <rect key="frame" x="197" y="310" width="630" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2GX-KW-ODm" secondAttribute="height" multiplier="630:73" id="bNJ-lS-MZx"/>
+                                    <constraint firstAttribute="width" secondItem="2GX-KW-ODm" secondAttribute="height" multiplier="630:73" id="otl-ul-pBu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
