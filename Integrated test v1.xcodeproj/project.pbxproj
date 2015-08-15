@@ -28,6 +28,7 @@
 		E1EF6D3A1B57651E001037C6 /* DrawingViewTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D391B57651E001037C6 /* DrawingViewTrails.swift */; };
 		E1EF6D3D1B5768A0001037C6 /* DrawingViewTrailsB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D3C1B5768A0001037C6 /* DrawingViewTrailsB.swift */; };
 		E1EF6D3F1B5768C9001037C6 /* BubblesB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D3E1B5768C9001037C6 /* BubblesB.swift */; };
+		F280A3EF1B7EB5E20071C100 /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280A3EE1B7EB5E20071C100 /* ScaleView.swift */; };
 		F2DA21D01B74249D0048C068 /* PatientUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */; };
 		F2DA21D61B7646420048C068 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21D51B7646420048C068 /* Results.swift */; };
 		F2DA21E91B7C11210048C068 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA21E81B7C11210048C068 /* ResultsViewController.swift */; };
@@ -70,6 +71,7 @@
 		E1EF6D391B57651E001037C6 /* DrawingViewTrails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewTrails.swift; sourceTree = "<group>"; };
 		E1EF6D3C1B5768A0001037C6 /* DrawingViewTrailsB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewTrailsB.swift; sourceTree = "<group>"; };
 		E1EF6D3E1B5768C9001037C6 /* BubblesB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubblesB.swift; sourceTree = "<group>"; };
+		F280A3EE1B7EB5E20071C100 /* ScaleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
 		F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientUIViewController.swift; sourceTree = "<group>"; };
 		F2DA21D51B7646420048C068 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		F2DA21E81B7C11210048C068 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				F2DA21D51B7646420048C068 /* Results.swift */,
 				F2DA21E81B7C11210048C068 /* ResultsViewController.swift */,
+				F280A3EE1B7EB5E20071C100 /* ScaleView.swift */,
 			);
 			name = Results;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				1BCEE8BC1B555EA5002AEE37 /* TrailsBViewController.swift in Sources */,
 				E1EF6D3D1B5768A0001037C6 /* DrawingViewTrailsB.swift in Sources */,
 				E1EF6D271B559D8E001037C6 /* DrawingViewCircles.swift in Sources */,
+				F280A3EF1B7EB5E20071C100 /* ScaleView.swift in Sources */,
 				F2DA21E91B7C11210048C068 /* ResultsViewController.swift in Sources */,
 				E1EF6D351B56E36A001037C6 /* TapInOrderBackwardsViewController.swift in Sources */,
 				1BA4A9CB1B5556D800E3FBD4 /* AppDelegate.swift in Sources */,

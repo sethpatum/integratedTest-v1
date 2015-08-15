@@ -15,8 +15,14 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        let scaleViewFrame = CGRect(x: 0.0, y: 85.0, width: view.bounds.width, height: 50)
+        var scaleView = ScaleView(frame: scaleViewFrame)
+        view.addSubview(scaleView)
+        scaleView.reset()
+        
     }
 
     override func didReceiveMemoryWarning() {
