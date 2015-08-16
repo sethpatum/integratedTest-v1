@@ -115,7 +115,7 @@ class LetterCancellationViewController: ViewController {
         result.startTime = startTime2
         result.endTime = NSDate()
         result.screenshot = image
-        resultsArray.addObject(result)
+        resultsArray.add(result)
         
     }
     

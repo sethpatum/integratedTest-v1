@@ -8,7 +8,7 @@
 
 import UIKit
 
-var resultsArray : NSMutableArray = NSMutableArray()
+var resultsArray : AllResults = AllResults()
 
 class Results: NSObject {
     var name:String?

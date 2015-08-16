@@ -32,15 +32,15 @@ class ResultsViewController: UIViewController {
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return resultsArray.count
+        return resultsArray.numResults()
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        let res:Results = resultsArray.objectAtIndex(section) as! Results
+        let res:Results = resultsArray.get(section)
         if(res.collapsed == false)
         {
-            let res:Results = resultsArray.objectAtIndex(section) as! Results
+            let res:Results = resultsArray.get(section)
             return res.numRows()
         }
         return 0;
@@ -60,7 +60,7 @@ class ResultsViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-         let res:Results = resultsArray.objectAtIndex(indexPath.section) as! Results
+         let res:Results = resultsArray.get(indexPath.section)
         if(res.collapsed == false){
             return CGFloat(res.heightForRow(indexPath.row))
         }
@@ -69,7 +69,7 @@ class ResultsViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let res:Results = resultsArray.objectAtIndex(section) as! Results
+        let res:Results = resultsArray.get(section)
         
         let headerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 40))
         headerView.backgroundColor = UIColor.grayColor()
@@ -90,7 +90,7 @@ class ResultsViewController: UIViewController {
         println(recognizer.view?.tag)
         
         var indexPath : NSIndexPath = NSIndexPath(forRow: 0, inSection:(recognizer.view?.tag as Int!)!)
-        let res:Results = resultsArray.objectAtIndex(indexPath.section) as! Results
+        let res:Results = resultsArray.get(indexPath.section)
         if (indexPath.row == 0) {
             
             res.collapsed = !res.collapsed
@@ -104,7 +104,7 @@ class ResultsViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let res:Results = resultsArray.objectAtIndex(indexPath.section) as! Results
+        let res:Results = resultsArray.get(indexPath.section)
         
         let CellIdentifier = "Cell"
         var cell :UITableViewCell

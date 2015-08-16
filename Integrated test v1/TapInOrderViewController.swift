@@ -132,7 +132,7 @@ class TapInOrderViewController: ViewController {
                 let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
                 self.dateLabel.text = timestamp
             }
-            resultsArray.addObject(result)
+            resultsArray.add(result)
         }
     }
     

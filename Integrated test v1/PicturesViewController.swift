@@ -125,7 +125,7 @@ class PicturesViewController: ViewController {
         result.startTime = startTime2
         result.endTime = NSDate()
         result.longDescription.addObject("\(corr) correct out of \(count)")
-        resultsArray.addObject(result)
+        resultsArray.add(result)
     }
     
     override func viewDidLoad() {

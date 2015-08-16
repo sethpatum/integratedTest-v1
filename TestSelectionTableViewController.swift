@@ -30,7 +30,7 @@ class TestSelectionTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         selectedTest = segue.identifier
         if(selectedTest == "DONE") {
-            resultsArray.removeAllObjects()
+            resultsArray.doneWithPatient()
         }
     }
 
