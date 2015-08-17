@@ -960,6 +960,12 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" id="HW9-8Y-uG3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@ 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlc-1y-QpP">
+                                <rect key="frame" x="484" y="719" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1720,13 +1726,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Db8-gX-wha"/>
-        <segue reference="31h-M1-QQK"/>
-        <segue reference="QiM-jf-6BP"/>
-        <segue reference="MHg-ok-Ccm"/>
-        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="mFR-im-uC4"/>
         <segue reference="eko-29-BFX"/>
         <segue reference="ShD-fn-Xek"/>
+        <segue reference="k5O-0U-7Tk"/>
         <segue reference="HE1-1j-NTJ"/>
         <segue reference="neN-op-hGA"/>
+        <segue reference="QiM-jf-6BP"/>
+        <segue reference="MHg-ok-Ccm"/>
     </inferredMetricsTieBreakers>
 </document>
