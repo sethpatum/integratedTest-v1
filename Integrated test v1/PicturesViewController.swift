@@ -18,6 +18,14 @@ class PicturesViewController: ViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    @IBOutlet weak var correctButton: UIButton!
+    
+    @IBOutlet weak var incorrectButton: UIButton!
+    
+    @IBOutlet weak var backButton: UIButton!
+   
+    @IBOutlet weak var resetButton: UIButton!
+    
     
     @IBAction func HelpButton(sender: AnyObject) {
         if(selectedTest == "Naming Pictures") {
@@ -31,6 +39,9 @@ class PicturesViewController: ViewController {
     
     
     @IBAction func reset(sender: AnyObject) {
+        resetButton.enabled = false
+        backButton.enabled = false
+        self.navigationItem.setHidesBackButton(false, animated:true)
         if(count > 0) {
             done()
         }
@@ -52,6 +63,9 @@ class PicturesViewController: ViewController {
     @IBAction func correct(sender: AnyObject) {
         if(count == 0) {
             startTime2 = NSDate()
+            self.navigationItem.setHidesBackButton(true, animated:true)
+            backButton.enabled = true
+            resetButton.enabled = true
         }
         
         count += 1
@@ -77,6 +91,9 @@ class PicturesViewController: ViewController {
     @IBAction func incorrect(sender: AnyObject) {
         if(count == 0) {
             startTime2 = NSDate()
+            self.navigationItem.setHidesBackButton(true, animated:true)
+            backButton.enabled = true
+            resetButton.enabled = true
         }
         
         count += 1
@@ -101,6 +118,11 @@ class PicturesViewController: ViewController {
     @IBAction func back(sender: AnyObject) {
         
         count -= 1
+        if count == 0 {
+            resetButton.enabled = false
+            backButton.enabled = false
+            self.navigationItem.setHidesBackButton(false, animated:true)
+        }
         if order.count > 0 {
             if order[order.count-1] == true {
                 corr -= 1
@@ -126,6 +148,9 @@ class PicturesViewController: ViewController {
         result.endTime = NSDate()
         result.longDescription.addObject("\(corr) correct out of \(count)")
         resultsArray.add(result)
+        
+        backButton.enabled = false
+        self.navigationItem.setHidesBackButton(false, animated:true)
     }
     
     override func viewDidLoad() {
@@ -148,6 +173,8 @@ class PicturesViewController: ViewController {
         imageView.image = image
         self.view.addSubview(imageView)
         
+        backButton.enabled = false
+        resetButton.enabled = false
     }
     
     override func didReceiveMemoryWarning() {

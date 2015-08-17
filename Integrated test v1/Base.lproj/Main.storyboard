@@ -390,7 +390,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC6-KN-UvJ">
-                                <rect key="frame" x="299" y="75" width="74" height="49"/>
+                                <rect key="frame" x="297" y="75" width="74" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -581,7 +581,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dF-gl-s6U">
-                                <rect key="frame" x="881" y="92" width="74" height="35"/>
+                                <rect key="frame" x="881" y="93" width="74" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Help">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -591,7 +591,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgm-Kp-zhs">
-                                <rect key="frame" x="76" y="92" width="91" height="35"/>
+                                <rect key="frame" x="480" y="93" width="91" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -606,14 +606,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggc-c4-fOQ">
-                                <rect key="frame" x="215" y="92" width="342" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjG-ot-Iq5">
-                                <rect key="frame" x="203" y="93" width="92" height="32.5"/>
+                                <rect key="frame" x="84" y="94" width="92" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -622,14 +616,26 @@
                                     <action selector="StartTest:" destination="aMc-eE-pqC" eventType="touchUpInside" id="V8c-Bk-Qib"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdU-cO-zDB">
+                                <rect key="frame" x="257" y="87" width="50" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="End">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="EndTest:" destination="aMc-eE-pqC" eventType="touchUpInside" id="EPD-qs-Dox"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="dateLabel" destination="Ggc-c4-fOQ" id="7i1-Aw-eSl"/>
-                        <outlet property="resultLabel" destination="b2p-zT-jU6" id="LO6-mN-aIs"/>
+                        <outlet property="endButton" destination="xdU-cO-zDB" id="PnQ-2T-nfh"/>
+                        <outlet property="helpButton" destination="8dF-gl-s6U" id="shv-A0-bYq"/>
+                        <outlet property="resetButton" destination="hgm-Kp-zhs" id="9b0-8L-F0e"/>
+                        <outlet property="startButton" destination="QjG-ot-Iq5" id="ZfN-QU-ZFE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Klf-71-dqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -659,7 +665,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-c2-AAR">
-                                <rect key="frame" x="311" y="91" width="96" height="35"/>
+                                <rect key="frame" x="543" y="91" width="96" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -668,12 +674,6 @@
                                     <action selector="Reset:" destination="3ez-fa-Egv" eventType="touchUpInside" id="xiO-YJ-eRw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nha-Ps-YcZ">
-                                <rect key="frame" x="506" y="91" width="366" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="js0-Cy-TKm">
                                 <rect key="frame" x="80" y="91" width="93" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -684,12 +684,16 @@
                                     <action selector="StartTest:" destination="3ez-fa-Egv" eventType="touchUpInside" id="Yll-eg-p1s"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQk-7e-xgy">
-                                <rect key="frame" x="169" y="91" width="299" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Es-zV-oyd">
+                                <rect key="frame" x="318" y="93" width="68" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="End">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endButton:" destination="3ez-fa-Egv" eventType="touchUpInside" id="s2E-fe-G46"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -697,8 +701,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="StartButton" destination="js0-Cy-TKm" id="bZ6-Cb-XF9"/>
-                        <outlet property="dateLabel" destination="kQk-7e-xgy" id="c1Z-rs-u0N"/>
-                        <outlet property="resultLabel" destination="nha-Ps-YcZ" id="pQm-Ny-vfP"/>
+                        <outlet property="endButton" destination="5Es-zV-oyd" id="Nij-6d-hKb"/>
+                        <outlet property="helpButton" destination="isx-Fl-uac" id="oAT-Wt-Isy"/>
+                        <outlet property="resetButton" destination="Zvw-c2-AAR" id="Uyj-Hw-gRu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55P-Mn-pQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -737,16 +742,6 @@
                                     <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="kD0-qa-s1T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-nR-hll">
-                                <rect key="frame" x="63" y="90" width="116" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Correct">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="correct:" destination="34v-JF-kvs" eventType="touchUpInside" id="5fj-Gf-tCZ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhR-Sx-REv">
                                 <rect key="frame" x="243" y="90" width="129" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -773,12 +768,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-nR-hll">
+                                <rect key="frame" x="63" y="90" width="116" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Correct">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="correct:" destination="34v-JF-kvs" eventType="touchUpInside" id="5fj-Gf-tCZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="backButton" destination="c5W-Si-CB6" id="8ae-wY-0bk"/>
+                        <outlet property="correctButton" destination="2Zc-nR-hll" id="r10-Vm-eZp"/>
+                        <outlet property="incorrectButton" destination="OhR-Sx-REv" id="cBf-se-QwQ"/>
+                        <outlet property="resetButton" destination="bGr-qg-ue7" id="sey-OI-GNX"/>
                         <outlet property="resultLabel" destination="Q2a-Sc-BPL" id="Db4-TY-cS9"/>
                     </connections>
                 </viewController>
@@ -1728,11 +1737,11 @@
         <segue reference="Db8-gX-wha"/>
         <segue reference="mFR-im-uC4"/>
         <segue reference="eko-29-BFX"/>
-        <segue reference="ShD-fn-Xek"/>
         <segue reference="k5O-0U-7Tk"/>
-        <segue reference="HE1-1j-NTJ"/>
         <segue reference="neN-op-hGA"/>
         <segue reference="QiM-jf-6BP"/>
         <segue reference="MHg-ok-Ccm"/>
+        <segue reference="Ud1-Nd-Hgw"/>
+        <segue reference="deg-nT-nb7"/>
     </inferredMetricsTieBreakers>
 </document>

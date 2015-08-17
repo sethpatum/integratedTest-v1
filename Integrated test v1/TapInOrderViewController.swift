@@ -23,9 +23,14 @@ class TapInOrderViewController: ViewController {
     
     var startTime2 = NSDate()
 
+    @IBOutlet weak var startButton: UIButton!
     
-    @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var endButton: UIButton!
+    
+    @IBOutlet weak var resetButton: UIButton!
+    
+    @IBOutlet weak var helpButton: UIButton!
+    
     
     //start from 1st button; reset all info
     @IBAction func Reset(sender: AnyObject) {
@@ -39,10 +44,6 @@ class TapInOrderViewController: ViewController {
         drawsequence()
         startTime2 = NSDate()
         currpressed = 0
-        
-        resultLabel.text = ""
-        dateLabel.text = ""
-        
     }
     
     //allow buttons to be pressed
@@ -106,11 +107,19 @@ class TapInOrderViewController: ViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        endButton.enabled = false
+        resetButton.enabled = false
         
     }
     
     
     @IBAction func StartTest(sender: AnyObject) {
+        
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        helpButton.enabled = false
+        startButton.enabled = false
+        endButton.enabled = true
+        resetButton.enabled = true
         
         randomizeOrder()
         
@@ -118,8 +127,29 @@ class TapInOrderViewController: ViewController {
         startTime2 = NSDate()
     }
     
+    @IBAction func EndTest(sender: AnyObject) {
+        self.navigationItem.setHidesBackButton(false, animated:true)
+        helpButton.enabled = true
+        startButton.enabled = true
+        endButton.enabled = false
+        resetButton.enabled = false
+        
+        numplaces = 0
+        numRepeats = 0
+        donetest()
+    }
+    
+    
+    
     func donetest() {
+        
         delay(0.5) {
+            self.navigationItem.setHidesBackButton(false, animated:true)
+            self.helpButton.enabled = true
+            self.startButton.enabled = true
+            self.endButton.enabled = false
+            self.resetButton.enabled = false
+            
             let result = Results()
             result.name = "Tap in Order"
             result.startTime = self.startTime2
@@ -130,7 +160,6 @@ class TapInOrderViewController: ViewController {
                 result.longDescription.addObject("Spatial span: \(self.numplaces)")
                 
                 let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-                self.dateLabel.text = timestamp
             }
             resultsArray.add(result)
         }

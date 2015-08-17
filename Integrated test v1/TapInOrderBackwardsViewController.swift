@@ -20,11 +20,12 @@ class TapInOrderBackwardsViewController: UIViewController {
     var currpressed = 0 //order of button that is about to be pressed
     var numRepeats = 0 //how many times user messed up on the same numplaces, calling repeat()
     
-    @IBOutlet weak var resultLabel: UILabel!
     
     @IBOutlet weak var StartButton: UIButton!
+    @IBOutlet weak var endButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var helpButton: UIButton!
     
-    @IBOutlet weak var dateLabel: UILabel!
     
     //start from 1st button; reset all info
     @IBAction func Reset(sender: AnyObject) {
@@ -37,9 +38,6 @@ class TapInOrderBackwardsViewController: UIViewController {
         randomizeOrder()
         drawsequence()
         currpressed = 0
-        
-        resultLabel.text = ""
-        dateLabel.text = ""
         
     }
     
@@ -104,13 +102,37 @@ class TapInOrderBackwardsViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        endButton.enabled = false
+        resetButton.enabled = false
        
     }
     
     @IBAction func StartTest(sender: AnyObject) {
+        
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        helpButton.enabled = false
+        StartButton.enabled = false
+        endButton.enabled = true
+        resetButton.enabled = true
+        
         randomizeOrder()
         
         drawsequence()
+    }
+    
+    
+    @IBAction func endButton(sender: AnyObject) {
+        
+        self.navigationItem.setHidesBackButton(false, animated:true)
+        helpButton.enabled = true
+        StartButton.enabled = true
+        endButton.enabled = false
+        resetButton.enabled = false
+        
+        numplaces = 0
+        numRepeats = 0
+        //donetest()
+
     }
     
     //light up the right # of buttons (numplaces+1) for current sequence; buttons enabled AFTER all light up
@@ -173,10 +195,8 @@ class TapInOrderBackwardsViewController: UIViewController {
                 delay(0.5) {
                     for (index, i) in enumerate(self.order) {
                         self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
-                        self.resultLabel.text = "Backwards spatial span: \(self.numplaces)"
                         
                         let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-                        self.dateLabel.text = timestamp
                     }
                 }
             }
@@ -197,11 +217,16 @@ class TapInOrderBackwardsViewController: UIViewController {
                 */
                 //account for delay when changing black back to red for most recently pressed button
                 delay(0.5) {
+                    self.navigationItem.setHidesBackButton(false, animated:true)
+                    self.helpButton.enabled = true
+                    self.StartButton.enabled = true
+                    self.endButton.enabled = false
+                    self.resetButton.enabled = false
                     for (index, i) in enumerate(self.order) {
                         self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
-                        self.resultLabel.text = "Backwards spatial span: \(self.numplaces+1)"
+                        
                         let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-                        self.dateLabel.text = timestamp
+                       
                     }
                 }
             }
