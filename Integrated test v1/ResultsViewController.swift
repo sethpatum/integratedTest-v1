@@ -86,9 +86,6 @@ class ResultsViewController: UIViewController {
     }
     
     func sectionHeaderTapped(recognizer: UITapGestureRecognizer) {
-        println("Tapping working")
-        println(recognizer.view?.tag)
-        
         var indexPath : NSIndexPath = NSIndexPath(forRow: 0, inSection:(recognizer.view?.tag as Int!)!)
         let res:Results = resultsArray.get(indexPath.section)
         if (indexPath.row == 0) {
