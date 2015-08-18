@@ -54,6 +54,14 @@ class PatientUIViewController: ViewController, MFMailComposeViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // load the defaults from presistant memory
+        useridOn = NSUserDefaults.standardUserDefaults().boolForKey("useridOn")
+        ageOn = NSUserDefaults.standardUserDefaults().boolForKey("ageOn")
+        emailOn = NSUserDefaults.standardUserDefaults().boolForKey("emailOn")
+        if(NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") != nil) {
+            emailAddress = NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") as! String
+        }
   
         IDlabel.hidden = !useridOn
         IDfield.hidden = !useridOn

@@ -29,26 +29,44 @@ class SetupViewController: UIViewController {
         emailOn = emailOnOff.on
         
         email.enabled = emailOn
+        NSUserDefaults.standardUserDefaults().setBool(emailOn, forKey: "emailOn")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     @IBAction func emailChanged(sender: AnyObject) {
         emailAddress = email.text
+        NSUserDefaults.standardUserDefaults().setObject(emailAddress, forKey:"emailAddress")
+        NSUserDefaults.standardUserDefaults().synchronize()
+
     }
     
     
     @IBAction func UseridOnOff(sender: AnyObject) {
         useridOn = useridOnOff.on
+        NSUserDefaults.standardUserDefaults().setBool(useridOn, forKey: "useridOn")
+        NSUserDefaults.standardUserDefaults().synchronize()
+
     }
     
     
     @IBAction func AgeOnOff(sender: AnyObject) {
         ageOn = AgeOnOff.on
+        NSUserDefaults.standardUserDefaults().setBool(ageOn, forKey: "ageOn")
+        NSUserDefaults.standardUserDefaults().synchronize()
+
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        useridOn = NSUserDefaults.standardUserDefaults().boolForKey("useridOn")
+        ageOn = NSUserDefaults.standardUserDefaults().boolForKey("ageOn")
+        emailOn = NSUserDefaults.standardUserDefaults().boolForKey("emailOn")
+        if(NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") != nil) {
+            emailAddress = NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") as! String
+        }
+       
+        
         email.enabled = emailOn
         emailOnOff.on = emailOn
         useridOnOff.on = useridOn

@@ -217,7 +217,7 @@ class CirclesViewController: ViewController {
         let screenshot = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
+        //UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
     }
     
     func update(timer: NSTimer) {
