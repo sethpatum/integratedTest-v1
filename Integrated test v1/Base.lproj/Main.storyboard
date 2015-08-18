@@ -1713,14 +1713,14 @@
         <image name="photo-seth" width="980" height="1322"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="MHg-ok-Ccm"/>
         <segue reference="Db8-gX-wha"/>
         <segue reference="mFR-im-uC4"/>
         <segue reference="eko-29-BFX"/>
         <segue reference="QiM-jf-6BP"/>
-        <segue reference="MHg-ok-Ccm"/>
+        <segue reference="deg-nT-nb7"/>
         <segue reference="fs4-pa-L87"/>
         <segue reference="Ud1-Nd-Hgw"/>
-        <segue reference="deg-nT-nb7"/>
         <segue reference="DXj-KH-ajy"/>
     </inferredMetricsTieBreakers>
 </document>
