@@ -54,12 +54,10 @@ class CirclesViewController: ViewController {
         timedConnections = [(Int, Int, Int, Int, Double)]()
         circles.resultListTimesCircles = [Double]()
         circles.resultListCircles = [(Int, Int, Int)]()
-        
         println("TIMED CONNEXTIONS ARE \(timedConnections)")
         println("RESULT LIST TIMES CIRCLES ARE \(circles.resultListTimesCircles)")
         
         let drawViewFrame = CGRect(x: 0.0, y: 130.0, width: view.bounds.width, height: view.bounds.height-130.0)
-        
         drawingView = DrawingViewCircles(frame: drawViewFrame)
         
         println("\(view.bounds.width) \(view.bounds.height)")

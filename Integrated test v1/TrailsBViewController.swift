@@ -34,11 +34,8 @@ class TrailsBViewController: ViewController {
         
         var timer = NSTimer()
         startTime2 = NSDate()
-
         
-        let aSelector : Selector = "update"
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         stopTrailsB = false
@@ -67,7 +64,7 @@ class TrailsBViewController: ViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func update() {
+    func update(timer: NSTimer) {
         
         if stopTrailsB == false{
             var currTime = NSDate.timeIntervalSinceReferenceDate()
@@ -84,6 +81,9 @@ class TrailsBViewController: ViewController {
             let strSeconds = seconds > 9 ? String(seconds):"0"+String(seconds)
             
             timerLabel.text = "\(strMinutes) : \(strSeconds)"
+        }
+        else {
+            timer.invalidate()
         }
         
     }

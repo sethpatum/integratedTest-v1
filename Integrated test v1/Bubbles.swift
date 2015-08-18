@@ -191,7 +191,7 @@ class BubblesA {
             
         }
         
-        currentBubble = lastBubble
+//        currentBubble = lastBubble
         
         return false
         
