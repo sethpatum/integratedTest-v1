@@ -9,7 +9,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -97,7 +97,7 @@
         <!--Test Selection-->
         <scene sceneID="7CP-gZ-Hkw">
             <objects>
-                <tableViewController title="Test Selection" id="d7F-55-Zey" customClass="TestSelectionTableViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Test Selection" id="d7F-55-Zey" customClass="TestSelectionTableViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8ak-p9-mBL">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,7 +301,7 @@
         <!--Results-->
         <scene sceneID="mpW-Ug-Cmc">
             <objects>
-                <viewController title="Results" id="hTf-BP-e2o" customClass="ResultsViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Results" id="hTf-BP-e2o" customClass="ResultsViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bgP-rH-uJ2"/>
                         <viewControllerLayoutGuide type="bottom" id="0ap-2i-jGT"/>
@@ -354,7 +354,7 @@
         <!--Trails-->
         <scene sceneID="8cD-Kf-I6U">
             <objects>
-                <viewController title="Trails" id="rGF-LE-KyD" customClass="TrailsAViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Trails" id="rGF-LE-KyD" customClass="TrailsAViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hdW-ur-mNy"/>
                         <viewControllerLayoutGuide type="bottom" id="TmG-Ix-urm"/>
@@ -417,7 +417,7 @@
         <!--Circles-->
         <scene sceneID="yHj-ko-7ng">
             <objects>
-                <viewController title="Circles" id="76o-Z3-r7u" customClass="CirclesViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Circles" id="76o-Z3-r7u" customClass="CirclesViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="axa-jU-bw7"/>
                         <viewControllerLayoutGuide type="bottom" id="fAp-3c-Lde"/>
@@ -480,8 +480,7 @@
         <!--Letter Cancellation-->
         <scene sceneID="ZnD-yQ-p0S">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H1t-gt-USf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Letter Cancellation" id="V47-eX-aHh" customClass="LetterCancellationViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Letter Cancellation" id="V47-eX-aHh" customClass="LetterCancellationViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s3U-Wp-x8R"/>
                         <viewControllerLayoutGuide type="bottom" id="ORD-GX-sJE"/>
@@ -544,13 +543,14 @@
                         <outlet property="startButton" destination="oaT-8N-oAD" id="ksK-uC-SaY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H1t-gt-USf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6434" y="298"/>
         </scene>
         <!--Tap In Order-->
         <scene sceneID="5QU-nd-mYw">
             <objects>
-                <viewController title="Tap In Order" id="aMc-eE-pqC" customClass="TapInOrderViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Tap In Order" id="aMc-eE-pqC" customClass="TapInOrderViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zW2-Cp-KfG"/>
                         <viewControllerLayoutGuide type="bottom" id="0xx-6z-tAF"/>
@@ -624,7 +624,7 @@
         <!--Tap In Order Backwards-->
         <scene sceneID="7eY-Lg-n3b">
             <objects>
-                <viewController title="Tap In Order Backwards" id="3ez-fa-Egv" customClass="TapInOrderBackwardsViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Tap In Order Backwards" id="3ez-fa-Egv" customClass="TapInOrderBackwardsViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n0u-dI-7Dj"/>
                         <viewControllerLayoutGuide type="bottom" id="oOy-mh-Xor"/>
@@ -692,7 +692,7 @@
         <!--Pictures-->
         <scene sceneID="kDn-YC-7pR">
             <objects>
-                <viewController title="Pictures" id="34v-JF-kvs" customClass="PicturesViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pictures" id="34v-JF-kvs" customClass="PicturesViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pp4-qe-ZeA"/>
                         <viewControllerLayoutGuide type="bottom" id="j5L-Wi-dfa"/>
@@ -1262,7 +1262,7 @@
         <!--Setup View Controller-->
         <scene sceneID="mHE-ju-bPZ">
             <objects>
-                <viewController id="WAV-l7-oOn" customClass="SetupViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WAV-l7-oOn" customClass="SetupViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Ir-dL-ABU"/>
                         <viewControllerLayoutGuide type="bottom" id="D5V-DY-taj"/>
@@ -1567,7 +1567,7 @@
         <!--Patient Information-->
         <scene sceneID="pX2-93-CRM">
             <objects>
-                <viewController title="Patient Information" id="8LV-H7-0SE" customClass="PatientUIViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Patient Information" id="8LV-H7-0SE" customClass="PatientUIViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fFZ-k9-eVo"/>
                         <viewControllerLayoutGuide type="bottom" id="Pbc-6E-Yf8"/>
