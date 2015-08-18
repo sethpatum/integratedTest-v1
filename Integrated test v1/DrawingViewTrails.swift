@@ -9,6 +9,7 @@ import Foundation
 
 import UIKit
 
+
 class DrawingViewTrails: UIView {
     private var currPath = UIBezierPath()
     
@@ -140,7 +141,9 @@ class DrawingViewTrails: UIView {
                 countSinceCorrect += 1
                 println("countSinceCorrect = \(countSinceCorrect)")
                 
-                if countSinceCorrect > 0 {
+                if countSinceCorrect > 1 {
+                    
+                    println("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                     
                     currPath.removeAllPoints()
                     
@@ -168,6 +171,8 @@ class DrawingViewTrails: UIView {
             
             if bubbles.inNewBubble(touch.locationInView(self).x, y:touch.locationInView(self).y) == true {
                 
+                println("in a new bubble")
+                
                 if bubbles.inCorrectBubble() == true {
                     
                     mainPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
@@ -186,7 +191,9 @@ class DrawingViewTrails: UIView {
                     countSinceCorrect += 1
                     println("countSinceCorrect = \(countSinceCorrect)")
                     
-                    if countSinceCorrect > 0 {
+                    if countSinceCorrect > 1 {
+                        
+                        println("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                         
                         currPath.removeAllPoints()
                         

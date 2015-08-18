@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 
+
 class BubblesA {
     var bubblelist = [(Int,Int, String)]()
     let radius = 20
@@ -191,7 +192,7 @@ class BubblesA {
             
         }
         
-        currentBubble = lastBubble
+//        currentBubble = lastBubble
         
         return false
         

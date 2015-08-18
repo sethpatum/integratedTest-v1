@@ -14,6 +14,7 @@ var timedConnectionsLetters = [(Int, Int, Int, Int, Double)]()
 
 import UIKit
 
+
 class LetterCancellationViewController: ViewController {
     
     var drawingView: DrawingViewLetters!
@@ -45,14 +46,12 @@ class LetterCancellationViewController: ViewController {
     
     @IBAction func StartButton(sender: AnyObject) {
         
-        println("start button clicked")
-        
         startButton.enabled = false
         doneButton.enabled = true
         self.navigationItem.setHidesBackButton(true, animated:true)
 
-        
         if drawingView !== nil {
+            
             drawingView.removeFromSuperview()
         }
         
@@ -60,12 +59,14 @@ class LetterCancellationViewController: ViewController {
             
             imageView.removeFromSuperview()
             imageView.image = nil
-            timedConnectionsLetters = [(Int, Int, Int, Int, Double)]()
-            
-            println("should have removed image")
-            println("timed connextions = \(timedConnectionsLetters)")
             
         }
+        
+        timedConnectionsLetters = [(Int, Int, Int, Int, Double)]()
+        letters.resultListIndexes = [Int]()
+        letters.resultListX = [Int]()
+        letters.resultListLetters = [String]()
+        letters.resultListTimes = [Double]()
         
         let drawViewFrame = CGRect(x: 0.0, y: 200.0, width: view.bounds.width, height: view.bounds.height-200.0)
         drawingView = DrawingViewLetters(frame: drawViewFrame)
@@ -81,7 +82,7 @@ class LetterCancellationViewController: ViewController {
         
         let aSelector : Selector = "update"
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         stopLetters = false
@@ -231,7 +232,7 @@ class LetterCancellationViewController: ViewController {
         UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
     }
     
-    func update() {
+    func update(timer: NSTimer) {
         
         if stopLetters == false{
             var currTime = NSDate.timeIntervalSinceReferenceDate()
@@ -254,6 +255,10 @@ class LetterCancellationViewController: ViewController {
             
             println("\(strMinutes) : \(strSeconds)")
         }
+        else {
+            timer.invalidate()
+        }
+        
         
     }
     

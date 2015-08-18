@@ -13,6 +13,7 @@ var timePassedTrailsA = 0.0
 var timedConnectionsA = [Double]()
 var displayImgTrailsA = false
 
+
 class TrailsAViewController: ViewController {
     
     var drawingView: DrawingViewTrails!
@@ -42,9 +43,10 @@ class TrailsAViewController: ViewController {
             
             imageView.removeFromSuperview()
             imageView.image = nil
-            timedConnectionsA = [Double]()
             
         }
+        
+        timedConnectionsA = [Double]()
         
         let drawViewFrame = CGRect(x: 0.0, y: 150.0, width: view.bounds.width, height: view.bounds.height-150)
         drawingView = DrawingViewTrails(frame: drawViewFrame)
@@ -60,7 +62,7 @@ class TrailsAViewController: ViewController {
         
         let aSelector : Selector = "update"
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         timedConnectionsA = [Double]()
@@ -115,7 +117,7 @@ class TrailsAViewController: ViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func update() {
+    func update(timer: NSTimer) {
         
         if stopTrailsA == false{
             var currTime = NSDate.timeIntervalSinceReferenceDate()
@@ -136,10 +138,12 @@ class TrailsAViewController: ViewController {
             
             timerLabel.text = "\(strMinutes) : \(strSeconds)"
         }
+        else {
+            timer.invalidate()
+        }
         
         if displayImgTrailsA == true {
             println("should have removed image")
-            println("timed connextions = \(timedConnectionsA)")
             let imageSize = CGSize(width: 1024, height: 618)
             imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 150), size: imageSize))
             self.view.addSubview(imageView)
@@ -165,8 +169,6 @@ class TrailsAViewController: ViewController {
     }
     
     func drawCustomImage(size: CGSize) -> UIImage {
-        println(timedConnectionsA)
-        println("# connections = \(timedConnectionsA.count)")
         
         // Setup our context
         let bounds = CGRect(origin: CGPoint.zeroPoint, size: size)
@@ -186,8 +188,6 @@ class TrailsAViewController: ViewController {
                 
                 let z = timedConnectionsA[k] - timedConnectionsA[k-1]
                 
-                println("a = \(a) b = \(b) x = \(x) y = \(y) z = \(z)")
-                
                 CGContextSetStrokeColorWithColor(context, getColor(z))
                 
                 CGContextBeginPath(context)
@@ -199,8 +199,6 @@ class TrailsAViewController: ViewController {
                 CGContextStrokePath(context)
                 
                 if k > 1 {
-                    
-                    println("getting here")
                     
                     let (a2, b2, fillerA2) = drawingView.bubbles.bubblelist[k-2]
                     let (x2, y2, fillerB2) = drawingView.bubbles.bubblelist[k-1]
@@ -226,7 +224,7 @@ class TrailsAViewController: ViewController {
             let (a3, b3, fillerA3) = drawingView.bubbles.bubblelist[timedConnectionsA.count-3]
             let (x3, y3, fillerB) = drawingView.bubbles.bubblelist[timedConnectionsA.count-2]
             
-            let z3 = timedConnectionsA[timedConnectionsA.count-1]-timedConnectionsA[timedConnectionsA.count-2]
+            let z3 = timedConnectionsA[timedConnectionsA.count-2]-timedConnectionsA[timedConnectionsA.count-3]
             
             let r3 = CGRect(x: a3-10, y: b3-10, width: 20, height: 20)
             CGContextSetFillColorWithColor(context, getColor(z3))
@@ -245,6 +243,7 @@ class TrailsAViewController: ViewController {
         // Drawing complete, retrieve the finished image and cleanup
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
         return image
     }
     

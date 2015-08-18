@@ -13,6 +13,7 @@ var stopCircles:Bool = false
 var timePassedCircles = 0.0
 
 
+
 //[(Circle 1's x value, y value, circle 2's x, y, time between crosses)]
 var timedConnections = [(Int, Int, Int, Int, Double)]()
 
@@ -54,12 +55,10 @@ class CirclesViewController: ViewController {
         timedConnections = [(Int, Int, Int, Int, Double)]()
         circles.resultListTimesCircles = [Double]()
         circles.resultListCircles = [(Int, Int, Int)]()
-        
         println("TIMED CONNEXTIONS ARE \(timedConnections)")
         println("RESULT LIST TIMES CIRCLES ARE \(circles.resultListTimesCircles)")
         
         let drawViewFrame = CGRect(x: 0.0, y: 130.0, width: view.bounds.width, height: view.bounds.height-130.0)
-        
         drawingView = DrawingViewCircles(frame: drawViewFrame)
         
         println("\(view.bounds.width) \(view.bounds.height)")

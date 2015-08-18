@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class Letters{
     
     var letterlist = [(Int, Int, String)]()

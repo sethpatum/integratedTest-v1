@@ -10,6 +10,7 @@ import Foundation
 
 import UIKit
 
+
 class DrawingViewTrailsB: UIView {
     private var currPath = UIBezierPath()
     
@@ -141,7 +142,7 @@ class DrawingViewTrailsB: UIView {
                 countSinceCorrect += 1
                 println("countSinceCorrect = \(countSinceCorrect)")
                 
-                if countSinceCorrect > 0 {
+                if countSinceCorrect > 1 {
                     
                     currPath.removeAllPoints()
                     
@@ -187,7 +188,7 @@ class DrawingViewTrailsB: UIView {
                     countSinceCorrect += 1
                     println("countSinceCorrect = \(countSinceCorrect)")
                     
-                    if countSinceCorrect > 0 {
+                    if countSinceCorrect > 1 {
                         
                         currPath.removeAllPoints()
                         
