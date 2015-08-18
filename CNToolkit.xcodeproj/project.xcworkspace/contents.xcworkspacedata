@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Integrated test v1.xcodeproj">
+      location = "self:/Users/saman/workspace/CNToolkit v1/CNToolkit.xcodeproj">
    </FileRef>
 </Workspace>

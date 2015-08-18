@@ -48,14 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1BA4A9C51B5556D800E3FBD4 /* Integrated test v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Integrated test v1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA4A9C51B5556D800E3FBD4 /* CNToolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNToolkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA4A9C91B5556D800E3FBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA4A9CA1B5556D800E3FBD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BA4A9CF1B5556D800E3FBD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1BA4A9D41B5556D800E3FBD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1BA4A9DA1B5556D800E3FBD4 /* Integrated test v1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Integrated test v1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA4A9DA1B5556D800E3FBD4 /* CNToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CNToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA4A9DF1B5556D800E3FBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrated_test_v1Tests.swift; sourceTree = "<group>"; };
 		1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 		1BA4A9BC1B5556D800E3FBD4 = {
 			isa = PBXGroup;
 			children = (
-				1BA4A9C71B5556D800E3FBD4 /* Integrated test v1 */,
-				1BA4A9DD1B5556D800E3FBD4 /* Integrated test v1Tests */,
+				1BA4A9C71B5556D800E3FBD4 /* CNToolkit */,
+				1BA4A9DD1B5556D800E3FBD4 /* CNToolkit Tests */,
 				1BA4A9C61B5556D800E3FBD4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,13 +112,13 @@
 		1BA4A9C61B5556D800E3FBD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BA4A9C51B5556D800E3FBD4 /* Integrated test v1.app */,
-				1BA4A9DA1B5556D800E3FBD4 /* Integrated test v1Tests.xctest */,
+				1BA4A9C51B5556D800E3FBD4 /* CNToolkit.app */,
+				1BA4A9DA1B5556D800E3FBD4 /* CNToolkitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1BA4A9C71B5556D800E3FBD4 /* Integrated test v1 */ = {
+		1BA4A9C71B5556D800E3FBD4 /* CNToolkit */ = {
 			isa = PBXGroup;
 			children = (
 				1BA4A9CA1B5556D800E3FBD4 /* AppDelegate.swift */,
@@ -138,6 +138,7 @@
 				1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */,
 				1BA4A9C81B5556D800E3FBD4 /* Supporting Files */,
 			);
+			name = CNToolkit;
 			path = "Integrated test v1";
 			sourceTree = "<group>";
 		};
@@ -149,12 +150,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1BA4A9DD1B5556D800E3FBD4 /* Integrated test v1Tests */ = {
+		1BA4A9DD1B5556D800E3FBD4 /* CNToolkit Tests */ = {
 			isa = PBXGroup;
 			children = (
 				1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */,
 				1BA4A9DE1B5556D800E3FBD4 /* Supporting Files */,
 			);
+			name = "CNToolkit Tests";
 			path = "Integrated test v1Tests";
 			sourceTree = "<group>";
 		};
@@ -237,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1BA4A9C41B5556D800E3FBD4 /* Integrated test v1 */ = {
+		1BA4A9C41B5556D800E3FBD4 /* CNToolkit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BA4A9E41B5556D800E3FBD4 /* Build configuration list for PBXNativeTarget "Integrated test v1" */;
+			buildConfigurationList = 1BA4A9E41B5556D800E3FBD4 /* Build configuration list for PBXNativeTarget "CNToolkit" */;
 			buildPhases = (
 				1BA4A9C11B5556D800E3FBD4 /* Sources */,
 				1BA4A9C21B5556D800E3FBD4 /* Frameworks */,
@@ -249,14 +251,14 @@
 			);
 			dependencies = (
 			);
-			name = "Integrated test v1";
+			name = CNToolkit;
 			productName = "Integrated test v1";
-			productReference = 1BA4A9C51B5556D800E3FBD4 /* Integrated test v1.app */;
+			productReference = 1BA4A9C51B5556D800E3FBD4 /* CNToolkit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1BA4A9D91B5556D800E3FBD4 /* Integrated test v1Tests */ = {
+		1BA4A9D91B5556D800E3FBD4 /* CNToolkitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BA4A9E71B5556D800E3FBD4 /* Build configuration list for PBXNativeTarget "Integrated test v1Tests" */;
+			buildConfigurationList = 1BA4A9E71B5556D800E3FBD4 /* Build configuration list for PBXNativeTarget "CNToolkitTests" */;
 			buildPhases = (
 				1BA4A9D61B5556D800E3FBD4 /* Sources */,
 				1BA4A9D71B5556D800E3FBD4 /* Frameworks */,
@@ -267,9 +269,9 @@
 			dependencies = (
 				1BA4A9DC1B5556D800E3FBD4 /* PBXTargetDependency */,
 			);
-			name = "Integrated test v1Tests";
+			name = CNToolkitTests;
 			productName = "Integrated test v1Tests";
-			productReference = 1BA4A9DA1B5556D800E3FBD4 /* Integrated test v1Tests.xctest */;
+			productReference = 1BA4A9DA1B5556D800E3FBD4 /* CNToolkitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -290,7 +292,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1BA4A9C01B5556D800E3FBD4 /* Build configuration list for PBXProject "Integrated test v1" */;
+			buildConfigurationList = 1BA4A9C01B5556D800E3FBD4 /* Build configuration list for PBXProject "CNToolkit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -303,8 +305,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1BA4A9C41B5556D800E3FBD4 /* Integrated test v1 */,
-				1BA4A9D91B5556D800E3FBD4 /* Integrated test v1Tests */,
+				1BA4A9C41B5556D800E3FBD4 /* CNToolkit */,
+				1BA4A9D91B5556D800E3FBD4 /* CNToolkitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -374,7 +376,7 @@
 /* Begin PBXTargetDependency section */
 		1BA4A9DC1B5556D800E3FBD4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1BA4A9C41B5556D800E3FBD4 /* Integrated test v1 */;
+			target = 1BA4A9C41B5556D800E3FBD4 /* CNToolkit */;
 			targetProxy = 1BA4A9DB1B5556D800E3FBD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -489,7 +491,7 @@
 				INFOPLIST_FILE = "Integrated test v1/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CNToolkit;
 			};
 			name = Debug;
 		};
@@ -500,7 +502,7 @@
 				INFOPLIST_FILE = "Integrated test v1/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CNToolkit;
 			};
 			name = Release;
 		};
@@ -518,7 +520,7 @@
 				);
 				INFOPLIST_FILE = "Integrated test v1Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CNToolkitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Integrated test v1.app/Integrated test v1";
 			};
 			name = Debug;
@@ -533,7 +535,7 @@
 				);
 				INFOPLIST_FILE = "Integrated test v1Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CNToolkitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Integrated test v1.app/Integrated test v1";
 			};
 			name = Release;
@@ -541,7 +543,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BA4A9C01B5556D800E3FBD4 /* Build configuration list for PBXProject "Integrated test v1" */ = {
+		1BA4A9C01B5556D800E3FBD4 /* Build configuration list for PBXProject "CNToolkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BA4A9E21B5556D800E3FBD4 /* Debug */,
@@ -550,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BA4A9E41B5556D800E3FBD4 /* Build configuration list for PBXNativeTarget "Integrated test v1" */ = {
+		1BA4A9E41B5556D800E3FBD4 /* Build configuration list for PBXNativeTarget "CNToolkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BA4A9E51B5556D800E3FBD4 /* Debug */,
@@ -559,7 +561,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BA4A9E71B5556D800E3FBD4 /* Build configuration list for PBXNativeTarget "Integrated test v1Tests" */ = {
+		1BA4A9E71B5556D800E3FBD4 /* Build configuration list for PBXNativeTarget "CNToolkitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BA4A9E81B5556D800E3FBD4 /* Debug */,
