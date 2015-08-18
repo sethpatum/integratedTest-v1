@@ -21,20 +21,23 @@ class CirclesViewController: ViewController {
     var drawingView: DrawingViewCircles!
     var imageView: UIImageView!
     
-    @IBOutlet weak var DateLabel: UILabel!
-    
-    @IBOutlet weak var resultLabel: UILabel!
     
     @IBOutlet weak var timerLabel: UILabel!
+    
+    @IBOutlet weak var startButton: UIButton!
+    
+    @IBOutlet weak var doneButton: UIButton!
+    
+    
     
     var startTime = NSTimeInterval()
      var startTime2 = NSDate()
     
     @IBAction func StartButton(sender: AnyObject) {
         
-        println("start button clicked")
-        
-        resultLabel.text = ""
+        startButton.enabled = false
+        doneButton.enabled = true
+        self.navigationItem.setHidesBackButton(true, animated:true)
         
         if drawingView !== nil {
             
@@ -78,17 +81,17 @@ class CirclesViewController: ViewController {
     }
     
     @IBAction func StopButton(sender: AnyObject) {
+        
+        startButton.enabled = true
+        doneButton.enabled = false
+        self.navigationItem.setHidesBackButton(false, animated:true)
+
         let result = Results()
 
         
         stopCircles = true
         
         circles.checkResultList(result)
-        
-        resultLabel.text = resultTextCircles
-        
-        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-        DateLabel.text = timestamp
         
         screenShotMethod()
         
@@ -193,6 +196,7 @@ class CirclesViewController: ViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        doneButton.enabled = false
     }
     
     override func supportedInterfaceOrientations() -> Int {

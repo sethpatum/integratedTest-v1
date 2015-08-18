@@ -392,7 +392,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC6-KN-UvJ">
                                 <rect key="frame" x="297" y="75" width="74" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Stop">
+                                <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -405,6 +405,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="doneButton" destination="dC6-KN-UvJ" id="xM0-2Q-8yp"/>
+                        <outlet property="startButton" destination="G06-RH-wg0" id="xeZ-eJ-7Ub"/>
                         <outlet property="timerLabel" destination="wmb-M8-alp" id="CGF-lH-QVG"/>
                     </connections>
                 </viewController>
@@ -444,12 +446,6 @@
                                     <action selector="StartButton:" destination="76o-Z3-r7u" eventType="touchUpInside" id="FJA-n1-djX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wB-cS-6pA">
-                                <rect key="frame" x="412" y="72" width="396" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLD-2k-esF">
                                 <rect key="frame" x="270" y="72" width="100" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -466,20 +462,14 @@
                                     <action selector="StopButton:" destination="76o-Z3-r7u" eventType="touchUpInside" id="Ctl-3J-k1q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyg-lF-zwo">
-                                <rect key="frame" x="16" y="115" width="938" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="DateLabel" destination="8wB-cS-6pA" id="7SV-7u-MiZ"/>
-                        <outlet property="resultLabel" destination="cyg-lF-zwo" id="vvb-ID-W1z"/>
+                        <outlet property="doneButton" destination="dMF-8v-AH5" id="gAT-vG-210"/>
+                        <outlet property="startButton" destination="PXe-uo-2eK" id="IYp-2T-C7Q"/>
                         <outlet property="timerLabel" destination="DLD-2k-esF" id="oOf-gy-FG4"/>
                     </connections>
                 </viewController>
@@ -490,6 +480,7 @@
         <!--Letter Cancellation-->
         <scene sceneID="ZnD-yQ-p0S">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H1t-gt-USf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Letter Cancellation" id="V47-eX-aHh" customClass="LetterCancellationViewController" customModule="Integrated_test_v1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s3U-Wp-x8R"/>
@@ -511,14 +502,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8M-sW-MwY">
-                                <rect key="frame" x="364" y="117" width="507" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaT-8N-oAD">
-                                <rect key="frame" x="59" y="74" width="83" height="35"/>
+                                <rect key="frame" x="59" y="74" width="66" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -537,12 +522,6 @@
                                     <action selector="StopButton:" destination="V47-eX-aHh" eventType="touchUpInside" id="d5Z-ou-9vz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eju-XL-H40">
-                                <rect key="frame" x="85" y="160" width="843" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0c-zX-AxU">
                                 <rect key="frame" x="889" y="74" width="80" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -559,12 +538,12 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="DateLabel" destination="B8M-sW-MwY" id="XfA-7i-dga"/>
+                        <outlet property="doneButton" destination="Ew8-yG-tYn" id="sDg-ig-psu"/>
                         <outlet property="fontLabel" destination="mdr-L3-lLy" id="bz8-hD-GLN"/>
-                        <outlet property="resultLabel" destination="eju-XL-H40" id="nAx-Sb-dSW"/>
+                        <outlet property="helpButton" destination="X0c-zX-AxU" id="Dih-fb-w9c"/>
+                        <outlet property="startButton" destination="oaT-8N-oAD" id="ksK-uC-SaY"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H1t-gt-USf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6434" y="298"/>
         </scene>
@@ -1737,11 +1716,11 @@
         <segue reference="Db8-gX-wha"/>
         <segue reference="mFR-im-uC4"/>
         <segue reference="eko-29-BFX"/>
-        <segue reference="k5O-0U-7Tk"/>
-        <segue reference="neN-op-hGA"/>
         <segue reference="QiM-jf-6BP"/>
         <segue reference="MHg-ok-Ccm"/>
+        <segue reference="fs4-pa-L87"/>
         <segue reference="Ud1-Nd-Hgw"/>
         <segue reference="deg-nT-nb7"/>
+        <segue reference="DXj-KH-ajy"/>
     </inferredMetricsTieBreakers>
 </document>

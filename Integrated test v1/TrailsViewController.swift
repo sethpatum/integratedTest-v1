@@ -24,8 +24,16 @@ class TrailsAViewController: ViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
+    
     @IBAction func StartButton(sender: AnyObject) {
         
+        
+        startButton.enabled = false
+        doneButton.enabled = true
+        self.navigationItem.setHidesBackButton(true, animated:true)
+   
         if drawingView !== nil {
             drawingView.removeFromSuperview()
         }
@@ -62,6 +70,11 @@ class TrailsAViewController: ViewController {
     }
     
     @IBAction func StopButton(sender: AnyObject) {
+        
+        startButton.enabled = true
+        doneButton.enabled = false
+        self.navigationItem.setHidesBackButton(false, animated:true)
+
         stopTrailsA = true
         displayImgTrailsA = true        
     }
@@ -88,6 +101,8 @@ class TrailsAViewController: ViewController {
             self.title = "Trails B"
         }
         
+        doneButton.enabled = false
+
     }
     
     override func supportedInterfaceOrientations() -> Int {
@@ -140,6 +155,11 @@ class TrailsAViewController: ViewController {
             resultsArray.add(result)
 
             displayImgTrailsA = false
+            
+            startButton.enabled = true
+            doneButton.enabled = false
+            self.navigationItem.setHidesBackButton(false, animated:true)
+
         }
         
     }

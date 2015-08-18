@@ -18,11 +18,15 @@ class LetterCancellationViewController: ViewController {
     
     var drawingView: DrawingViewLetters!
     
-    @IBOutlet weak var resultLabel: UILabel! //done
-    
-    @IBOutlet weak var DateLabel: UILabel! //done
-    
+        
     @IBOutlet weak var fontLabel: UILabel! //done
+    
+    
+    
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var helpButton: UIButton!
+    
     
     var imageView: UIImageView!
     
@@ -43,7 +47,10 @@ class LetterCancellationViewController: ViewController {
         
         println("start button clicked")
         
-        resultLabel.text = ""
+        startButton.enabled = false
+        doneButton.enabled = true
+        self.navigationItem.setHidesBackButton(true, animated:true)
+
         
         if drawingView !== nil {
             drawingView.removeFromSuperview()
@@ -81,16 +88,19 @@ class LetterCancellationViewController: ViewController {
         
     }
     
-    @IBAction func StopButton(sender: AnyObject) {
+    @IBAction func StopButton(sender: AnyObject){
+        
+        startButton.enabled = true
+        doneButton.enabled = false
+        self.navigationItem.setHidesBackButton(false, animated:true)
+        
         let result = Results()
         
         stopLetters = true
         
         letters.checkResultListLetters(result)
-        resultLabel.text = resultTextLetters
         
         let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-        DateLabel.text = timestamp
         
         screenShotMethod()
         
@@ -196,6 +206,7 @@ class LetterCancellationViewController: ViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+         doneButton.enabled = false
     }
     
     override func supportedInterfaceOrientations() -> Int {
