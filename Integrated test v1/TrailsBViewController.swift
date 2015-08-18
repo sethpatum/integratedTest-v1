@@ -7,6 +7,7 @@
 //
 import UIKit
 
+
 var stopTrailsB:Bool = false
 class TrailsBViewController: ViewController {
     

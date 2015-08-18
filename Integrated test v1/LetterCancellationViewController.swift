@@ -14,6 +14,7 @@ var timedConnectionsLetters = [(Int, Int, Int, Int, Double)]()
 
 import UIKit
 
+
 class LetterCancellationViewController: ViewController {
     
     var drawingView: DrawingViewLetters!

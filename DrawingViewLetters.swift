@@ -13,6 +13,7 @@ import UIKit
 
 var letters = Letters()
 
+
 class DrawingViewLetters: UIView {
     private var path = UIBezierPath()
     

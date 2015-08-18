@@ -10,6 +10,7 @@ import Foundation
 
 import UIKit
 
+
 class DrawingViewTrailsB: UIView {
     private var currPath = UIBezierPath()
     
