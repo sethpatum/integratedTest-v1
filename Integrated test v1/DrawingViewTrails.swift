@@ -12,6 +12,8 @@ import UIKit
 
 class DrawingViewTrails: UIView {
     private var currPath = UIBezierPath()
+   
+    var errorPath = UIBezierPath()
     
     var mainPath = UIBezierPath()
     
@@ -41,10 +43,28 @@ class DrawingViewTrails: UIView {
         mainPath.lineWidth = 5
         mainPath.lineCapStyle = kCGLineCapRound
         
+        errorPath.lineWidth = 3
+        errorPath.lineCapStyle = kCGLineCapRound
+        
+    }
+    
+    
+    func drawResultBackground() {
+        
+        for bubble in bubbles.bubblelist {
+            drawBubble(bubble)
+        }
+        UIColor.blackColor().set()
+        opaque = false
+        backgroundColor = nil
+        mainPath.stroke()
+        UIColor.blueColor().set()
+        errorPath.stroke()
     }
     
     override func drawRect(rect: CGRect) {
         //println("in drawRect")
+        
         
         for bubble in bubbles.bubblelist {
             drawBubble(bubble)
@@ -63,6 +83,7 @@ class DrawingViewTrails: UIView {
         
         mainPath.removeAllPoints()
         currPath.removeAllPoints()
+        errorPath.removeAllPoints()
         
         setNeedsDisplay()
     }
@@ -143,6 +164,8 @@ class DrawingViewTrails: UIView {
                 
                 if countSinceCorrect > 1 {
                     
+                    errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
+                    
                     println("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                     
                     currPath.removeAllPoints()
@@ -192,6 +215,8 @@ class DrawingViewTrails: UIView {
                     println("countSinceCorrect = \(countSinceCorrect)")
                     
                     if countSinceCorrect > 1 {
+                        
+                        errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                         
                         println("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                         

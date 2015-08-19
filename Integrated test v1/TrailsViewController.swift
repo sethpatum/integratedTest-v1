@@ -146,7 +146,7 @@ class TrailsAViewController: ViewController {
             println("should have removed image")
             let imageSize = CGSize(width: 1024, height: 618)
             imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 150), size: imageSize))
-            self.view.addSubview(imageView)
+           // self.view.addSubview(imageView)
             let image = drawCustomImage(imageSize)
             imageView.image = image
            
@@ -178,6 +178,7 @@ class TrailsAViewController: ViewController {
         let context = UIGraphicsGetCurrentContext()
         
         // Setup complete, do drawing here
+        drawingView.drawResultBackground()  //background bubbles
         
         if (timedConnectionsA.count > 0){
             
@@ -188,7 +189,7 @@ class TrailsAViewController: ViewController {
                 
                 let z = timedConnectionsA[k] - timedConnectionsA[k-1]
                 
-                CGContextSetStrokeColorWithColor(context, getColor(z))
+                CGContextSetStrokeColorWithColor(context, getColor(z, alpha: 0.8))
                 
                 CGContextBeginPath(context)
                 CGContextSetLineWidth(context, 7.0)
@@ -205,7 +206,7 @@ class TrailsAViewController: ViewController {
                     
                     let z2 = timedConnectionsA[k-1]-timedConnectionsA[k-2]
                     
-                    CGContextSetFillColorWithColor(context, getColor(z2))
+                    CGContextSetFillColorWithColor(context, getColor(z2, alpha: 0.5))
                     
                     CGContextBeginPath(context)
                     CGContextSetLineWidth(context, 7.0)
@@ -227,7 +228,7 @@ class TrailsAViewController: ViewController {
             let z3 = timedConnectionsA[timedConnectionsA.count-2]-timedConnectionsA[timedConnectionsA.count-3]
             
             let r3 = CGRect(x: a3-10, y: b3-10, width: 20, height: 20)
-            CGContextSetFillColorWithColor(context, getColor(z3))
+            CGContextSetFillColorWithColor(context, getColor(z3, alpha: 0.5))
             CGContextBeginPath(context)
             CGContextMoveToPoint(context, CGFloat(a3), CGFloat(b3))
             CGContextFillEllipseInRect(context, r3)
