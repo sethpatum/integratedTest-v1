@@ -11,6 +11,7 @@ import UIKit
 
 
 class DrawingViewTrails: UIView {
+    
     private var currPath = UIBezierPath()
    
     var errorPath = UIBezierPath()
@@ -18,6 +19,13 @@ class DrawingViewTrails: UIView {
     var mainPath = UIBezierPath()
     
     var bubbles = BubblesA()
+    
+    var nextBubb = 0
+    
+    
+//ADDITION
+    var paths = [UIBezierPath]()
+    
     
     var countSinceCorrect = 0
     var canDraw = true
@@ -57,7 +65,41 @@ class DrawingViewTrails: UIView {
         UIColor.blackColor().set()
         opaque = false
         backgroundColor = nil
-        mainPath.stroke()
+        
+//ADDITION
+        println("should have drawn colored bezierpath")
+        println("paths has \(paths.count) members; timedConnectionsA length is \(timedConnectionsA.count)")
+        /*
+        for (index, p) in enumerate(paths){
+            p.stroke()
+            println("should have stroked a path")
+        }
+        */
+        
+        if (timedConnectionsA.count > 0){
+            
+            for var k = 2; k < timedConnectionsA.count; ++k { // changed k-1 to k-2 deleted timedconnectionsA.count -1
+                
+                let (a, b, fillerA) = bubbles.bubblelist[k-2]
+                let (x, y, fillerB) = bubbles.bubblelist[k-1]
+                
+                let z = timedConnectionsA[k-1] - timedConnectionsA[k-2]
+                
+                getColor2(z, alpha: 0.8).set()
+                
+                var path : UIBezierPath = paths[k-1]
+                
+                path.lineWidth = 5
+                path.lineCapStyle = kCGLineCapRound
+                
+                path.stroke()
+                
+            }
+            
+        }
+
+//DELETION        mainPath.stroke()
+        
         UIColor.blueColor().set()
         errorPath.stroke()
     }
@@ -116,7 +158,7 @@ class DrawingViewTrails: UIView {
         
         let aFont = UIFont(name: "Optima-Bold", size: 18)
         // create a dictionary of attributes to be applied to the string
-        let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.redColor()]
+        let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
         // create the attributed string
         let text = CFAttributedStringCreate(nil, name, attr)
         // create the line of text
@@ -147,6 +189,26 @@ class DrawingViewTrails: UIView {
             if bubbles.inCorrectBubble() == true {
                 
                 mainPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
+                
+//ADDITION
+                
+                if bubbles.currentBubble == nextBubb {
+                    var p = UIBezierPath()
+                    p = UIBezierPath(CGPath: currPath.CGPath)
+                    paths.append(p)
+                    
+                    
+                    println("paths added member; length is \(paths.count); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
+                    
+                    
+                    nextBubb += 1
+                    
+                }
+                else {
+                    var p = UIBezierPath()
+                    p = UIBezierPath(CGPath: currPath.CGPath)
+                    errorPath.appendPath(p)
+                }
                 
                 currPath.removeAllPoints()
                 currPath.moveToPoint(touch.locationInView(self))
@@ -200,6 +262,28 @@ class DrawingViewTrails: UIView {
                     
                     mainPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                     
+//ADDITION
+                    
+                    if bubbles.currentBubble == nextBubb {
+                        var p = UIBezierPath()
+                        p = UIBezierPath(CGPath: currPath.CGPath)
+                        paths.append(p)
+                        
+                        
+                        println("paths added member; length is \(paths.count); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
+                        
+                        
+                        nextBubb += 1
+                        
+                    }
+                    else {
+                        var p = UIBezierPath()
+                        p = UIBezierPath(CGPath: currPath.CGPath)
+                        
+                        errorPath.appendPath(p)
+                        
+                    }
+                    
                     currPath.removeAllPoints()
                     currPath.moveToPoint(touch.locationInView(self))
                     
@@ -212,7 +296,7 @@ class DrawingViewTrails: UIView {
                 else {
                     
                     countSinceCorrect += 1
-                    println("countSinceCorrect = \(countSinceCorrect)")
+                    println("countSinceCorrect = \(countSinceCorrect); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
                     
                     if countSinceCorrect > 1 {
                         
@@ -239,5 +323,44 @@ class DrawingViewTrails: UIView {
         //println("Touch Ended")
         var touch = touches.first as! UITouch
     }
+    
+//ADDITION
+    func drawCustomImage2(){
+        
+        if (timedConnectionsA.count > 0){
+            
+            for var k = 1; k < timedConnectionsA.count-1; ++k {
+                
+                let (a, b, fillerA) = bubbles.bubblelist[k-1]
+                let (x, y, fillerB) = bubbles.bubblelist[k]
+                
+                let z = timedConnectionsA[k] - timedConnectionsA[k-1]
+                
+                getColor2(z, alpha: 0.8).set()
+                
+                paths[k-1].lineWidth = 5
+                paths[k-1].lineCapStyle = kCGLineCapRound
+                
+                paths[k-1].stroke()
+                
+            }
+            
+        }
+        
+    }
+    
+    func getColor2(i: Double, alpha: Double = 1.0) -> UIColor {
+        if (i < 5.0) {
+            let h = CGFloat(0.3 - i / 15.0)
+            return UIColor(hue: h, saturation: 1.0, brightness: 1.0, alpha: CGFloat(alpha))
+        } else if (i < 60) {
+            let b = CGFloat((60.0 - i)/55.0)
+            return UIColor(hue: 0.0, saturation: 1.0, brightness: b, alpha: CGFloat(alpha))
+        } else {
+            return UIColor(hue: 0.0, saturation: 1.0, brightness: 0.0, alpha: CGFloat(alpha))
+        }
+    }
+    
+//END OF ADDITION
     
 }

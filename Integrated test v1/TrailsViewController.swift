@@ -168,6 +168,7 @@ class TrailsAViewController: ViewController {
         
     }
     
+    
     func drawCustomImage(size: CGSize) -> UIImage {
         
         // Setup our context
@@ -180,6 +181,8 @@ class TrailsAViewController: ViewController {
         // Setup complete, do drawing here
         drawingView.drawResultBackground()  //background bubbles
         
+        
+/*DELETED
         if (timedConnectionsA.count > 0){
             
             for var k = 1; k < timedConnectionsA.count-1; ++k {
@@ -240,7 +243,7 @@ class TrailsAViewController: ViewController {
             CGContextFillPath(context)
             
         }
-        
+*/        
         // Drawing complete, retrieve the finished image and cleanup
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
