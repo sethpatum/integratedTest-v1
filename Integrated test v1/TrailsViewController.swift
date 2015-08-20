@@ -83,7 +83,7 @@ class TrailsAViewController: ViewController {
     
     
     @IBAction func HelpButton(sender: AnyObject) {
-         if(selectedTest == "Trails A") {
+         if(selectedTest == "Trails A" || selectedTest == "Trails A Practice") {
             let vc = storyboard?.instantiateViewControllerWithIdentifier("Trails A Help") as! UIViewController
             navigationController?.pushViewController(vc, animated:true)
         } else {
@@ -99,10 +99,14 @@ class TrailsAViewController: ViewController {
         
          if(selectedTest == "Trails A") {
             self.title = "Trails A"
-         } else {
+         } else if(selectedTest == "Trails B") {
             self.title = "Trails B"
+         } else if(selectedTest == "Trails A Practice") {
+            self.title = "Trails A Practice"
+         } else {
+            self.title = "Trails B Practice"
         }
-        
+    
         doneButton.enabled = false
 
     }

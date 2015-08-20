@@ -44,8 +44,19 @@ class BubblesA {
         var names = [String]()
          if(selectedTest == "Trails A") {
             names = trailsAnames
-         } else {
+         } else if(selectedTest == "Trails A") {
             names = trailsBnames
+        } else if(selectedTest == "Trails A Practice") {
+            names.append(trailsAnames[0])
+            names.append(trailsAnames[1])
+            names.append(trailsAnames[2])
+            names.append(trailsAnames[3])
+        } else {
+            names.append(trailsBnames[0])
+            names.append(trailsBnames[1])
+            names.append(trailsBnames[2])
+            names.append(trailsBnames[3])
+            
         }
         
         // select from two possible coordinate systems
@@ -109,13 +120,17 @@ class BubblesA {
         coordList.map(transform)
        
         // off will move the starting point around
-        let off = Int(arc4random_uniform(25))
-        for i in 0...24 {
-            let j = (i + off)%25
+        let clen = coordList.count
+        let sz:Int = min(clen, names.count)
+        let off = Int(arc4random_uniform(UInt32(clen)))
+        for i in 0...sz-1 {
+            let j = (i + off)%clen
             let coord = coordList[j]
             bubblelist.append((coord.0, coord.1, names[i]))
             
         }
+        
+        println("lst=\(lst), xt=\(xt), yt=\(yt), off=\(off)")
         
     }
     
