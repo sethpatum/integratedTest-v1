@@ -328,5 +328,4 @@ class DrawingViewTrails: UIView {
         }
     }
     
-    
 }
