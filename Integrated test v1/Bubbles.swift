@@ -21,114 +21,105 @@ class BubblesA {
     var nextBubble = 0
     
     
+    //Rotate (180 degrees) or mirror (on x or y) the point
+    var xt:Bool = true
+    var yt:Bool = true
+    func transform(coord:(Int, Int)) -> (Int, Int) {
+        var x = coord.0
+        var y = coord.1
+        if xt  {
+            x  = 1000 - x
+        }
+        if yt {
+            y = 600 - y
+        }
+        return (x, y)
+    }
+    
     init() {
-        if(selectedTest == "Trails A") {
-            print("In Trails A")
-            bubblelist.append((720, 240, "1"))
-            bubblelist.append((800, 270, "2"))
-            bubblelist.append((820, 140, "3"))
-            bubblelist.append((300, 120, "4"))
-            bubblelist.append((375, 370, "5"))
-            bubblelist.append((550, 190, "6"))
-            bubblelist.append((385, 480, "7"))
-            bubblelist.append((700, 470, "8"))
-            bubblelist.append((775, 430, "9"))
-            bubblelist.append((710, 370, "10"))
-            bubblelist.append((950, 290, "11"))
-            bubblelist.append((970, 555, "12"))
-            bubblelist.append((500, 570, "13"))
-            bubblelist.append((580, 515, "14"))
-            bubblelist.append((110, 530, "15"))
-            bubblelist.append((290, 510, "16"))
-            bubblelist.append((70, 440, "17"))
-            bubblelist.append((280, 315, "18"))
-            bubblelist.append((190, 170, "19"))
-            bubblelist.append((170, 290, "20"))
-            bubblelist.append((40, 235, "21"))
-            bubblelist.append((75, 40, "22"))
-            bubblelist.append((925, 30, "23"))
-            bubblelist.append((560, 80, "24"))
-            bubblelist.append((970, 95, "25"))
+        var coordList = [(Int, Int)]()
+        
+        let trailsAnames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
+        let trailsBnames = ["1", "A", "2", "B", "3", "C", "4", "D", "5",  "E",  "6",  "F",  "7",  "G",  "8",  "H",  "9",  "I", "10",  "J", "11",  "K", "12",  "L", "13"]
+        var names = [String]()
+         if(selectedTest == "Trails A") {
+            names = trailsAnames
+         } else {
+            names = trailsBnames
+        }
+        
+        // select from two possible coordinate systems
+        let lst = arc4random_uniform(2000)
+        if(lst < 1000) {
+            coordList.append((720, 240))
+            coordList.append((800, 270))
+            coordList.append((820, 140))
+            coordList.append((300, 120))
+            coordList.append((375, 370))
+            coordList.append((550, 190))
+            coordList.append((385, 480))
+            coordList.append((700, 470))
+            coordList.append((775, 430))
+            coordList.append((710, 370))
+            coordList.append((950, 290))
+            coordList.append((970, 555))
+            coordList.append((500, 570))
+            coordList.append((580, 515))
+            coordList.append((110, 530))
+            coordList.append((290, 510))
+            coordList.append((70, 440))
+            coordList.append((280, 315))
+            coordList.append((190, 170))
+            coordList.append((170, 290))
+            coordList.append((40, 235))
+            coordList.append((75, 40))
+            coordList.append((925, 30))
+            coordList.append((560, 80))
+            coordList.append((970, 95))
         } else {
-            print("In Trails B")
-            // Trails B
-            let random = Int(arc4random_uniform(3))
-            println(random)
-            let random1 = Int(arc4random_uniform(3))
-            println(random1)
-            let random5 = Int(arc4random_uniform(3))
-            println(random5)
-            let random2 = Int(arc4random_uniform(3))
-            println(random2)
-            let random3 = Int(arc4random_uniform(3))
-            println(random3)
-            let random4 = Int(arc4random_uniform(3))
-            println(random4)
-            let random6 = Int(arc4random_uniform(3))
-            println(random6)
-            
-            if(random==0){
-                
-                bubblelist.append((720, 240, "1"))
-                bubblelist.append((800, 270, "A"))
-                bubblelist.append((820, 140, "2"))
-                bubblelist.append((300, 120, "B"))
-                bubblelist.append((375, 370, "3"))
-                bubblelist.append((550, 190, "C"))
-                bubblelist.append((385, 480, "4"))
-                bubblelist.append((700, 470, "D"))
-                bubblelist.append((775, 430, "5"))
-                bubblelist.append((710, 370, "E"))
-                bubblelist.append((950, 290, "6"))
-                bubblelist.append((970, 555, "F"))
-                bubblelist.append((500, 570, "7"))
-                bubblelist.append((580, 515, "G"))
-                bubblelist.append((110, 530, "8"))
-                bubblelist.append((290, 510, "H"))
-                bubblelist.append((70, 440, "9"))
-                bubblelist.append((280, 315, "I"))
-                bubblelist.append((190, 170, "10"))
-                bubblelist.append((170, 290, "J"))
-                bubblelist.append((40, 235, "11"))
-                bubblelist.append((75, 40, "K"))
-                bubblelist.append((925, 30, "12"))
-                bubblelist.append((560, 80, "L"))
-                bubblelist.append((970, 95, "13"))
-                
-            } else {
-                bubblelist.append((490, 325, "1"))
-                bubblelist.append((750, 175, "A"))
-                bubblelist.append((810, 420, "2"))
-                bubblelist.append((210, 365, "B"))
-                bubblelist.append((360, 350, "3"))
-                bubblelist.append((600, 200, "C"))
-                bubblelist.append((200, 300, "4"))
-                bubblelist.append((175, 110, "D"))
-                bubblelist.append((490, 120, "5"))
-                bubblelist.append((900, 100, "E"))
-                bubblelist.append((860, 345, "6"))
-                bubblelist.append((940, 500, "F"))
-                bubblelist.append((475, 425, "7"))
-                bubblelist.append((700, 485, "G"))
-                bubblelist.append((150, 520, "8"))
-                bubblelist.append((480, 535, "H"))
-                bubblelist.append((160, 435, "9"))
-                bubblelist.append((160, 210, "I"))
-                bubblelist.append((110, 50, "10"))
-                bubblelist.append((730, 75, "J"))
-                bubblelist.append((950, 40, "11"))
-                bubblelist.append((970, 570, "K"))
-                bubblelist.append((620, 545, "12"))
-                bubblelist.append((865, 550, "L"))
-                bubblelist.append((90, 570, "13"))
-                
-            }
-            
+            coordList.append((490, 325))
+            coordList.append((750, 175))
+            coordList.append((810, 420))
+            coordList.append((210, 365))
+            coordList.append((360, 350))
+            coordList.append((600, 200))
+            coordList.append((200, 300))
+            coordList.append((175, 110))
+            coordList.append((490, 120))
+            coordList.append((900, 100))
+            coordList.append((860, 345))
+            coordList.append((940, 500))
+            coordList.append((475, 425))
+            coordList.append((700, 485))
+            coordList.append((150, 520))
+            coordList.append((480, 535))
+            coordList.append((160, 435))
+            coordList.append((160, 210))
+            coordList.append((110, 50))
+            coordList.append((730, 75))
+            coordList.append((950, 40))
+            coordList.append((970, 570))
+            coordList.append((620, 545))
+            coordList.append((865, 550))
+            coordList.append((90, 570))
+        }
+        
+        xt = arc4random_uniform(2000) < 1000
+        yt = arc4random_uniform(2000) < 1000
+        coordList.map(transform)
+       
+        // off will move the starting point around
+        let off = Int(arc4random_uniform(25))
+        for i in 0...24 {
+            let j = (i + off)%25
+            let coord = coordList[j]
+            bubblelist.append((coord.0, coord.1, names[i]))
             
         }
         
     }
     
+        
     func inBubble(x:CGFloat, y:CGFloat)->Int{
         
         for (index,bubble) in enumerate(bubblelist){
