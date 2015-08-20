@@ -165,7 +165,7 @@ class TrailsAViewController: ViewController {
             
             startButton.enabled = true
             doneButton.enabled = false
-            self.navigationItem.setHidesBackButton(false, animated:true)
+            self.navigationItem.setHidesBackButton(false, animated:false)
 
         }
         
