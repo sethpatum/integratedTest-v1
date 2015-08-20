@@ -44,8 +44,19 @@ class BubblesA {
         var names = [String]()
          if(selectedTest == "Trails A") {
             names = trailsAnames
-         } else {
+         } else if(selectedTest == "Trails A") {
             names = trailsBnames
+        } else if(selectedTest == "Trails A Practice") {
+            names.append(trailsAnames[0])
+            names.append(trailsAnames[1])
+            names.append(trailsAnames[2])
+            names.append(trailsAnames[3])
+        } else {
+            names.append(trailsBnames[0])
+            names.append(trailsBnames[1])
+            names.append(trailsBnames[2])
+            names.append(trailsBnames[3])
+            
         }
         
         // select from two possible coordinate systems
@@ -151,6 +162,8 @@ class BubblesA {
             bubblelist.append((coord.0, coord.1, names[i]))
             
         }
+        
+        println("lst=\(lst), xt=\(xt), yt=\(yt), off=\(off)")
         
     }
     
