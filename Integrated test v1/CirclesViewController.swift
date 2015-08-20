@@ -140,7 +140,7 @@ class CirclesViewController: ViewController {
                 
                 println("a = \(a) b = \(b) x = \(x) y = \(y) z = \(z)")
                 
-                CGContextSetStrokeColorWithColor(context, getColor(z))
+                CGContextSetStrokeColorWithColor(context, getColor(z, alpha:0.7))
                 
                 CGContextBeginPath(context)
                 CGContextSetLineWidth(context, 7.0)
@@ -156,7 +156,7 @@ class CirclesViewController: ViewController {
                     
                     let (a2, b2, x2, y2, z2) = timedConnections[k-1]
                     
-                    CGContextSetFillColorWithColor(context, getColor(z2))
+                    CGContextSetFillColorWithColor(context, getColor(z2, alpha:0.5))
                     
                     CGContextBeginPath(context)
                     CGContextSetLineWidth(context, 7.0)
@@ -173,7 +173,7 @@ class CirclesViewController: ViewController {
             
             let (a3, b3, x3, y3, z3) = timedConnections[timedConnections.count-1]
             let r3 = CGRect(x: a3-10, y: b3-10, width: 20, height: 20)
-            CGContextSetFillColorWithColor(context, getColor(z3))
+            CGContextSetFillColorWithColor(context, getColor(z3, alpha:0.5))
             CGContextBeginPath(context)
             CGContextMoveToPoint(context, CGFloat(a3), CGFloat(b3))
             CGContextFillEllipseInRect(context, r3)

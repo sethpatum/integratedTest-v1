@@ -181,68 +181,7 @@ class TrailsAViewController: ViewController {
         drawingView.drawResultBackground()  //background bubbles
         
         
-/*DELETED
-        if (timedConnectionsA.count > 0){
-            
-            for var k = 1; k < timedConnectionsA.count-1; ++k {
-                
-                let (a, b, fillerA) = drawingView.bubbles.bubblelist[k-1]
-                let (x, y, fillerB) = drawingView.bubbles.bubblelist[k]
-                
-                let z = timedConnectionsA[k] - timedConnectionsA[k-1]
-                
-                CGContextSetStrokeColorWithColor(context, getColor(z, alpha: 0.8))
-                
-                CGContextBeginPath(context)
-                CGContextSetLineWidth(context, 7.0)
-                
-                CGContextMoveToPoint(context, CGFloat(a), CGFloat(b))
-                CGContextAddLineToPoint(context, CGFloat(x), CGFloat(y))
-                
-                CGContextStrokePath(context)
-                
-                if k > 1 {
-                    
-                    let (a2, b2, fillerA2) = drawingView.bubbles.bubblelist[k-2]
-                    let (x2, y2, fillerB2) = drawingView.bubbles.bubblelist[k-1]
-                    
-                    let z2 = timedConnectionsA[k-1]-timedConnectionsA[k-2]
-                    
-                    CGContextSetFillColorWithColor(context, getColor(z2, alpha: 0.5))
-                    
-                    CGContextBeginPath(context)
-                    CGContextSetLineWidth(context, 7.0)
-                    
-                    CGContextMoveToPoint(context, CGFloat(a2), CGFloat(b2))
-                    
-                    let r = CGRect(x: a2-10, y: b2-10, width: 20, height: 20)
-                    CGContextFillEllipseInRect(context, r)
-                    
-                    CGContextFillPath(context)
-                    
-                }
-
-            }
-            
-            let (a3, b3, fillerA3) = drawingView.bubbles.bubblelist[timedConnectionsA.count-3]
-            let (x3, y3, fillerB) = drawingView.bubbles.bubblelist[timedConnectionsA.count-2]
-            
-            let z3 = timedConnectionsA[timedConnectionsA.count-2]-timedConnectionsA[timedConnectionsA.count-3]
-            
-            let r3 = CGRect(x: a3-10, y: b3-10, width: 20, height: 20)
-            CGContextSetFillColorWithColor(context, getColor(z3, alpha: 0.5))
-            CGContextBeginPath(context)
-            CGContextMoveToPoint(context, CGFloat(a3), CGFloat(b3))
-            CGContextFillEllipseInRect(context, r3)
-            
-            let r4 = CGRect(x: x3-10, y: y3-10, width: 20, height: 20)
-            CGContextMoveToPoint(context, CGFloat(x3), CGFloat(y3))
-            CGContextFillEllipseInRect(context, r4)
-            
-            CGContextFillPath(context)
-            
-        }
-*/        
+       
         // Drawing complete, retrieve the finished image and cleanup
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
