@@ -150,7 +150,7 @@ class BubblesA {
         
         xt = arc4random_uniform(2000) < 1000
         yt = arc4random_uniform(2000) < 1000
-        coordList.map(transform)
+        coordList = coordList.map(transform)
        
         // off will move the starting point around
         let clen = coordList.count
