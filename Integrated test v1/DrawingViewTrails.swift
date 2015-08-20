@@ -69,16 +69,10 @@ class DrawingViewTrails: UIView {
 //ADDITION
         println("should have drawn colored bezierpath")
         println("paths has \(paths.count) members; timedConnectionsA length is \(timedConnectionsA.count)")
-        /*
-        for (index, p) in enumerate(paths){
-            p.stroke()
-            println("should have stroked a path")
-        }
-        */
         
         if (timedConnectionsA.count > 0){
             
-            for var k = 2; k < timedConnectionsA.count; ++k { // changed k-1 to k-2 deleted timedconnectionsA.count -1
+            for var k = 2; k < timedConnectionsA.count; ++k {
                 
                 let (a, b, fillerA) = bubbles.bubblelist[k-2]
                 let (x, y, fillerB) = bubbles.bubblelist[k-1]
@@ -89,7 +83,7 @@ class DrawingViewTrails: UIView {
                 
                 var path : UIBezierPath = paths[k-1]
                 
-                path.lineWidth = 5
+                path.lineWidth = 7
                 path.lineCapStyle = kCGLineCapRound
                 
                 path.stroke()
@@ -97,8 +91,6 @@ class DrawingViewTrails: UIView {
             }
             
         }
-
-//DELETION        mainPath.stroke()
         
         UIColor.blueColor().set()
         errorPath.stroke()
@@ -324,31 +316,6 @@ class DrawingViewTrails: UIView {
         var touch = touches.first as! UITouch
     }
     
-//ADDITION
-    func drawCustomImage2(){
-        
-        if (timedConnectionsA.count > 0){
-            
-            for var k = 1; k < timedConnectionsA.count-1; ++k {
-                
-                let (a, b, fillerA) = bubbles.bubblelist[k-1]
-                let (x, y, fillerB) = bubbles.bubblelist[k]
-                
-                let z = timedConnectionsA[k] - timedConnectionsA[k-1]
-                
-                getColor2(z, alpha: 0.8).set()
-                
-                paths[k-1].lineWidth = 5
-                paths[k-1].lineCapStyle = kCGLineCapRound
-                
-                paths[k-1].stroke()
-                
-            }
-            
-        }
-        
-    }
-    
     func getColor2(i: Double, alpha: Double = 1.0) -> UIColor {
         if (i < 5.0) {
             let h = CGFloat(0.3 - i / 15.0)
@@ -361,6 +328,5 @@ class DrawingViewTrails: UIView {
         }
     }
     
-//END OF ADDITION
     
 }
