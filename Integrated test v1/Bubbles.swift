@@ -44,7 +44,7 @@ class BubblesA {
         var names = [String]()
          if(selectedTest == "Trails A") {
             names = trailsAnames
-         } else if(selectedTest == "Trails A") {
+         } else if(selectedTest == "Trails B") {
             names = trailsBnames
         } else if(selectedTest == "Trails A Practice") {
             names.append(trailsAnames[0])
@@ -62,8 +62,8 @@ class BubblesA {
         // select from two possible coordinate systems
         let lst = arc4random_uniform(2000)
         if(lst < 1000) {
-            coordList.append((720, 240))
-            coordList.append((800, 270))
+            coordList.append((810, 270)) //720, 240
+            coordList.append((710, 235)) //800, 270
             coordList.append((820, 140))
             coordList.append((300, 120))
             coordList.append((375, 370))
@@ -83,11 +83,16 @@ class BubblesA {
             coordList.append((190, 170))
             coordList.append((170, 290))
             coordList.append((40, 235))
-            coordList.append((75, 40))
-            coordList.append((925, 30))
+            coordList.append((170, 40))
+            coordList.append((850, 30))
             coordList.append((560, 80))
             coordList.append((970, 95))
         } else {
+            /*
+            
+            this list had problems with intersecting lines
+            particularly when randomized
+            
             coordList.append((490, 325))
             coordList.append((750, 175))
             coordList.append((810, 420))
@@ -113,6 +118,34 @@ class BubblesA {
             coordList.append((620, 545))
             coordList.append((865, 550))
             coordList.append((90, 570))
+*/
+            
+            coordList.append((520, 290))
+            coordList.append((735, 180))
+            coordList.append((630, 350))
+            coordList.append((225, 285))
+            coordList.append((330, 215))
+            coordList.append((70, 245))
+            coordList.append((120, 70))
+            coordList.append((410, 45))
+            coordList.append((920, 80))
+            coordList.append((930, 530))
+            coordList.append((700, 565))
+            coordList.append((740, 480))
+            coordList.append((420, 575))
+            coordList.append((520, 490))
+            coordList.append((150, 540))
+            coordList.append((60, 345))
+            coordList.append((340, 390))
+            coordList.append((230, 455))
+            coordList.append((840, 430))
+            coordList.append((770, 290))
+            coordList.append((850, 120))
+            coordList.append((650, 90))
+            coordList.append((265, 110))
+            coordList.append((445, 210))
+            coordList.append((580, 175))
+            
         }
         
         xt = arc4random_uniform(2000) < 1000
@@ -126,6 +159,7 @@ class BubblesA {
         for i in 0...sz-1 {
             let j = (i + off)%sz  // can do by clen, but then the bubbles are all over the screen on practice
             let coord = coordList[j]
+            
             bubblelist.append((coord.0, coord.1, names[i]))
             
         }
