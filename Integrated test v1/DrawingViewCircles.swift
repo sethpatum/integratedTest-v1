@@ -34,6 +34,18 @@ class DrawingViewCircles: UIView {
         path.lineCapStyle = kCGLineCapRound
     }
     
+    
+    func drawResultBackground() {
+        for circle in circles.circlelist{
+            drawCircles(circle)
+        }
+        
+        UIColor.blackColor().set()
+        opaque = false
+        backgroundColor = nil
+        path.stroke()
+    }
+    
     override func drawRect(rect: CGRect) {
         //println("in drawRect")
         for circle in circles.circlelist{
@@ -44,7 +56,6 @@ class DrawingViewCircles: UIView {
         opaque = false
         backgroundColor = nil
         path.stroke()
-        
     }
     
     func reset() {
@@ -149,6 +160,18 @@ class DrawingViewCircles: UIView {
         //println("Touch Ended")
         var touch = touches.first as! UITouch
         
+    }
+    
+    func getColor2(i: Double, alpha: Double = 1.0) -> UIColor {
+        if (i < 5.0) {
+            let h = CGFloat(0.3 - i / 15.0)
+            return UIColor(hue: h, saturation: 1.0, brightness: 1.0, alpha: CGFloat(alpha))
+        } else if (i < 60) {
+            let b = CGFloat((60.0 - i)/55.0)
+            return UIColor(hue: 0.0, saturation: 1.0, brightness: b, alpha: CGFloat(alpha))
+        } else {
+            return UIColor(hue: 0.0, saturation: 1.0, brightness: 0.0, alpha: CGFloat(alpha))
+        }
     }
     
 }

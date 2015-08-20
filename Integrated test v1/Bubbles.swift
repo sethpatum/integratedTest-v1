@@ -119,7 +119,7 @@ class BubblesA {
         
     }
     
-        
+    
     func inBubble(x:CGFloat, y:CGFloat)->Int{
         
         for (index,bubble) in enumerate(bubblelist){
