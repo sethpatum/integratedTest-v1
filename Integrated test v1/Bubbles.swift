@@ -124,7 +124,7 @@ class BubblesA {
         let sz:Int = min(clen, names.count)
         let off = Int(arc4random_uniform(UInt32(clen)))
         for i in 0...sz-1 {
-            let j = (i + off)%clen
+            let j = (i + off)%sz  // can do by clen, but then the bubbles are all over the screen on practice
             let coord = coordList[j]
             bubblelist.append((coord.0, coord.1, names[i]))
             
