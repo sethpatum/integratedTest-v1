@@ -125,6 +125,7 @@ class DrawingViewTrails: UIView {
     func drawBubble(bubble:(Int, Int, String)) {
         //println("in drawbubble")
         
+        
         let (x, y, name) = bubble
         //println("Bubble \(bubble)")
         
@@ -134,7 +135,8 @@ class DrawingViewTrails: UIView {
         CGContextSetLineWidth(context, 3.0);
         
         // Set the circle outerline-colour
-        UIColor.redColor().set()
+        bubbleColor!.set()
+        
         
         // Create Circle
         CGContextAddArc(context, CGFloat(x), CGFloat(y), 20, 0.0, CGFloat(M_PI * 2.0), 1)

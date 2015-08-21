@@ -12,6 +12,7 @@ var stopTrailsA:Bool = false
 var timePassedTrailsA = 0.0
 var timedConnectionsA = [Double]()
 var displayImgTrailsA = false
+var bubbleColor:UIColor?
 
 
 class TrailsAViewController: ViewController {
@@ -69,6 +70,8 @@ class TrailsAViewController: ViewController {
         stopTrailsA = false
         displayImgTrailsA = false
         
+        bubbleColor = UIColor.redColor()
+        
     }
     
     @IBAction func StopButton(sender: AnyObject) {
@@ -78,7 +81,7 @@ class TrailsAViewController: ViewController {
         self.navigationItem.setHidesBackButton(false, animated:true)
 
         stopTrailsA = true
-        displayImgTrailsA = true        
+        done()
     }
     
     
@@ -91,8 +94,8 @@ class TrailsAViewController: ViewController {
             navigationController?.pushViewController(vc, animated:true)
         }
         stopTrailsA = true
-        displayImgTrailsA = true
         stopTrailsB = true
+        done()
     }
     
     
@@ -126,7 +129,7 @@ class TrailsAViewController: ViewController {
     
     func update(timer: NSTimer) {
         
-        if stopTrailsA == false{
+        if stopTrailsA == false {
             var currTime = NSDate.timeIntervalSinceReferenceDate()
             var diff: NSTimeInterval = currTime - startTime
             
@@ -150,28 +153,33 @@ class TrailsAViewController: ViewController {
         }
         
         if displayImgTrailsA == true {
-            let imageSize = CGSize(width: 1024, height: 618)
-            imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 150), size: imageSize))
-           // self.view.addSubview(imageView)
-            let image = drawCustomImage(imageSize)
-            imageView.image = image
-           
-            // add to results
-            let result = Results()
-            result.name = self.title
-            result.startTime = startTime2
-            result.endTime = NSDate()
-            result.screenshot = image
-            resultsArray.add(result)
-
-            displayImgTrailsA = false
-            
-            startButton.enabled = true
-            doneButton.enabled = false
-            self.navigationItem.setHidesBackButton(false, animated:false)
-
+            done()
         }
+    }
+    
+    func done() {
+        let imageSize = CGSize(width: 1024, height: 618)
+        imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 150), size: imageSize))
+        // self.view.addSubview(imageView)
+        let image = drawCustomImage(imageSize)
+        imageView.image = image
         
+        // add to results
+        let result = Results()
+        result.name = self.title
+        result.startTime = startTime2
+        result.endTime = NSDate()
+        result.screenshot = image
+        resultsArray.add(result)
+        
+        displayImgTrailsA = false
+        
+        startButton.enabled = true
+        doneButton.enabled = false
+        self.navigationItem.setHidesBackButton(false, animated:false)
+        
+        bubbleColor = UIColor(red:0.6, green:0.0, blue:0.0, alpha:1.0)
+
     }
     
     
