@@ -140,6 +140,17 @@ class TapInOrderViewController: ViewController {
     }
     
     
+    @IBAction func HelpButton(sender: AnyObject) {
+        self.navigationItem.setHidesBackButton(false, animated:true)
+        helpButton.enabled = true
+        startButton.enabled = true
+        endButton.enabled = false
+        resetButton.enabled = false
+        
+        numplaces = 0
+        numRepeats = 0
+        donetest()
+    }
     
     func donetest() {
         

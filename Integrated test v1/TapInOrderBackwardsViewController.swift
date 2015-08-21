@@ -134,6 +134,17 @@ class TapInOrderBackwardsViewController: UIViewController {
         //donetest()
 
     }
+    @IBAction func helpButton(sender: AnyObject) {
+        self.navigationItem.setHidesBackButton(false, animated:true)
+        helpButton.enabled = true
+        StartButton.enabled = true
+        endButton.enabled = false
+        resetButton.enabled = false
+        
+        numplaces = 0
+        numRepeats = 0
+        //donetest()
+    }
     
     //light up the right # of buttons (numplaces+1) for current sequence; buttons enabled AFTER all light up
     func drawsequence() {

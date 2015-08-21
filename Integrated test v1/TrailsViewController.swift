@@ -90,6 +90,9 @@ class TrailsAViewController: ViewController {
             let vc = storyboard?.instantiateViewControllerWithIdentifier("Trails B Help") as! UIViewController
             navigationController?.pushViewController(vc, animated:true)
         }
+        stopTrailsA = true
+        displayImgTrailsA = true
+        stopTrailsB = true
     }
     
     
