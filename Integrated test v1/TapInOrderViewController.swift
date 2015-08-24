@@ -13,6 +13,7 @@ import Darwin
 class TapInOrderViewController: ViewController {
     
     
+    
     var buttonList = [UIButton]()
     var places:[(Int,Int)] = [(100, 250),  (450, 300), (350, 500), (600, 450), (800, 200), (700, 650), (850, 550), (200, 350), (100, 600), (300, 650)]
     //SHORTER LIST FOR TESTING: var places:[(Int,Int)] = [(100, 200), (450, 250), (350, 450), (600, 400)]
