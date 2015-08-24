@@ -34,6 +34,47 @@ class CirclesViewController: ViewController {
     var startTime = NSTimeInterval()
      var startTime2 = NSDate()
     
+    @IBAction func HelpButton(sender: AnyObject) {
+        startButton.enabled = true
+        doneButton.enabled = false
+        self.navigationItem.setHidesBackButton(false, animated:true)
+        
+        let result = Results()
+        
+        
+        stopCircles = true
+        
+        circles.checkResultList(result)
+        
+        screenShotMethod()
+        
+        resultTextCircles = ""
+        
+        if imageView !== nil {
+            
+            imageView.removeFromSuperview()
+            imageView.image = nil
+            
+            println("should have removed image")
+        }
+        
+        let imageSize = CGSize(width: 1024, height: 638)
+        imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 130), size: imageSize))
+        //self.view.addSubview(imageView)
+        let image = drawCustomImage(imageSize)
+        imageView.image = image
+        
+        // add to results
+        result.name = "Circles"
+        result.startTime = startTime2
+        result.endTime = NSDate()
+        result.screenshot = image
+        resultsArray.add(result)
+        
+
+        
+    }
+    
     @IBAction func StartButton(sender: AnyObject) {
         
         startButton.enabled = false

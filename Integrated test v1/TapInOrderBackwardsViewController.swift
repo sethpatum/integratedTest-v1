@@ -138,6 +138,17 @@ class TapInOrderBackwardsViewController: UIViewController {
         donetest()
 
     }
+    @IBAction func helpButton(sender: AnyObject) {
+        self.navigationItem.setHidesBackButton(false, animated:true)
+        helpButton.enabled = true
+        StartButton.enabled = true
+        endButton.enabled = false
+        resetButton.enabled = false
+        
+        numplaces = 0
+        numRepeats = 0
+        //donetest()
+    }
     
     func donetest() {
         
