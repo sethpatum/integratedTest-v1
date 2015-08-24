@@ -121,10 +121,14 @@ class TapInOrderViewController: ViewController {
         endButton.enabled = true
         resetButton.enabled = true
         
+        numplaces = 0
+        numRepeats = 0
+        
         randomizeOrder()
         
         drawsequence()
         startTime2 = NSDate()
+        currpressed = 0
     }
     
     @IBAction func EndTest(sender: AnyObject) {
@@ -134,12 +138,9 @@ class TapInOrderViewController: ViewController {
         endButton.enabled = false
         resetButton.enabled = false
         
-        numplaces = 0
-        numRepeats = 0
         donetest()
+        
     }
-    
-    
     
     func donetest() {
         
@@ -157,11 +158,16 @@ class TapInOrderViewController: ViewController {
             for (index, i) in enumerate(self.order) {
                 self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
                 //self.resultLabel.text = "Spatial span: \(self.numplaces)"
-                result.longDescription.addObject("Spatial span: \(self.numplaces)")
                 
                 let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
             }
+            result.longDescription.addObject("Spatial span: \(self.numplaces)")
+            
             resultsArray.add(result)
+            
+            self.numplaces = 0
+            self.numRepeats = 0
+            
         }
     }
     

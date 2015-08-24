@@ -20,6 +20,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     var currpressed = 0 //order of button that is about to be pressed
     var numRepeats = 0 //how many times user messed up on the same numplaces, calling repeat()
     
+    var startTime2 = NSDate()
     
     @IBOutlet weak var StartButton: UIButton!
     @IBOutlet weak var endButton: UIButton!
@@ -37,6 +38,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         
         randomizeOrder()
         drawsequence()
+        startTime2 = NSDate()
         currpressed = 0
         
     }
@@ -115,24 +117,55 @@ class TapInOrderBackwardsViewController: UIViewController {
         endButton.enabled = true
         resetButton.enabled = true
         
+        numplaces = 0
+        numRepeats = 0
+        
         randomizeOrder()
         
         drawsequence()
+        startTime2 = NSDate()
+        currpressed = 0
     }
     
     
     @IBAction func endButton(sender: AnyObject) {
-        
         self.navigationItem.setHidesBackButton(false, animated:true)
         helpButton.enabled = true
         StartButton.enabled = true
         endButton.enabled = false
         resetButton.enabled = false
         
-        numplaces = 0
-        numRepeats = 0
-        //donetest()
+        donetest()
 
+    }
+    
+    func donetest() {
+        
+        delay(0.5) {
+            self.navigationItem.setHidesBackButton(false, animated:true)
+            self.helpButton.enabled = true
+            self.StartButton.enabled = true
+            self.endButton.enabled = false
+            self.resetButton.enabled = false
+            
+            let result = Results()
+            result.name = "Tap in Order Backwards"
+            result.startTime = self.startTime2
+            result.endTime = NSDate()
+            for (index, i) in enumerate(self.order) {
+                self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
+                //self.resultLabel.text = "Spatial span: \(self.numplaces)"
+                
+                let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+            }
+            result.longDescription.addObject("Backwards spatial span: \(self.numplaces)")
+            
+            resultsArray.add(result)
+            
+            self.numplaces = 0
+            self.numRepeats = 0
+            
+        }
     }
     
     //light up the right # of buttons (numplaces+1) for current sequence; buttons enabled AFTER all light up
@@ -192,13 +225,7 @@ class TapInOrderBackwardsViewController: UIViewController {
                 }
                 */
                 //account for delay when changing black back to red for most recently pressed button
-                delay(0.5) {
-                    for (index, i) in enumerate(self.order) {
-                        self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
-                        
-                        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-                    }
-                }
+                donetest()
             }
             
         }
@@ -216,19 +243,7 @@ class TapInOrderBackwardsViewController: UIViewController {
                 }
                 */
                 //account for delay when changing black back to red for most recently pressed button
-                delay(0.5) {
-                    self.navigationItem.setHidesBackButton(false, animated:true)
-                    self.helpButton.enabled = true
-                    self.StartButton.enabled = true
-                    self.endButton.enabled = false
-                    self.resetButton.enabled = false
-                    for (index, i) in enumerate(self.order) {
-                        self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
-                        
-                        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-                       
-                    }
-                }
+                donetest()
             }
             
         }
