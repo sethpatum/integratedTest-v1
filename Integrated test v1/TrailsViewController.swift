@@ -94,7 +94,6 @@ class TrailsAViewController: ViewController {
             navigationController?.pushViewController(vc, animated:true)
         }
         stopTrailsA = true
-        stopTrailsB = true
         done()
     }
     
