@@ -26,6 +26,7 @@ class PicturesViewController: ViewController {
    
     @IBOutlet weak var resetButton: UIButton!
     
+    var wrongList = [""]
     
     @IBAction func HelpButton(sender: AnyObject) {
         if(selectedTest == "Naming Pictures") {
@@ -57,6 +58,8 @@ class PicturesViewController: ViewController {
         var image4 = UIImage(named: imageName)
         imageView4.image = image4
         self.view.addSubview(imageView4)
+        correctButton.enabled = true
+        incorrectButton.enabled = true
         
     }
     
@@ -102,8 +105,9 @@ class PicturesViewController: ViewController {
             resultLabel.text = "\(corr) correct out of 15"
             done()
         }
-        
+        wrongList.append(imageName)
         imageName = getImageName()
+        
         
         var imageView2 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
@@ -147,10 +151,14 @@ class PicturesViewController: ViewController {
         result.startTime = startTime2
         result.endTime = NSDate()
         result.longDescription.addObject("\(corr) correct out of \(count)")
+        result.longDescription.addObject("The incorrect pictures were the \(wrongList)")
         resultsArray.add(result)
         
         backButton.enabled = false
+        correctButton.enabled = false
+        incorrectButton.enabled = false
         self.navigationItem.setHidesBackButton(false, animated:true)
+        
     }
     
     override func viewDidLoad() {
@@ -185,56 +193,14 @@ class PicturesViewController: ViewController {
     override func supportedInterfaceOrientations() -> Int {
         return Int(UIInterfaceOrientationMask.Landscape.rawValue)
     }
+    let namingImages:[String] = ["House", "Comb", "Toothbrush", "Park Bench", "Volcano", "Mushroom", "Canoe", "Cactus", "Rhino", "Hammock", "Stethoscope", "Unicorn", "Camera Tripod", "Sphynx", "Palette", "Palette"]
     
     func getImageName()->String{
         
-        
         if(selectedTest == "Naming Pictures") {
-            if(count == 0){
-                return "House"//"Volcano"
-            }
-            if(count == 1){
-                return "Comb"//"Cactus"
-            }
-            if(count == 2){
-                return "Toothbrush"//"Park Bench"
-            }
-            if(count == 3){
-                return "Park Bench"//"Stethoscope"
-            }
-            if(count == 4){
-                return "Volcano"//"Mushroom"
-            }
-            if(count == 5){
-                return "Mushroom"//"House" mushroom NOT in original order
-            }
-            if(count == 6){
-                return "Canoe"//"Comb"
-            }
-            if(count == 7){
-                return "Cactus"//"Unicorn"
-            }
-            if(count == 8){
-                return "Rhino"//"Camera Tripod" rhino NOT in original order
-            }
-            if(count == 9){
-                return "Hammock"//"Rhino"
-            }
-            if(count == 10){
-                return "Stethoscope"//"Sphynx"
-            }
-            if(count == 11){
-                return "Unicorn"//"Canoe"
-            }
-            if(count == 12){
-                return "Camera Tripod"//"Toothbrush"
-            }
-            if(count == 13){
-                return "Sphynx"
-            }
-            else{
-                return "Palette"
-            }
+            println(count)
+    
+            return namingImages[count]
         } else {
             let c = count + 1
             return "FP" + String(c)
