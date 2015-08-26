@@ -142,6 +142,9 @@ class LetterCancellationViewController: ViewController {
         
         // Setup complete, do drawing here
         
+        drawingView.drawResultBackground()
+        
+        
         if (timedConnectionsLetters.count > 0){
             
             for var k = 0; k < timedConnectionsLetters.count; ++k {

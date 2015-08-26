@@ -49,6 +49,18 @@ class DrawingViewLetters: UIView {
         
     }
     
+    func drawResultBackground(){
+        //println("in drawRect")
+        for letter in letters.letterlist{
+            drawLetters(letter)
+        }
+        
+        UIColor.blackColor().set()
+        opaque = false
+        backgroundColor = nil
+        path.stroke()
+    }
+    
     func reset() {
         println("In reset")
         path.removeAllPoints()
