@@ -12,6 +12,7 @@ import UIKit
 
 class DrawingViewTrails: UIView {
     
+    
     private var currPath = UIBezierPath()
    
     var errorPath = UIBezierPath()

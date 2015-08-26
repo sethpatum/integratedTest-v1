@@ -13,6 +13,7 @@ import UIKit
 
 class PyramidsAndPalmsViewController: UIViewController {
     
+    
     var imageList = [(UIImage, UIImage, UIImage)]()
     var imageView = UIImageView()
     var button1 = UIButton()
