@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -825,16 +825,6 @@
                                     <action selector="HelpButton:" destination="34v-JF-kvs" eventType="touchUpInside" id="yc0-Tt-Zdj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGr-qg-ue7">
-                                <rect key="frame" x="598" y="90" width="95" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="kD0-qa-s1T"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhR-Sx-REv">
                                 <rect key="frame" x="243" y="90" width="129" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -869,6 +859,16 @@
                                 </state>
                                 <connections>
                                     <action selector="correct:" destination="34v-JF-kvs" eventType="touchUpInside" id="5fj-Gf-tCZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGr-qg-ue7">
+                                <rect key="frame" x="601" y="84" width="95" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="End">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="kD0-qa-s1T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -912,7 +912,12 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMa-MB-wYM">
                                 <rect key="frame" x="103" y="145" width="818" height="424"/>
-                                <mutableString key="text">The following user agreement and disclaimer applies to all cognitive neurology sketchpad programs.Please be aware that all tests and guides provided are not meant for diagnostic purposes. This program is not a substitute for clinical judgment or standard of care medicine.While the authors and producers of this program strive to provide you with useful and accurate tools, we do not warrant and expressly disclaim that the information provided by this product is up-to-date complete or accurate. You agree to use this product only as an educational aid and not to diagnose or treat a condition. This party is not responsible for misdiagnosis due to errors in the product, user negligence or otherwise. You agree and acknowledge that you will at all times advise patients to seek professional diagnosis and treatment for any medical condition, and to discuss information obtained from this product with healthcare providers. This part is, to the extent permitted by law, provided on an “as is" basis without warranties of any kind, express or implied, and the authors and the producers of this product disclaim any liability, loss, or damage caused by it or its content. By continuing to use this product, you indicate your acceptance of these terms.</mutableString>
+                                <string key="text">The following user agreement and disclaimer applies to all cognitive neurology sketchpad programs.
+
+Please be aware that all tests and guides provided are not meant for diagnostic purposes. This program is not a substitute for clinical judgment or standard of care medicine.
+
+While the authors and producers of this program strive to provide you with useful and accurate tools, we do not warrant and expressly disclaim that the information provided by this product is up-to-date complete or accurate. You agree to use this product only as an educational aid and not to diagnose or treat a condition. This party is not responsible for misdiagnosis due to errors in the product, user negligence or otherwise. You agree and acknowledge that you will at all times advise patients to seek professional diagnosis and treatment for any medical condition, and to discuss information obtained from this product with healthcare providers. This part is, to the extent permitted by law, provided on an “as is" basis without warranties of any kind, express or implied, and the authors and the producers of this product disclaim any liability, loss, or damage caused by it or its content. By continuing to use this product, you indicate your acceptance of these terms.
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1840,13 +1845,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HW9-8Y-uG3"/>
+        <segue reference="fs4-pa-L87"/>
+        <segue reference="Db8-gX-wha"/>
         <segue reference="31h-M1-QQK"/>
-        <segue reference="Lca-c5-giE"/>
         <segue reference="QiM-jf-6BP"/>
         <segue reference="MHg-ok-Ccm"/>
-        <segue reference="DXj-KH-ajy"/>
-        <segue reference="Ud1-Nd-Hgw"/>
         <segue reference="deg-nT-nb7"/>
-        <segue reference="fs4-pa-L87"/>
+        <segue reference="Ud1-Nd-Hgw"/>
+        <segue reference="DXj-KH-ajy"/>
     </inferredMetricsTieBreakers>
 </document>
