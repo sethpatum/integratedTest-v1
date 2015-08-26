@@ -218,7 +218,7 @@ class DrawingViewTrails: UIView {
                 countSinceCorrect += 1
                 println("countSinceCorrect = \(countSinceCorrect)")
                 
-                if countSinceCorrect > 1 {
+                if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
                     
                     errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                     
@@ -292,7 +292,7 @@ class DrawingViewTrails: UIView {
                     countSinceCorrect += 1
                     println("countSinceCorrect = \(countSinceCorrect); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
                     
-                    if countSinceCorrect > 1 {
+                    if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
                         
                         errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                         

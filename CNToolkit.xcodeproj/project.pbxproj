@@ -19,6 +19,7 @@
 		1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */; };
 		1BCEE8BA1B555E92002AEE37 /* TrailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B91B555E92002AEE37 /* TrailsViewController.swift */; };
 		1BCEE8BC1B555EA5002AEE37 /* TrailsBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */; };
+		E11414A41B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11414A31B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift */; };
 		E1EF6D271B559D8E001037C6 /* DrawingViewCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */; };
 		E1EF6D2A1B559DE0001037C6 /* Circles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D291B559DE0001037C6 /* Circles.swift */; };
 		E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D2E1B56A0A2001037C6 /* DrawingViewLetters.swift */; };
@@ -64,6 +65,7 @@
 		1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B91B555E92002AEE37 /* TrailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsViewController.swift; sourceTree = "<group>"; };
 		1BCEE8BB1B555EA5002AEE37 /* TrailsBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsBViewController.swift; sourceTree = "<group>"; };
+		E11414A31B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyramidsAndPalmsViewController.swift; sourceTree = "<group>"; };
 		E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewCircles.swift; sourceTree = "<group>"; };
 		E1EF6D291B559DE0001037C6 /* Circles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circles.swift; sourceTree = "<group>"; };
 		E1EF6D2E1B56A0A2001037C6 /* DrawingViewLetters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawingViewLetters.swift; path = ../DrawingViewLetters.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				F2DA21EC1B7D61E80048C068 /* TestSelectionTableViewController.swift */,
 				F280A3F21B80F1620071C100 /* SetupViewController.swift */,
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
+				E11414A31B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift */,
 				F2DA21E71B7BFCE20048C068 /* Results */,
 				F2DA21D71B76469F0048C068 /* TapInOrder */,
 				E1EF6D3B1B57680A001037C6 /* TrailsB */,
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */,
+				E11414A41B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift in Sources */,
 				E1EF6D3A1B57651E001037C6 /* DrawingViewTrails.swift in Sources */,
 				F2DA21ED1B7D61E80048C068 /* TestSelectionTableViewController.swift in Sources */,
 				1BCEE8BA1B555E92002AEE37 /* TrailsViewController.swift in Sources */,
