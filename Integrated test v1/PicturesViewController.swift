@@ -194,6 +194,7 @@ class PicturesViewController: ViewController {
         return Int(UIInterfaceOrientationMask.Landscape.rawValue)
     }
     let namingImages:[String] = ["House", "Comb", "Toothbrush", "Park Bench", "Volcano", "Mushroom", "Canoe", "Cactus", "Rhino", "Hammock", "Stethoscope", "Unicorn", "Camera Tripod", "Sphynx", "Palette", "Palette"]
+    let namingImages2:[String] = ["A. Schwarzenegger", "B. Clinton", "B. Murray", "B. Obama", "E. Presley", "G. Bush", "G. Clooney", "H. Clinton", "J. Leno", "J. Travolta", "M. Monroe", "M. Obama", "MLK", "O. Winfrey", "R. Williams", "R. Williams"]
     
     func getImageName()->String{
         
@@ -202,8 +203,7 @@ class PicturesViewController: ViewController {
     
             return namingImages[count]
         } else {
-            let c = count + 1
-            return "FP" + String(c)
+            return namingImages2[count]
         }
         
     }
