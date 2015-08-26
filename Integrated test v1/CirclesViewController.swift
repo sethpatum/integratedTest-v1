@@ -46,7 +46,7 @@ class CirclesViewController: ViewController {
         
         circles.checkResultList(result)
         
-        screenShotMethod()
+        //screenShotMethod()
         
         resultTextCircles = ""
         

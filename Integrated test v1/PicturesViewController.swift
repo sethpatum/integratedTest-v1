@@ -26,7 +26,7 @@ class PicturesViewController: ViewController {
    
     @IBOutlet weak var resetButton: UIButton!
     
-    var wrongList = [""]
+    var wrongList = [String]()
     
     @IBAction func HelpButton(sender: AnyObject) {
         if(selectedTest == "Naming Pictures") {

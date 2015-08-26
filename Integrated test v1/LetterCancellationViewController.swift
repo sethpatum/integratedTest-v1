@@ -7,7 +7,7 @@
 //
 
 var resultTextLetters = ""
-var fontLetters = 20
+var fontLetters = 0
 var stopLetters:Bool = false
 var timePassedLetters = 0.0
 var timedConnectionsLetters = [(Int, Int, Int, Int, Double)]()
@@ -22,6 +22,7 @@ class LetterCancellationViewController: ViewController {
         
     @IBOutlet weak var fontLabel: UILabel! //done
     
+    @IBOutlet weak var slider: UISlider!
     
     
     @IBOutlet weak var startButton: UIButton!
@@ -64,7 +65,6 @@ class LetterCancellationViewController: ViewController {
         
         timedConnectionsLetters = [(Int, Int, Int, Int, Double)]()
         letters.resultListIndexes = [Int]()
-        letters.resultListX = [Int]()
         letters.resultListLetters = [String]()
         letters.resultListTimes = [Double]()
         
@@ -117,7 +117,7 @@ class LetterCancellationViewController: ViewController {
         
         let imageSize = CGSize(width: 1024, height: 558)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 210), size: imageSize))
-        self.view.addSubview(imageView)
+        // self.view.addSubview(imageView)
         let image = drawCustomImage(imageSize)
         imageView.image = image
         
@@ -153,7 +153,7 @@ class LetterCancellationViewController: ViewController {
                 
                 println("a = \(a) b = \(b) x = \(x) y = \(y) z = \(z)")
                 
-                CGContextSetStrokeColorWithColor(context, getColor(z))
+                CGContextSetStrokeColorWithColor(context, getColor(z, alpha:0.7))
                 
                 CGContextBeginPath(context)
                 CGContextSetLineWidth(context, 7.0)
@@ -169,7 +169,7 @@ class LetterCancellationViewController: ViewController {
                     
                     let (a2, b2, x2, y2, z2) = timedConnectionsLetters[k-1]
                     
-                    CGContextSetFillColorWithColor(context, getColor(z2))
+                    CGContextSetFillColorWithColor(context, getColor(z2, alpha:0.8))
                     
                     CGContextBeginPath(context)
                     CGContextSetLineWidth(context, 7.0)
@@ -186,7 +186,7 @@ class LetterCancellationViewController: ViewController {
             
             let (a3, b3, x3, y3, z3) = timedConnectionsLetters[timedConnectionsLetters.count-1]
             let r3 = CGRect(x: a3-15, y: b3-5, width: 20, height: 20)
-            CGContextSetFillColorWithColor(context, getColor(z3))
+            CGContextSetFillColorWithColor(context, getColor(z3, alpha:0.8))
             CGContextBeginPath(context)
             CGContextMoveToPoint(context, CGFloat(a3-5), CGFloat(b3+5))
             CGContextFillEllipseInRect(context, r3)
@@ -211,6 +211,11 @@ class LetterCancellationViewController: ViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
          doneButton.enabled = false
+        
+        var currentValue = Int(slider.value)
+        fontLetters = currentValue
+        fontLabel.text = "Adjust font size: \(currentValue)"
+
     }
     
     override func supportedInterfaceOrientations() -> Int {

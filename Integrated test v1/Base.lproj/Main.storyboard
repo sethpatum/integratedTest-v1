@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -599,12 +599,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="20" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="zb1-Zl-JAM">
-                                <rect key="frame" x="568" y="74" width="300" height="31"/>
-                                <connections>
-                                    <action selector="sizeChanged:" destination="V47-eX-aHh" eventType="valueChanged" id="NGr-7T-ixH"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adjust font size: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdr-L3-lLy">
                                 <rect key="frame" x="291" y="74" width="271" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -641,6 +635,12 @@
                                     <segue destination="n4n-Q1-TJy" kind="show" id="DXj-KH-ajy"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="35" minValue="20" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="zb1-Zl-JAM">
+                                <rect key="frame" x="568" y="74" width="300" height="31"/>
+                                <connections>
+                                    <action selector="sizeChanged:" destination="V47-eX-aHh" eventType="valueChanged" id="NGr-7T-ixH"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -650,6 +650,7 @@
                         <outlet property="doneButton" destination="Ew8-yG-tYn" id="sDg-ig-psu"/>
                         <outlet property="fontLabel" destination="mdr-L3-lLy" id="bz8-hD-GLN"/>
                         <outlet property="helpButton" destination="X0c-zX-AxU" id="Dih-fb-w9c"/>
+                        <outlet property="slider" destination="zb1-Zl-JAM" id="HCH-ek-bic"/>
                         <outlet property="startButton" destination="oaT-8N-oAD" id="ksK-uC-SaY"/>
                     </connections>
                 </viewController>
@@ -899,8 +900,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep6-pB-iiZ">
-                                <rect key="frame" x="429" y="529" width="166" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep6-pB-iiZ">
+                                <rect key="frame" x="429" y="577" width="166" height="90"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="I Agree">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -909,9 +910,16 @@
                                     <segue destination="cLF-Kx-Eej" kind="show" id="Lca-c5-giE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Disclaimer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHN-iP-fdU">
-                                <rect key="frame" x="438" y="93" width="148" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMa-MB-wYM">
+                                <rect key="frame" x="103" y="145" width="818" height="424"/>
+                                <mutableString key="text">The following user agreement and disclaimer applies to all cognitive neurology sketchpad programs.Please be aware that all tests and guides provided are not meant for diagnostic purposes. This program is not a substitute for clinical judgment or standard of care medicine.While the authors and producers of this program strive to provide you with useful and accurate tools, we do not warrant and expressly disclaim that the information provided by this product is up-to-date complete or accurate. You agree to use this product only as an educational aid and not to diagnose or treat a condition. This party is not responsible for misdiagnosis due to errors in the product, user negligence or otherwise. You agree and acknowledge that you will at all times advise patients to seek professional diagnosis and treatment for any medical condition, and to discuss information obtained from this product with healthcare providers. This part is, to the extent permitted by law, provided on an “as is" basis without warranties of any kind, express or implied, and the authors and the producers of this product disclaim any liability, loss, or damage caused by it or its content. By continuing to use this product, you indicate your acceptance of these terms.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Disclaimer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHN-iP-fdU">
+                                <rect key="frame" x="438" y="71" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -919,7 +927,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ep6-pB-iiZ" firstAttribute="leading" secondItem="g9y-gS-QLw" secondAttribute="leadingMargin" constant="413" id="5ts-Or-dfT"/>
+                            <constraint firstItem="hMa-MB-wYM" firstAttribute="top" secondItem="SHN-iP-fdU" secondAttribute="bottom" constant="53" id="9wZ-iM-5Ab"/>
+                            <constraint firstItem="hMa-MB-wYM" firstAttribute="leading" secondItem="g9y-gS-QLw" secondAttribute="leadingMargin" constant="87" id="D1n-Ep-OPD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SHN-iP-fdU" secondAttribute="trailing" constant="422" id="aDN-Bd-Ymr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hMa-MB-wYM" secondAttribute="trailing" constant="87" id="bjc-0D-pRJ"/>
+                            <constraint firstItem="Uoj-kS-pBg" firstAttribute="top" secondItem="ep6-pB-iiZ" secondAttribute="bottom" constant="101" id="izo-EG-hiz"/>
+                            <constraint firstItem="SHN-iP-fdU" firstAttribute="top" secondItem="nud-CB-7JD" secondAttribute="bottom" constant="51" id="j7u-3L-Xjz"/>
                             <constraint firstItem="SHN-iP-fdU" firstAttribute="leading" secondItem="g9y-gS-QLw" secondAttribute="leadingMargin" constant="422" id="rND-xc-tLy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ep6-pB-iiZ" secondAttribute="trailing" constant="413" id="zAW-nV-cKv"/>
                         </constraints>
@@ -1826,14 +1839,14 @@
         <image name="photo-seth" width="980" height="1322"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sPd-Ez-M2U"/>
-        <segue reference="Db8-gX-wha"/>
+        <segue reference="HW9-8Y-uG3"/>
         <segue reference="31h-M1-QQK"/>
+        <segue reference="Lca-c5-giE"/>
         <segue reference="QiM-jf-6BP"/>
-        <segue reference="deg-nT-nb7"/>
-        <segue reference="Ud1-Nd-Hgw"/>
+        <segue reference="MHg-ok-Ccm"/>
         <segue reference="DXj-KH-ajy"/>
+        <segue reference="Ud1-Nd-Hgw"/>
+        <segue reference="deg-nT-nb7"/>
         <segue reference="fs4-pa-L87"/>
-        <segue reference="eko-29-BFX"/>
     </inferredMetricsTieBreakers>
 </document>

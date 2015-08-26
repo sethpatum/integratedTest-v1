@@ -12,9 +12,8 @@ import UIKit
 
 class Letters{
     
-    var letterlist = [(Int, Int, String)]()
+    var letterlist = [(Int, Int, String, UIColor)]()
     var resultListIndexes = [Int]()
-    var resultListX = [Int]()
     var resultListLetters = [String]()
     var resultListTimes = [Double]()
     
@@ -25,7 +24,7 @@ class Letters{
         
         var letterlist1 = [(Int, Int, String)]()
         
-        letterlist = [(Int, Int, String)]()
+        letterlist = [(Int, Int, String, UIColor)]()
         
         letterlist1.append((150, 80, "N"))
         letterlist1.append((150, 180, "E"))
@@ -82,7 +81,7 @@ class Letters{
             
             let i = array[Int(random)]
             
-            letterlist.append((a,b,i))
+            letterlist.append((a,b,i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
             println(i)
             
@@ -107,7 +106,7 @@ class Letters{
             
             let i = array2[Int(random)]
             
-            letterlist.append((a,b,i))
+            letterlist.append((a,b,i,UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
             println(i)
             
@@ -127,7 +126,7 @@ class Letters{
         
         println("In inLetter")
         for (index,letter) in enumerate(letterlist){
-            let (a, b, c) = letter
+            let (a, b, c, col) = letter
             
             var z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
             
@@ -167,9 +166,8 @@ class Letters{
         
         resultListIndexes.append(curr)
         
-        let (a,b,c) = letterlist[curr]
+        let (a,b,c, col) = letterlist[curr]
         
-        resultListX.append(a)
         resultListLetters.append(c)
         
         println("added \(c) to resultListLetters")
@@ -189,24 +187,33 @@ class Letters{
         var correctOnLeft = 0
         var incorrect = 0
         
+        // Mark all the correct letters here.
+        for var i = 0; i < letterlist.count; ++i {
+            let (x, y, c, col) = letterlist[i]
+            if(c == ("E") || c==("R")) {
+                letterlist[i].3 = UIColor(hue: 0.66, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+            }
+        }
+    
         for var k = 0; k < resultListIndexes.count; ++k {
             if (resultListLetters[k]==("E") || resultListLetters[k]==("R")) {
-                
-                if resultListX[k] < 500 {
+                 // Will override  the color of the visited correct letteres
+                letterlist[resultListIndexes[k]].3 = UIColor(hue: 0.33, saturation: 1.0, brightness: 0.70, alpha: 1.0)
+                if letterlist[resultListIndexes[k]].0 < 500 {
                     correctOnLeft += 1
                 }
                 else {
                     correctOnRight += 1
                 }
                 
-            }
-                
-            else {
+            } else {
+                letterlist[resultListIndexes[k]].3 = UIColor(hue: 0.0, saturation: 1.0, brightness: 0.70, alpha: 1.0)
                 incorrect += 1
             }
             
         }
-        
+    
+
         //resultTextLetters = "\(correctOnRight) correct out of 5 on right; \(correctOnLeft) correct out of 5 on left; \(incorrect) incorrect."
         result.longDescription.addObject("\(correctOnRight) correct out of 5 on right;")
         result.longDescription.addObject("\(correctOnLeft) correct out of 5 on left;")
@@ -215,8 +222,8 @@ class Letters{
         
         for var k = 1; k < resultListTimes.count; ++k{
             
-            let (a, b, c) = letterlist[resultListIndexes[k-1]]
-            let (x, y, z) = letterlist[resultListIndexes[k]]
+            let (a, b, c, col1) = letterlist[resultListIndexes[k-1]]
+            let (x, y, z, col2) = letterlist[resultListIndexes[k]]
             let i = resultListTimes[k] - resultListTimes[k-1]
             
             println("From x = \(a), y = \(b) to x = \(x), y = \(y), time = \(i)")
@@ -227,7 +234,6 @@ class Letters{
         
         
         resultListIndexes = [Int]()
-        resultListX = [Int]()
         resultListLetters = [String]()
         resultListTimes = [Double]()
         

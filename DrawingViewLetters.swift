@@ -39,20 +39,20 @@ class DrawingViewLetters: UIView {
     override func drawRect(rect: CGRect) {
         //println("in drawRect")
         for letter in letters.letterlist{
-            drawLetters(letter)
+            drawLetters(letter, color:UIColor(hue: 0.66, saturation: 0.9, brightness: 1.0, alpha: 1.0))
         }
         
         UIColor.blackColor().set()
         opaque = false
         backgroundColor = nil
         path.stroke()
-        
     }
+    
     
     func drawResultBackground(){
         //println("in drawRect")
-        for letter in letters.letterlist{
-            drawLetters(letter)
+         for letter in letters.letterlist{
+            drawLetters(letter, color:letter.3)
         }
         
         UIColor.blackColor().set()
@@ -70,10 +70,11 @@ class DrawingViewLetters: UIView {
         setNeedsDisplay()
     }
     
-    func drawLetters(letter:(Int, Int, String)){
+    
+    // Don't use the color in letter, use the color given
+    func drawLetters(letter:(Int, Int, String, UIColor), color:UIColor){
         
-        
-        let (x, y, name) = letter
+        let (x, y, name, c) = letter
         //println("Bubble \(bubble)")
         
         var context = UIGraphicsGetCurrentContext();
@@ -82,7 +83,7 @@ class DrawingViewLetters: UIView {
         CGContextSetLineWidth(context, 3.0);
         
         // Set the circle outerline-colour
-        UIColor.redColor().set()
+       color.set()
         
         
         // Draw
@@ -99,7 +100,7 @@ class DrawingViewLetters: UIView {
         let aFont = UIFont(name: "Optima-Bold", size: f)
         
         // create a dictionary of attributes to be applied to the string
-        let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.redColor()]
+        let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:color]
         // create the attributed string
         let text = CFAttributedStringCreate(nil, name, attr)
         // create the line of text
