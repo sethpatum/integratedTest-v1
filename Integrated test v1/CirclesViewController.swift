@@ -61,9 +61,7 @@ class CirclesViewController: ViewController {
         
         let imageSize = CGSize(width: 1024, height: 638)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 130), size: imageSize))
-        if resultsDisplayOn == true {
-            self.view.addSubview(imageView)
-        }
+        result.displayLocal(self.view, imageView:imageView, results:self.resultsLabel)
         let image = drawCustomImage(imageSize)
         imageView.image = image
         
@@ -150,9 +148,7 @@ class CirclesViewController: ViewController {
         
         let imageSize = CGSize(width: 1024, height: 638)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 130), size: imageSize))
-        if resultsDisplayOn == true {
-            self.view.addSubview(imageView)
-        }
+        result.displayLocal(self.view, imageView:imageView, results:self.resultsLabel)
         let image = drawCustomImage(imageSize)
         imageView.image = image
         

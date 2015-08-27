@@ -118,9 +118,7 @@ class LetterCancellationViewController: ViewController {
         
         let imageSize = CGSize(width: 1024, height: 558)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 210), size: imageSize))
-        if resultsDisplayOn == true {
-            self.view.addSubview(imageView)
-        }
+        result.displayLocal(self.view, imageView:imageView, results:self.resultsLabel)
         let image = drawCustomImage(imageSize)
         imageView.image = image
         
