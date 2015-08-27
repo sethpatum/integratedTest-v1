@@ -42,7 +42,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         drawsequence()
         startTime2 = NSDate()
         currpressed = 0
-        
+        self.resultsLabel.text = ""
     }
     
     //allow buttons to be pressed
@@ -96,10 +96,7 @@ class TapInOrderBackwardsViewController: UIViewController {
             
         }
         
-        
         println("order is \(order)")
-        
-        
     }
     
     //randomize 1st order; light up 1st button
@@ -127,6 +124,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         drawsequence()
         startTime2 = NSDate()
         currpressed = 0
+        self.resultsLabel.text = ""
     }
     
     

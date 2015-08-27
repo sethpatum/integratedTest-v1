@@ -47,6 +47,7 @@ class TapInOrderViewController: ViewController {
         drawsequence()
         startTime2 = NSDate()
         currpressed = 0
+        self.resultsLabel.text = ""
     }
     
     //allow buttons to be pressed
@@ -132,6 +133,8 @@ class TapInOrderViewController: ViewController {
         drawsequence()
         startTime2 = NSDate()
         currpressed = 0
+        
+        self.resultsLabel.text = ""
     }
     
     @IBAction func EndTest(sender: AnyObject) {

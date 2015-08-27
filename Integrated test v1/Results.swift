@@ -84,9 +84,11 @@ class Results: NSObject {
         screenshot = UIGraphicsGetImageFromCurrentImageContext()
     }
     
-    func displayLocal(view:UIView!, imageView:UIImageView, results:UILabel) {
+    func displayLocal(view:UIView?, imageView:UIImageView?, results:UILabel) {
         if resultsDisplayOn == true {
-            view.addSubview(imageView)
+            if view != nil && imageView != nil {
+                view!.addSubview(imageView!)
+            }
             var str:String = ""
             for info in longDescription {
                 str += info as! String

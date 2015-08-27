@@ -31,9 +31,8 @@ class CirclesViewController: ViewController {
     
     @IBOutlet weak var resultsLabel: UILabel!
     
-    
     var startTime = NSTimeInterval()
-     var startTime2 = NSDate()
+    var startTime2 = NSDate()
     
     @IBAction func HelpButton(sender: AnyObject) {
         startButton.enabled = true
@@ -118,8 +117,9 @@ class CirclesViewController: ViewController {
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         stopCircles = false
-        
+        resultsLabel.text = ""
     }
+    
     
     @IBAction func StopButton(sender: AnyObject) {
         
