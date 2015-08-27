@@ -12,6 +12,7 @@ var useridOn : Bool = false
 var ageOn    : Bool = true
 var emailOn  : Bool = false
 var emailAddress : String = ""
+var resultsDisplayOn : Bool = true
 
 class SetupViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class SetupViewController: UIViewController {
     
     @IBOutlet weak var AgeOnOff: UISwitch!
     
+    @IBOutlet weak var resultsDisplayOnOff: UISwitch!
     
     @IBAction func emailOnOff(sender: AnyObject) {
         emailOn = emailOnOff.on
@@ -57,12 +59,22 @@ class SetupViewController: UIViewController {
     }
     
     
+    @IBAction func ResultsDisplayOnOff(sender: AnyObject) {
+        resultsDisplayOn = resultsDisplayOnOff.on
+        NSUserDefaults.standardUserDefaults().setBool(resultsDisplayOn, forKey: "resultsDisplayOn")
+        NSUserDefaults.standardUserDefaults().synchronize()
+
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         useridOn = NSUserDefaults.standardUserDefaults().boolForKey("useridOn")
         ageOn = NSUserDefaults.standardUserDefaults().boolForKey("ageOn")
         emailOn = NSUserDefaults.standardUserDefaults().boolForKey("emailOn")
-        if(NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") != nil) {
+        resultsDisplayOn = NSUserDefaults.standardUserDefaults().boolForKey("resultsDisplayOn")
+
+    if(NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") != nil) {
             emailAddress = NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") as! String
         }
        
@@ -72,6 +84,7 @@ class SetupViewController: UIViewController {
         useridOnOff.on = useridOn
         AgeOnOff.on = ageOn
         email.text = emailAddress
+        resultsDisplayOnOff.on = resultsDisplayOn
     }
     
     

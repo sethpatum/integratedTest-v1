@@ -26,6 +26,8 @@ class PicturesViewController: ViewController {
    
     @IBOutlet weak var resetButton: UIButton!
     
+    @IBOutlet weak var resultsLabel: UILabel!
+    
     var wrongList = [String]()
     
     @IBAction func HelpButton(sender: AnyObject) {
@@ -151,8 +153,18 @@ class PicturesViewController: ViewController {
         result.startTime = startTime2
         result.endTime = NSDate()
         result.longDescription.addObject("\(corr) correct out of \(count)")
-        result.longDescription.addObject("The incorrect pictures were the \(wrongList)")
+        if wrongList.count > 0  {
+            result.longDescription.addObject("The incorrect pictures were the \(wrongList)")
+        }
         resultsArray.add(result)
+        
+        if resultsDisplayOn == true {
+            var str:String = "\(corr) correct out of \(count)"
+            if wrongList.count > 0 {
+                str += "\nThe incorrect pictures were the \(wrongList)"
+            }
+            self.resultsLabel.text = str
+        }
         
         backButton.enabled = false
         correctButton.enabled = false

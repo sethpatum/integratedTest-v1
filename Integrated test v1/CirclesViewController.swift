@@ -29,6 +29,7 @@ class CirclesViewController: ViewController {
     
     @IBOutlet weak var doneButton: UIButton!
     
+    @IBOutlet weak var resultsLabel: UILabel!
     
     
     var startTime = NSTimeInterval()
@@ -60,7 +61,9 @@ class CirclesViewController: ViewController {
         
         let imageSize = CGSize(width: 1024, height: 638)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 130), size: imageSize))
-        //self.view.addSubview(imageView)
+        if resultsDisplayOn == true {
+            self.view.addSubview(imageView)
+        }
         let image = drawCustomImage(imageSize)
         imageView.image = image
         
@@ -147,7 +150,9 @@ class CirclesViewController: ViewController {
         
         let imageSize = CGSize(width: 1024, height: 638)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 130), size: imageSize))
-        //self.view.addSubview(imageView)
+        if resultsDisplayOn == true {
+            self.view.addSubview(imageView)
+        }
         let image = drawCustomImage(imageSize)
         imageView.image = image
         

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -509,6 +509,12 @@
                                     <action selector="StopButton:" destination="rGF-LE-KyD" eventType="touchUpInside" id="C5p-pz-pny"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHb-GL-Dl7">
+                                <rect key="frame" x="587" y="75" width="293" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -516,6 +522,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="doneButton" destination="dC6-KN-UvJ" id="xM0-2Q-8yp"/>
+                        <outlet property="resultsLabel" destination="MHb-GL-Dl7" id="uFs-TN-w6M"/>
                         <outlet property="startButton" destination="G06-RH-wg0" id="xeZ-eJ-7Ub"/>
                         <outlet property="timerLabel" destination="wmb-M8-alp" id="CGF-lH-QVG"/>
                     </connections>
@@ -572,6 +579,12 @@
                                     <action selector="StopButton:" destination="76o-Z3-r7u" eventType="touchUpInside" id="Ctl-3J-k1q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKR-nO-cK5">
+                                <rect key="frame" x="405" y="75" width="289" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -579,6 +592,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="doneButton" destination="dMF-8v-AH5" id="gAT-vG-210"/>
+                        <outlet property="resultsLabel" destination="BKR-nO-cK5" id="2bP-uv-22r"/>
                         <outlet property="startButton" destination="PXe-uo-2eK" id="IYp-2T-C7Q"/>
                         <outlet property="timerLabel" destination="DLD-2k-esF" id="oOf-gy-FG4"/>
                     </connections>
@@ -641,6 +655,12 @@
                                     <action selector="sizeChanged:" destination="V47-eX-aHh" eventType="valueChanged" id="NGr-7T-ixH"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krb-QW-eyc">
+                                <rect key="frame" x="577" y="119" width="289" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -650,6 +670,7 @@
                         <outlet property="doneButton" destination="Ew8-yG-tYn" id="sDg-ig-psu"/>
                         <outlet property="fontLabel" destination="mdr-L3-lLy" id="bz8-hD-GLN"/>
                         <outlet property="helpButton" destination="X0c-zX-AxU" id="Dih-fb-w9c"/>
+                        <outlet property="resultsLabel" destination="krb-QW-eyc" id="GFU-me-ahD"/>
                         <outlet property="slider" destination="zb1-Zl-JAM" id="HCH-ek-bic"/>
                         <outlet property="startButton" destination="oaT-8N-oAD" id="ksK-uC-SaY"/>
                     </connections>
@@ -717,6 +738,18 @@
                                     <action selector="EndTest:" destination="aMc-eE-pqC" eventType="touchUpInside" id="EPD-qs-Dox"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIk-IK-Axm">
+                                <rect key="frame" x="577" y="67" width="293" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lE-pG-0gr">
+                                <rect key="frame" x="586.5" y="77" width="293" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -726,6 +759,7 @@
                         <outlet property="endButton" destination="xdU-cO-zDB" id="PnQ-2T-nfh"/>
                         <outlet property="helpButton" destination="8dF-gl-s6U" id="shv-A0-bYq"/>
                         <outlet property="resetButton" destination="hgm-Kp-zhs" id="9b0-8L-F0e"/>
+                        <outlet property="resultsLabel" destination="HIk-IK-Axm" id="H6P-q6-mKl"/>
                         <outlet property="startButton" destination="QjG-ot-Iq5" id="ZfN-QU-ZFE"/>
                     </connections>
                 </viewController>
@@ -787,6 +821,12 @@
                                     <action selector="endButton:" destination="3ez-fa-Egv" eventType="touchUpInside" id="s2E-fe-G46"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBq-Vi-FGC">
+                                <rect key="frame" x="647" y="81" width="229" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -797,6 +837,7 @@
                         <outlet property="endButton" destination="5Es-zV-oyd" id="Nij-6d-hKb"/>
                         <outlet property="helpButton" destination="isx-Fl-uac" id="oAT-Wt-Isy"/>
                         <outlet property="resetButton" destination="Zvw-c2-AAR" id="Uyj-Hw-gRu"/>
+                        <outlet property="resultsLabel" destination="eBq-Vi-FGC" id="8wR-6U-2KZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55P-Mn-pQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -825,26 +866,6 @@
                                     <action selector="HelpButton:" destination="34v-JF-kvs" eventType="touchUpInside" id="yc0-Tt-Zdj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhR-Sx-REv">
-                                <rect key="frame" x="243" y="90" width="129" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Incorrect">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="incorrect:" destination="34v-JF-kvs" eventType="touchUpInside" id="s3t-DR-Tf0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5W-Si-CB6">
-                                <rect key="frame" x="443" y="90" width="86" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="34v-JF-kvs" eventType="touchUpInside" id="Myq-wQ-lqT"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2a-Sc-BPL">
                                 <rect key="frame" x="63" y="141" width="905" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -861,8 +882,34 @@
                                     <action selector="correct:" destination="34v-JF-kvs" eventType="touchUpInside" id="5fj-Gf-tCZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1T-MC-dKm">
+                                <rect key="frame" x="581" y="75" width="302" height="110"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhR-Sx-REv">
+                                <rect key="frame" x="220" y="90" width="129" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Incorrect">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incorrect:" destination="34v-JF-kvs" eventType="touchUpInside" id="s3t-DR-Tf0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5W-Si-CB6">
+                                <rect key="frame" x="401" y="90" width="86" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="34v-JF-kvs" eventType="touchUpInside" id="Myq-wQ-lqT"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGr-qg-ue7">
-                                <rect key="frame" x="601" y="84" width="95" height="47"/>
+                                <rect key="frame" x="523" y="84" width="95" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="End">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -882,6 +929,7 @@
                         <outlet property="incorrectButton" destination="OhR-Sx-REv" id="cBf-se-QwQ"/>
                         <outlet property="resetButton" destination="bGr-qg-ue7" id="sey-OI-GNX"/>
                         <outlet property="resultLabel" destination="Q2a-Sc-BPL" id="Db4-TY-cS9"/>
+                        <outlet property="resultsLabel" destination="A1T-MC-dKm" id="uea-t2-fQC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2Y-Ax-B2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -919,7 +967,7 @@ Please be aware that all tests and guides provided are not meant for diagnostic 
 While the authors and producers of this program strive to provide you with useful and accurate tools, we do not warrant and expressly disclaim that the information provided by this product is up-to-date complete or accurate. You agree to use this product only as an educational aid and not to diagnose or treat a condition. This party is not responsible for misdiagnosis due to errors in the product, user negligence or otherwise. You agree and acknowledge that you will at all times advise patients to seek professional diagnosis and treatment for any medical condition, and to discuss information obtained from this product with healthcare providers. This part is, to the extent permitted by law, provided on an “as is" basis without warranties of any kind, express or implied, and the authors and the producers of this product disclaim any liability, loss, or damage caused by it or its content. By continuing to use this product, you indicate your acceptance of these terms.
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Disclaimer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHN-iP-fdU">
@@ -1468,6 +1516,18 @@ While the authors and producers of this program strive to provide you with usefu
                                     <action selector="AgeOnOff:" destination="WAV-l7-oOn" eventType="valueChanged" id="gCU-2p-EJ1"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display Results at end of the test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqa-Se-Me9">
+                                <rect key="frame" x="34" y="397" width="253" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xF5-aA-G4J">
+                                <rect key="frame" x="309" y="392" width="51" height="31"/>
+                                <connections>
+                                    <action selector="ResultsDisplayOnOff:" destination="WAV-l7-oOn" eventType="valueChanged" id="TN7-4q-Hwt"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1481,6 +1541,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <outlet property="email" destination="NrE-Xy-X6o" id="bEp-e3-fTN"/>
                         <outlet property="emailLabel" destination="6Jc-Y1-3bJ" id="Fub-Th-JPk"/>
                         <outlet property="emailOnOff" destination="jfq-be-YFq" id="Kc5-f7-bXg"/>
+                        <outlet property="resultsDisplayOnOff" destination="xF5-aA-G4J" id="4ua-3H-3Z8"/>
                         <outlet property="useridOnOff" destination="PtC-pM-W8s" id="zDl-if-ViI"/>
                     </connections>
                 </viewController>
@@ -1669,9 +1730,9 @@ While the authors and producers of this program strive to provide you with usefu
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLC-Eh-PJb">
                                 <rect key="frame" x="204" y="168" width="616" height="301"/>
-                                <mutableString key="text">The naming pictures task consists of 15 different images in order of naming difficulty. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
+                                <string key="text">The naming pictures task consists of 15 different images in order of naming difficulty. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
