@@ -16,8 +16,6 @@ class PicturesViewController: ViewController {
     var order = [Bool]()
      var startTime2 = NSDate()
     
-    @IBOutlet weak var resultLabel: UILabel!
-    
     @IBOutlet weak var correctButton: UIButton!
     
     @IBOutlet weak var incorrectButton: UIButton!
@@ -53,7 +51,7 @@ class PicturesViewController: ViewController {
         count = 0
         corr = 0
         imageName = getImageName()
-        resultLabel.text = ""
+        resultsLabel.text = ""
         
         var imageView4 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
@@ -77,7 +75,6 @@ class PicturesViewController: ViewController {
         corr += 1
         
         if(count==15){
-            resultLabel.text = "\(corr) correct out of 15"
             done()
         }
         
@@ -104,7 +101,6 @@ class PicturesViewController: ViewController {
         count += 1
         
         if(count==15){
-            resultLabel.text = "\(corr) correct out of 15"
             done()
         }
         wrongList.append(imageName)

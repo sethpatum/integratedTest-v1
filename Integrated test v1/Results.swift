@@ -52,7 +52,7 @@ class Results: NSObject {
     // All rows are same height, except the screeshot
     func heightForRow(i:Int) -> Int {
         if i < longDescription.count {
-            return 30
+             return 60
         }
         if i == longDescription.count && screenshot != nil {
             return 500
@@ -65,6 +65,8 @@ class Results: NSObject {
     func setRow(i:Int, cell:UITableViewCell) {
         if i < longDescription.count {
             cell.textLabel?.text = longDescription.objectAtIndex(i) as? String
+            cell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            cell.textLabel?.numberOfLines = 0
         }
         if i == longDescription.count && screenshot != nil {
             cell.imageView?.image = screenshot
