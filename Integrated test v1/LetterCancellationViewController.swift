@@ -29,6 +29,7 @@ class LetterCancellationViewController: ViewController {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     
+    @IBOutlet weak var resultsLabel: UILabel!
     
     var imageView: UIImageView!
     
@@ -86,7 +87,7 @@ class LetterCancellationViewController: ViewController {
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         stopLetters = false
-        
+        resultsLabel.text = ""
     }
     
     @IBAction func StopButton(sender: AnyObject){
@@ -116,8 +117,8 @@ class LetterCancellationViewController: ViewController {
         }
         
         let imageSize = CGSize(width: 1024, height: 558)
-        imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 210), size: imageSize))
-        // self.view.addSubview(imageView)
+        imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 200), size: imageSize))
+        result.displayLocal(self.view, imageView:imageView, results:self.resultsLabel)
         let image = drawCustomImage(imageSize)
         imageView.image = image
         

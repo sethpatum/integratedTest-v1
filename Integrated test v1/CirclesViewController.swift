@@ -29,10 +29,10 @@ class CirclesViewController: ViewController {
     
     @IBOutlet weak var doneButton: UIButton!
     
-    
+    @IBOutlet weak var resultsLabel: UILabel!
     
     var startTime = NSTimeInterval()
-     var startTime2 = NSDate()
+    var startTime2 = NSDate()
     
     @IBAction func HelpButton(sender: AnyObject) {
         startButton.enabled = true
@@ -60,7 +60,7 @@ class CirclesViewController: ViewController {
         
         let imageSize = CGSize(width: 1024, height: 638)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 130), size: imageSize))
-        //self.view.addSubview(imageView)
+        result.displayLocal(self.view, imageView:imageView, results:self.resultsLabel)
         let image = drawCustomImage(imageSize)
         imageView.image = image
         
@@ -117,8 +117,9 @@ class CirclesViewController: ViewController {
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         stopCircles = false
-        
+        resultsLabel.text = ""
     }
+    
     
     @IBAction func StopButton(sender: AnyObject) {
         
@@ -147,7 +148,7 @@ class CirclesViewController: ViewController {
         
         let imageSize = CGSize(width: 1024, height: 638)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 130), size: imageSize))
-        //self.view.addSubview(imageView)
+        result.displayLocal(self.view, imageView:imageView, results:self.resultsLabel)
         let image = drawCustomImage(imageSize)
         imageView.image = image
         

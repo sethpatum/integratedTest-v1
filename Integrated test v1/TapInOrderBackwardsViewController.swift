@@ -30,6 +30,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     
+    @IBOutlet weak var resultsLabel: UILabel!
     
     //start from 1st button; reset all info
     @IBAction func Reset(sender: AnyObject) {
@@ -104,10 +105,7 @@ class TapInOrderBackwardsViewController: UIViewController {
             
         }
         
-        
         println("order is \(order)")
-        
-        
     }
     
     //randomize 1st order; light up 1st button
@@ -139,6 +137,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         drawSequenceRecursively(numplaces)
         startTime2 = NSDate()
         currpressed = 0
+        self.resultsLabel.text = ""
     }
     
     
@@ -181,7 +180,10 @@ class TapInOrderBackwardsViewController: UIViewController {
             result.endTime = NSDate()
             for (index, i) in enumerate(self.order) {
                 self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
-                //self.resultLabel.text = "Spatial span: \(self.numplaces)"
+                
+                if resultsDisplayOn == true {
+                    self.resultsLabel.text = "Spatial span: \(self.numplaces)"
+                }
                 
                 let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
             }

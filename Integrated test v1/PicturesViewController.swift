@@ -16,8 +16,6 @@ class PicturesViewController: ViewController {
     var order = [Bool]()
      var startTime2 = NSDate()
     
-    @IBOutlet weak var resultLabel: UILabel!
-    
     @IBOutlet weak var correctButton: UIButton!
     
     @IBOutlet weak var incorrectButton: UIButton!
@@ -25,6 +23,8 @@ class PicturesViewController: ViewController {
     @IBOutlet weak var backButton: UIButton!
    
     @IBOutlet weak var resetButton: UIButton!
+    
+    @IBOutlet weak var resultsLabel: UILabel!
     
     var wrongList = [String]()
     
@@ -51,7 +51,7 @@ class PicturesViewController: ViewController {
         count = 0
         corr = 0
         imageName = getImageName()
-        resultLabel.text = ""
+        resultsLabel.text = ""
         
         var imageView4 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
@@ -75,7 +75,6 @@ class PicturesViewController: ViewController {
         corr += 1
         
         if(count==15){
-            resultLabel.text = "\(corr) correct out of 15"
             done()
         }
         
@@ -102,7 +101,6 @@ class PicturesViewController: ViewController {
         count += 1
         
         if(count==15){
-            resultLabel.text = "\(corr) correct out of 15"
             done()
         }
         wrongList.append(imageName)
@@ -151,8 +149,18 @@ class PicturesViewController: ViewController {
         result.startTime = startTime2
         result.endTime = NSDate()
         result.longDescription.addObject("\(corr) correct out of \(count)")
-        result.longDescription.addObject("The incorrect pictures were the \(wrongList)")
+        if wrongList.count > 0  {
+            result.longDescription.addObject("The incorrect pictures were the \(wrongList)")
+        }
         resultsArray.add(result)
+        
+        if resultsDisplayOn == true {
+            var str:String = "\(corr) correct out of \(count)"
+            if wrongList.count > 0 {
+                str += "\nThe incorrect pictures were the \(wrongList)"
+            }
+            self.resultsLabel.text = str
+        }
         
         backButton.enabled = false
         correctButton.enabled = false
@@ -194,6 +202,7 @@ class PicturesViewController: ViewController {
         return Int(UIInterfaceOrientationMask.Landscape.rawValue)
     }
     let namingImages:[String] = ["House", "Comb", "Toothbrush", "Park Bench", "Volcano", "Mushroom", "Canoe", "Cactus", "Rhino", "Hammock", "Stethoscope", "Unicorn", "Camera Tripod", "Sphynx", "Palette", "Palette"]
+    let namingImages2:[String] = ["A. Schwarzenegger", "B. Clinton", "B. Murray", "B. Obama", "E. Presley", "G. Bush", "G. Clooney", "H. Clinton", "J. Leno", "J. Travolta", "M. Monroe", "M. Obama", "MLK", "O. Winfrey", "R. Williams", "R. Williams"]
     
     func getImageName()->String{
         
@@ -202,8 +211,7 @@ class PicturesViewController: ViewController {
     
             return namingImages[count]
         } else {
-            let c = count + 1
-            return "FP" + String(c)
+            return namingImages2[count]
         }
         
     }
