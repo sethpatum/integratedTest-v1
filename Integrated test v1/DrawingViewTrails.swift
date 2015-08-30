@@ -170,7 +170,9 @@ class DrawingViewTrails: UIView {
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         //println("Touch Begin")
         
-        canDraw = true
+        if nextBubb != bubbles.bubblelist.count {
+            canDraw = true
+        }
         
         var touch = touches.first as! UITouch
         currPath.moveToPoint(touch.locationInView(self))

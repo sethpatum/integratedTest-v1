@@ -72,6 +72,8 @@ class TrailsAViewController: ViewController {
         stopTrailsA = false
         displayImgTrailsA = false
         
+        drawingView.canDraw = true
+        
         bubbleColor = UIColor.redColor()
         
     }
@@ -159,6 +161,7 @@ class TrailsAViewController: ViewController {
     }
     
     func done() {
+        drawingView.canDraw = false
         let imageSize = CGSize(width: 1024, height: 618)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 150), size: imageSize))
         if resultsDisplayOn == true {

@@ -51,11 +51,15 @@ class BubblesA {
             names.append(trailsAnames[1])
             names.append(trailsAnames[2])
             names.append(trailsAnames[3])
+            names.append(trailsAnames[4])
+            names.append(trailsAnames[5])
         } else {
             names.append(trailsBnames[0])
             names.append(trailsBnames[1])
             names.append(trailsBnames[2])
             names.append(trailsBnames[3])
+            names.append(trailsBnames[4])
+            names.append(trailsBnames[5])
             
         }
         
