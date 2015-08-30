@@ -14,7 +14,7 @@ var emailOn  : Bool = false
 var emailAddress : String = ""
 var resultsDisplayOn : Bool = true
 
-class SetupViewController: UIViewController {
+class SetupViewController: ViewController {
 
    
     @IBOutlet weak var email: UITextField!
