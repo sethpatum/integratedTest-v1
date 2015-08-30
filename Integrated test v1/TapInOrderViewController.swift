@@ -45,6 +45,7 @@ class TapInOrderViewController: ViewController {
         numplaces = 0
         numRepeats = 0
         currpressed = 0
+        self.resultsLabel.text = ""
         
         randomizeOrder()
         

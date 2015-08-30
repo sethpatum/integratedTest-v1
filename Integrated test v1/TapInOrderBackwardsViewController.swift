@@ -40,6 +40,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         numplaces = 0
         numRepeats = 0
         currpressed = 0
+        self.resultsLabel.text = ""
         
         randomizeOrder()
         
@@ -121,7 +122,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     
     @IBAction func StartTest(sender: AnyObject) {
         
-        ended == false
+        ended = false
         
         self.navigationItem.setHidesBackButton(true, animated:true)
         helpButton.enabled = false
@@ -137,6 +138,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         drawSequenceRecursively(numplaces)
         startTime2 = NSDate()
         currpressed = 0
+
         self.resultsLabel.text = ""
     }
     
@@ -233,6 +235,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     }
     */
     func drawSequenceRecursively(num:Int){
+        
         if num < 0 {
             self.enableButtons()
         }
