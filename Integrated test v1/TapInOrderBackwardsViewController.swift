@@ -23,6 +23,8 @@ class TapInOrderBackwardsViewController: UIViewController {
     
     var startTime2 = NSDate()
     
+    var ended = false
+    
     @IBOutlet weak var StartButton: UIButton!
     @IBOutlet weak var endButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
@@ -36,11 +38,18 @@ class TapInOrderBackwardsViewController: UIViewController {
         
         numplaces = 0
         numRepeats = 0
+        currpressed = 0
         
         randomizeOrder()
-        drawsequence()
-        startTime2 = NSDate()
-        currpressed = 0
+        
+        for (index, i) in enumerate(self.order) {
+            self.buttonList[index].backgroundColor = UIColor.redColor()
+        }
+        
+        delay(1.5){
+            self.drawSequenceRecursively(self.numplaces)
+            self.startTime2 = NSDate()
+        }
         
     }
     
@@ -107,10 +116,14 @@ class TapInOrderBackwardsViewController: UIViewController {
         super.viewDidLoad()
         endButton.enabled = false
         resetButton.enabled = false
+        
+        randomizeOrder()
        
     }
     
     @IBAction func StartTest(sender: AnyObject) {
+        
+        ended == false
         
         self.navigationItem.setHidesBackButton(true, animated:true)
         helpButton.enabled = false
@@ -123,7 +136,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         
         randomizeOrder()
         
-        drawsequence()
+        drawSequenceRecursively(numplaces)
         startTime2 = NSDate()
         currpressed = 0
     }
@@ -139,7 +152,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         donetest()
 
     }
-    @IBAction func helpButton(sender: AnyObject) {
+    @IBAction func helpBhutton(sender: AnyObject) {
         self.navigationItem.setHidesBackButton(false, animated:true)
         helpButton.enabled = true
         StartButton.enabled = true
@@ -153,6 +166,8 @@ class TapInOrderBackwardsViewController: UIViewController {
     
     func donetest() {
         
+        ended = true
+        
         delay(0.5) {
             self.navigationItem.setHidesBackButton(false, animated:true)
             self.helpButton.enabled = true
@@ -161,7 +176,7 @@ class TapInOrderBackwardsViewController: UIViewController {
             self.resetButton.enabled = false
             
             let result = Results()
-            result.name = "Tap in Order Backwards"
+            result.name = "Backward Spatial Span"
             result.startTime = self.startTime2
             result.endTime = NSDate()
             for (index, i) in enumerate(self.order) {
@@ -170,7 +185,7 @@ class TapInOrderBackwardsViewController: UIViewController {
                 
                 let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
             }
-            result.longDescription.addObject("Backwards spatial span: \(self.numplaces)")
+            result.longDescription.addObject("Backward spatial span: \(self.numplaces)")
             
             resultsArray.add(result)
             
@@ -181,6 +196,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     }
     
     //light up the right # of buttons (numplaces+1) for current sequence; buttons enabled AFTER all light up
+    /*
     func drawsequence() {
         
         println("drawing sequence")
@@ -212,6 +228,40 @@ class TapInOrderBackwardsViewController: UIViewController {
             self.enableButtons()
         }
         
+    }
+    */
+    func drawSequenceRecursively(num:Int){
+        if num < 0 {
+            self.enableButtons()
+        }
+        
+        else {
+            
+            if ended == false {
+                delay(0.4) {
+                    if self.ended == false {
+                        self.buttonList[num].backgroundColor = UIColor.greenColor()
+                        println("green; num = \(num)")
+                        self.delay(1.0){
+                            if self.ended == false {
+                                self.buttonList[num].backgroundColor = UIColor.redColor()
+                                println("red; num = \(num)")
+                                /*
+                                for (index, i) in enumerate(self.order) {
+                                    self.buttonList[index].backgroundColor = UIColor.redColor()
+                                }
+*/
+                                
+                                println("Getting here shoudl be red")
+                                
+                                var num2 = num - 1
+                                self.drawSequenceRecursively(num2)
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     //call when a mistake is made (-> repeat(), or finish if repeated already)
@@ -246,7 +296,11 @@ class TapInOrderBackwardsViewController: UIViewController {
         else {
             
             if numplaces < buttonList.count-1{
-                next()
+                
+                delay(1.0){
+                    self.next()
+                }
+                
             }
             else {
                 /*
@@ -273,21 +327,29 @@ class TapInOrderBackwardsViewController: UIViewController {
         */
         //account for delay when changing black back to red for most recently pressed button
         delay(0.5) {
-            for (index, i) in enumerate(self.order) {
-                self.buttonList[index].backgroundColor = UIColor.lightGrayColor()
+            
+            if self.ended == false {
+                for (index, i) in enumerate(self.order) {
+                    self.buttonList[index].backgroundColor = UIColor.lightGrayColor()
+                }
             }
+            
         }
         
         //return color to normal, currpressed to zero (restarting that sequence), record the repeat, light up buttons
         delay(2.5) {
-            println("in repeat")
-            for (index, i) in enumerate(self.order) {
-                self.buttonList[index].backgroundColor = UIColor.redColor()
+            
+            if self.ended == false {
+                println("in repeat")
+                for (index, i) in enumerate(self.order) {
+                    self.buttonList[index].backgroundColor = UIColor.redColor()
+                }
+                
+                self.currpressed = 0
+                self.numRepeats += 1
+                self.drawSequenceRecursively(self.numplaces)
             }
             
-            self.currpressed = 0
-            self.numRepeats += 1
-            self.drawsequence()
         }
         
         
@@ -295,13 +357,15 @@ class TapInOrderBackwardsViewController: UIViewController {
     
     //user completed sequence; reset repeats, increase numplaces so 1 more button lights up
     func next(){
+        numplaces = numplaces + 1
         delay(1) {
-            println("next")
-            self.numRepeats = 0
-            self.numplaces = self.numplaces + 1
-            self.currpressed = 0
-            self.randomizeOrder()
-            self.drawsequence()
+            if self.ended == false {
+                println("next")
+                self.numRepeats = 0
+                self.currpressed = 0
+                self.randomizeOrder()
+                self.drawSequenceRecursively(self.numplaces)
+            }
         }
         
     }

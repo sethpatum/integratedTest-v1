@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -161,7 +161,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zk-7p-btk">
                                                     <rect key="frame" x="12" y="0.0" width="1000" height="45"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="          Tap In Order Task">
+                                                    <state key="normal" title="          Forward Spatial Span Task">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -180,7 +180,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xD-K4-s1K">
                                                     <rect key="frame" x="8" y="0.0" width="1008" height="43"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="          Tap In Order Backwards Task">
+                                                    <state key="normal" title="          Backward Spatial Span Task">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -912,9 +912,14 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMa-MB-wYM">
                                 <rect key="frame" x="103" y="145" width="818" height="424"/>
-                                <mutableString key="text">The following user agreement and disclaimer applies to all cognitive neurology sketchpad programs.Please be aware that all tests and guides provided are not meant for diagnostic purposes. This program is not a substitute for clinical judgment or standard of care medicine.While the authors and producers of this program strive to provide you with useful and accurate tools, we do not warrant and expressly disclaim that the information provided by this product is up-to-date complete or accurate. You agree to use this product only as an educational aid and not to diagnose or treat a condition. This party is not responsible for misdiagnosis due to errors in the product, user negligence or otherwise. You agree and acknowledge that you will at all times advise patients to seek professional diagnosis and treatment for any medical condition, and to discuss information obtained from this product with healthcare providers. This part is, to the extent permitted by law, provided on an “as is" basis without warranties of any kind, express or implied, and the authors and the producers of this product disclaim any liability, loss, or damage caused by it or its content. By continuing to use this product, you indicate your acceptance of these terms.</mutableString>
+                                <string key="text">The following user agreement and disclaimer applies to all cognitive neurology sketchpad programs.
+
+Please be aware that all tests and guides provided are not meant for diagnostic purposes. This program is not a substitute for clinical judgment or standard of care medicine.
+
+While the authors and producers of this program strive to provide you with useful and accurate tools, we do not warrant and expressly disclaim that the information provided by this product is up-to-date complete or accurate. You agree to use this product only as an educational aid and not to diagnose or treat a condition. This party is not responsible for misdiagnosis due to errors in the product, user negligence or otherwise. You agree and acknowledge that you will at all times advise patients to seek professional diagnosis and treatment for any medical condition, and to discuss information obtained from this product with healthcare providers. This part is, to the extent permitted by law, provided on an “as is" basis without warranties of any kind, express or implied, and the authors and the producers of this product disclaim any liability, loss, or damage caused by it or its content. By continuing to use this product, you indicate your acceptance of these terms.
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Disclaimer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHN-iP-fdU">
@@ -1227,8 +1232,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obL-hD-d9W">
-                                                    <rect key="frame" x="293" y="7" width="121" height="30"/>
-                                                    <state key="normal" title="Tap In Order Help">
+                                                    <rect key="frame" x="293" y="7" width="184" height="30"/>
+                                                    <state key="normal" title="Forward Spatial Span Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -1245,8 +1250,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPJ-h6-unc">
-                                                    <rect key="frame" x="292" y="7" width="201" height="30"/>
-                                                    <state key="normal" title="Tap In Order Backwards Help">
+                                                    <rect key="frame" x="292" y="7" width="196" height="30"/>
+                                                    <state key="normal" title="Backward Spatial Span Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -1570,16 +1575,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-mW-coz">
-                                <rect key="frame" x="52" y="148" width="921" height="320"/>
-                                <string key="text">The tap in order tasks consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Backward Spatial Span Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-rr-E8k">
+                                <rect key="frame" x="194" y="80" width="637" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap In Order Backwards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-rr-E8k">
-                                <rect key="frame" x="194" y="80" width="637" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-mW-coz">
+                                <rect key="frame" x="52" y="161" width="921" height="320"/>
+                                <mutableString key="text">The backwards spatial span task consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1612,15 +1617,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap In Order Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzj-9T-yuq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forward Spatial Span Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzj-9T-yuq">
                                 <rect key="frame" x="225" y="80" width="575" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-rd-OzH">
-                                <rect key="frame" x="47" y="153" width="930" height="300"/>
-                                <string key="text">The tap in order tasks consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</string>
+                                <rect key="frame" x="47" y="150" width="930" height="300"/>
+                                <mutableString key="text">The forward spatial span task consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1839,14 +1844,14 @@
         <image name="photo-seth" width="980" height="1322"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HW9-8Y-uG3"/>
-        <segue reference="31h-M1-QQK"/>
         <segue reference="Lca-c5-giE"/>
-        <segue reference="QiM-jf-6BP"/>
+        <segue reference="31h-M1-QQK"/>
         <segue reference="MHg-ok-Ccm"/>
-        <segue reference="DXj-KH-ajy"/>
-        <segue reference="Ud1-Nd-Hgw"/>
-        <segue reference="deg-nT-nb7"/>
-        <segue reference="fs4-pa-L87"/>
+        <segue reference="QiM-jf-6BP"/>
+        <segue reference="Okh-or-2Qq"/>
+        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="neN-op-hGA"/>
+        <segue reference="HE1-1j-NTJ"/>
+        <segue reference="ShD-fn-Xek"/>
     </inferredMetricsTieBreakers>
 </document>
