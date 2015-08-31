@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -846,7 +846,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="HelpButton:" destination="aMc-eE-pqC" eventType="touchUpInside" id="f0J-CM-8mp"/>
                                     <segue destination="HDC-iK-Prx" kind="show" id="deg-nT-nb7"/>
                                 </connections>
                             </button>
@@ -934,8 +933,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="endButton:" destination="3ez-fa-Egv" eventType="touchUpInside" id="Z6l-3T-nQB"/>
-                                    <action selector="helpButton:" destination="3ez-fa-Egv" eventType="touchUpInside" id="nHr-IM-DRF"/>
                                     <segue destination="LJW-cf-FV7" kind="show" id="Ud1-Nd-Hgw"/>
                                 </connections>
                             </button>
@@ -2170,15 +2167,15 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth" width="980" height="1322"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="md3-6k-lZH"/>
-        <segue reference="HE1-1j-NTJ"/>
-        <segue reference="ShD-fn-Xek"/>
-        <segue reference="k5O-0U-7Tk"/>
         <segue reference="qak-Qc-doH"/>
+        <segue reference="md3-6k-lZH"/>
         <segue reference="neN-op-hGA"/>
+        <segue reference="V8q-qM-EbC"/>
         <segue reference="Db8-gX-wha"/>
         <segue reference="kBo-Bx-fAG"/>
-        <segue reference="V8q-qM-EbC"/>
         <segue reference="QiM-jf-6BP"/>
+        <segue reference="deg-nT-nb7"/>
+        <segue reference="Ud1-Nd-Hgw"/>
+        <segue reference="DXj-KH-ajy"/>
     </inferredMetricsTieBreakers>
 </document>

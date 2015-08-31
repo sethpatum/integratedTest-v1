@@ -178,31 +178,33 @@ class TrailsAViewController: ViewController {
     }
     
     func done() {
-        drawingView.canDraw = false
-        let imageSize = CGSize(width: 1024, height: 618)
-        imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 135), size: imageSize))
-        if resultsDisplayOn == true {
-            self.view.addSubview(imageView)
+        if drawingView != nil {
+            drawingView.canDraw = false
+            let imageSize = CGSize(width: 1024, height: 618)
+            imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 135), size: imageSize))
+            if resultsDisplayOn == true {
+                self.view.addSubview(imageView)
+            }
+            let image = drawCustomImage(imageSize)
+            imageView.image = image
+            
+            // add to results
+            let result = Results()
+            result.name = self.title
+            result.startTime = startTime2
+            result.endTime = NSDate()
+            result.screenshot = image
+            
+            var num = timePassedTrailsA
+            let minutes = UInt8(num / 60.0)
+            num -= (NSTimeInterval(minutes)*60.0)
+            let seconds = UInt8(num)
+            num = NSTimeInterval(seconds)
+            
+            result.longDescription.addObject("\(drawingView.incorrect) incorrect in \(minutes) minutes and \(seconds) seconds")
+            
+            resultsArray.add(result)
         }
-        let image = drawCustomImage(imageSize)
-        imageView.image = image
-        
-        // add to results
-        let result = Results()
-        result.name = self.title
-        result.startTime = startTime2
-        result.endTime = NSDate()
-        result.screenshot = image
-        
-        var num = timePassedTrailsA
-        let minutes = UInt8(num / 60.0)
-        num -= (NSTimeInterval(minutes)*60.0)
-        let seconds = UInt8(num)
-        num = NSTimeInterval(seconds)
-        
-        result.longDescription.addObject("\(drawingView.incorrect) incorrect in \(minutes) minutes and \(seconds) seconds")
-        
-        resultsArray.add(result)
         
         displayImgTrailsA = false
         
