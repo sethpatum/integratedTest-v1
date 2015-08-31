@@ -526,6 +526,16 @@
                                     <action selector="Start:" destination="ENC-Gu-dJo" eventType="touchUpInside" id="gvJ-lP-iLh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-E2-LvU">
+                                <rect key="frame" x="839" y="97" width="92" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Siw-zc-zif" kind="show" id="84T-KC-0pV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -539,6 +549,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDV-9f-D1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8705" y="298"/>
+        </scene>
+        <!--Pyramids and Palm Trees Help-->
+        <scene sceneID="7bO-85-GMO">
+            <objects>
+                <viewController title="Pyramids and Palm Trees Help" id="Siw-zc-zif" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X4Z-yB-YBC"/>
+                        <viewControllerLayoutGuide type="bottom" id="nuT-t5-Mle"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VHz-Qd-gXT">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pyramids and Palm Trees Help" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HQ-Sq-AkN">
+                                <rect key="frame" x="385" y="78" width="255" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="par-fq-yNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8705" y="1201"/>
         </scene>
         <!--Trails-->
         <scene sceneID="8cD-Kf-I6U">
@@ -1506,6 +1544,17 @@ While the authors and producers of this program strive to provide you with usefu
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jiP-cF-Vk3" id="x59-BR-CcV">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENd-fe-GQo">
+                                                    <rect key="frame" x="295" y="5" width="210" height="30"/>
+                                                    <state key="normal" title="Pyramids and Palm Trees Help">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="Siw-zc-zif" kind="show" id="qak-Qc-doH"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rud-UX-Lyo">
@@ -1513,14 +1562,21 @@ While the authors and producers of this program strive to provide you with usefu
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rud-UX-Lyo" id="7hM-63-mAs">
                                             <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WmL-99-YPE">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WmL-99-YPE" id="kFY-c2-K4Z">
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkF-Kf-dEp">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c08-ij-X0p">
                                                     <rect key="frame" x="469" y="7" width="87" height="30"/>
                                                     <state key="normal" title="back to start">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="BYZ-38-t0r" kind="showDetail" id="Okh-or-2Qq"/>
+                                                        <segue destination="BYZ-38-t0r" kind="showDetail" id="md3-6k-lZH"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -2064,10 +2120,11 @@ While the authors and producers of this program strive to provide you with usefu
         <segue reference="31h-M1-QQK"/>
         <segue reference="V8q-qM-EbC"/>
         <segue reference="QiM-jf-6BP"/>
-        <segue reference="Ud1-Nd-Hgw"/>
-        <segue reference="deg-nT-nb7"/>
-        <segue reference="DXj-KH-ajy"/>
-        <segue reference="fs4-pa-L87"/>
-        <segue reference="HW9-8Y-uG3"/>
+        <segue reference="md3-6k-lZH"/>
+        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="neN-op-hGA"/>
+        <segue reference="HE1-1j-NTJ"/>
+        <segue reference="ShD-fn-Xek"/>
+        <segue reference="qak-Qc-doH"/>
     </inferredMetricsTieBreakers>
 </document>
