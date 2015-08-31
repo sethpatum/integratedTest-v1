@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -1315,13 +1315,7 @@ While the authors and producers of this program strive to provide you with usefu
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letter Cancellation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yof-Vo-1qV">
-                                <rect key="frame" x="212" y="80" width="601" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW8-hQ-r96">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW8-hQ-r96">
                                 <rect key="frame" x="179" y="302" width="667" height="163"/>
                                 <string key="text">The Letter Cancellation task displays a page full letters of the alphabet. The patients task is to cross off or draw a line through all of the letters E and R. As soon as the start button is pressed a timer will start and the pateint should start the task. The done button is pressed only after the patient expresses that they feel that they have finished the task.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1331,11 +1325,9 @@ While the authors and producers of this program strive to provide you with usefu
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yof-Vo-1qV" firstAttribute="top" secondItem="UMK-1B-sfz" secondAttribute="bottom" constant="60" id="7kr-oc-i1b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yof-Vo-1qV" secondAttribute="trailing" constant="195" id="hQE-s1-Gcp"/>
+                            <constraint firstItem="gW8-hQ-r96" firstAttribute="top" secondItem="UMK-1B-sfz" secondAttribute="bottom" constant="60" id="7dF-W7-A7F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gW8-hQ-r96" secondAttribute="trailing" constant="80" id="tGM-fU-0nH"/>
                             <constraint firstItem="gW8-hQ-r96" firstAttribute="leading" secondItem="KP0-aq-Pqa" secondAttribute="leadingMargin" constant="80" id="uMu-Wd-oAd"/>
-                            <constraint firstItem="yof-Vo-1qV" firstAttribute="leading" secondItem="KP0-aq-Pqa" secondAttribute="leadingMargin" constant="196" id="ujd-ds-SAd"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1357,13 +1349,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Trails B Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIM-gY-ChS">
-                                <rect key="frame" x="225" y="80" width="574" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-1F-qoc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-1F-qoc">
                                 <rect key="frame" x="53" y="143" width="919" height="364"/>
                                 <string key="text">Both parts of the Trail Making Test consists of 25 circles distributed over a sheet of paper. In Part A, the circles are numbered 1 – 25, and the patient should draw lines to connect the numbers in ascending order. In Part B, the circles include both numbers (1 – 13) and letters (A – L); as in Part A, the patient draws lines to connect the circles in an ascending pattern, but with the added task of alternating between the numbers and letters (i.e., 1-A-2-B-3-C, etc.). The patient should be instructed to connect the circles as quickly as possible, without lifting the finger off of the iPad. The iPad will time the patient as he or she connects the "trail." If the patient makes an error the iPad will point it out immediately and allow the patient to correct it. Errors affect the patient's score only in that the correction of errors is included in the completion time for the task. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1373,11 +1359,9 @@ While the authors and producers of this program strive to provide you with usefu
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tIM-gY-ChS" firstAttribute="top" secondItem="cL6-4p-FxY" secondAttribute="bottom" constant="60" id="1Fq-Yu-Nda"/>
-                            <constraint firstItem="dbZ-1F-qoc" firstAttribute="leading" secondItem="daf-wh-sPu" secondAttribute="leadingMargin" constant="37" id="QlV-53-TLx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tIM-gY-ChS" secondAttribute="trailing" constant="209" id="Qrf-e7-JLQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dbZ-1F-qoc" secondAttribute="trailing" constant="36" id="bv3-bh-eaX"/>
-                            <constraint firstItem="tIM-gY-ChS" firstAttribute="leading" secondItem="daf-wh-sPu" secondAttribute="leadingMargin" constant="209" id="zzH-sG-p0T"/>
+                            <constraint firstItem="dbZ-1F-qoc" firstAttribute="leading" secondItem="daf-wh-sPu" secondAttribute="leadingMargin" constant="80" id="QlV-53-TLx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dbZ-1F-qoc" secondAttribute="trailing" constant="80" id="bv3-bh-eaX"/>
+                            <constraint firstItem="dbZ-1F-qoc" firstAttribute="top" secondItem="cL6-4p-FxY" secondAttribute="bottom" constant="60" id="mcw-RA-3Rj"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1773,15 +1757,9 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Trails A Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miG-4J-iRn">
-                                <rect key="frame" x="227" y="79" width="570" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="17" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQM-vN-MOD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="17" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQM-vN-MOD">
                                 <rect key="frame" x="110" y="133" width="817" height="384"/>
-                                <mutableString key="text">Both parts of the Trail Making Test consists of 25 circles distributed over a sheet of paper. In Part A, the circles are numbered 1 – 25, and the patient should draw lines to connect the numbers in ascending order. The patient should be instructed to connect the circles as quickly as possible, without lifting the finger off of the iPad. The iPad will time the patient as he or she connects the "trail." If the patient makes an error the iPad will point it out immediately and allow the patient to correct it. Errors affect the patient's score only in that the correction of errors is included in the completion time for the task. </mutableString>
+                                <string key="text">Both parts of the Trail Making Test consists of 25 circles distributed over a sheet of paper. In Part A, the circles are numbered 1 – 25, and the patient should draw lines to connect the numbers in ascending order. The patient should be instructed to connect the circles as quickly as possible, without lifting the finger off of the iPad. The iPad will time the patient as he or she connects the "trail." If the patient makes an error the iPad will point it out immediately and allow the patient to correct it. Errors affect the patient's score only in that the correction of errors is included in the completion time for the task. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1789,11 +1767,9 @@ While the authors and producers of this program strive to provide you with usefu
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="miG-4J-iRn" firstAttribute="leading" secondItem="m4E-zD-5XL" secondAttribute="leadingMargin" constant="211" id="2CD-oL-IgF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="miG-4J-iRn" secondAttribute="trailing" constant="211" id="GfH-IM-7xn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cQM-vN-MOD" secondAttribute="trailing" constant="30" id="QVi-PY-lTn"/>
-                            <constraint firstItem="miG-4J-iRn" firstAttribute="top" secondItem="L32-Xh-EP6" secondAttribute="bottom" constant="59" id="nCA-wY-sCg"/>
-                            <constraint firstItem="cQM-vN-MOD" firstAttribute="leading" secondItem="m4E-zD-5XL" secondAttribute="leadingMargin" constant="94" id="tyR-2s-Q2x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cQM-vN-MOD" secondAttribute="trailing" constant="80" id="QVi-PY-lTn"/>
+                            <constraint firstItem="cQM-vN-MOD" firstAttribute="top" secondItem="L32-Xh-EP6" secondAttribute="bottom" constant="60" id="klC-lW-aRn"/>
+                            <constraint firstItem="cQM-vN-MOD" firstAttribute="leading" secondItem="m4E-zD-5XL" secondAttribute="leadingMargin" constant="80" id="tyR-2s-Q2x"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1815,14 +1791,8 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OTA Cancellation Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFU-BW-JhS">
-                                <rect key="frame" x="230" y="80" width="565" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-AO-QqY">
-                                <rect key="frame" x="169" y="210" width="686" height="348"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-AO-QqY">
+                                <rect key="frame" x="169" y="115" width="686" height="348"/>
                                 <string key="text">The OTA cancellation task displays a page full of semi/ incomplete circles along with full circles. The patients task is to cross off or draw a line through all the semi/incomplete circles. As soon as the start button is pressed a timer will start and the pateint should start the task. The done button is pressed only after the patient expresses that they feel that they have finished the task</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1831,10 +1801,8 @@ While the authors and producers of this program strive to provide you with usefu
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CFU-BW-JhS" firstAttribute="top" secondItem="vOW-2a-dTj" secondAttribute="bottom" constant="60" id="8Ja-Dr-4jA"/>
                             <constraint firstItem="Iyg-AO-QqY" firstAttribute="leading" secondItem="ovC-Z1-86U" secondAttribute="leadingMargin" constant="80" id="Evi-FA-Tck"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CFU-BW-JhS" secondAttribute="trailing" constant="213" id="Pi3-SP-ayw"/>
-                            <constraint firstItem="CFU-BW-JhS" firstAttribute="leading" secondItem="ovC-Z1-86U" secondAttribute="leadingMargin" constant="214" id="UNr-8i-Dmm"/>
+                            <constraint firstItem="Iyg-AO-QqY" firstAttribute="top" secondItem="vOW-2a-dTj" secondAttribute="bottom" constant="60" id="MGc-HN-lSf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Iyg-AO-QqY" secondAttribute="trailing" constant="80" id="pwd-o6-7Ci"/>
                         </constraints>
                     </view>
@@ -1857,13 +1825,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Backward Spatial Span Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-rr-E8k">
-                                <rect key="frame" x="194" y="80" width="637" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-mW-coz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-mW-coz">
                                 <rect key="frame" x="52" y="161" width="921" height="320"/>
                                 <string key="text">The backwards spatial span task consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1873,11 +1835,9 @@ While the authors and producers of this program strive to provide you with usefu
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="E9I-rr-E8k" firstAttribute="top" secondItem="OpX-Gw-cMk" secondAttribute="bottom" constant="60" id="6ye-4F-G0y"/>
-                            <constraint firstItem="xXj-mW-coz" firstAttribute="leading" secondItem="Gl7-Jh-P78" secondAttribute="leadingMargin" constant="36" id="TqK-4g-hVg"/>
-                            <constraint firstItem="E9I-rr-E8k" firstAttribute="leading" secondItem="Gl7-Jh-P78" secondAttribute="leadingMargin" constant="178" id="dxP-0x-1Oq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xXj-mW-coz" secondAttribute="trailing" constant="35" id="vZ1-q9-e8r"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="E9I-rr-E8k" secondAttribute="trailing" constant="177" id="vsa-ya-ys5"/>
+                            <constraint firstItem="xXj-mW-coz" firstAttribute="leading" secondItem="Gl7-Jh-P78" secondAttribute="leadingMargin" constant="80" id="TqK-4g-hVg"/>
+                            <constraint firstItem="xXj-mW-coz" firstAttribute="top" secondItem="OpX-Gw-cMk" secondAttribute="bottom" constant="60" id="u14-Zo-eC3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xXj-mW-coz" secondAttribute="trailing" constant="80" id="vZ1-q9-e8r"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1899,13 +1859,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forward Spatial Span Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzj-9T-yuq">
-                                <rect key="frame" x="225" y="80" width="575" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-rd-OzH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-rd-OzH">
                                 <rect key="frame" x="47" y="150" width="930" height="300"/>
                                 <string key="text">The forward spatial span task consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1915,13 +1869,9 @@ While the authors and producers of this program strive to provide you with usefu
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bzj-9T-yuq" firstAttribute="top" secondItem="95I-0B-o2J" secondAttribute="bottom" constant="60" id="Rsz-qx-05U"/>
-                            <constraint firstItem="Bzj-9T-yuq" firstAttribute="leading" secondItem="scV-Q0-7Kq" secondAttribute="leadingMargin" constant="209" id="S5R-Lo-aoS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bzj-9T-yuq" secondAttribute="trailing" constant="208" id="Xxx-U2-xu2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bzj-9T-yuq" secondAttribute="trailing" constant="208" id="dn5-zk-m1k"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3wd-rd-OzH" secondAttribute="trailing" constant="31" id="gg5-kd-Zdf"/>
-                            <constraint firstItem="Bzj-9T-yuq" firstAttribute="leading" secondItem="scV-Q0-7Kq" secondAttribute="leadingMargin" constant="209" id="pGM-Jy-dxK"/>
-                            <constraint firstItem="3wd-rd-OzH" firstAttribute="leading" secondItem="scV-Q0-7Kq" secondAttribute="leadingMargin" constant="31" id="uU7-hA-xHg"/>
+                            <constraint firstItem="3wd-rd-OzH" firstAttribute="top" secondItem="95I-0B-o2J" secondAttribute="bottom" constant="60" id="Yi0-eU-fCs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3wd-rd-OzH" secondAttribute="trailing" constant="80" id="gg5-kd-Zdf"/>
+                            <constraint firstItem="3wd-rd-OzH" firstAttribute="leading" secondItem="scV-Q0-7Kq" secondAttribute="leadingMargin" constant="80" id="uU7-hA-xHg"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1943,14 +1893,8 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Naming Pictures Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-Nq-u7W">
-                                <rect key="frame" x="204" y="80" width="616" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLC-Eh-PJb">
-                                <rect key="frame" x="204" y="168" width="616" height="301"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLC-Eh-PJb">
+                                <rect key="frame" x="204" y="168" width="708" height="301"/>
                                 <string key="text">The naming pictures task consists of 15 different images in order of naming difficulty. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
 
 </string>
@@ -1961,13 +1905,9 @@ While the authors and producers of this program strive to provide you with usefu
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="kLC-Eh-PJb" secondAttribute="trailing" constant="32" id="8Hu-BL-O8D"/>
-                            <constraint firstItem="sbi-Nq-u7W" firstAttribute="top" secondItem="9Fx-TQ-XC6" secondAttribute="bottom" constant="60" id="LhX-ex-6HK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sbi-Nq-u7W" secondAttribute="trailing" constant="188" id="P5A-06-cuR"/>
-                            <constraint firstItem="sbi-Nq-u7W" firstAttribute="leading" secondItem="n7K-6r-RaO" secondAttribute="leadingMargin" constant="188" id="PRv-6l-fCQ"/>
-                            <constraint firstItem="sbi-Nq-u7W" firstAttribute="leading" secondItem="n7K-6r-RaO" secondAttribute="leadingMargin" constant="188" id="Wp8-zi-ydI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sbi-Nq-u7W" secondAttribute="trailing" constant="188" id="Zae-Av-xCj"/>
-                            <constraint firstItem="kLC-Eh-PJb" firstAttribute="leading" secondItem="n7K-6r-RaO" secondAttribute="leadingMargin" constant="33" id="vUp-kI-clz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kLC-Eh-PJb" secondAttribute="trailing" constant="80" id="8Hu-BL-O8D"/>
+                            <constraint firstItem="kLC-Eh-PJb" firstAttribute="top" secondItem="9Fx-TQ-XC6" secondAttribute="bottom" constant="60" id="s5o-N0-6HE"/>
+                            <constraint firstItem="kLC-Eh-PJb" firstAttribute="leading" secondItem="n7K-6r-RaO" secondAttribute="leadingMargin" constant="80" id="vUp-kI-clz"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -2142,31 +2082,21 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-wQ-vIS">
-                                <rect key="frame" x="49" y="103" width="927" height="301"/>
-                                <string key="text">The naming pictures task consists of 15 different images in order of difficulty to recognize. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-wQ-vIS">
+                                <rect key="frame" x="72" y="125" width="869" height="301"/>
+                                <mutableString key="text">The famous faces task consists of 15 different images. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
 
-</string>
+</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Famous Faces Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFD-Vz-guJ">
-                                <rect key="frame" x="204" y="80" width="616" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oFD-Vz-guJ" firstAttribute="leading" secondItem="R6K-mZ-ux7" secondAttribute="leadingMargin" constant="188" id="9GO-qK-SDP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oFD-Vz-guJ" secondAttribute="trailing" constant="188" id="QPZ-EO-Woi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pbe-wQ-vIS" secondAttribute="trailing" constant="32" id="R02-8Y-22q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oFD-Vz-guJ" secondAttribute="trailing" constant="188" id="eP8-l7-RZD"/>
-                            <constraint firstItem="oFD-Vz-guJ" firstAttribute="leading" secondItem="R6K-mZ-ux7" secondAttribute="leadingMargin" constant="188" id="mQB-es-X6H"/>
-                            <constraint firstItem="pbe-wQ-vIS" firstAttribute="leading" secondItem="R6K-mZ-ux7" secondAttribute="leadingMargin" constant="33" id="mkC-9E-JvL"/>
-                            <constraint firstItem="oFD-Vz-guJ" firstAttribute="top" secondItem="Dff-5X-0I9" secondAttribute="bottom" constant="60" id="z9B-uH-vmi"/>
+                            <constraint firstItem="pbe-wQ-vIS" firstAttribute="top" secondItem="Dff-5X-0I9" secondAttribute="bottom" constant="60" id="24v-2G-3qF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pbe-wQ-vIS" secondAttribute="trailing" constant="80" id="R02-8Y-22q"/>
+                            <constraint firstItem="pbe-wQ-vIS" firstAttribute="leading" secondItem="R6K-mZ-ux7" secondAttribute="leadingMargin" constant="80" id="mkC-9E-JvL"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
