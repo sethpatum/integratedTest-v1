@@ -192,6 +192,26 @@ class CirclesViewController: ViewController {
                 
                 CGContextStrokePath(context)
                 
+                if k == 0 {
+                    let aFont = UIFont(name: "Helvetica", size: 19)
+                    let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
+                    let text = CFAttributedStringCreate(nil, "START", attr)
+                    let line = CTLineCreateWithAttributedString(text)
+                    CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
+                    CGContextSetTextPosition(context, CGFloat(a-28), CGFloat(b+41))
+                    CTLineDraw(line, context)
+                }
+                
+                if k == timedConnections.count-1 {
+                    let aFont = UIFont(name: "Helvetica", size: 19)
+                    let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
+                    let text = CFAttributedStringCreate(nil, "END", attr)
+                    let line = CTLineCreateWithAttributedString(text)
+                    CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
+                    CGContextSetTextPosition(context, CGFloat(x-19), CGFloat(y+41))
+                    CTLineDraw(line, context)
+                }
+                
                 if k > 0 {
                     
                     println("getting here")

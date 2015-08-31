@@ -186,6 +186,26 @@ class LetterCancellationViewController: ViewController {
                 
                 CGContextStrokePath(context)
                 
+                if k == 0 {
+                    let aFont = UIFont(name: "Helvetica", size: 19)
+                    let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
+                    let text = CFAttributedStringCreate(nil, "START", attr)
+                    let line = CTLineCreateWithAttributedString(text)
+                    CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
+                    CGContextSetTextPosition(context, CGFloat(a-34), CGFloat(b+35))
+                    CTLineDraw(line, context)
+                }
+                
+                if k == timedConnectionsLetters.count-1 {
+                    let aFont = UIFont(name: "Helvetica", size: 19)
+                    let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
+                    let text = CFAttributedStringCreate(nil, "END", attr)
+                    let line = CTLineCreateWithAttributedString(text)
+                    CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
+                    CGContextSetTextPosition(context, CGFloat(x-25), CGFloat(y+35))
+                    CTLineDraw(line, context)
+                }
+                
                 if k > 0 {
                     
                     println("getting here")

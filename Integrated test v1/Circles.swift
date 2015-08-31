@@ -67,12 +67,12 @@ class Circles{
         circlelist2.append((830, 380, 0)) //CHANGED
         circlelist2.append((725, 380, 0)) // CHANGED
         circlelist2.append((920, 450, 2))
-        circlelist2.append((555, 520, 2)) //
-        circlelist2.append((650, 535, 0)) //
+        circlelist2.append((540, 500, 2)) //
+        circlelist2.append((660, 535, 0)) //
         circlelist2.append((950, 540, 0))
         circlelist2.append((465, 580, 1)) //
-        circlelist2.append((585, 610, 0)) // CHANGED
-        circlelist2.append((860, 590, 1))
+        circlelist2.append((585, 590, 0)) // CHANGED
+        circlelist2.append((860, 585, 1))
         circlelist2.append((770, 505, 2))
         
         var array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]
