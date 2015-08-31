@@ -13,6 +13,7 @@ var timePassedLetters = 0.0
 var timedConnectionsLetters = [(Int, Int, Int, Int, Double)]()
 
 import UIKit
+import Foundation
 
 
 class LetterCancellationViewController: ViewController {
@@ -24,6 +25,7 @@ class LetterCancellationViewController: ViewController {
     
     @IBOutlet weak var slider: UISlider!
     
+    @IBOutlet weak var fontSample: UILabel!
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
@@ -39,15 +41,34 @@ class LetterCancellationViewController: ViewController {
     
     @IBAction func sizeChanged(sender: UISlider) {
         
+        if drawingView !== nil {
+            
+            drawingView.removeFromSuperview()
+        }
+        
+        if imageView !== nil {
+            
+            imageView.removeFromSuperview()
+            imageView.image = nil
+            
+        }
+        
+        fontSample.text = "A D J U S T   F O N T   S I Z E"
+        
         var currentValue = Int(sender.value)
         
         fontLetters = currentValue
-        fontLabel.text = "Adjust font size: \(currentValue)"
+        fontLabel.text = "Font size: \(currentValue)"
+        
+        fontSample.font = fontSample.font.fontWithSize(CGFloat(fontLetters))
         
     }
     
     @IBAction func StartButton(sender: AnyObject) {
         
+        fontSample.text = ""
+        
+        slider.enabled = false
         startButton.enabled = false
         doneButton.enabled = true
         self.navigationItem.setHidesBackButton(true, animated:true)
@@ -92,6 +113,7 @@ class LetterCancellationViewController: ViewController {
     
     @IBAction func StopButton(sender: AnyObject){
         
+        slider.enabled = true
         startButton.enabled = true
         doneButton.enabled = false
         self.navigationItem.setHidesBackButton(false, animated:true)
@@ -211,11 +233,13 @@ class LetterCancellationViewController: ViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-         doneButton.enabled = false
+        fontSample.text = "A D J U S T   F O N T   S I Z E"
+        
+        doneButton.enabled = false
         
         var currentValue = Int(slider.value)
         fontLetters = currentValue
-        fontLabel.text = "Adjust font size: \(currentValue)"
+        fontLabel.text = "Font size: \(currentValue)"
 
     }
     

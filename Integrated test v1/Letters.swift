@@ -217,7 +217,7 @@ class Letters{
         //resultTextLetters = "\(correctOnRight) correct out of 5 on right; \(correctOnLeft) correct out of 5 on left; \(incorrect) incorrect."
         result.longDescription.addObject("\(correctOnRight) correct out of 5 on right;")
         result.longDescription.addObject("\(correctOnLeft) correct out of 5 on left;")
-        result.longDescription.addObject("\(incorrect) incorrect.")
+        result.longDescription.addObject("\(incorrect) false positives.")
 
         
         for var k = 1; k < resultListTimes.count; ++k{
