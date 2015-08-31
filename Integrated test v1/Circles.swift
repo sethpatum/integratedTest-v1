@@ -13,7 +13,7 @@ import Darwin
 
 class Circles{
     
-    var circlelist = [(Int, Int, Int)]()
+    var circlelist = [(Int, Int, Int, UIColor)]()
     var resultListIndexes = [Int]()
     var resultListCircles = [(Int, Int, Int)]()
     var resultListTimesCircles = [Double]()
@@ -28,12 +28,12 @@ class Circles{
         
         var circlelist1 = [(Int, Int, Int)]()
         
-        circlelist = [(Int, Int, Int)]()
+        circlelist = [(Int, Int, Int, UIColor)]()
         
-        circlelist1.append((140, 30, 0)) //CHANGED
+        circlelist1.append((70, 30, 0)) //CHANGED
         circlelist1.append((320, 40, 2)) //left
         circlelist1.append((480, 80, 1)) //left
-        circlelist1.append((100, 110, 0))
+        circlelist1.append((140, 110, 0))
         circlelist1.append((250, 90, 2)) //left
         circlelist1.append((395, 140, 0))
         circlelist1.append((50, 190, 1)) //left
@@ -87,7 +87,7 @@ class Circles{
             
             let i = array[Int(random)]
             
-            circlelist.append((a,b,i))
+            circlelist.append((a,b,i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
             println(i)
             
@@ -111,7 +111,7 @@ class Circles{
             
             let i = array2[Int(random)]
             
-            circlelist.append((a,b,i))
+            circlelist.append((a,b,i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
             var r = Int(random)
             
@@ -129,11 +129,11 @@ class Circles{
     func inCircle(x:CGFloat, y:CGFloat)->Int{
         
         for (index,circle) in enumerate(circlelist){
-            let (a, b, c) = circle
+            let (a, b, c, col) = circle
             
             var z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
             
-            if z <= 700.0 {
+            if z <= 850.0 {
                 return index
             }
             
@@ -157,7 +157,9 @@ class Circles{
             return
         }
         
-        resultListCircles.append(circlelist[curr])
+        let (a, b, c, col) = circlelist[curr]
+        
+        resultListCircles.append(a, b, c)
         resultListIndexes.append(curr)
         
         resultListTimesCircles.append(timePassedCircles)
@@ -181,13 +183,25 @@ class Circles{
         var rightSemiCircles = 0
         var incorrect = 0
         
-        for (index, circle) in enumerate(resultListCircles){
-            let(a,b,c) = circle
+        for var i = 0; i < circlelist.count; ++i {
+            let (a, b, c, col) = circlelist[i]
+            if (c == 1 || c == 2) {
+                circlelist[i].3 = UIColor(hue: 0.66, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+            }
+            
+        }
+        
+        for var k = 0; k < resultListIndexes.count; ++k {
+            
+            circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.33, saturation: 1.0, brightness: 0.70, alpha: 1.0)
+            
+            let (a, b, c) = resultListCircles[k]
             
             if c != 0{
                 
                 if a<500{
                     correctOnLeft += 1
+                    
                 }
                     
                 else{
@@ -204,9 +218,12 @@ class Circles{
             }
                 
             else {
+                
+                circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.0, saturation: 1.0, brightness: 0.70, alpha: 1.0)
+                
                 incorrect += 1
             }
-            
+
             
         }
         

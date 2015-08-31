@@ -37,7 +37,7 @@ class DrawingViewCircles: UIView {
     
     func drawResultBackground() {
         for circle in circles.circlelist{
-            drawCircles(circle)
+            drawCircles(circle, color:circle.3)
         }
         
         UIColor.blackColor().set()
@@ -49,7 +49,7 @@ class DrawingViewCircles: UIView {
     override func drawRect(rect: CGRect) {
         //println("in drawRect")
         for circle in circles.circlelist{
-            drawCircles(circle)
+            drawCircles(circle, color:UIColor(hue: 0.66, saturation: 0.9, brightness: 1.0, alpha: 1.0))
         }
         
         UIColor.blackColor().set()
@@ -70,10 +70,10 @@ class DrawingViewCircles: UIView {
         setNeedsDisplay()
     }
     
-    func drawCircles(circle:(Int, Int, Int)){
+    func drawCircles(circle:(Int, Int, Int, UIColor), color: UIColor){
         
         //println("in drawCircle")
-        let (x, y, z) = circle
+        let (x, y, z, col) = circle
         //println("Bubble \(bubble)")
         
         var context = UIGraphicsGetCurrentContext();
@@ -82,7 +82,7 @@ class DrawingViewCircles: UIView {
         CGContextSetLineWidth(context, 3.0);
         
         // Set the circle outerline-colour
-        UIColor.redColor().set()
+        color.set()
         
         // Create Circle
         
