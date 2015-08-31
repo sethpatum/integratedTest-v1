@@ -175,7 +175,7 @@ class DrawingViewTrails: UIView {
         
         CTLineDraw(line, context)
         
-        if ((selectedTest == "Trails A" || selectedTest == "Trails B") && name == "1") {
+        if (name == "1") {
             let aFont = UIFont(name: "Menlo", size: 19)
             let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
             let text = CFAttributedStringCreate(nil, "START", attr)
@@ -185,7 +185,10 @@ class DrawingViewTrails: UIView {
             CTLineDraw(line, context)
         }
         
-        if ((selectedTest == "Trails A" && name == "25") || (selectedTest == "Trails B" && name == "13")) {
+        if ((selectedTest == "Trails A" && name == "25") ||
+            (selectedTest == "Trails A Practice" && name == "6") ||
+             (selectedTest == "Trails B" && name == "13") ||
+            (selectedTest == "Trails B Practice" && name == "C")) {
             let aFont = UIFont(name: "Menlo", size: 19)
             let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
             let text = CFAttributedStringCreate(nil, "END", attr)

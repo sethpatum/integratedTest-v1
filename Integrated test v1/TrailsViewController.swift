@@ -27,14 +27,39 @@ class TrailsAViewController: ViewController {
     @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var practiceButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
     @IBOutlet weak var resultsLabel: UILabel!
     
     @IBAction func StartButton(sender: AnyObject) {
+        if(selectedTest == "Trails A Practice") {
+            selectedTest = "Trails A"
+        } else if(selectedTest == "Trails B Practice") {
+            selectedTest = "Trails B"
+        }
+        self.title = selectedTest
+
+        startTest()
+    }
+    
+    
+    @IBAction func PracticeButton(sender: AnyObject) {
+        if(selectedTest == "Trails A") {
+            selectedTest = "Trails A Practice"
+        } else if(selectedTest == "Trails B") {
+            selectedTest = "Trails B Practice"
+        }
+        self.title = selectedTest
         
+        startTest()
+    }
+
+    
+    func startTest() {
         
         startButton.enabled = false
+        practiceButton.enabled = false
         doneButton.enabled = true
         self.navigationItem.setHidesBackButton(true, animated:true)
    
@@ -77,10 +102,11 @@ class TrailsAViewController: ViewController {
         bubbleColor = UIColor.redColor()
         
     }
-    
+   
     @IBAction func StopButton(sender: AnyObject) {
         
         startButton.enabled = true
+        practiceButton.enabled = true
         doneButton.enabled = false
         self.navigationItem.setHidesBackButton(false, animated:true)
 
@@ -105,16 +131,7 @@ class TrailsAViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-         if(selectedTest == "Trails A") {
-            self.title = "Trails A"
-         } else if(selectedTest == "Trails B") {
-            self.title = "Trails B"
-         } else if(selectedTest == "Trails A Practice") {
-            self.title = "Trails A Practice"
-         } else {
-            self.title = "Trails B Practice"
-        }
+        self.title = selectedTest
     
         doneButton.enabled = false
 
@@ -190,6 +207,7 @@ class TrailsAViewController: ViewController {
         displayImgTrailsA = false
         
         startButton.enabled = true
+        practiceButton.enabled = true
         doneButton.enabled = false
         self.navigationItem.setHidesBackButton(false, animated:false)
         
