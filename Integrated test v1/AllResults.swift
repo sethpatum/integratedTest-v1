@@ -39,7 +39,7 @@ class AllResults  {
         var e:String = ""
         
         // See what information we got on the patient
-        if(patientName != nil) {
+        if(nameOn && patientName != nil) {
             e += "<p><h4>Patient Name: \(patientName!)</h4>\n"
         }
         
@@ -51,6 +51,12 @@ class AllResults  {
             e += "<h4>Patient ID: \(patientID!) </h4>\n"
         }
          e += "<p>\n"
+        
+        
+        if(bdateOn && patientBdate != nil) {
+            e += "<h4>Patient Birthdate: \(patientBdate!) </h4>\n"
+        }
+        e += "<p>\n"
         
         // Iterate over the results
         if(numResults() > 0) {

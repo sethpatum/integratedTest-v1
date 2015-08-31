@@ -1661,13 +1661,20 @@ While the authors and producers of this program strive to provide you with usefu
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PtC-pM-W8s">
-                                <rect key="frame" x="309" y="230" width="51" height="31"/>
+                                <rect key="frame" x="309" y="330" width="51" height="31"/>
                                 <connections>
                                     <action selector="UseridOnOff:" destination="WAV-l7-oOn" eventType="valueChanged" id="coj-80-Zp1"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Use ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zx5-XX-fO5">
-                                <rect key="frame" x="235" y="235" width="52" height="21"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gjh-kH-g6q">
+                                <rect key="frame" x="309" y="257" width="51" height="31"/>
+                                <connections>
+                                    <action selector="UseridOnOff:" destination="WAV-l7-oOn" eventType="valueChanged" id="3Er-Vs-HQ5"/>
+                                    <action selector="nameOnOff:" destination="WAV-l7-oOn" eventType="valueChanged" id="YIr-a1-hxW"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Patient's Name Field" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2w-Cm-Viv">
+                                <rect key="frame" x="93" y="262" width="194" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1680,30 +1687,49 @@ While the authors and producers of this program strive to provide you with usefu
                                     <action selector="emailChanged:" destination="WAV-l7-oOn" eventType="editingDidEnd" id="HxM-2r-Z2S"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxZ-hJ-qlK">
-                                <rect key="frame" x="221" y="309" width="66" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Patient's Age Field" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxZ-hJ-qlK">
+                                <rect key="frame" x="108" y="403" width="179" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CwZ-js-VDA">
-                                <rect key="frame" x="309" y="304" width="51" height="31"/>
+                                <rect key="frame" x="309" y="398" width="51" height="31"/>
                                 <connections>
                                     <action selector="AgeOnOff:" destination="WAV-l7-oOn" eventType="valueChanged" id="gCU-2p-EJ1"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display Results at end of the test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqa-Se-Me9">
-                                <rect key="frame" x="34" y="397" width="253" height="21"/>
+                                <rect key="frame" x="34" y="595" width="253" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xF5-aA-G4J">
-                                <rect key="frame" x="309" y="392" width="51" height="31"/>
+                                <rect key="frame" x="309" y="590" width="51" height="31"/>
                                 <connections>
                                     <action selector="ResultsDisplayOnOff:" destination="WAV-l7-oOn" eventType="valueChanged" id="TN7-4q-Hwt"/>
                                 </connections>
                             </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-OK-XiZ">
+                                <rect key="frame" x="309" y="463" width="51" height="31"/>
+                                <connections>
+                                    <action selector="BdateOnOff:" destination="WAV-l7-oOn" eventType="valueChanged" id="4A9-4V-MJH"/>
+                                    <action selector="UseridOnOff:" destination="WAV-l7-oOn" eventType="valueChanged" id="bin-5e-odd"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Patient's Birthdate Field" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0T-lT-QIw">
+                                <rect key="frame" x="68" y="468" width="219" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Use Patient's ID Field" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zx5-XX-fO5">
+                                <rect key="frame" x="122" y="335" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1714,9 +1740,11 @@ While the authors and producers of this program strive to provide you with usefu
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="AgeOnOff" destination="CwZ-js-VDA" id="T12-u9-16a"/>
+                        <outlet property="birthdateOnOff" destination="Owz-OK-XiZ" id="szr-4V-4aR"/>
                         <outlet property="email" destination="NrE-Xy-X6o" id="bEp-e3-fTN"/>
                         <outlet property="emailLabel" destination="6Jc-Y1-3bJ" id="Fub-Th-JPk"/>
                         <outlet property="emailOnOff" destination="jfq-be-YFq" id="Kc5-f7-bXg"/>
+                        <outlet property="nameOnOff" destination="gjh-kH-g6q" id="gY4-9M-alc"/>
                         <outlet property="resultsDisplayOnOff" destination="xF5-aA-G4J" id="4ua-3H-3Z8"/>
                         <outlet property="useridOnOff" destination="PtC-pM-W8s" id="zDl-if-ViI"/>
                     </connections>
@@ -2011,13 +2039,30 @@ While the authors and producers of this program strive to provide you with usefu
                                     <action selector="StartTesting:" destination="8LV-H7-0SE" eventType="touchUpInside" id="7ef-Ti-iy8"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Blz-yN-Djr">
+                                <rect key="frame" x="284" y="488" width="612" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="462714587.96182102">
+                                    <!--2015-08-31 11:49:47 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="updateBdate:" destination="8LV-H7-0SE" eventType="valueChanged" id="k6U-p3-vf6"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Birth Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxl-jn-0nR">
+                                <rect key="frame" x="167" y="558" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sa4-Rp-b5l" firstAttribute="leading" secondItem="3H2-tG-MDe" secondAttribute="leading" id="3AL-hP-3LV"/>
+                            <constraint firstItem="n3L-FX-oZV" firstAttribute="trailing" secondItem="M8x-q8-6n4" secondAttribute="trailing" id="4KF-mH-pcT"/>
                             <constraint firstItem="j5C-kr-yOE" firstAttribute="top" secondItem="sa4-Rp-b5l" secondAttribute="bottom" constant="18" id="5Zp-Lc-53L"/>
                             <constraint firstItem="3H2-tG-MDe" firstAttribute="leading" secondItem="j5C-kr-yOE" secondAttribute="leading" id="DhX-LR-fGW"/>
                             <constraint firstItem="xjO-OJ-rcn" firstAttribute="top" secondItem="fFZ-k9-eVo" secondAttribute="bottom" constant="65" id="FVF-cg-YZL"/>
+                            <constraint firstItem="Blz-yN-Djr" firstAttribute="top" secondItem="3H2-tG-MDe" secondAttribute="bottom" constant="23" id="FwE-6G-a0T"/>
                             <constraint firstItem="n77-2A-MJZ" firstAttribute="leading" secondItem="u4e-yX-EA7" secondAttribute="leadingMargin" constant="383" id="GCs-XR-puy"/>
                             <constraint firstItem="M8x-q8-6n4" firstAttribute="leading" secondItem="u4e-yX-EA7" secondAttribute="leadingMargin" constant="182" id="Gtc-1x-IoV"/>
                             <constraint firstItem="3H2-tG-MDe" firstAttribute="leading" secondItem="sa4-Rp-b5l" secondAttribute="leading" id="H6S-YY-A0N"/>
@@ -2025,16 +2070,20 @@ While the authors and producers of this program strive to provide you with usefu
                             <constraint firstItem="6ve-bk-cbh" firstAttribute="trailing" secondItem="n3L-FX-oZV" secondAttribute="trailing" id="N4i-du-hyd"/>
                             <constraint firstItem="3H2-tG-MDe" firstAttribute="leading" secondItem="n3L-FX-oZV" secondAttribute="trailing" constant="35" id="OT5-9y-Eu4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n77-2A-MJZ" secondAttribute="trailing" constant="382" id="PZw-Jy-WYh"/>
+                            <constraint firstItem="n3L-FX-oZV" firstAttribute="trailing" secondItem="6ve-bk-cbh" secondAttribute="trailing" id="Qss-w5-paV"/>
                             <constraint firstItem="6ve-bk-cbh" firstAttribute="top" secondItem="M8x-q8-6n4" secondAttribute="bottom" constant="27" id="SfG-iZ-Awz"/>
                             <constraint firstItem="n77-2A-MJZ" firstAttribute="top" secondItem="fFZ-k9-eVo" secondAttribute="bottom" constant="13" id="X8O-74-qUC"/>
                             <constraint firstItem="sa4-Rp-b5l" firstAttribute="leading" secondItem="M8x-q8-6n4" secondAttribute="trailing" constant="35" id="YRz-9k-6WP"/>
                             <constraint firstItem="sa4-Rp-b5l" firstAttribute="top" secondItem="n77-2A-MJZ" secondAttribute="bottom" constant="271" id="Yki-7g-YWT"/>
                             <constraint firstItem="M8x-q8-6n4" firstAttribute="top" secondItem="xjO-OJ-rcn" secondAttribute="bottom" constant="203" id="bnD-oc-2ZM"/>
                             <constraint firstItem="xjO-OJ-rcn" firstAttribute="leading" secondItem="u4e-yX-EA7" secondAttribute="leadingMargin" constant="65" id="cb1-zi-Xrv"/>
+                            <constraint firstItem="Blz-yN-Djr" firstAttribute="leading" secondItem="cxl-jn-0nR" secondAttribute="trailing" constant="35" id="dcC-f7-gP5"/>
+                            <constraint firstItem="cxl-jn-0nR" firstAttribute="top" secondItem="n3L-FX-oZV" secondAttribute="bottom" constant="98" id="hpQ-T0-R7w"/>
                             <constraint firstItem="6ve-bk-cbh" firstAttribute="trailing" secondItem="M8x-q8-6n4" secondAttribute="trailing" id="lkT-4U-gUQ"/>
                             <constraint firstItem="j5C-kr-yOE" firstAttribute="leading" secondItem="6ve-bk-cbh" secondAttribute="trailing" constant="35" id="udx-4W-j7C"/>
                             <constraint firstItem="sa4-Rp-b5l" firstAttribute="leading" secondItem="M8x-q8-6n4" secondAttribute="trailing" constant="35" id="w2f-ea-1S5"/>
                             <constraint firstItem="n3L-FX-oZV" firstAttribute="top" secondItem="6ve-bk-cbh" secondAttribute="bottom" constant="33" id="xaE-bK-7q3"/>
+                            <constraint firstItem="n3L-FX-oZV" firstAttribute="trailing" secondItem="cxl-jn-0nR" secondAttribute="trailing" id="yum-C2-jur"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -2052,7 +2101,10 @@ While the authors and producers of this program strive to provide you with usefu
                         <outlet property="IDlabel" destination="n3L-FX-oZV" id="N5a-u0-R62"/>
                         <outlet property="ageLabel" destination="6ve-bk-cbh" id="ulb-Bu-el4"/>
                         <outlet property="ageTextField" destination="j5C-kr-yOE" id="qBf-7C-Ex3"/>
+                        <outlet property="birthdateField" destination="Blz-yN-Djr" id="q9K-AG-b1D"/>
+                        <outlet property="birthdayLabel" destination="cxl-jn-0nR" id="PjC-3w-Abh"/>
                         <outlet property="nameField" destination="sa4-Rp-b5l" id="ac2-3B-e73"/>
+                        <outlet property="nameLabel" destination="M8x-q8-6n4" id="35q-NC-Eoj"/>
                         <segue destination="Oao-cI-byD" kind="show" identifier="toDisclaimer" id="gxL-oI-zvu"/>
                         <segue destination="cLF-Kx-Eej" kind="show" identifier="toTestSelection" id="Db8-gX-wha"/>
                     </connections>
@@ -2116,11 +2168,11 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth" width="980" height="1322"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lca-c5-giE"/>
+        <segue reference="Db8-gX-wha"/>
         <segue reference="31h-M1-QQK"/>
         <segue reference="V8q-qM-EbC"/>
         <segue reference="QiM-jf-6BP"/>
-        <segue reference="md3-6k-lZH"/>
+        <segue reference="eko-29-BFX"/>
         <segue reference="k5O-0U-7Tk"/>
         <segue reference="neN-op-hGA"/>
         <segue reference="HE1-1j-NTJ"/>

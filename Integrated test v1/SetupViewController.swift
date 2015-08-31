@@ -8,8 +8,10 @@
 
 import UIKit
 
+var nameOn   : Bool = true
 var useridOn : Bool = false
-var ageOn    : Bool = true
+var ageOn    : Bool = false
+var bdateOn  : Bool = true
 var emailOn  : Bool = false
 var emailAddress : String = ""
 var resultsDisplayOn : Bool = true
@@ -21,9 +23,13 @@ class SetupViewController: ViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailOnOff: UISwitch!
     
+    @IBOutlet weak var nameOnOff: UISwitch!
+    
     @IBOutlet weak var useridOnOff: UISwitch!
     
     @IBOutlet weak var AgeOnOff: UISwitch!
+    
+    @IBOutlet weak var birthdateOnOff: UISwitch!
     
     @IBOutlet weak var resultsDisplayOnOff: UISwitch!
     
@@ -42,6 +48,12 @@ class SetupViewController: ViewController {
 
     }
     
+    @IBAction func nameOnOff(sender: AnyObject) {
+        nameOn = nameOnOff.on
+        NSUserDefaults.standardUserDefaults().setBool(nameOn, forKey: "nameOn")
+        NSUserDefaults.standardUserDefaults().synchronize()
+
+    }
     
     @IBAction func UseridOnOff(sender: AnyObject) {
         useridOn = useridOnOff.on
@@ -58,6 +70,12 @@ class SetupViewController: ViewController {
 
     }
     
+    @IBAction func BdateOnOff(sender: AnyObject) {
+        bdateOn = birthdateOnOff.on
+        NSUserDefaults.standardUserDefaults().setBool(bdateOn, forKey: "bdateOn")
+        NSUserDefaults.standardUserDefaults().synchronize()
+
+    }
     
     @IBAction func ResultsDisplayOnOff(sender: AnyObject) {
         resultsDisplayOn = resultsDisplayOnOff.on
@@ -69,9 +87,11 @@ class SetupViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameOn = NSUserDefaults.standardUserDefaults().boolForKey("nameOn")
         useridOn = NSUserDefaults.standardUserDefaults().boolForKey("useridOn")
         ageOn = NSUserDefaults.standardUserDefaults().boolForKey("ageOn")
         emailOn = NSUserDefaults.standardUserDefaults().boolForKey("emailOn")
+        bdateOn = NSUserDefaults.standardUserDefaults().boolForKey("bdateOn")
         resultsDisplayOn = NSUserDefaults.standardUserDefaults().boolForKey("resultsDisplayOn")
 
     if(NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") != nil) {
@@ -81,8 +101,10 @@ class SetupViewController: ViewController {
         
         email.enabled = emailOn
         emailOnOff.on = emailOn
+        nameOnOff.on = nameOn
         useridOnOff.on = useridOn
         AgeOnOff.on = ageOn
+        birthdateOnOff.on = bdateOn
         email.text = emailAddress
         resultsDisplayOnOff.on = resultsDisplayOn
     }

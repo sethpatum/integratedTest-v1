@@ -15,11 +15,13 @@ var mailSubject : String = "CNToolkit Results"
 var patientName : String?
 var patientAge : String?
 var patientID : String?
+var patientBdate : String?
 
 class PatientUIViewController: ViewController, MFMailComposeViewControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
     
     var body:String?
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameField: UITextField!
     
     @IBOutlet weak var IDlabel: UILabel!
@@ -27,6 +29,9 @@ class PatientUIViewController: ViewController, MFMailComposeViewControllerDelega
     
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var ageTextField: UITextField!
+    
+    @IBOutlet weak var birthdayLabel: UILabel!
+    @IBOutlet weak var birthdateField: UIDatePicker!
     
     @IBAction func StartTesting(sender: AnyObject) {
         if firstTimeThrough == true {
@@ -52,6 +57,13 @@ class PatientUIViewController: ViewController, MFMailComposeViewControllerDelega
         patientID = IDfield.text
     }
     
+    @IBAction func updateBdate(sender: AnyObject) {
+        let d:UIDatePicker = sender as! UIDatePicker
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "y-MM-dd"
+        patientBdate = formatter.stringFromDate(d.date)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,11 +75,21 @@ class PatientUIViewController: ViewController, MFMailComposeViewControllerDelega
             emailAddress = NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") as! String
         }
   
+        
+        let currentDate = NSDate()
+        birthdateField.maximumDate = currentDate
+        
+        nameLabel.hidden = !nameOn
+        nameField.hidden = !nameOn
+        
         IDlabel.hidden = !useridOn
         IDfield.hidden = !useridOn
         
         ageLabel.hidden = !ageOn
         ageTextField.hidden = !ageOn
+        
+        birthdayLabel.hidden = !bdateOn
+        birthdateField.hidden = !bdateOn
         
         // Seguing here from Test selection
         if(selectedTest == "DONE") {
