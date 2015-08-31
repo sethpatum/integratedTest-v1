@@ -46,8 +46,6 @@ class CirclesViewController: ViewController {
         
         circles.checkResultList(result)
         
-        //screenShotMethod()
-        
         resultTextCircles = ""
         
         if imageView !== nil {
@@ -133,8 +131,6 @@ class CirclesViewController: ViewController {
         stopCircles = true
         
         circles.checkResultList(result)
-        
-        screenShotMethod()
         
         resultTextCircles = ""
         
@@ -271,7 +267,7 @@ class CirclesViewController: ViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    /*
     func screenShotMethod() {
         let layer = UIApplication.sharedApplication().keyWindow!.layer
         let scale = UIScreen.mainScreen().scale
@@ -283,7 +279,7 @@ class CirclesViewController: ViewController {
         
         //UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
     }
-    
+    */
     func update(timer: NSTimer) {
         
         if stopCircles == false{

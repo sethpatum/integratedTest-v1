@@ -28,10 +28,10 @@ class BubblesA {
         var x = coord.0
         var y = coord.1
         if xt  {
-            x  = 1000 - x
+            x  = 1010 - x
         }
         if yt {
-            y = 600 - y
+            y = 625 - y
         }
         return (x, y)
     }
@@ -222,7 +222,6 @@ class BubblesA {
                 nextBubble = 0
                 stopTrailsA = true
                 displayImgTrailsA = true
-                screenShotMethod()
             }
             
             timedConnectionsA.append(timePassedTrailsA)
@@ -240,19 +239,6 @@ class BubblesA {
         
         return false
         
-    }
-    
-    
-    func screenShotMethod() {
-        let layer = UIApplication.sharedApplication().keyWindow!.layer
-        let scale = UIScreen.mainScreen().scale
-        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
-        
-        layer.renderInContext(UIGraphicsGetCurrentContext())
-        let screenshot = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
     }
     
     

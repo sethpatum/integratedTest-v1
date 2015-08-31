@@ -126,7 +126,6 @@ class LetterCancellationViewController: ViewController {
         
         let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
         
-        screenShotMethod()
         
         resultTextLetters = ""
         
@@ -271,18 +270,6 @@ class LetterCancellationViewController: ViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func screenShotMethod() {
-        let layer = UIApplication.sharedApplication().keyWindow!.layer
-        let scale = UIScreen.mainScreen().scale
-        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
-        
-        layer.renderInContext(UIGraphicsGetCurrentContext())
-        let screenshot = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
     }
     
     func update(timer: NSTimer) {
