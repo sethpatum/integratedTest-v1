@@ -23,6 +23,8 @@ class DrawingViewTrails: UIView {
     
     var nextBubb = 0
     
+    var incorrect = 0
+    
     
 //ADDITION
     var paths = [UIBezierPath]()
@@ -151,7 +153,7 @@ class DrawingViewTrails: UIView {
         //CGContextTranslateCTM(context, 0, self.bounds.size.height);
         //CGContextScaleCTM(context, 1.0, -1.0);
         
-        let aFont = UIFont(name: "Optima-Bold", size: 18)
+        let aFont = UIFont(name: "Menlo-Bold", size: 24)
         // create a dictionary of attributes to be applied to the string
         let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
         // create the attributed string
@@ -161,9 +163,37 @@ class DrawingViewTrails: UIView {
         
         CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
         
-        CGContextSetTextPosition(context, CGFloat(x-8), CGFloat(y+5))
+        var num = count(name)
+        
+        if num == 1 {
+            CGContextSetTextPosition(context, CGFloat(x-7), CGFloat(y+8))
+        }
+        
+        else {
+            CGContextSetTextPosition(context, CGFloat(x-14), CGFloat(y+8))
+        }
         
         CTLineDraw(line, context)
+        
+        if ((selectedTest == "Trails A" || selectedTest == "Trails B") && name == "1") {
+            let aFont = UIFont(name: "Menlo", size: 19)
+            let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
+            let text = CFAttributedStringCreate(nil, "START", attr)
+            let line = CTLineCreateWithAttributedString(text)
+            CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
+            CGContextSetTextPosition(context, CGFloat(x-28), CGFloat(y+41))
+            CTLineDraw(line, context)
+        }
+        
+        if ((selectedTest == "Trails A" && name == "25") || (selectedTest == "Trails B" && name == "13")) {
+            let aFont = UIFont(name: "Menlo", size: 19)
+            let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
+            let text = CFAttributedStringCreate(nil, "END", attr)
+            let line = CTLineCreateWithAttributedString(text)
+            CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
+            CGContextSetTextPosition(context, CGFloat(x-16), CGFloat(y+41))
+            CTLineDraw(line, context)
+        }
         
     }
     
@@ -234,6 +264,9 @@ class DrawingViewTrails: UIView {
                     canDraw = false
                     
                     println("should have removed all pts")
+                    
+                    incorrect += 1
+                    
                 }
                 
             }
@@ -308,6 +341,9 @@ class DrawingViewTrails: UIView {
                         canDraw = false
                         
                         println("should have removed all pts")
+                        
+                        incorrect += 1
+                        
                     }
                     
                 }

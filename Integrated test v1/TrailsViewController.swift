@@ -51,7 +51,7 @@ class TrailsAViewController: ViewController {
         
         timedConnectionsA = [Double]()
         
-        let drawViewFrame = CGRect(x: 0.0, y: 150.0, width: view.bounds.width, height: view.bounds.height-150)
+        let drawViewFrame = CGRect(x: 0.0, y: 135.0, width: view.bounds.width, height: view.bounds.height-135)
         drawingView = DrawingViewTrails(frame: drawViewFrame)
         
         println("\(view.bounds.width) \(view.bounds.height)")
@@ -163,7 +163,7 @@ class TrailsAViewController: ViewController {
     func done() {
         drawingView.canDraw = false
         let imageSize = CGSize(width: 1024, height: 618)
-        imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 150), size: imageSize))
+        imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 135), size: imageSize))
         if resultsDisplayOn == true {
             self.view.addSubview(imageView)
         }
@@ -176,6 +176,15 @@ class TrailsAViewController: ViewController {
         result.startTime = startTime2
         result.endTime = NSDate()
         result.screenshot = image
+        
+        var num = timePassedTrailsA
+        let minutes = UInt8(num / 60.0)
+        num -= (NSTimeInterval(minutes)*60.0)
+        let seconds = UInt8(num)
+        num = NSTimeInterval(seconds)
+        
+        result.longDescription.addObject("\(drawingView.incorrect) incorrect in \(minutes) minutes and \(seconds) seconds")
+        
         resultsArray.add(result)
         
         displayImgTrailsA = false
