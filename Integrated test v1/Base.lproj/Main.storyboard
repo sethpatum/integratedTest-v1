@@ -1033,6 +1033,12 @@
                                     <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="kD0-qa-s1T"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdG-el-aYh">
+                                <rect key="frame" x="647" y="90" width="178" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1042,6 +1048,7 @@
                         <outlet property="backButton" destination="c5W-Si-CB6" id="8ae-wY-0bk"/>
                         <outlet property="correctButton" destination="2Zc-nR-hll" id="r10-Vm-eZp"/>
                         <outlet property="incorrectButton" destination="OhR-Sx-REv" id="cBf-se-QwQ"/>
+                        <outlet property="placeLabel" destination="BdG-el-aYh" id="bwf-Pc-3HU"/>
                         <outlet property="resetButton" destination="bGr-qg-ue7" id="sey-OI-GNX"/>
                         <outlet property="resultsLabel" destination="A1T-MC-dKm" id="uea-t2-fQC"/>
                     </connections>
