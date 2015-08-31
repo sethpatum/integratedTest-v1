@@ -113,6 +113,9 @@ class TapInOrderBackwardsViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Backward Spatial Span"
+        
         endButton.enabled = false
         resetButton.enabled = false
         

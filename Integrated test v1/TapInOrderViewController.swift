@@ -121,6 +121,9 @@ class TapInOrderViewController: ViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Forward Spatial Span"
+        
         endButton.enabled = false
         resetButton.enabled = false
         
@@ -134,6 +137,7 @@ class TapInOrderViewController: ViewController {
         ended = false
         
         self.navigationItem.setHidesBackButton(true, animated:true)
+        
         helpButton.enabled = false
         startButton.enabled = false
         endButton.enabled = true

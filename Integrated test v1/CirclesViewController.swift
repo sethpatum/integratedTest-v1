@@ -63,7 +63,7 @@ class CirclesViewController: ViewController {
         imageView.image = image
         
         // add to results
-        result.name = "Circles"
+        result.name = "OTA Cancellation"
         result.startTime = startTime2
         result.endTime = NSDate()
         result.screenshot = image
@@ -255,6 +255,8 @@ class CirclesViewController: ViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         doneButton.enabled = false
+        
+        self.navigationItem.title = "OTA Cancellation"
     }
     
     override func supportedInterfaceOrientations() -> Int {
