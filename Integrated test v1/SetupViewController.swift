@@ -79,7 +79,7 @@ class SetupViewController: ViewController {
     
     @IBAction func BdateOnOff(sender: AnyObject) {
         bdateOn = birthdateOnOff.on
-        NSUserDefaults.standardUserDefaults().setBool(bdateOn, forKey: "bdateOn")
+        NSUserDefaults.standardUserDefaults().setBool(!bdateOn, forKey: "bdateOff")
         NSUserDefaults.standardUserDefaults().synchronize()
         if ageOn && bdateOn {
             ageOn = false

@@ -68,13 +68,17 @@ class PatientUIViewController: ViewController, MFMailComposeViewControllerDelega
         super.viewDidLoad()
         
         // load the defaults from presistant memory
+        nameOn = !NSUserDefaults.standardUserDefaults().boolForKey("nameOff")
         useridOn = NSUserDefaults.standardUserDefaults().boolForKey("useridOn")
         ageOn = NSUserDefaults.standardUserDefaults().boolForKey("ageOn")
-        emailOn = NSUserDefaults.standardUserDefaults().boolForKey("emailOn")
+        emailOn = !NSUserDefaults.standardUserDefaults().boolForKey("emailOff")
+        bdateOn = !NSUserDefaults.standardUserDefaults().boolForKey("bdateOff")
+        resultsDisplayOn = !NSUserDefaults.standardUserDefaults().boolForKey("resultsDisplayOff")
+        
         if(NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") != nil) {
             emailAddress = NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") as! String
         }
-  
+
         
         let currentDate = NSDate()
         birthdateField.maximumDate = currentDate
@@ -105,6 +109,11 @@ class PatientUIViewController: ViewController, MFMailComposeViewControllerDelega
             selectedTest = ""
             resultsArray.doneWithPatient()
         }
+        
+        patientName = nil
+        patientID = nil
+        patientAge = nil
+        patientBdate = nil
     }
     
     override func didReceiveMemoryWarning() {
