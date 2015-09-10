@@ -71,6 +71,30 @@ class TapInOrderBackwardsViewController: UIViewController {
         }
     }
     
+    
+    //Rotate (180 degrees) or mirror (on x or y) the point
+    var xt:Bool = true
+    var yt:Bool = true
+    func transform(coord:(Int, Int)) -> (Int, Int) {
+        var x = coord.0
+        var y = coord.1
+        if xt  {
+            x  = 950 - x
+        }
+        if yt {
+            y = 850 - y
+        }
+        return (x, y)
+    }
+    
+    
+    func randomizeBoard() {
+        xt = arc4random_uniform(2000) < 1000
+        yt = arc4random_uniform(2000) < 1000
+        places = places.map(transform)
+    }
+
+    
     //changes 'order' and 'buttonList' arrays, adds buttons; called in next, reset and viewDidLoad
     func randomizeOrder() {
         
@@ -118,6 +142,8 @@ class TapInOrderBackwardsViewController: UIViewController {
         
         endButton.enabled = false
         resetButton.enabled = false
+        
+        randomizeBoard()
         
         randomizeOrder()
        
