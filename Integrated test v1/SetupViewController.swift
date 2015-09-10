@@ -37,7 +37,7 @@ class SetupViewController: ViewController {
         emailOn = emailOnOff.on
         
         email.enabled = emailOn
-        NSUserDefaults.standardUserDefaults().setBool(emailOn, forKey: "emailOn")
+        NSUserDefaults.standardUserDefaults().setBool(!emailOn, forKey: "emailOff")
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
@@ -50,7 +50,7 @@ class SetupViewController: ViewController {
     
     @IBAction func nameOnOff(sender: AnyObject) {
         nameOn = nameOnOff.on
-        NSUserDefaults.standardUserDefaults().setBool(nameOn, forKey: "nameOn")
+        NSUserDefaults.standardUserDefaults().setBool(!nameOn, forKey: "nameOff")
         NSUserDefaults.standardUserDefaults().synchronize()
 
     }
@@ -71,7 +71,7 @@ class SetupViewController: ViewController {
         if ageOn && bdateOn {
             bdateOn = false
             birthdateOnOff.on = bdateOn
-            NSUserDefaults.standardUserDefaults().setBool(bdateOn, forKey: "bdateOn")
+            NSUserDefaults.standardUserDefaults().setBool(!bdateOn, forKey: "bdateOff")
             NSUserDefaults.standardUserDefaults().synchronize()
             
         }
@@ -91,7 +91,7 @@ class SetupViewController: ViewController {
     
     @IBAction func ResultsDisplayOnOff(sender: AnyObject) {
         resultsDisplayOn = resultsDisplayOnOff.on
-        NSUserDefaults.standardUserDefaults().setBool(resultsDisplayOn, forKey: "resultsDisplayOn")
+        NSUserDefaults.standardUserDefaults().setBool(!resultsDisplayOn, forKey: "resultsDisplayOff")
         NSUserDefaults.standardUserDefaults().synchronize()
 
     }
@@ -99,14 +99,14 @@ class SetupViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameOn = NSUserDefaults.standardUserDefaults().boolForKey("nameOn")
+        nameOn = !NSUserDefaults.standardUserDefaults().boolForKey("nameOff")
         useridOn = NSUserDefaults.standardUserDefaults().boolForKey("useridOn")
         ageOn = NSUserDefaults.standardUserDefaults().boolForKey("ageOn")
-        emailOn = NSUserDefaults.standardUserDefaults().boolForKey("emailOn")
-        bdateOn = NSUserDefaults.standardUserDefaults().boolForKey("bdateOn")
-        resultsDisplayOn = NSUserDefaults.standardUserDefaults().boolForKey("resultsDisplayOn")
+        emailOn = !NSUserDefaults.standardUserDefaults().boolForKey("emailOff")
+        bdateOn = !NSUserDefaults.standardUserDefaults().boolForKey("bdateOff")
+        resultsDisplayOn = !NSUserDefaults.standardUserDefaults().boolForKey("resultsDisplayOff")
 
-    if(NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") != nil) {
+        if(NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") != nil) {
             emailAddress = NSUserDefaults.standardUserDefaults().objectForKey("emailAddress") as! String
         }
        
