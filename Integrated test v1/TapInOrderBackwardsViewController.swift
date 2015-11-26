@@ -35,7 +35,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     //start from 1st button; reset all info
     @IBAction func Reset(sender: AnyObject) {
         
-        println("in reset")
+        print("in reset")
         
         numplaces = 0
         numRepeats = 0
@@ -44,7 +44,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         
         randomizeOrder()
         
-        for (index, i) in enumerate(self.order) {
+        for (index, i) in self.order.enumerate() {
             self.buttonList[index].backgroundColor = UIColor.redColor()
         }
         
@@ -57,16 +57,16 @@ class TapInOrderBackwardsViewController: UIViewController {
     
     //allow buttons to be pressed
     func enableButtons() {
-        for (index, i) in enumerate(order) {
+        for (index, i) in order.enumerate() {
             buttonList[index].addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         }
     }
     
     //stop buttons from being pressed
     func disableButtons() {
-        for (index, i) in enumerate(order) {
+        for (index, i) in order.enumerate() {
             buttonList[index].removeTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-            println("buttons disabled")
+            print("buttons disabled")
             
         }
     }
@@ -98,7 +98,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     //changes 'order' and 'buttonList' arrays, adds buttons; called in next, reset and viewDidLoad
     func randomizeOrder() {
         
-        println("randomizing order")
+        print("randomizing order")
         
         order = [Int]()
         //numplaces = 0
@@ -109,20 +109,20 @@ class TapInOrderBackwardsViewController: UIViewController {
         }
         
         for var k=places.count-1; k>=0; --k{
-            var random = Int(arc4random_uniform(UInt32(k)))
+            let random = Int(arc4random_uniform(UInt32(k)))
             order.append(array[random])
             array.removeAtIndex(random)
         }
         
         buttonList = [UIButton]()
         
-        for (index, i) in enumerate(order) {
+        for (index, i) in order.enumerate() {
             let(a,b) = places[i]
             
-            var x : CGFloat = CGFloat(a)
-            var y : CGFloat = CGFloat(b)
+            let x : CGFloat = CGFloat(a)
+            let y : CGFloat = CGFloat(b)
             
-            let button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+            let button = UIButton(type: UIButtonType.System)
             buttonList.append(button)
             button.frame = CGRectMake(x, y, 50, 50)
             button.backgroundColor = UIColor.redColor()
@@ -130,7 +130,7 @@ class TapInOrderBackwardsViewController: UIViewController {
             
         }
         
-        println("order is \(order)")
+        print("order is \(order)")
     }
     
     //randomize 1st order; light up 1st button
@@ -209,7 +209,7 @@ class TapInOrderBackwardsViewController: UIViewController {
             result.name = "Backward Spatial Span"
             result.startTime = self.startTime2
             result.endTime = NSDate()
-            for (index, i) in enumerate(self.order) {
+            for (index, i) in self.order.enumerate() {
                 self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
                 
                 if resultsDisplayOn == true {
@@ -275,20 +275,20 @@ class TapInOrderBackwardsViewController: UIViewController {
                 delay(0.4) {
                     if self.ended == false {
                         self.buttonList[num].backgroundColor = UIColor.greenColor()
-                        println("green; num = \(num)")
+                        print("green; num = \(num)")
                         self.delay(1.0){
                             if self.ended == false {
                                 self.buttonList[num].backgroundColor = UIColor.redColor()
-                                println("red; num = \(num)")
+                                print("red; num = \(num)")
                                 /*
                                 for (index, i) in enumerate(self.order) {
                                     self.buttonList[index].backgroundColor = UIColor.redColor()
                                 }
 */
                                 
-                                println("Getting here shoudl be red")
+                                print("Getting here shoudl be red")
                                 
-                                var num2 = num - 1
+                                let num2 = num - 1
                                 self.drawSequenceRecursively(num2)
                             }
                         }
@@ -304,13 +304,13 @@ class TapInOrderBackwardsViewController: UIViewController {
         
         disableButtons()
         
-        println("selection done")
+        print("selection done")
         
         //false means user hit incorrect button
         if status == false {
             
             if numRepeats < 1 {
-                repeat()
+                `repeat`()
             }
                 
                 //if user has already repeated this level color changes to gray and test finishes
@@ -348,11 +348,11 @@ class TapInOrderBackwardsViewController: UIViewController {
             
         }
         
-        println("Done in \(n)! \(status)")
+        print("Done in \(n)! \(status)")
     }
     
     //user messed up; replay same sequence
-    func repeat(){
+    func `repeat`(){
         //change color to gray to indicate mistake
         /*
         for (index, i) in enumerate(order) {
@@ -363,7 +363,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         delay(0.5) {
             
             if self.ended == false {
-                for (index, i) in enumerate(self.order) {
+                for (index, i) in self.order.enumerate() {
                     self.buttonList[index].backgroundColor = UIColor.lightGrayColor()
                 }
             }
@@ -374,8 +374,8 @@ class TapInOrderBackwardsViewController: UIViewController {
         delay(2.5) {
             
             if self.ended == false {
-                println("in repeat")
-                for (index, i) in enumerate(self.order) {
+                print("in repeat")
+                for (index, i) in self.order.enumerate() {
                     self.buttonList[index].backgroundColor = UIColor.redColor()
                 }
                 
@@ -394,7 +394,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         numplaces = numplaces + 1
         delay(1) {
             if self.ended == false {
-                println("next")
+                print("next")
                 self.numRepeats = 0
                 self.currpressed = 0
                 self.randomizeOrder()
@@ -407,12 +407,12 @@ class TapInOrderBackwardsViewController: UIViewController {
     //what happens when a user taps a button (if buttons are enabled at the time)
     func buttonAction(sender:UIButton!)
     {
-        println("Button tapped")
+        print("Button tapped")
         
         //find which button user has tapped
         for i in 0...buttonList.count-1 {
             if sender == buttonList[i] {
-                println("In button \(i)")
+                print("In button \(i)")
                 
                 //change color to indicate tap
                 sender.backgroundColor = UIColor.blackColor()
@@ -423,17 +423,17 @@ class TapInOrderBackwardsViewController: UIViewController {
                 
                 //get out of loop if it's the wrong button; will eventually lead to repeat()
                 if i != currpressed {
-                    println("BA: Problem \(i) is not \(currpressed)")
+                    print("BA: Problem \(i) is not \(currpressed)")
                     selectionDone(i, status:false)
                     return
                 }
                     //if it's the right button AND it's the last in the current sequence exit loop; will eventually go to next()
                 else if currpressed == numplaces {
-                    println("BA: at end of list cp=\(currpressed) i=\(i) - all OK")
+                    print("BA: at end of list cp=\(currpressed) i=\(i) - all OK")
                     selectionDone(i, status:true)
                     return
                 }
-                println("BA: \(i) is good")
+                print("BA: \(i) is good")
                 
                 //if it's the correct button but there are more in sequence, curpressed increases by 1 to check next tap
                 currpressed = currpressed + 1
@@ -446,8 +446,8 @@ class TapInOrderBackwardsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Landscape
     }
     
     //delay function

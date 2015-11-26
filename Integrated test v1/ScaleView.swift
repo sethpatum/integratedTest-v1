@@ -15,7 +15,7 @@ class ScaleView: UIView {
         backgroundColor = UIColor.whiteColor()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         backgroundColor = UIColor.whiteColor()
     }
@@ -37,7 +37,7 @@ class ScaleView: UIView {
         for i in 0...100 {
             var path = UIBezierPath()
             path.lineWidth = 5
-            path.lineCapStyle = kCGLineCapRound
+            path.lineCapStyle = CGLineCap.Round
             
             var v = CGFloat(i)*(xEnd-xStart)/100.0 + xStart
             var next = CGPoint(x:v, y:10.0)
@@ -47,7 +47,7 @@ class ScaleView: UIView {
             var c = CGFloat(i)*(cEnd-cStart)/100.0 + cStart
             var cgc = getColor(Double(c))
             var uic = UIColor(CGColor:cgc)
-            uic!.set()
+            uic.set()
             path.stroke()
             prev = next
             
@@ -56,15 +56,15 @@ class ScaleView: UIView {
                 let line = CTLineCreateWithAttributedString(text)
                 CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
                 CGContextSetTextPosition(context, CGFloat(v), CGFloat(25))
-                CTLineDraw(line, context)
+                CTLineDraw(line, context!)
             }
         }
         
     }
     
     override func drawRect(rect: CGRect) {
-        var mid = bounds.width / 2 - 20
-        var end = bounds.width - 80.0
+        let mid = bounds.width / 2 - 20
+        let end = bounds.width - 80.0
         lineseg(80.0, xEnd:mid, cStart:0.0, cEnd:10.0)
         lineseg(mid, xEnd:end, cStart:10.0, cEnd:60.0)
         

@@ -79,7 +79,7 @@ class TrailsAViewController: ViewController {
         let drawViewFrame = CGRect(x: 0.0, y: 135.0, width: view.bounds.width, height: view.bounds.height-135)
         drawingView = DrawingViewTrails(frame: drawViewFrame)
         
-        println("\(view.bounds.width) \(view.bounds.height)")
+        print("\(view.bounds.width) \(view.bounds.height)")
         
         view.addSubview(drawingView)
         
@@ -117,11 +117,11 @@ class TrailsAViewController: ViewController {
     
     @IBAction func HelpButton(sender: AnyObject) {
          if(selectedTest == "Trails A" || selectedTest == "Trails A Practice") {
-            let vc = storyboard?.instantiateViewControllerWithIdentifier("Trails A Help") as! UIViewController
-            navigationController?.pushViewController(vc, animated:true)
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("Trails A Help") as UIViewController
+            navigationController!.pushViewController(vc, animated:true)
         } else {
-            let vc = storyboard?.instantiateViewControllerWithIdentifier("Trails B Help") as! UIViewController
-            navigationController?.pushViewController(vc, animated:true)
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("Trails B Help") as UIViewController
+            navigationController!.pushViewController(vc, animated:true)
         }
         stopTrailsA = true
         done()
@@ -137,8 +137,8 @@ class TrailsAViewController: ViewController {
 
     }
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Landscape
     }
     
     
@@ -150,7 +150,7 @@ class TrailsAViewController: ViewController {
     func update(timer: NSTimer) {
         
         if stopTrailsA == false {
-            var currTime = NSDate.timeIntervalSinceReferenceDate()
+            let currTime = NSDate.timeIntervalSinceReferenceDate()
             var diff: NSTimeInterval = currTime - startTime
             
             timePassedTrailsA = diff
@@ -221,7 +221,7 @@ class TrailsAViewController: ViewController {
     func drawCustomImage(size: CGSize) -> UIImage {
         
         // Setup our context
-        let bounds = CGRect(origin: CGPoint.zeroPoint, size: size)
+        let bounds = CGRect(origin: CGPoint.zero, size: size)
         let opaque = false
         let scale: CGFloat = 0
         UIGraphicsBeginImageContextWithOptions(size, opaque, scale)

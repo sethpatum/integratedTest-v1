@@ -20,11 +20,11 @@ class DrawingViewLetters: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        println("Initializing")
+        print("Initializing")
     }
     
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         //fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
         setupView()
@@ -33,7 +33,7 @@ class DrawingViewLetters: UIView {
     func setupView() {
         backgroundColor = UIColor.whiteColor()
         path.lineWidth = 5
-        path.lineCapStyle = kCGLineCapRound
+        path.lineCapStyle = CGLineCap.Round
     }
     
     override func drawRect(rect: CGRect) {
@@ -62,7 +62,7 @@ class DrawingViewLetters: UIView {
     }
     
     func reset() {
-        println("In reset")
+        print("In reset")
         path.removeAllPoints()
         
         letters.randomize()
@@ -77,7 +77,7 @@ class DrawingViewLetters: UIView {
         let (x, y, name, c) = letter
         //println("Bubble \(bubble)")
         
-        var context = UIGraphicsGetCurrentContext();
+        let context = UIGraphicsGetCurrentContext();
         
         // Set the circle outerline-width
         CGContextSetLineWidth(context, 3.0);
@@ -110,12 +110,12 @@ class DrawingViewLetters: UIView {
         
         CGContextSetTextPosition(context, CGFloat(x-8), CGFloat(y+5))
         
-        CTLineDraw(line, context)
+        CTLineDraw(line, context!)
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Begin")
-        var touch = touches.first as! UITouch
+        var touch = touches.first! as UITouch
         path.moveToPoint(touch.locationInView(self))
         setNeedsDisplay()
         
@@ -123,9 +123,9 @@ class DrawingViewLetters: UIView {
         
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch moved")
-        var touch = touches.first as! UITouch
+        var touch = touches.first! as UITouch
         path.addLineToPoint(touch.locationInView(self))
         setNeedsDisplay()
         
@@ -146,9 +146,9 @@ class DrawingViewLetters: UIView {
     }
     */
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Ended")
-        var touch = touches.first as! UITouch
+        var touch = touches.first! as UITouch
         
     }
     

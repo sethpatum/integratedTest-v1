@@ -53,7 +53,7 @@ class CirclesViewController: ViewController {
             imageView.removeFromSuperview()
             imageView.image = nil
             
-            println("should have removed image")
+            print("should have removed image")
         }
         
         let imageSize = CGSize(width: 1024, height: 638)
@@ -94,13 +94,13 @@ class CirclesViewController: ViewController {
         timedConnections = [(Int, Int, Int, Int, Double)]()
         circles.resultListTimesCircles = [Double]()
         circles.resultListCircles = [(Int, Int, Int)]()
-        println("TIMED CONNEXTIONS ARE \(timedConnections)")
-        println("RESULT LIST TIMES CIRCLES ARE \(circles.resultListTimesCircles)")
+        print("TIMED CONNEXTIONS ARE \(timedConnections)")
+        print("RESULT LIST TIMES CIRCLES ARE \(circles.resultListTimesCircles)")
         
         let drawViewFrame = CGRect(x: 0.0, y: 130.0, width: view.bounds.width, height: view.bounds.height-130.0)
         drawingView = DrawingViewCircles(frame: drawViewFrame)
         
-        println("\(view.bounds.width) \(view.bounds.height)")
+        print("\(view.bounds.width) \(view.bounds.height)")
         
         view.addSubview(drawingView)
         
@@ -139,7 +139,7 @@ class CirclesViewController: ViewController {
             imageView.removeFromSuperview()
             imageView.image = nil
             
-            println("should have removed image")
+            print("should have removed image")
         }
         
         let imageSize = CGSize(width: 1024, height: 638)
@@ -158,10 +158,10 @@ class CirclesViewController: ViewController {
     }
     
     func drawCustomImage(size: CGSize) -> UIImage {
-        println(timedConnections)
+        print(timedConnections)
         
         // Setup our context
-        let bounds = CGRect(origin: CGPoint.zeroPoint, size: size)
+        let bounds = CGRect(origin: CGPoint.zero, size: size)
         let opaque = false
         let scale: CGFloat = 0
         UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
@@ -176,7 +176,7 @@ class CirclesViewController: ViewController {
                 
                 let (a, b, x, y, z) = timedConnections[k]
                 
-                println("a = \(a) b = \(b) x = \(x) y = \(y) z = \(z)")
+                print("a = \(a) b = \(b) x = \(x) y = \(y) z = \(z)")
                 
                 CGContextSetStrokeColorWithColor(context, getColor(z, alpha:0.7))
                 
@@ -195,7 +195,7 @@ class CirclesViewController: ViewController {
                     let line = CTLineCreateWithAttributedString(text)
                     CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
                     CGContextSetTextPosition(context, CGFloat(a-28), CGFloat(b+41))
-                    CTLineDraw(line, context)
+                    CTLineDraw(line, context!)
                 }
                 
                 if k == timedConnections.count-1 {
@@ -205,12 +205,12 @@ class CirclesViewController: ViewController {
                     let line = CTLineCreateWithAttributedString(text)
                     CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
                     CGContextSetTextPosition(context, CGFloat(x-19), CGFloat(y+41))
-                    CTLineDraw(line, context)
+                    CTLineDraw(line, context!)
                 }
                 
                 if k > 0 {
                     
-                    println("getting here")
+                    print("getting here")
                     
                     let (a2, b2, x2, y2, z2) = timedConnections[k-1]
                     
@@ -259,8 +259,8 @@ class CirclesViewController: ViewController {
         self.navigationItem.title = "OTA Cancellation"
     }
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Landscape
     }
     
     
@@ -285,11 +285,11 @@ class CirclesViewController: ViewController {
     func update(timer: NSTimer) {
         
         if stopCircles == false{
-            var currTime = NSDate.timeIntervalSinceReferenceDate()
+            let currTime = NSDate.timeIntervalSinceReferenceDate()
             var diff: NSTimeInterval = currTime - startTime
             
             timePassedCircles = diff
-            println(timePassedCircles)
+            print(timePassedCircles)
             
             let minutes = UInt8(diff / 60.0)
             

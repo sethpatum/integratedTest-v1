@@ -73,7 +73,7 @@ class Letters{
         var array = ["N", "E", "A", "E", "W", "B", "V", "A", "H", "X", "Z", "R", "U", "A", "E", "L", "S", "R", "Q", "I"]
         var length = 20
         
-        for(index, letter) in enumerate(letterlist1){
+        for(index, letter) in letterlist1.enumerate(){
             
             let (a,b,c) = letter
             
@@ -83,13 +83,13 @@ class Letters{
             
             letterlist.append((a,b,i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
-            println(i)
+            print(i)
             
-            var r = Int(random)
+            let r = Int(random)
             
             array.removeAtIndex(r)
             
-            println(array)
+            print(array)
             
             length = length - 1
             
@@ -98,7 +98,7 @@ class Letters{
         var array2 = ["O", "B", "E", "G", "A", "P", "K", "E", "B", "W", "R", "Q", "W", "E", "Y", "T", "R", "P", "W", "X"]
         var length2 = 20
         
-        for(index, letter) in enumerate(letterlist2){
+        for(index, letter) in letterlist2.enumerate(){
             
             let(a,b,c) = letter
             
@@ -108,13 +108,13 @@ class Letters{
             
             letterlist.append((a,b,i,UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
-            println(i)
+            print(i)
             
-            var r = Int(random)
+            let r = Int(random)
             
             array2.removeAtIndex(r)
             
-            println(array2)
+            print(array2)
             
             length2 = length2 - 1
             
@@ -124,43 +124,43 @@ class Letters{
     
     func inLetter(x:CGFloat, y:CGFloat)->Int{
         
-        println("In inLetter")
-        for (index,letter) in enumerate(letterlist){
+        print("In inLetter")
+        for (index,letter) in letterlist.enumerate(){
             let (a, b, c, col) = letter
             
-            var z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
+            let z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
             
-            var i: CGFloat = CGFloat(450 + ((fontLetters - 20)*18))
+            let i: CGFloat = CGFloat(450 + ((fontLetters - 20)*18))
             
-            println(i)
+            print(i)
             
             if z <= i {
-                println("returned index to inNewLetter")
+                print("returned index to inNewLetter")
                 return index
             }
             
         }
         
-        println("returned -1 to inNewLetter")
+        print("returned -1 to inNewLetter")
         return -1
     }
     
     func inNewLetter(x:CGFloat, y:CGFloat) {
-        println("in inNewLetter")
+        print("in inNewLetter")
         
         let curr = inLetter(x, y:y)
         
         for var k = 0; k < resultListIndexes.count; ++k {
             
             if curr == resultListIndexes[k] {
-                println("inNewLetter says not in new letter")
+                print("inNewLetter says not in new letter")
                 return
             }
             
         }
         
         if curr == -1 {
-            println("inNewLetter says not in new letter")
+            print("inNewLetter says not in new letter")
             return
         }
         
@@ -170,7 +170,7 @@ class Letters{
         
         resultListLetters.append(c)
         
-        println("added \(c) to resultListLetters")
+        print("added \(c) to resultListLetters")
         
         resultListTimes.append(timePassedLetters)
         
@@ -179,7 +179,7 @@ class Letters{
     func checkResultListLetters(result:Results){
         
         for var j = 0; j < resultListLetters.count; ++j {
-            println(resultListLetters[j])
+            print(resultListLetters[j])
         }
         
         
@@ -226,7 +226,7 @@ class Letters{
             let (x, y, z, col2) = letterlist[resultListIndexes[k]]
             let i = resultListTimes[k] - resultListTimes[k-1]
             
-            println("From x = \(a), y = \(b) to x = \(x), y = \(y), time = \(i)")
+            print("From x = \(a), y = \(b) to x = \(x), y = \(y), time = \(i)")
             
             timedConnectionsLetters.append(a, b, x, y, i)
             

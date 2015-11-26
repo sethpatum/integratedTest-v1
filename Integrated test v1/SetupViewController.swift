@@ -42,7 +42,7 @@ class SetupViewController: ViewController {
     }
     
     @IBAction func emailChanged(sender: AnyObject) {
-        emailAddress = email.text
+        emailAddress = email.text!
         NSUserDefaults.standardUserDefaults().setObject(emailAddress, forKey:"emailAddress")
         NSUserDefaults.standardUserDefaults().synchronize()
 

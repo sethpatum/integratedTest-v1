@@ -18,11 +18,11 @@ class DrawingViewCircles: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        println("Initializing")
+        print("Initializing")
     }
     
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         //fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
         setupView()
@@ -31,7 +31,7 @@ class DrawingViewCircles: UIView {
     func setupView() {
         backgroundColor = UIColor.whiteColor()
         path.lineWidth = 5
-        path.lineCapStyle = kCGLineCapRound
+        path.lineCapStyle = CGLineCap.Round
     }
     
     
@@ -59,13 +59,13 @@ class DrawingViewCircles: UIView {
     }
     
     func reset() {
-        println("In reset")
+        print("In reset")
         
         path.removeAllPoints()
         
         circles.randomizeList()
         
-        println("randomized list")
+        print("randomized list")
         
         setNeedsDisplay()
     }
@@ -76,7 +76,7 @@ class DrawingViewCircles: UIView {
         let (x, y, z, col) = circle
         //println("Bubble \(bubble)")
         
-        var context = UIGraphicsGetCurrentContext();
+        let context = UIGraphicsGetCurrentContext();
         
         // Set the circle outerline-width
         CGContextSetLineWidth(context, 3.0);
@@ -122,9 +122,9 @@ class DrawingViewCircles: UIView {
         */
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Begin")
-        var touch = touches.first as! UITouch
+        var touch = touches.first! as UITouch
         path.moveToPoint(touch.locationInView(self))
         setNeedsDisplay()
         
@@ -133,9 +133,9 @@ class DrawingViewCircles: UIView {
         
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch moved")
-        var touch = touches.first as! UITouch
+        var touch = touches.first! as UITouch
         path.addLineToPoint(touch.locationInView(self))
         setNeedsDisplay()
         
@@ -156,9 +156,9 @@ class DrawingViewCircles: UIView {
     }
     */
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Ended")
-        var touch = touches.first as! UITouch
+        var touch = touches.first! as UITouch
         
     }
     

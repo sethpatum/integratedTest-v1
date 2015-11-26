@@ -58,8 +58,8 @@ class PyramidsAndPalmsViewController: UIViewController {
         
         order = [1, 2, 1, 1, 2]
         
-        button1 = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        button2 = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        button1 = UIButton(type: UIButtonType.Custom)
+        button2 = UIButton(type: UIButtonType.Custom)
         
     }
     
@@ -123,7 +123,7 @@ class PyramidsAndPalmsViewController: UIViewController {
         
         place += 1
         
-        println("place is \(place), result list is \(resultList)")
+        print("place is \(place), result list is \(resultList)")
         
         if place >= imageList.count {
             checkList()
@@ -223,8 +223,8 @@ class PyramidsAndPalmsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Landscape
     }
     
 }

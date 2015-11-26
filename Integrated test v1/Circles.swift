@@ -78,24 +78,24 @@ class Circles{
         var array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]
         var length = 21
         
-        for(index, circle) in enumerate(circlelist1){
+        for(index, circle) in circlelist1.enumerate(){
             let (a,b,c) = circle
             
             let random = arc4random_uniform(UInt32(length))
             
-            println(random)
+            print(random)
             
             let i = array[Int(random)]
             
             circlelist.append((a,b,i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
-            println(i)
+            print(i)
             
-            var r = Int(random)
+            let r = Int(random)
             
             array.removeAtIndex(r)
             
-            println(array)
+            print(array)
             
             length = length - 1
             
@@ -104,7 +104,7 @@ class Circles{
         var array2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]
         var length2 = 21
         
-        for(index, circle) in enumerate(circlelist2){
+        for(index, circle) in circlelist2.enumerate(){
             let (a,b,c) = circle
             
             let random = arc4random_uniform(UInt32(length2))
@@ -113,7 +113,7 @@ class Circles{
             
             circlelist.append((a,b,i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
-            var r = Int(random)
+            let r = Int(random)
             
             array2.removeAtIndex(r)
             
@@ -121,17 +121,17 @@ class Circles{
             
         }
         
-        println(circlelist)
+        print(circlelist)
         
         
     }
     
     func inCircle(x:CGFloat, y:CGFloat)->Int{
         
-        for (index,circle) in enumerate(circlelist){
+        for (index,circle) in circlelist.enumerate(){
             let (a, b, c, col) = circle
             
-            var z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
+            let z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
             
             if z <= 850.0 {
                 return index
@@ -169,11 +169,11 @@ class Circles{
     
     func checkResultList(result:Results){
         
-        for (index, circle) in enumerate(resultListCircles){
+        for (index, circle) in resultListCircles.enumerate(){
             
             let(a,b,c) = circle
             
-            println("x = \(a), y = \(b), c = \(c)")
+            print("x = \(a), y = \(b), c = \(c)")
             
         }
         
@@ -234,7 +234,7 @@ class Circles{
         result.longDescription.addObject("\(incorrect) full circles incorrectly crossed off.")
         //resultTextCircles = "\(correctOnLeft) out of 12 semicircles crossed off on left half; \(correctOnRight) out of 12 semicircles crossed off on right half. \n\(leftSemiCircles) out of 12 left-halved semicircles crossed off; \(rightSemiCircles) out of 12 right-halved semicircles crossed off. \n\(incorrect) full circles incorrectly crossed off."
         
-        println(resultListTimesCircles)
+        print(resultListTimesCircles)
         
         for var k = 1; k < resultListTimesCircles.count; ++k{
             
@@ -242,7 +242,7 @@ class Circles{
             let (x, y, z) = resultListCircles[k]
             let i = resultListTimesCircles[k] - resultListTimesCircles[k-1]
             
-            println("From x = \(a), y = \(b) to x = \(x), y = \(y), time = \(i)")
+            print("From x = \(a), y = \(b) to x = \(x), y = \(y), time = \(i)")
             
             timedConnections.append(a, b, x, y, i)
             

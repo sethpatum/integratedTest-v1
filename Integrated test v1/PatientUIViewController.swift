@@ -102,7 +102,7 @@ class PatientUIViewController: ViewController, MFMailComposeViewControllerDelega
                 var picker = MFMailComposeViewController()
                 picker.mailComposeDelegate = self
                 picker.setSubject(mailSubject)
-                picker.setMessageBody(body, isHTML: true)
+                picker.setMessageBody(body!, isHTML: true)
                 picker.setToRecipients([emailAddress])
                 presentViewController(picker, animated: true, completion: nil)
             }
@@ -120,8 +120,8 @@ class PatientUIViewController: ViewController, MFMailComposeViewControllerDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    drop
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    //drop
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     

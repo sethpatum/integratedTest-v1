@@ -36,11 +36,11 @@ class DrawingViewTrails: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        println("Initializing")
+        print("Initializing")
     }
     
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         //fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
         setupView()
@@ -49,13 +49,13 @@ class DrawingViewTrails: UIView {
     func setupView() {
         backgroundColor = UIColor.whiteColor()
         currPath.lineWidth = 5
-        currPath.lineCapStyle = kCGLineCapRound
+        currPath.lineCapStyle = CGLineCap.Round
         
         mainPath.lineWidth = 5
-        mainPath.lineCapStyle = kCGLineCapRound
+        mainPath.lineCapStyle = CGLineCap.Round
         
         errorPath.lineWidth = 3
-        errorPath.lineCapStyle = kCGLineCapRound
+        errorPath.lineCapStyle = CGLineCap.Round
         
     }
     
@@ -70,8 +70,8 @@ class DrawingViewTrails: UIView {
         backgroundColor = nil
         
 //ADDITION
-        println("should have drawn colored bezierpath")
-        println("paths has \(paths.count) members; timedConnectionsA length is \(timedConnectionsA.count)")
+        print("should have drawn colored bezierpath")
+        print("paths has \(paths.count) members; timedConnectionsA length is \(timedConnectionsA.count)")
         
         if (timedConnectionsA.count > 0){
             
@@ -84,10 +84,10 @@ class DrawingViewTrails: UIView {
                 
                 getColor2(z, alpha: 0.8).set()
                 
-                var path : UIBezierPath = paths[k-1]
+                let path : UIBezierPath = paths[k-1]
                 
                 path.lineWidth = 7
-                path.lineCapStyle = kCGLineCapRound
+                path.lineCapStyle = CGLineCap.Round
                 
                 path.stroke()
                 
@@ -116,7 +116,7 @@ class DrawingViewTrails: UIView {
     }
     
     func reset() {
-        println("In reset")
+        print("In reset")
         
         mainPath.removeAllPoints()
         currPath.removeAllPoints()
@@ -132,7 +132,7 @@ class DrawingViewTrails: UIView {
         let (x, y, name) = bubble
         //println("Bubble \(bubble)")
         
-        var context = UIGraphicsGetCurrentContext();
+        let context = UIGraphicsGetCurrentContext();
         
         // Set the circle outerline-width
         CGContextSetLineWidth(context, 3.0);
@@ -163,7 +163,7 @@ class DrawingViewTrails: UIView {
         
         CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
         
-        var num = count(name)
+        let num = name.characters.count
         
         if num == 1 {
             CGContextSetTextPosition(context, CGFloat(x-7), CGFloat(y+8))
@@ -173,7 +173,7 @@ class DrawingViewTrails: UIView {
             CGContextSetTextPosition(context, CGFloat(x-14), CGFloat(y+8))
         }
         
-        CTLineDraw(line, context)
+        CTLineDraw(line, context!)
         
         if (name == "1") {
             let aFont = UIFont(name: "Menlo", size: 19)
@@ -182,7 +182,7 @@ class DrawingViewTrails: UIView {
             let line = CTLineCreateWithAttributedString(text)
             CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
             CGContextSetTextPosition(context, CGFloat(x-28), CGFloat(y+41))
-            CTLineDraw(line, context)
+            CTLineDraw(line, context!)
         }
         
         if ((selectedTest == "Trails A" && name == "25") ||
@@ -195,19 +195,19 @@ class DrawingViewTrails: UIView {
             let line = CTLineCreateWithAttributedString(text)
             CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
             CGContextSetTextPosition(context, CGFloat(x-16), CGFloat(y+41))
-            CTLineDraw(line, context)
+            CTLineDraw(line, context!)
         }
         
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Begin")
         
         if nextBubb != bubbles.bubblelist.count {
             canDraw = true
         }
         
-        var touch = touches.first as! UITouch
+        var touch = touches.first! as UITouch
         currPath.moveToPoint(touch.locationInView(self))
         
         setNeedsDisplay()
@@ -228,7 +228,7 @@ class DrawingViewTrails: UIView {
                     paths.append(p)
                     
                     
-                    println("paths added member; length is \(paths.count); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
+                    print("paths added member; length is \(paths.count); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
                     
                     
                     nextBubb += 1
@@ -245,20 +245,20 @@ class DrawingViewTrails: UIView {
                 
                 countSinceCorrect = 0
                 
-                println("in correct bubble")
+                print("in correct bubble")
                 
             }
                 
             else {
                 
                 countSinceCorrect += 1
-                println("countSinceCorrect = \(countSinceCorrect)")
+                print("countSinceCorrect = \(countSinceCorrect)")
                 
                 if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
                     
                     errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                     
-                    println("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
+                    print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                     
                     currPath.removeAllPoints()
                     
@@ -266,7 +266,7 @@ class DrawingViewTrails: UIView {
                     
                     canDraw = false
                     
-                    println("should have removed all pts")
+                    print("should have removed all pts")
                     
                     incorrect += 1
                     
@@ -278,9 +278,9 @@ class DrawingViewTrails: UIView {
         
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch moved")
-        var touch = touches.first as! UITouch
+        var touch = touches.first! as UITouch
         
         if canDraw == true {
             currPath.addLineToPoint(touch.locationInView(self))
@@ -289,7 +289,7 @@ class DrawingViewTrails: UIView {
             
             if bubbles.inNewBubble(touch.locationInView(self).x, y:touch.locationInView(self).y) == true {
                 
-                println("in a new bubble")
+                print("in a new bubble")
                 
                 if bubbles.inCorrectBubble() == true {
                     
@@ -303,7 +303,7 @@ class DrawingViewTrails: UIView {
                         paths.append(p)
                         
                         
-                        println("paths added member; length is \(paths.count); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
+                        print("paths added member; length is \(paths.count); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
                         
                         
                         nextBubb += 1
@@ -322,20 +322,20 @@ class DrawingViewTrails: UIView {
                     
                     countSinceCorrect = 0
                     
-                    println("in correct bubble")
+                    print("in correct bubble")
                     
                 }
                     
                 else {
                     
                     countSinceCorrect += 1
-                    println("countSinceCorrect = \(countSinceCorrect); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
+                    print("countSinceCorrect = \(countSinceCorrect); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
                     
                     if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
                         
                         errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                         
-                        println("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
+                        print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                         
                         currPath.removeAllPoints()
                         
@@ -343,7 +343,7 @@ class DrawingViewTrails: UIView {
                         
                         canDraw = false
                         
-                        println("should have removed all pts")
+                        print("should have removed all pts")
                         
                         incorrect += 1
                         
@@ -355,9 +355,9 @@ class DrawingViewTrails: UIView {
         
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Ended")
-        var touch = touches.first as! UITouch
+        var touch = touches.first! as UITouch
     }
     
     func getColor2(i: Double, alpha: Double = 1.0) -> UIColor {

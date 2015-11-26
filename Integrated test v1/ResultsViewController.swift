@@ -19,7 +19,7 @@ class ResultsViewController: UIViewController {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         let scaleViewFrame = CGRect(x: 0.0, y: 85.0, width: view.bounds.width, height: 50)
-        var scaleView = ScaleView(frame: scaleViewFrame)
+        let scaleView = ScaleView(frame: scaleViewFrame)
         view.addSubview(scaleView)
         scaleView.reset()
         
@@ -86,15 +86,15 @@ class ResultsViewController: UIViewController {
     }
     
     func sectionHeaderTapped(recognizer: UITapGestureRecognizer) {
-        var indexPath : NSIndexPath = NSIndexPath(forRow: 0, inSection:(recognizer.view?.tag as Int!)!)
+        let indexPath : NSIndexPath = NSIndexPath(forRow: 0, inSection:(recognizer.view?.tag as Int!)!)
         let res:Results = resultsArray.get(indexPath.section)
         if (indexPath.row == 0) {
             
             res.collapsed = !res.collapsed
            
             //reload specific section animated
-            var range = NSMakeRange(indexPath.section, 1)
-            var sectionToReload = NSIndexSet(indexesInRange: range)
+            let range = NSMakeRange(indexPath.section, 1)
+            let sectionToReload = NSIndexSet(indexesInRange: range)
             self.tableView .reloadSections(sectionToReload, withRowAnimation:UITableViewRowAnimation.Fade)
         }
         
@@ -105,7 +105,7 @@ class ResultsViewController: UIViewController {
         
         let CellIdentifier = "Cell"
         var cell :UITableViewCell
-        cell = self.tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell
+        cell = self.tableView.dequeueReusableCellWithIdentifier(CellIdentifier)! as UITableViewCell
         
         if (res.collapsed) {
             cell.textLabel?.text = "click to enlarge"

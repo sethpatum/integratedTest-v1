@@ -31,10 +31,10 @@ class PicturesViewController: ViewController {
     
     @IBAction func HelpButton(sender: AnyObject) {
         if(selectedTest == "Naming Pictures") {
-            let vc = storyboard?.instantiateViewControllerWithIdentifier("Naming Pictures Help") as! UIViewController
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("Naming Pictures Help") as! UIViewController
             navigationController?.pushViewController(vc, animated:true)
         } else {
-            let vc = storyboard?.instantiateViewControllerWithIdentifier("Famous Faces Help") as! UIViewController
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("Famous Faces Help") as! UIViewController
             navigationController?.pushViewController(vc, animated:true)
         }
     }
@@ -61,7 +61,7 @@ class PicturesViewController: ViewController {
             imageView4 = UIImageView(frame:CGRectMake(207.0, 171.0, 600.0, 600.0))
         }
         
-        var image4 = UIImage(named: imageName)
+        let image4 = UIImage(named: imageName)
         imageView4.image = image4
         self.view.addSubview(imageView4)
         correctButton.enabled = true
@@ -99,7 +99,7 @@ class PicturesViewController: ViewController {
             imageView1 = UIImageView(frame:CGRectMake(207.0, 171.0, 600.0, 600.0))
         }
         
-        var image1 = UIImage(named: imageName)
+        let image1 = UIImage(named: imageName)
         imageView1.image = image1
         self.view.addSubview(imageView1)
         
@@ -141,7 +141,7 @@ class PicturesViewController: ViewController {
             imageView2 = UIImageView(frame:CGRectMake(207.0, 171.0, 600.0, 600.0))
         }
         
-        var image2 = UIImage(named: imageName)
+        let image2 = UIImage(named: imageName)
         imageView2.image = image2
         self.view.addSubview(imageView2)
         
@@ -184,7 +184,7 @@ class PicturesViewController: ViewController {
             imageView3 = UIImageView(frame:CGRectMake(207.0, 171.0, 600.0, 600.0))
         }
         
-        var image3 = UIImage(named: imageName)
+        let image3 = UIImage(named: imageName)
         imageView3.image = image3
         self.view.addSubview(imageView3)
         
@@ -229,7 +229,7 @@ class PicturesViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(selectedTest)
+        print(selectedTest, terminator: "")
         if(selectedTest == "Naming Pictures") {
             self.title = "Naming Pictures"
         } else {
@@ -246,7 +246,7 @@ class PicturesViewController: ViewController {
             imageView = UIImageView(frame:CGRectMake(207.0, 171.0, 600.0, 600.0))
         }
         
-        var image = UIImage(named: imageName)
+        let image = UIImage(named: imageName)
         imageView.image = image
         self.view.addSubview(imageView)
         
@@ -266,8 +266,8 @@ class PicturesViewController: ViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Landscape
     }
     let namingImages:[String] = ["House", "Comb", "Toothbrush", "Park Bench", "Volcano", "Mushroom", "Canoe", "Cactus", "Rhino", "Hammock", "Stethoscope", "Unicorn", "Camera Tripod", "Sphynx", "Palette", "Palette"]
     let namingImages2:[String] = ["A. Schwarzenegger", "B. Clinton", "B. Murray", "B. Obama", "E. Presley", "G. Bush", "G. Clooney", "H. Clinton", "J. Leno", "J. Travolta", "M. Monroe", "M. Obama", "MLK", "O. Winfrey", "R. Williams", "R. Williams"]
@@ -275,7 +275,7 @@ class PicturesViewController: ViewController {
     func getImageName()->String{
         
         if(selectedTest == "Naming Pictures") {
-            println(count)
+            print(count)
     
             return namingImages[count]
         } else {

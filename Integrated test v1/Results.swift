@@ -82,7 +82,7 @@ class Results: NSObject {
         let scale = UIScreen.mainScreen().scale
         UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
         
-        layer.renderInContext(UIGraphicsGetCurrentContext())
+        layer.renderInContext(UIGraphicsGetCurrentContext()!)
         screenshot = UIGraphicsGetImageFromCurrentImageContext()
     }
     

@@ -61,7 +61,7 @@ class AllResults  {
         // Iterate over the results
         if(numResults() > 0) {
             for i in 0...numResults()-1 {
-                var r = get(i)
+                let r = get(i)
                 e += "<h2>\(i+1)) \(r.name!)</h2><p>\n"
                 
                 if(r.shortDescription != nil){
@@ -79,15 +79,15 @@ class AllResults  {
                 }
                 
                 if(r.screenshot != nil) {
-                    var imageString = returnEmailStringBase64EncodedImage(r.screenshot!)
+                    let imageString = returnEmailStringBase64EncodedImage(r.screenshot!)
                     e += "<img src='data:image/png;base64,\(imageString)' width='\(r.screenshot!.size.width)' height='\(r.screenshot!.size.height)'><p>\n"
                 }
             }
         }
         
         // Put the time scale at the end of the e-mail
-        var scaleImage = UIImage(named: "scale")
-        var imageString = returnEmailStringBase64EncodedImage(scaleImage!)
+        let scaleImage = UIImage(named: "scale")
+        let imageString = returnEmailStringBase64EncodedImage(scaleImage!)
         e += "<p> <h3>scale</h3>\n"
         e += "<img src='data:image/png;base64,\(imageString)' width='\(scaleImage!.size.width)' height='\(scaleImage!.size.height)'><p>\n"
         
@@ -95,7 +95,8 @@ class AllResults  {
     }
     
     func returnEmailStringBase64EncodedImage(image:UIImage) -> String {
-        let imgData:NSData = UIImagePNGRepresentation(image);
+        //BUGBUG: Fix this!!
+        let imgData:NSData = UIImagePNGRepresentation(image)!;
         let dataString = imgData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
         return dataString
     }

@@ -55,7 +55,7 @@ class LetterCancellationViewController: ViewController {
         
         fontSample.text = "A D J U S T   F O N T   S I Z E"
         
-        var currentValue = Int(sender.value)
+        let currentValue = Int(sender.value)
         
         fontLetters = currentValue
         fontLabel.text = "Font size: \(currentValue)"
@@ -93,7 +93,7 @@ class LetterCancellationViewController: ViewController {
         let drawViewFrame = CGRect(x: 0.0, y: 200.0, width: view.bounds.width, height: view.bounds.height-200.0)
         drawingView = DrawingViewLetters(frame: drawViewFrame)
         
-        println("\(view.bounds.width) \(view.bounds.height)")
+        print("\(view.bounds.width) \(view.bounds.height)")
         
         view.addSubview(drawingView)
         
@@ -134,7 +134,7 @@ class LetterCancellationViewController: ViewController {
             imageView.removeFromSuperview()
             imageView.image = nil
             
-            println("should have removed image")
+            print("should have removed image")
         }
         
         let imageSize = CGSize(width: 1024, height: 558)
@@ -153,10 +153,10 @@ class LetterCancellationViewController: ViewController {
     }
     
     func drawCustomImage(size: CGSize) -> UIImage {
-        println(timedConnectionsLetters)
+        print(timedConnectionsLetters)
         
         // Setup our context
-        let bounds = CGRect(origin: CGPoint.zeroPoint, size: size)
+        let bounds = CGRect(origin: CGPoint.zero, size: size)
         let opaque = false
         let scale: CGFloat = 0
         UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
@@ -173,7 +173,7 @@ class LetterCancellationViewController: ViewController {
                 
                 let (a, b, x, y, z) = timedConnectionsLetters[k]
                 
-                println("a = \(a) b = \(b) x = \(x) y = \(y) z = \(z)")
+                print("a = \(a) b = \(b) x = \(x) y = \(y) z = \(z)")
                 
                 CGContextSetStrokeColorWithColor(context, getColor(z, alpha:0.7))
                 
@@ -192,7 +192,7 @@ class LetterCancellationViewController: ViewController {
                     let line = CTLineCreateWithAttributedString(text)
                     CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
                     CGContextSetTextPosition(context, CGFloat(a-34), CGFloat(b+35))
-                    CTLineDraw(line, context)
+                    CTLineDraw(line, context!)
                 }
                 
                 if k == timedConnectionsLetters.count-1 {
@@ -202,12 +202,12 @@ class LetterCancellationViewController: ViewController {
                     let line = CTLineCreateWithAttributedString(text)
                     CGContextSetTextMatrix(context, CGAffineTransformMake(CGFloat(1), CGFloat(0), CGFloat(0), CGFloat(-1),CGFloat(0), CGFloat(0)))
                     CGContextSetTextPosition(context, CGFloat(x-25), CGFloat(y+35))
-                    CTLineDraw(line, context)
+                    CTLineDraw(line, context!)
                 }
                 
                 if k > 0 {
                     
-                    println("getting here")
+                    print("getting here")
                     
                     let (a2, b2, x2, y2, z2) = timedConnectionsLetters[k-1]
                     
@@ -256,14 +256,14 @@ class LetterCancellationViewController: ViewController {
         
         doneButton.enabled = false
         
-        var currentValue = Int(slider.value)
+        let currentValue = Int(slider.value)
         fontLetters = currentValue
         fontLabel.text = "Font size: \(currentValue)"
 
     }
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Landscape
     }
     
     
@@ -275,7 +275,7 @@ class LetterCancellationViewController: ViewController {
     func update(timer: NSTimer) {
         
         if stopLetters == false{
-            var currTime = NSDate.timeIntervalSinceReferenceDate()
+            let currTime = NSDate.timeIntervalSinceReferenceDate()
             var diff: NSTimeInterval = currTime - startTime
             
             timePassedLetters = diff
@@ -293,7 +293,7 @@ class LetterCancellationViewController: ViewController {
             let strMinutes = minutes > 9 ? String(minutes):"0"+String(minutes)
             let strSeconds = seconds > 9 ? String(seconds):"0"+String(seconds)
             
-            println("\(strMinutes) : \(strSeconds)")
+            print("\(strMinutes) : \(strSeconds)")
         }
         else {
             timer.invalidate()

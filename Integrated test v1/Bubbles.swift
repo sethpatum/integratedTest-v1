@@ -168,17 +168,17 @@ class BubblesA {
             
         }
         
-        println("lst=\(lst), xt=\(xt), yt=\(yt), off=\(off)")
+        print("lst=\(lst), xt=\(xt), yt=\(yt), off=\(off)")
         
     }
     
     
     func inBubble(x:CGFloat, y:CGFloat)->Int{
         
-        for (index,bubble) in enumerate(bubblelist){
+        for (index,bubble) in bubblelist.enumerate(){
             let (a, b, name) = bubble
             
-            var z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
+            let z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
             
             if z <= 700.0 {
                 //println("inside bubble " + name)
@@ -198,7 +198,7 @@ class BubblesA {
         if curr == -1 {
             return false
         }
-        println("Found new bubble \(curr)")
+        print("Found new bubble \(curr)")
         
         
         lastBubble = currentBubble
@@ -218,7 +218,7 @@ class BubblesA {
                 
                 timedConnectionsA.append(timePassedTrailsA)
                 
-                println("Done")
+                print("Done")
                 nextBubble = 0
                 stopTrailsA = true
                 displayImgTrailsA = true
