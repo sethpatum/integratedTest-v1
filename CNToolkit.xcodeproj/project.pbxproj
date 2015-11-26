@@ -269,6 +269,7 @@
 		1BA4A9BD1B5556D800E3FBD4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = sunspot;
 				TargetAttributes = {
