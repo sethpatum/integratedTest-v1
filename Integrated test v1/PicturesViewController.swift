@@ -31,10 +31,10 @@ class PicturesViewController: ViewController {
     
     @IBAction func HelpButton(sender: AnyObject) {
         if(selectedTest == "Naming Pictures") {
-            let vc = storyboard!.instantiateViewControllerWithIdentifier("Naming Pictures Help") as! UIViewController
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("Naming Pictures Help") as UIViewController
             navigationController?.pushViewController(vc, animated:true)
         } else {
-            let vc = storyboard!.instantiateViewControllerWithIdentifier("Famous Faces Help") as! UIViewController
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("Famous Faces Help") as UIViewController
             navigationController?.pushViewController(vc, animated:true)
         }
     }

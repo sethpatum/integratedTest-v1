@@ -76,10 +76,6 @@ class DrawingViewTrails: UIView {
         if (timedConnectionsA.count > 0){
             
             for var k = 2; k < timedConnectionsA.count; ++k {
-                
-                let (a, b, fillerA) = bubbles.bubblelist[k-2]
-                let (x, y, fillerB) = bubbles.bubblelist[k-1]
-                
                 let z = timedConnectionsA[k-1] - timedConnectionsA[k-2]
                 
                 getColor2(z, alpha: 0.8).set()
@@ -207,7 +203,7 @@ class DrawingViewTrails: UIView {
             canDraw = true
         }
         
-        var touch = touches.first! as UITouch
+        let touch = touches.first! as UITouch
         currPath.moveToPoint(touch.locationInView(self))
         
         setNeedsDisplay()
@@ -280,7 +276,7 @@ class DrawingViewTrails: UIView {
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch moved")
-        var touch = touches.first! as UITouch
+        let touch = touches.first! as UITouch
         
         if canDraw == true {
             currPath.addLineToPoint(touch.locationInView(self))
@@ -357,7 +353,7 @@ class DrawingViewTrails: UIView {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Ended")
-        var touch = touches.first! as UITouch
+        
     }
     
     func getColor2(i: Double, alpha: Double = 1.0) -> UIColor {

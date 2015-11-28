@@ -74,7 +74,7 @@ class DrawingViewLetters: UIView {
     // Don't use the color in letter, use the color given
     func drawLetters(letter:(Int, Int, String, UIColor), color:UIColor){
         
-        let (x, y, name, c) = letter
+        let (x, y, name, _) = letter
         //println("Bubble \(bubble)")
         
         let context = UIGraphicsGetCurrentContext();
@@ -148,7 +148,7 @@ class DrawingViewLetters: UIView {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Ended")
-        let touch = touches.first! as UITouch
+        //let touch = touches.first! as UITouch
         
     }
     

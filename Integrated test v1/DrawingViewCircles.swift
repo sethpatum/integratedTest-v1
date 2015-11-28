@@ -73,7 +73,7 @@ class DrawingViewCircles: UIView {
     func drawCircles(circle:(Int, Int, Int, UIColor), color: UIColor){
         
         //println("in drawCircle")
-        let (x, y, z, col) = circle
+        let (x, y, z, _) = circle
         //println("Bubble \(bubble)")
         
         let context = UIGraphicsGetCurrentContext();
@@ -158,7 +158,7 @@ class DrawingViewCircles: UIView {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Ended")
-        let touch = touches.first! as UITouch
+        
         
     }
     
