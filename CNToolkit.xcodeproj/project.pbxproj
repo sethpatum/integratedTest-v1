@@ -146,6 +146,7 @@
 				E1EF6D2B1B56A05F001037C6 /* Letters */,
 				F2DA21D81B7646E40048C068 /* Pictures */,
 				1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */,
+				1BA503741C0A4A320021F216 /* SoundEffect.mp3 */,
 				1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */,
 				1BA4A9C81B5556D800E3FBD4 /* Supporting Files */,
 			);
@@ -156,7 +157,6 @@
 		1BA4A9C81B5556D800E3FBD4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1BA503741C0A4A320021F216 /* SoundEffect.mp3 */,
 				1BA4A9C91B5556D800E3FBD4 /* Info.plist */,
 			);
 			name = "Supporting Files";
