@@ -243,7 +243,7 @@ class DrawingViewTrails: UIView {
                 currPath.removeAllPoints()
                 currPath.moveToPoint(touch.locationInView(self))
                 
-                countSinceCorrect = 0
+//                countSinceCorrect = 0
                 
                 print("in correct bubble")
                 
@@ -251,18 +251,18 @@ class DrawingViewTrails: UIView {
                 
             else {
                 
-                countSinceCorrect += 1
-                print("countSinceCorrect = \(countSinceCorrect)")
+//                countSinceCorrect += 1
+//                print("countSinceCorrect = \(countSinceCorrect)")
                 
-                if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
+//                if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
                     
                     errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                     
-                    print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
+//                    print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                     
                     currPath.removeAllPoints()
                     
-                    countSinceCorrect = 0
+//                    countSinceCorrect = 0
                     
                     canDraw = false
                     
@@ -270,7 +270,7 @@ class DrawingViewTrails: UIView {
                     
                     incorrect += 1
                     
-                }
+//                }
                 
             }
             
@@ -320,7 +320,7 @@ class DrawingViewTrails: UIView {
                     currPath.removeAllPoints()
                     currPath.moveToPoint(touch.locationInView(self))
                     
-                    countSinceCorrect = 0
+//                    countSinceCorrect = 0
                     
                     print("in correct bubble")
                     
@@ -328,18 +328,18 @@ class DrawingViewTrails: UIView {
                     
                 else {
                     
-                    countSinceCorrect += 1
+//                    countSinceCorrect += 1
                     print("countSinceCorrect = \(countSinceCorrect); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
                     
-                    if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
+//                    if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
                         
                         errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                         
-                        print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
+//                        print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                         
                         currPath.removeAllPoints()
                         
-                        countSinceCorrect = 0
+//                        countSinceCorrect = 0
                         
                         canDraw = false
                         
@@ -347,7 +347,7 @@ class DrawingViewTrails: UIView {
                         
                         incorrect += 1
                         
-                    }
+//                    }
                     
                 }
             }

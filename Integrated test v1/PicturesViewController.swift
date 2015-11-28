@@ -172,6 +172,9 @@ class PicturesViewController: ViewController {
             if order[order.count-1] == true {
                 corr -= 1
             }
+            else {
+                wrongList.removeAtIndex(wrongList.count-1)
+            }
             
             order.removeAtIndex(order.count-1)
         }
