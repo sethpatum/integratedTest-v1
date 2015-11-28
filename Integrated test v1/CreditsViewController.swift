@@ -22,7 +22,7 @@ class CreditsViewController: UIViewController {
         override func viewDidLoad() {
         super.viewDidLoad()
             
-            let audioPath = NSBundle.mainBundle().pathForResource("SoundEffect", ofType: "mp3")
+            let audioPath = NSBundle.mainBundle().pathForResource("SoundEffect1", ofType: "mp3")
             var error:NSError? = nil
             do {
                 player = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath!))

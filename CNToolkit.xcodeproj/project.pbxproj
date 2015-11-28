@@ -15,7 +15,7 @@
 		1BA4A9E11B5556D800E3FBD4 /* Integrated_test_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */; };
 		1BA503711C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */; };
 		1BA503731C0A487C0021F216 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA503721C0A487C0021F216 /* AVFoundation.framework */; };
-		1BA503751C0A4A320021F216 /* SoundEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1BA503741C0A4A320021F216 /* SoundEffect.mp3 */; };
+		1BA503751C0A4A320021F216 /* SoundEffect1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1BA503741C0A4A320021F216 /* SoundEffect1.mp3 */; };
 		1BA503771C0A4A980021F216 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA503761C0A4A980021F216 /* CreditsViewController.swift */; };
 		1BCEE8B21B555A53002AEE37 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */; };
 		1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */; };
@@ -63,7 +63,7 @@
 		1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrated_test_v1Tests.swift; sourceTree = "<group>"; };
 		1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceNameAdaptiveMemoryViewController.swift; sourceTree = "<group>"; };
 		1BA503721C0A487C0021F216 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		1BA503741C0A4A320021F216 /* SoundEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = SoundEffect.mp3; path = ../../../Downloads/SoundEffect.mp3; sourceTree = "<group>"; };
+		1BA503741C0A4A320021F216 /* SoundEffect1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = SoundEffect1.mp3; path = ../../../Downloads/SoundEffect1.mp3; sourceTree = "<group>"; };
 		1BA503761C0A4A980021F216 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapInOrderViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				E1EF6D2B1B56A05F001037C6 /* Letters */,
 				F2DA21D81B7646E40048C068 /* Pictures */,
 				1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */,
-				1BA503741C0A4A320021F216 /* SoundEffect.mp3 */,
+				1BA503741C0A4A320021F216 /* SoundEffect1.mp3 */,
 				1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */,
 				1BA4A9C81B5556D800E3FBD4 /* Supporting Files */,
 			);
@@ -324,7 +324,7 @@
 				1BA4A9D01B5556D800E3FBD4 /* Main.storyboard in Resources */,
 				1BA4A9D51B5556D800E3FBD4 /* LaunchScreen.xib in Resources */,
 				1BA4A9D21B5556D800E3FBD4 /* Images.xcassets in Resources */,
-				1BA503751C0A4A320021F216 /* SoundEffect.mp3 in Resources */,
+				1BA503751C0A4A320021F216 /* SoundEffect1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
