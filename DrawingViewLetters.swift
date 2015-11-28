@@ -115,7 +115,7 @@ class DrawingViewLetters: UIView {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Begin")
-        var touch = touches.first! as UITouch
+        let touch = touches.first! as UITouch
         path.moveToPoint(touch.locationInView(self))
         setNeedsDisplay()
         
@@ -125,7 +125,7 @@ class DrawingViewLetters: UIView {
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch moved")
-        var touch = touches.first! as UITouch
+        let touch = touches.first! as UITouch
         path.addLineToPoint(touch.locationInView(self))
         setNeedsDisplay()
         
@@ -148,7 +148,7 @@ class DrawingViewLetters: UIView {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //println("Touch Ended")
-        var touch = touches.first! as UITouch
+        let touch = touches.first! as UITouch
         
     }
     
