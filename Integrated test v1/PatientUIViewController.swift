@@ -99,7 +99,7 @@ class PatientUIViewController: ViewController, MFMailComposeViewControllerDelega
         if(selectedTest == "DONE") {
             if(emailOn) {
                 body = resultsArray.emailBody()
-                var picker = MFMailComposeViewController()
+                let picker = MFMailComposeViewController()
                 picker.mailComposeDelegate = self
                 picker.setSubject(mailSubject)
                 picker.setMessageBody(body!, isHTML: true)

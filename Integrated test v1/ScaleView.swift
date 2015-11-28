@@ -29,24 +29,24 @@ class ScaleView: UIView {
     func lineseg(xStart:CGFloat, xEnd:CGFloat, cStart:CGFloat, cEnd:CGFloat) {
         var prev = CGPoint(x:xStart, y:10)
         
-        var context = UIGraphicsGetCurrentContext();
+        let context = UIGraphicsGetCurrentContext();
         let aFont = UIFont(name: "Optima-Bold", size: 10)
         let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
         
         
         for i in 0...100 {
-            var path = UIBezierPath()
+            let path = UIBezierPath()
             path.lineWidth = 5
             path.lineCapStyle = CGLineCap.Round
             
-            var v = CGFloat(i)*(xEnd-xStart)/100.0 + xStart
-            var next = CGPoint(x:v, y:10.0)
+            let v = CGFloat(i)*(xEnd-xStart)/100.0 + xStart
+            let next = CGPoint(x:v, y:10.0)
             path.moveToPoint(prev)
             path.addLineToPoint(next)
             
-            var c = CGFloat(i)*(cEnd-cStart)/100.0 + cStart
-            var cgc = getColor(Double(c))
-            var uic = UIColor(CGColor:cgc)
+            let c = CGFloat(i)*(cEnd-cStart)/100.0 + cStart
+            let cgc = getColor(Double(c))
+            let uic = UIColor(CGColor:cgc)
             uic.set()
             path.stroke()
             prev = next
