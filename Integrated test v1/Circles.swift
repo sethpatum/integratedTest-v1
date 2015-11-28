@@ -78,8 +78,8 @@ class Circles{
         var array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]
         var length = 21
         
-        for(index, circle) in circlelist1.enumerate(){
-            let (a,b,c) = circle
+        for(_, circle) in circlelist1.enumerate(){
+            let (a,b,_) = circle
             
             let random = arc4random_uniform(UInt32(length))
             
@@ -104,8 +104,8 @@ class Circles{
         var array2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]
         var length2 = 21
         
-        for(index, circle) in circlelist2.enumerate(){
-            let (a,b,c) = circle
+        for(_, circle) in circlelist2.enumerate(){
+            let (a,b,_) = circle
             
             let random = arc4random_uniform(UInt32(length2))
             
@@ -129,7 +129,7 @@ class Circles{
     func inCircle(x:CGFloat, y:CGFloat)->Int{
         
         for (index,circle) in circlelist.enumerate(){
-            let (a, b, c, col) = circle
+            let (a, b, _, _) = circle
             
             let z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
             
@@ -157,7 +157,7 @@ class Circles{
             return
         }
         
-        let (a, b, c, col) = circlelist[curr]
+        let (a, b, c, _) = circlelist[curr]
         
         resultListCircles.append(a, b, c)
         resultListIndexes.append(curr)
@@ -169,7 +169,7 @@ class Circles{
     
     func checkResultList(result:Results){
         
-        for (index, circle) in resultListCircles.enumerate(){
+        for (_, circle) in resultListCircles.enumerate(){
             
             let(a,b,c) = circle
             
@@ -184,7 +184,7 @@ class Circles{
         var incorrect = 0
         
         for var i = 0; i < circlelist.count; ++i {
-            let (a, b, c, col) = circlelist[i]
+            let (_, _, c, _) = circlelist[i]
             if (c == 1 || c == 2) {
                 circlelist[i].3 = UIColor(hue: 0.66, saturation: 1.0, brightness: 1.0, alpha: 1.0)
             }
@@ -195,7 +195,7 @@ class Circles{
             
             circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.33, saturation: 1.0, brightness: 0.70, alpha: 1.0)
             
-            let (a, b, c) = resultListCircles[k]
+            let (a, _, c) = resultListCircles[k]
             
             if c != 0{
                 
@@ -238,8 +238,8 @@ class Circles{
         
         for var k = 1; k < resultListTimesCircles.count; ++k{
             
-            let (a, b, c) = resultListCircles[k-1]
-            let (x, y, z) = resultListCircles[k]
+            let (a, b, _) = resultListCircles[k-1]
+            let (x, y, _) = resultListCircles[k]
             let i = resultListTimesCircles[k] - resultListTimesCircles[k-1]
             
             print("From x = \(a), y = \(b) to x = \(x), y = \(y), time = \(i)")

@@ -176,7 +176,7 @@ class BubblesA {
     func inBubble(x:CGFloat, y:CGFloat)->Int{
         
         for (index,bubble) in bubblelist.enumerate(){
-            let (a, b, name) = bubble
+            let (a, b, _) = bubble
             
             let z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
             

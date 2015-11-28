@@ -106,12 +106,11 @@ class CirclesViewController: ViewController {
         
         drawingView.reset()
         
-        var timer = NSTimer()
-        startTime2 = NSDate()
+                startTime2 = NSDate()
         
-        let aSelector : Selector = "update"
+        //let aSelector : Selector = "update"
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         stopCircles = false
@@ -161,7 +160,7 @@ class CirclesViewController: ViewController {
         print(timedConnections)
         
         // Setup our context
-        let bounds = CGRect(origin: CGPoint.zero, size: size)
+        //let bounds = CGRect(origin: CGPoint.zero, size: size)
         let opaque = false
         let scale: CGFloat = 0
         UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
@@ -212,7 +211,7 @@ class CirclesViewController: ViewController {
                     
                     print("getting here")
                     
-                    let (a2, b2, x2, y2, z2) = timedConnections[k-1]
+                    let (a2, b2, x2, _, z2) = timedConnections[k-1]
                     
                     CGContextSetFillColorWithColor(context, getColor(z2, alpha:0.5))
                     
