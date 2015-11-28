@@ -73,9 +73,9 @@ class Letters{
         var array = ["N", "E", "A", "E", "W", "B", "V", "A", "H", "X", "Z", "R", "U", "A", "E", "L", "S", "R", "Q", "I"]
         var length = 20
         
-        for(index, letter) in letterlist1.enumerate(){
+        for(_, letter) in letterlist1.enumerate(){
             
-            let (a,b,c) = letter
+            let (a,b,_) = letter
             
             let random = arc4random_uniform(UInt32(length))
             
@@ -98,9 +98,9 @@ class Letters{
         var array2 = ["O", "B", "E", "G", "A", "P", "K", "E", "B", "W", "R", "Q", "W", "E", "Y", "T", "R", "P", "W", "X"]
         var length2 = 20
         
-        for(index, letter) in letterlist2.enumerate(){
+        for(_, letter) in letterlist2.enumerate(){
             
-            let(a,b,c) = letter
+            let(a,b,_) = letter
             
             let random = arc4random_uniform(UInt32(length2))
             
@@ -126,7 +126,7 @@ class Letters{
         
         print("In inLetter")
         for (index,letter) in letterlist.enumerate(){
-            let (a, b, c, col) = letter
+            let (a, b, _, _) = letter
             
             let z = (x-CGFloat(a))*(x-CGFloat(a)) + (y-CGFloat(b))*(y-CGFloat(b))
             
@@ -166,7 +166,7 @@ class Letters{
         
         resultListIndexes.append(curr)
         
-        let (a,b,c, col) = letterlist[curr]
+        let (_,_,c, _) = letterlist[curr]
         
         resultListLetters.append(c)
         
@@ -189,7 +189,7 @@ class Letters{
         
         // Mark all the correct letters here.
         for var i = 0; i < letterlist.count; ++i {
-            let (x, y, c, col) = letterlist[i]
+            let (_, _, c, _) = letterlist[i]
             if(c == ("E") || c==("R")) {
                 letterlist[i].3 = UIColor(hue: 0.66, saturation: 1.0, brightness: 1.0, alpha: 1.0)
             }
@@ -222,8 +222,8 @@ class Letters{
         
         for var k = 1; k < resultListTimes.count; ++k{
             
-            let (a, b, c, col1) = letterlist[resultListIndexes[k-1]]
-            let (x, y, z, col2) = letterlist[resultListIndexes[k]]
+            let (a, b, _, _) = letterlist[resultListIndexes[k-1]]
+            let (x, y, _, _) = letterlist[resultListIndexes[k]]
             let i = resultListTimes[k] - resultListTimes[k-1]
             
             print("From x = \(a), y = \(b) to x = \(x), y = \(y), time = \(i)")

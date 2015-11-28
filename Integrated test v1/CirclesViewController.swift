@@ -211,7 +211,7 @@ class CirclesViewController: ViewController {
                     
                     print("getting here")
                     
-                    let (a2, b2, x2, _, z2) = timedConnections[k-1]
+                    let (a2, b2, _, _, z2) = timedConnections[k-1]
                     
                     CGContextSetFillColorWithColor(context, getColor(z2, alpha:0.5))
                     
