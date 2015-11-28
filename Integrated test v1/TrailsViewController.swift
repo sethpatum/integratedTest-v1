@@ -89,7 +89,7 @@ class TrailsAViewController: ViewController {
         
         //let aSelector : Selector = "update"
         
-        //var timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         timedConnectionsA = [Double]()
