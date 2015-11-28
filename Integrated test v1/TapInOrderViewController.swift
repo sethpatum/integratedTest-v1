@@ -49,7 +49,7 @@ class TapInOrderViewController: ViewController {
         
         randomizeOrder()
         
-        for (index, i) in self.order.enumerate() {
+        for (index, _) in self.order.enumerate() {
             self.buttonList[index].backgroundColor = UIColor.redColor()
         }
         
@@ -62,14 +62,14 @@ class TapInOrderViewController: ViewController {
     
     //allow buttons to be pressed
     func enableButtons() {
-        for (index, i) in order.enumerate() {
+        for (index, _) in order.enumerate() {
             buttonList[index].addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         }
     }
     
     //stop buttons from being pressed
     func disableButtons() {
-        for (index, i) in order.enumerate() {
+        for (index, _) in order.enumerate() {
             buttonList[index].removeTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
             print("buttons disabled")
             
@@ -121,7 +121,7 @@ class TapInOrderViewController: ViewController {
         
         buttonList = [UIButton]()
         
-        for (index, i) in order.enumerate() {
+        for (_, i) in order.enumerate() {
             let(a,b) = places[i]
             
             let x : CGFloat = CGFloat(a)
@@ -208,14 +208,14 @@ class TapInOrderViewController: ViewController {
             result.name = "Forward Spatial Span"
             result.startTime = self.startTime2
             result.endTime = NSDate()
-            for (index, i) in self.order.enumerate() {
+            for (index, _) in self.order.enumerate() {
                 self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
                 
                 if resultsDisplayOn == true {
                     self.resultsLabel.text = "Spatial span: \(self.numplaces)"
                 }
                 
-                let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+                //let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
             }
             result.longDescription.addObject("Forward spatial span: \(self.numplaces)")
             
@@ -359,7 +359,7 @@ class TapInOrderViewController: ViewController {
         delay(0.5) {
             
             if self.ended == false {
-                for (index, i) in self.order.enumerate() {
+                for (index, _) in self.order.enumerate() {
                     self.buttonList[index].backgroundColor = UIColor.lightGrayColor()
                 }
             }
@@ -371,7 +371,7 @@ class TapInOrderViewController: ViewController {
             
             if self.ended == false {
                 print("in repeat")
-                for (index, i) in self.order.enumerate() {
+                for (index, _) in self.order.enumerate() {
                     self.buttonList[index].backgroundColor = UIColor.redColor()
                 }
                 

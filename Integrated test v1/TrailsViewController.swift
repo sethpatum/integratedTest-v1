@@ -85,12 +85,11 @@ class TrailsAViewController: ViewController {
         
         drawingView.reset()
         
-        var timer = NSTimer()
-        startTime2 = NSDate()
+                startTime2 = NSDate()
         
-        let aSelector : Selector = "update"
+        //let aSelector : Selector = "update"
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
         
         startTime = NSDate.timeIntervalSinceReferenceDate()
         timedConnectionsA = [Double]()
@@ -221,11 +220,11 @@ class TrailsAViewController: ViewController {
     func drawCustomImage(size: CGSize) -> UIImage {
         
         // Setup our context
-        let bounds = CGRect(origin: CGPoint.zero, size: size)
+        //let bounds = CGRect(origin: CGPoint.zero, size: size)
         let opaque = false
         let scale: CGFloat = 0
         UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
-        let context = UIGraphicsGetCurrentContext()
+        //let context = UIGraphicsGetCurrentContext()
         
         // Setup complete, do drawing here
         drawingView.drawResultBackground()  //background bubbles
