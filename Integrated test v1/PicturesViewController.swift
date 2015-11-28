@@ -272,7 +272,7 @@ class PicturesViewController: ViewController {
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.Landscape
     }
-    let namingImages:[String] = ["House", "Comb", "Toothbrush", "Park Bench", "Volcano", "Mushroom", "Canoe", "Cactus", "Rhino", "Hammock", "Stethoscope", "Unicorn", "Camera Tripod", "Sphynx", "Palette", "Palette"]
+    let namingImages:[String] = ["House", "Comb", "Toothbrush", "Park Bench", "Volcano", "Mushroom", "Canoe", "Cactus", "Rhino", "Hammock", "Stethoscope", "Unicorn", "Camera Tripod", "Sphinx", "Palette", "Palette"]
     let namingImages2:[String] = ["A. Schwarzenegger", "B. Clinton", "B. Murray", "B. Obama", "E. Presley", "G. Bush", "G. Clooney", "H. Clinton", "J. Leno", "J. Travolta", "M. Monroe", "M. Obama", "MLK", "O. Winfrey", "R. Williams", "R. Williams"]
     
     func getImageName()->String{
