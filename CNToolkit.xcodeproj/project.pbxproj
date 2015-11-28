@@ -14,6 +14,9 @@
 		1BA4A9D51B5556D800E3FBD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */; };
 		1BA4A9E11B5556D800E3FBD4 /* Integrated_test_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */; };
 		1BA503711C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */; };
+		1BA503731C0A487C0021F216 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA503721C0A487C0021F216 /* AVFoundation.framework */; };
+		1BA503751C0A4A320021F216 /* SoundEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1BA503741C0A4A320021F216 /* SoundEffect.mp3 */; };
+		1BA503771C0A4A980021F216 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA503761C0A4A980021F216 /* CreditsViewController.swift */; };
 		1BCEE8B21B555A53002AEE37 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */; };
 		1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */; };
 		1BCEE8B61B555C9B002AEE37 /* LetterCancellationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */; };
@@ -59,6 +62,9 @@
 		1BA4A9DF1B5556D800E3FBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrated_test_v1Tests.swift; sourceTree = "<group>"; };
 		1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceNameAdaptiveMemoryViewController.swift; sourceTree = "<group>"; };
+		1BA503721C0A487C0021F216 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1BA503741C0A4A320021F216 /* SoundEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = SoundEffect.mp3; path = ../../../Downloads/SoundEffect.mp3; sourceTree = "<group>"; };
+		1BA503761C0A4A980021F216 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapInOrderViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCancellationViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA503731C0A487C0021F216 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +110,7 @@
 		1BA4A9BC1B5556D800E3FBD4 = {
 			isa = PBXGroup;
 			children = (
+				1BA503721C0A487C0021F216 /* AVFoundation.framework */,
 				1BA4A9C71B5556D800E3FBD4 /* CNToolkit */,
 				1BA4A9DD1B5556D800E3FBD4 /* CNToolkit Tests */,
 				1BA4A9C61B5556D800E3FBD4 /* Products */,
@@ -129,6 +137,7 @@
 				F280A3F21B80F1620071C100 /* SetupViewController.swift */,
 				F297C1481B9320C200E0F5A1 /* HomeViewController.swift */,
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
+				1BA503761C0A4A980021F216 /* CreditsViewController.swift */,
 				E11414A31B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift */,
 				F2DA21E71B7BFCE20048C068 /* Results */,
 				F2DA21D71B76469F0048C068 /* TapInOrder */,
@@ -147,6 +156,7 @@
 		1BA4A9C81B5556D800E3FBD4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1BA503741C0A4A320021F216 /* SoundEffect.mp3 */,
 				1BA4A9C91B5556D800E3FBD4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -313,6 +323,7 @@
 				1BA4A9D01B5556D800E3FBD4 /* Main.storyboard in Resources */,
 				1BA4A9D51B5556D800E3FBD4 /* LaunchScreen.xib in Resources */,
 				1BA4A9D21B5556D800E3FBD4 /* Images.xcassets in Resources */,
+				1BA503751C0A4A320021F216 /* SoundEffect.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +350,7 @@
 				F297C1491B9320C200E0F5A1 /* HomeViewController.swift in Sources */,
 				E1EF6D2F1B56A0A2001037C6 /* DrawingViewLetters.swift in Sources */,
 				F280A3F11B80B80D0071C100 /* AllResults.swift in Sources */,
+				1BA503771C0A4A980021F216 /* CreditsViewController.swift in Sources */,
 				E1EF6D311B56A10E001037C6 /* Letters.swift in Sources */,
 				1BCEE8B21B555A53002AEE37 /* PicturesViewController.swift in Sources */,
 				F2DA21D61B7646420048C068 /* Results.swift in Sources */,
