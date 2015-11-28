@@ -282,7 +282,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G70-gH-ndg">
-                                                    <rect key="frame" x="93" y="7" width="162" height="30"/>
+                                                    <rect key="frame" x="87" y="7" width="162" height="30"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="Famous Faces Task">
@@ -482,8 +482,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIh-XA-cI2">
-                                                    <rect key="frame" x="95" y="7" width="331" height="30"/>
+                                                    <rect key="frame" x="91" y="7" width="331" height="30"/>
                                                     <animations/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="Face-Name Associative Memory Task Part 2"/>
                                                 </button>
                                             </subviews>
@@ -684,7 +685,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HlH-rG-TeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="3124"/>
+            <point key="canvasLocation" x="1362" y="3084"/>
         </scene>
         <!--Pyramids and Palm Trees Help-->
         <scene sceneID="7bO-85-GMO">
@@ -758,7 +759,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub1-RI-FqD">
-                                <rect key="frame" x="169" y="76" width="107" height="47"/>
+                                <rect key="frame" x="160" y="76" width="125" height="47"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Practice">
@@ -1768,7 +1769,7 @@ While the authors and producers of this program strive to provide you with usefu
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HG1-TQ-naz">
-                                                    <rect key="frame" x="300" y="7" width="86" height="30"/>
+                                                    <rect key="frame" x="296" y="7" width="95" height="30"/>
                                                     <animations/>
                                                     <state key="normal" title="Trails A Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1830,6 +1831,33 @@ While the authors and producers of this program strive to provide you with usefu
                                         <rect key="frame" x="0.0" y="548" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WmL-99-YPE" id="kFY-c2-K4Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXi-Nm-pN6">
+                                                    <rect key="frame" x="301" y="5" width="288" height="30"/>
+                                                    <animations/>
+                                                    <state key="normal" title="Face-Name Associaive Memory Task Help"/>
+                                                </button>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QIc-du-QPr">
+                                        <rect key="frame" x="0.0" y="592" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QIc-du-QPr" id="SU3-Uk-kIw">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vv9-Im-K8l">
+                                        <rect key="frame" x="0.0" y="636" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vv9-Im-K8l" id="WAh-Ox-0Kx">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
@@ -2420,6 +2448,7 @@ While the authors and producers of this program strive to provide you with usefu
     <inferredMetricsTieBreakers>
         <segue reference="md3-6k-lZH"/>
         <segue reference="ShD-fn-Xek"/>
+        <segue reference="HE1-1j-NTJ"/>
         <segue reference="neN-op-hGA"/>
         <segue reference="k5O-0U-7Tk"/>
         <segue reference="qak-Qc-doH"/>
@@ -2427,6 +2456,5 @@ While the authors and producers of this program strive to provide you with usefu
         <segue reference="kBo-Bx-fAG"/>
         <segue reference="QiM-jf-6BP"/>
         <segue reference="V8q-qM-EbC"/>
-        <segue reference="Ud1-Nd-Hgw"/>
     </inferredMetricsTieBreakers>
 </document>
