@@ -13,6 +13,7 @@
 		1BA4A9D21B5556D800E3FBD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4A9D11B5556D800E3FBD4 /* Images.xcassets */; };
 		1BA4A9D51B5556D800E3FBD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BA4A9D31B5556D800E3FBD4 /* LaunchScreen.xib */; };
 		1BA4A9E11B5556D800E3FBD4 /* Integrated_test_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */; };
+		1BA503711C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */; };
 		1BCEE8B21B555A53002AEE37 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */; };
 		1BCEE8B41B555C23002AEE37 /* TapInOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */; };
 		1BCEE8B61B555C9B002AEE37 /* LetterCancellationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */; };
@@ -57,6 +58,7 @@
 		1BA4A9DA1B5556D800E3FBD4 /* CNToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CNToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA4A9DF1B5556D800E3FBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA4A9E01B5556D800E3FBD4 /* Integrated_test_v1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrated_test_v1Tests.swift; sourceTree = "<group>"; };
+		1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceNameAdaptiveMemoryViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B11B555A53002AEE37 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B31B555C23002AEE37 /* TapInOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapInOrderViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCancellationViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				1BA4A9CA1B5556D800E3FBD4 /* AppDelegate.swift */,
 				1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */,
 				F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */,
+				1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */,
 				F2DA21EC1B7D61E80048C068 /* TestSelectionTableViewController.swift */,
 				F280A3F21B80F1620071C100 /* SetupViewController.swift */,
 				F297C1481B9320C200E0F5A1 /* HomeViewController.swift */,
@@ -346,6 +349,7 @@
 				1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */,
 				E1EF6D271B559D8E001037C6 /* DrawingViewCircles.swift in Sources */,
 				F280A3EF1B7EB5E20071C100 /* ScaleView.swift in Sources */,
+				1BA503711C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift in Sources */,
 				F2DA21E91B7C11210048C068 /* ResultsViewController.swift in Sources */,
 				E1EF6D351B56E36A001037C6 /* TapInOrderBackwardsViewController.swift in Sources */,
 				1BA4A9CB1B5556D800E3FBD4 /* AppDelegate.swift in Sources */,

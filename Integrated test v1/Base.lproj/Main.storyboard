@@ -669,7 +669,7 @@
         <!--Face-Name Associative Memory Task-->
         <scene sceneID="AmG-QK-3ur">
             <objects>
-                <viewController title="Face-Name Associative Memory Task" id="byE-k5-hyQ" sceneMemberID="viewController">
+                <viewController title="Face-Name Associative Memory Task" id="byE-k5-hyQ" customClass="FaceNameAdaptiveMemoryViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6pm-FP-XaS"/>
                         <viewControllerLayoutGuide type="bottom" id="V36-w9-w9T"/>
