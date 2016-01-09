@@ -8,10 +8,41 @@
 
 import UIKit
 
-class FaceNameAdaptiveMemoryViewController: UIViewController {
+class FaceNameAdaptiveMemoryViewController: UIViewController{
+    
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+  
+    @IBAction func startButton(sender: AnyObject) {
+        if(selectedTest == "Face1") {
+            startTest()
+        } else if(selectedTest == "Face2") {
+            startTest()
+        }
+        self.title = selectedTest
+    }
+    
+    func startTest(){
+        startButton.enabled = false
+        doneButton.enabled = true
+        self.navigationItem.setHidesBackButton(true, animated:false)
+        
+
+    }
+    
+    @IBAction func doneButton(sender: AnyObject) {
+        startButton.enabled = true
+        doneButton.enabled = false
+        self.navigationItem.setHidesBackButton(false, animated:true)
+
+    }
+    
+
+    @IBOutlet weak var Done: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        doneButton.enabled = false
 
         // Do any additional setup after loading the view.
     }
