@@ -70,6 +70,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController{
         generateList()
         
         print(imageNames)
+        
+        display()
 
         // Do any additional setup after loading the view.
     }
@@ -81,7 +83,11 @@ class FaceNameAdaptiveMemoryViewController: UIViewController{
     
     func display(){
         
+        var imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
         
+        let image = UIImage(named: imageNames[0])
+        imageView.image = image
+        self.view.addSubview(imageView)
         
     }
     
