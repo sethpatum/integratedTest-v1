@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -489,6 +488,9 @@
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="Face-Name Associative Memory Task Part 2"/>
+                                                    <connections>
+                                                        <segue destination="byE-k5-hyQ" kind="show" id="rhS-v8-KdI"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <animations/>
@@ -2491,15 +2493,15 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth" width="980" height="1322"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Db8-gX-wha"/>
-        <segue reference="mFR-im-uC4"/>
         <segue reference="HW9-8Y-uG3"/>
         <segue reference="ShD-fn-Xek"/>
+        <segue reference="Db8-gX-wha"/>
+        <segue reference="kBo-Bx-fAG"/>
         <segue reference="V8q-qM-EbC"/>
-        <segue reference="QiM-jf-6BP"/>
         <segue reference="EC3-Ff-iUm"/>
-        <segue reference="Ud1-Nd-Hgw"/>
+        <segue reference="QiM-jf-6BP"/>
         <segue reference="DXj-KH-ajy"/>
+        <segue reference="Ud1-Nd-Hgw"/>
         <segue reference="gg1-hx-kcc"/>
         <segue reference="fs4-pa-L87"/>
     </inferredMetricsTieBreakers>
