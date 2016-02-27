@@ -1359,12 +1359,6 @@ While the authors and producers of this program strive to provide you with usefu
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cv-wd-WtU">
-                                <rect key="frame" x="740" y="446" width="63" height="58"/>
-                                <connections>
-                                    <action selector="JohnCena:" destination="rSh-c4-bd9" eventType="touchUpInside" id="T0e-U9-OzU"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seth Patum Amarasinghe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQk-nM-t7S">
                                 <rect key="frame" x="424" y="247" width="195" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1434,6 +1428,12 @@ While the authors and producers of this program strive to provide you with usefu
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cv-wd-WtU">
+                                <rect key="frame" x="499" y="117" width="63" height="58"/>
+                                <connections>
+                                    <action selector="JohnCena:" destination="rSh-c4-bd9" eventType="touchUpInside" id="T0e-U9-OzU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1734,8 +1734,8 @@ While the authors and producers of this program strive to provide you with usefu
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXi-Nm-pN6">
-                                                    <rect key="frame" x="301" y="5" width="288" height="30"/>
-                                                    <state key="normal" title="Face-Name Associaive Memory Task Help"/>
+                                                    <rect key="frame" x="301" y="5" width="348" height="30"/>
+                                                    <state key="normal" title="Face-Name Associaive Memory Tasks 1 and 2 Help"/>
                                                     <connections>
                                                         <segue destination="d7D-pO-YQu" kind="show" id="shN-qw-cgK"/>
                                                     </connections>
@@ -2301,17 +2301,17 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth1" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Db8-gX-wha"/>
-        <segue reference="mFR-im-uC4"/>
         <segue reference="md3-6k-lZH"/>
-        <segue reference="shN-qw-cgK"/>
-        <segue reference="k5O-0U-7Tk"/>
-        <segue reference="neN-op-hGA"/>
-        <segue reference="ajT-9n-yKn"/>
-        <segue reference="QiM-jf-6BP"/>
+        <segue reference="mFR-im-uC4"/>
+        <segue reference="Db8-gX-wha"/>
         <segue reference="V8q-qM-EbC"/>
         <segue reference="rhS-v8-KdI"/>
-        <segue reference="dk3-Hv-CAU"/>
-        <segue reference="Ovp-gb-IO2"/>
+        <segue reference="QiM-jf-6BP"/>
+        <segue reference="ShD-fn-Xek"/>
+        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="ajT-9n-yKn"/>
+        <segue reference="shN-qw-cgK"/>
+        <segue reference="neN-op-hGA"/>
+        <segue reference="HE1-1j-NTJ"/>
     </inferredMetricsTieBreakers>
 </document>
