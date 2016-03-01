@@ -18,26 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omX-H3-pod">
-                                <rect key="frame" x="16" y="84" width="271" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="omX-H3-pod" secondAttribute="height" multiplier="39:4" id="09k-p0-oME"/>
-                                    <constraint firstAttribute="width" secondItem="omX-H3-pod" secondAttribute="height" multiplier="39:4" id="pXx-T2-w9q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="09k-p0-oME"/>
-                                        <exclude reference="pXx-T2-w9q"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="8LV-H7-0SE" kind="show" id="mFR-im-uC4"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cnbs" translatesAutoresizingMaskIntoConstraints="NO" id="gzh-35-JNZ">
                                 <rect key="frame" x="16" y="336" width="992" height="128"/>
                                 <constraints>
@@ -110,6 +90,26 @@
                                 </state>
                                 <connections>
                                     <segue destination="TVi-xE-qQ2" kind="show" id="DYu-A0-SQ0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omX-H3-pod">
+                                <rect key="frame" x="20" y="84" width="271" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="omX-H3-pod" secondAttribute="height" multiplier="39:4" id="09k-p0-oME"/>
+                                    <constraint firstAttribute="width" secondItem="omX-H3-pod" secondAttribute="height" multiplier="39:4" id="pXx-T2-w9q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="09k-p0-oME"/>
+                                        <exclude reference="pXx-T2-w9q"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="8LV-H7-0SE" kind="show" id="mFR-im-uC4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -564,8 +564,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKq-LM-Xae">
-                                <rect key="frame" x="231" y="404" width="562" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-Og-gLE">
+                                <rect key="frame" x="231" y="104" width="347" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKq-LM-Xae">
+                                <rect key="frame" x="231" y="404" width="586" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -590,9 +596,9 @@
                                     <segue destination="Siw-zc-zif" kind="show" id="84T-KC-0pV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-Og-gLE">
-                                <rect key="frame" x="297" y="105" width="454" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXi-bd-9WT">
+                                <rect key="frame" x="653" y="106" width="178" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -602,6 +608,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="Counter" destination="cXi-bd-9WT" id="KRy-Eu-vNt"/>
                         <outlet property="promptLabel" destination="fKq-LM-Xae" id="zhv-vF-2Vy"/>
                         <outlet property="resultLabel" destination="z4A-Og-gLE" id="hmV-Na-ZwC"/>
                     </connections>
@@ -1242,7 +1249,7 @@ While the authors and producers of this program strive to provide you with usefu
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep6-pB-iiZ">
-                                <rect key="frame" x="16" y="87" width="207" height="44"/>
+                                <rect key="frame" x="20" y="80" width="207" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="I Agree">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1256,7 +1263,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <constraints>
                             <constraint firstItem="ep6-pB-iiZ" firstAttribute="leading" secondItem="g9y-gS-QLw" secondAttribute="leadingMargin" constant="413" id="5ts-Or-dfT"/>
                             <constraint firstItem="hMa-MB-wYM" firstAttribute="leading" secondItem="g9y-gS-QLw" secondAttribute="leadingMargin" constant="87" id="D1n-Ep-OPD"/>
-                            <constraint firstItem="ep6-pB-iiZ" firstAttribute="top" secondItem="nud-CB-7JD" secondAttribute="bottom" constant="67" id="Y41-QZ-eif"/>
+                            <constraint firstItem="ep6-pB-iiZ" firstAttribute="top" secondItem="nud-CB-7JD" secondAttribute="bottom" constant="66" id="Y41-QZ-eif"/>
                             <constraint firstItem="ep6-pB-iiZ" firstAttribute="leading" secondItem="g9y-gS-QLw" secondAttribute="leadingMargin" id="a0F-BN-OIp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SHN-iP-fdU" secondAttribute="trailing" constant="422" id="aDN-Bd-Ymr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hMa-MB-wYM" secondAttribute="trailing" constant="87" id="bjc-0D-pRJ"/>
@@ -2171,16 +2178,6 @@ While the authors and producers of this program strive to provide you with usefu
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjO-OJ-rcn">
-                                <rect key="frame" x="81" y="85" width="168" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start Testing">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StartTesting:" destination="8LV-H7-0SE" eventType="touchUpInside" id="7ef-Ti-iy8"/>
-                                </connections>
-                            </button>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Blz-yN-Djr">
                                 <rect key="frame" x="284" y="488" width="612" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="462714587.96182102">
@@ -2196,6 +2193,16 @@ While the authors and producers of this program strive to provide you with usefu
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjO-OJ-rcn">
+                                <rect key="frame" x="30" y="84" width="168" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Start Testing">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartTesting:" destination="8LV-H7-0SE" eventType="touchUpInside" id="7ef-Ti-iy8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2219,7 +2226,7 @@ While the authors and producers of this program strive to provide you with usefu
                             <constraint firstItem="sa4-Rp-b5l" firstAttribute="leading" secondItem="M8x-q8-6n4" secondAttribute="trailing" constant="35" id="YRz-9k-6WP"/>
                             <constraint firstItem="sa4-Rp-b5l" firstAttribute="top" secondItem="n77-2A-MJZ" secondAttribute="bottom" constant="271" id="Yki-7g-YWT"/>
                             <constraint firstItem="M8x-q8-6n4" firstAttribute="top" secondItem="xjO-OJ-rcn" secondAttribute="bottom" constant="203" id="bnD-oc-2ZM"/>
-                            <constraint firstItem="xjO-OJ-rcn" firstAttribute="leading" secondItem="u4e-yX-EA7" secondAttribute="leadingMargin" constant="65" id="cb1-zi-Xrv"/>
+                            <constraint firstItem="xjO-OJ-rcn" firstAttribute="leading" secondItem="u4e-yX-EA7" secondAttribute="leadingMargin" constant="10" id="cb1-zi-Xrv"/>
                             <constraint firstItem="Blz-yN-Djr" firstAttribute="leading" secondItem="cxl-jn-0nR" secondAttribute="trailing" constant="35" id="dcC-f7-gP5"/>
                             <constraint firstItem="6ve-bk-cbh" firstAttribute="trailing" secondItem="M8x-q8-6n4" secondAttribute="trailing" id="lkT-4U-gUQ"/>
                             <constraint firstItem="j5C-kr-yOE" firstAttribute="leading" secondItem="6ve-bk-cbh" secondAttribute="trailing" constant="35" id="udx-4W-j7C"/>
@@ -2301,7 +2308,7 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth1" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Db8-gX-wha"/>
+        <segue reference="Lca-c5-giE"/>
         <segue reference="mFR-im-uC4"/>
         <segue reference="md3-6k-lZH"/>
         <segue reference="k5O-0U-7Tk"/>
