@@ -489,7 +489,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         let result = Results()
         result.name = self.title
-    //    result.startTime = startTime2
+        result.startTime = startTime2
         result.endTime = NSDate()
         result.longDescription.addObject("\(wrong) faces recalled incorrectly")
         //if wrongList.count > 0  {
