@@ -55,7 +55,10 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     
     @IBOutlet weak var namePicker: UIPickerView!
     
+    var startTime2 = NSDate()
+    
     @IBAction func startButton(sender: AnyObject) {
+        startTime2 = NSDate()
         
         if(selectedTest == "Face1") {
             startTest()
@@ -286,17 +289,20 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
     }
     
+    var nextButton : UIButton! 
+    
     func testRecall(){
         
         nameLabel.text = ""
         
         namePicker.hidden = false
         
-        let button = UIButton(type: UIButtonType.System) as UIButton
-        button.frame = CGRectMake(750, 550, 100, 100)
-        button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        button.setTitle("Next", forState: UIControlState.Normal)
-        self.view.addSubview(button)
+        nextButton = UIButton(type: UIButtonType.System) as UIButton
+        nextButton.frame = CGRectMake(750, 580, 100, 100)
+        nextButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        nextButton.setTitle("Next", forState: UIControlState.Normal)
+        nextButton.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(nextButton)
         
         
         if self.imageView.image !== nil {
@@ -316,19 +322,17 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         if(curr == nameList[count]){
             orderRecall.append(true)
-        }
-        else{
+        } else {
             orderRecall.append(false)
         }
         
         count += 1
         
         if(count == 12){
-            self.removeFromParentViewController()
+            //self.removeFromParentViewController()
             checkRecall()
-        }
-            
-        else{
+            nextButton.enabled = false
+        } else {
             if self.imageView.image !== nil {
                 self.imageView.removeFromSuperview()
                 self.imageView.image = nil
@@ -481,6 +485,18 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         }
         
         resultLabel.text = "\(wrong) faces recalled incorrectly"
+        self.navigationItem.setHidesBackButton(false, animated:true)
+        
+        let result = Results()
+        result.name = self.title
+    //    result.startTime = startTime2
+        result.endTime = NSDate()
+        result.longDescription.addObject("\(wrong) faces recalled incorrectly")
+        //if wrongList.count > 0  {
+        //    result.longDescription.addObject("The incorrect pictures were the \(wrongList)")
+        //}
+        resultsArray.add(result)
+
     }
     
     /*

@@ -15,7 +15,7 @@ class PicturesViewController: ViewController {
     @IBOutlet weak var placeLabel: UILabel!
     
     var order = [Bool]()
-     var startTime2 = NSDate()
+    var startTime2 = NSDate()
     
     @IBOutlet weak var correctButton: UIButton!
     
