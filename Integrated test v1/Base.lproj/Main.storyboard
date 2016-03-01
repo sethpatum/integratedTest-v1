@@ -674,16 +674,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJp-ZD-eJ0">
-                                <rect key="frame" x="98" y="194" width="829" height="227"/>
+                                <rect key="frame" x="98" y="72" width="829" height="227"/>
                                 <string key="text">Patient should be instructed to read out loud and try to remember the name that goes with each face. There will be 2 learning trials followed by a delay. After the delay, patients will initially be asked to recall the name associated with the face then given a recognition test. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Face Name Help" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3l-gN-PeX">
-                                <rect key="frame" x="385" y="100" width="255" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -708,12 +702,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pyramids and Palm Trees Help" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HQ-Sq-AkN">
-                                <rect key="frame" x="385" y="78" width="255" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmR-bI-azd">
                                 <rect key="frame" x="465" y="216" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2322,17 +2310,17 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth1" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="md3-6k-lZH"/>
-        <segue reference="mFR-im-uC4"/>
         <segue reference="Db8-gX-wha"/>
-        <segue reference="V8q-qM-EbC"/>
-        <segue reference="rhS-v8-KdI"/>
-        <segue reference="QiM-jf-6BP"/>
-        <segue reference="ShD-fn-Xek"/>
-        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="mFR-im-uC4"/>
+        <segue reference="md3-6k-lZH"/>
         <segue reference="ajT-9n-yKn"/>
+        <segue reference="HE1-1j-NTJ"/>
+        <segue reference="ShD-fn-Xek"/>
         <segue reference="shN-qw-cgK"/>
         <segue reference="neN-op-hGA"/>
-        <segue reference="HE1-1j-NTJ"/>
+        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="QiM-jf-6BP"/>
+        <segue reference="rhS-v8-KdI"/>
+        <segue reference="V8q-qM-EbC"/>
     </inferredMetricsTieBreakers>
 </document>
