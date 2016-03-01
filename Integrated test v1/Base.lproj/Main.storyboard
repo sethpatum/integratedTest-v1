@@ -653,15 +653,33 @@
                                     <action selector="doneButton:" destination="byE-k5-hyQ" eventType="touchUpInside" id="9gy-bm-N29"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVs-0l-8UX">
+                                <rect key="frame" x="20" y="660" width="1024" height="56"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srw-iy-urr">
+                                <rect key="frame" x="443" y="667" width="194" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuQ-5q-XSQ">
+                                <rect key="frame" x="598" y="93" width="215" height="82"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="Done" destination="uNF-J2-30d" id="Wu9-I6-Nu7"/>
-                        <outlet property="doneButton" destination="uNF-J2-30d" id="n53-ko-75g"/>
-                        <outlet property="startButton" destination="lim-h9-hEG" id="WIH-YH-uOa"/>
+                        <outlet property="Done" destination="uNF-J2-30d" id="392-DK-dst"/>
+                        <outlet property="doneButton" destination="uNF-J2-30d" id="xra-4s-ebM"/>
+                        <outlet property="nameLabel" destination="srw-iy-urr" id="gYJ-LI-mGd"/>
+                        <outlet property="namePicker" destination="eVs-0l-8UX" id="hyI-Zz-xrG"/>
+                        <outlet property="resultLabel" destination="cuQ-5q-XSQ" id="STC-jm-C0Y"/>
+                        <outlet property="startButton" destination="lim-h9-hEG" id="moQ-P6-ntl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HlH-rG-TeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2325,8 +2343,8 @@ While the authors and producers of this program strive to provide you with usefu
         <segue reference="rhS-v8-KdI"/>
         <segue reference="V8q-qM-EbC"/>
         <segue reference="fs4-pa-L87"/>
+        <segue reference="gg1-hx-kcc"/>
         <segue reference="ShD-fn-Xek"/>
-        <segue reference="shN-qw-cgK"/>
         <segue reference="k5O-0U-7Tk"/>
         <segue reference="ajT-9n-yKn"/>
     </inferredMetricsTieBreakers>
