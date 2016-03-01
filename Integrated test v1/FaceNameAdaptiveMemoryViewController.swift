@@ -125,6 +125,26 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         self.view.addSubview(imageView)
         nameLabel.text = nameList[0]
         
+   
+        
+        for i in 1...11 {
+            let d = Double(i)*2.0
+            delay(d){
+                
+                if self.imageView.image !== nil {
+                    self.imageView.removeFromSuperview()
+                    self.imageView.image = nil
+                }
+                
+                self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
+                let image = UIImage(named: self.imageNames[i])
+                self.imageView.image = image
+                self.view.addSubview(self.imageView)
+                self.nameLabel.text = self.nameList[i]
+            }
+
+        }
+        /*
         delay(2){
             
             if self.imageView.image !== nil {
@@ -277,7 +297,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             self.imageView.image = image11
             self.view.addSubview(self.imageView)
             self.nameLabel.text = self.nameList[11]
-        }
+        } */
         
         delay(24){
             if self.imageView.image !== nil {
