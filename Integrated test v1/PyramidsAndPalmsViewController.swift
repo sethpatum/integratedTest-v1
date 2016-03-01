@@ -22,6 +22,8 @@ class PyramidsAndPalmsViewController: UIViewController {
     var place = 0
     var order = [Int]()
     
+    @IBOutlet weak var Counter: UILabel!
+    
     @IBOutlet weak var promptLabel: UILabel!
     
     @IBOutlet weak var resultLabel: UILabel!
@@ -69,6 +71,8 @@ class PyramidsAndPalmsViewController: UIViewController {
         place = 0
         resultLabel.text = ""
         promptLabel.text = "Which fits best with the picture on top?"
+        
+        Counter.text = "\(place+1)/\(imageList.count)"
         
         if imageView.image !== nil {
             imageView.removeFromSuperview()
@@ -123,14 +127,14 @@ class PyramidsAndPalmsViewController: UIViewController {
         
         place += 1
         
+        
+        
         print("place is \(place), result list is \(resultList)")
         
         if place >= imageList.count {
             checkList()
-        }
-            
-        else {
-            
+        } else {
+            Counter.text = "\(place+1)/\(imageList.count)"
             
             let (a, b, c) = imageList[place]
             
