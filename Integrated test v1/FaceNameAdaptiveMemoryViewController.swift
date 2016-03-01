@@ -10,15 +10,20 @@ import UIKit
 
 class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
    
-    
     var curr = ""
     var count = 0
     var imageNames = [String]()
     var nameList = [String]()
     var orderRecall = [Bool]()
     
+    var startTime2 = NSDate()
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var namePicker: UIPickerView!
+    @IBOutlet weak var Done: UIButton!
    
     var imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
     
@@ -49,13 +54,6 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     let m6:[String] = ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]
     
     
-    @IBOutlet weak var doneButton: UIButton!
-    @IBOutlet weak var startButton: UIButton!
-
-    
-    @IBOutlet weak var namePicker: UIPickerView!
-    
-    var startTime2 = NSDate()
     
     @IBAction func startButton(sender: AnyObject) {
         startTime2 = NSDate()
@@ -95,8 +93,6 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
     }
     
-    
-    @IBOutlet weak var Done: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
