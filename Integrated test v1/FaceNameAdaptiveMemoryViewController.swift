@@ -348,6 +348,9 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             //self.removeFromParentViewController()
             checkRecall()
             nextButton.enabled = false
+            
+            wait()
+            
         } else {
             if self.imageView.image !== nil {
                 self.imageView.removeFromSuperview()
@@ -381,9 +384,15 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
     }
     
+    func wait(){
+        
+        testRecognition()
+        
+    }
+    
     func testRecognition(){
         
-        
+        print("Got here!")
         
     }
     
