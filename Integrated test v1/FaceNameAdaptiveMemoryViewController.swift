@@ -10,15 +10,20 @@ import UIKit
 
 class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
    
-    
     var curr = ""
     var count = 0
     var imageNames = [String]()
     var nameList = [String]()
     var orderRecall = [Bool]()
     
+    var startTime2 = NSDate()
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var namePicker: UIPickerView!
+    @IBOutlet weak var Done: UIButton!
    
     var imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
     
@@ -49,13 +54,6 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     let m6:[String] = ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]
     
     
-    @IBOutlet weak var doneButton: UIButton!
-    @IBOutlet weak var startButton: UIButton!
-
-    
-    @IBOutlet weak var namePicker: UIPickerView!
-    
-    var startTime2 = NSDate()
     
     @IBAction func startButton(sender: AnyObject) {
         startTime2 = NSDate()
@@ -96,8 +94,6 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     }
     
     
-    @IBOutlet weak var Done: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         doneButton.enabled = false
@@ -125,6 +121,26 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         self.view.addSubview(imageView)
         nameLabel.text = nameList[0]
         
+   
+        
+        for i in 1...11 {
+            let d = Double(i)*2.0
+            delay(d){
+                
+                if self.imageView.image !== nil {
+                    self.imageView.removeFromSuperview()
+                    self.imageView.image = nil
+                }
+                
+                self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
+                let image = UIImage(named: self.imageNames[i])
+                self.imageView.image = image
+                self.view.addSubview(self.imageView)
+                self.nameLabel.text = self.nameList[i]
+            }
+
+        }
+        /*
         delay(2){
             
             if self.imageView.image !== nil {
@@ -277,7 +293,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             self.imageView.image = image11
             self.view.addSubview(self.imageView)
             self.nameLabel.text = self.nameList[11]
-        }
+        } */
         
         delay(24){
             if self.imageView.image !== nil {
