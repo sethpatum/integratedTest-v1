@@ -1992,9 +1992,9 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-AO-QqY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-AO-QqY">
                                 <rect key="frame" x="169" y="115" width="686" height="348"/>
-                                <string key="text">The OTA cancellation task displays a page full of semi/ incomplete circles along with full circles. The patients task is to cross off or draw a line through all the semi/incomplete circles. As soon as the start button is pressed a timer will start and the pateint should start the task. The done button is pressed only after the patient expresses that they feel that they have finished the task</string>
+                                <string key="text">Instruct the patient that they will see a screen full of circles and incomplete circles. Their task is to draw a line through all the complete circles.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
