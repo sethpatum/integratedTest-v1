@@ -25,6 +25,15 @@ class DrawingViewTrails: UIView {
     
     var incorrect = 0
     
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
     
 //ADDITION
     var paths = [UIBezierPath]()
@@ -251,22 +260,24 @@ class DrawingViewTrails: UIView {
 //                print("countSinceCorrect = \(countSinceCorrect)")
                 
 //                if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
+                    delay(500.0) {
+                
+                        self.errorPath.appendPath(UIBezierPath(CGPath: self.currPath.CGPath))
                     
-                    errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
+//                      print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                     
-//                    print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
+                        self.currPath.removeAllPoints()
                     
-                    currPath.removeAllPoints()
+//                      countSinceCorrect = 0
                     
-//                    countSinceCorrect = 0
+                        self.canDraw = false
                     
-                    canDraw = false
+                        print("should have removed all pts")
                     
-                    print("should have removed all pts")
+                        self.incorrect += 1
                     
-                    incorrect += 1
-                    
-//                }
+//                      }
+                }
                 
             }
             
@@ -328,6 +339,8 @@ class DrawingViewTrails: UIView {
                     print("countSinceCorrect = \(countSinceCorrect); currBubb = \(bubbles.currentBubble); nextBubb = \(bubbles.nextBubble)")
                     
 //                    if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
+                    
+                    
                         
                         errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                         
