@@ -2114,7 +2114,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLC-Eh-PJb">
                                 <rect key="frame" x="204" y="168" width="708" height="301"/>
-                                <string key="text">The naming pictures task consists of 15 different images in order of naming difficulty. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
+                                <string key="text">The naming picture task consists of 15 different images in order of naming difficulty.
 
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2303,7 +2303,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-wQ-vIS">
                                 <rect key="frame" x="72" y="125" width="869" height="301"/>
-                                <string key="text">The famous faces task consists of 15 different images. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
+                                <string key="text">The Famous People task consists of 15 images of famous people. Images courtesy of Laura Germaine at http://www.testmybrain.org/ 1.Arnold Schwarzenegger 2.Bill Clinton 3.Bill Murray 4.Barack Obama 5.Elvis Presley 6.George W Bush 7.George Clooney 8.Hillary Clinton 9.Jay Leno 10.John Travolta 11.Marilyn Monroe 12.Michelle Obama 13.Martin Luther King 14.Oprah Winfrey 15.Robin Williams
 
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2335,17 +2335,17 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth1" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HE1-1j-NTJ"/>
-        <segue reference="md3-6k-lZH"/>
-        <segue reference="mFR-im-uC4"/>
         <segue reference="Lca-c5-giE"/>
-        <segue reference="QiM-jf-6BP"/>
-        <segue reference="rhS-v8-KdI"/>
-        <segue reference="V8q-qM-EbC"/>
-        <segue reference="fs4-pa-L87"/>
-        <segue reference="gg1-hx-kcc"/>
-        <segue reference="ShD-fn-Xek"/>
-        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="mFR-im-uC4"/>
+        <segue reference="md3-6k-lZH"/>
+        <segue reference="shN-qw-cgK"/>
         <segue reference="ajT-9n-yKn"/>
+        <segue reference="ShD-fn-Xek"/>
+        <segue reference="neN-op-hGA"/>
+        <segue reference="HE1-1j-NTJ"/>
+        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="V8q-qM-EbC"/>
+        <segue reference="DsW-ql-KM7"/>
+        <segue reference="rhS-v8-KdI"/>
     </inferredMetricsTieBreakers>
 </document>
