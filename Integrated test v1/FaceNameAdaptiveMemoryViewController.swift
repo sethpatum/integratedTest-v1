@@ -15,8 +15,16 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     var imageNames = [String]()
     var nameList = [String]()
     var orderRecall = [Bool]()
+    var orderRecognize = [Int]()
+    var recognizeKey = [[String]]()
+    var flistnum = -1
+    var mlistnum = -1
     
+    var startTime = NSTimeInterval()
     var startTime2 = NSDate()
+    var doneTimer = false
+    
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
@@ -305,7 +313,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
     }
     
-    var nextButton : UIButton! 
+//    var nextButton : UIButton!
     
     func testRecall(){
         
@@ -313,7 +321,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         namePicker.hidden = false
         
-        nextButton = UIButton(type: UIButtonType.System) as UIButton
+        let nextButton = UIButton(type: UIButtonType.System) as UIButton
+        nextButton.tag = 1
         nextButton.frame = CGRectMake(750, 580, 100, 100)
         nextButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         nextButton.setTitle("Next", forState: UIControlState.Normal)
@@ -336,30 +345,43 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     
     func buttonAction(sender:UIButton!){
         
-        if(curr == nameList[count]){
-            orderRecall.append(true)
-        } else {
-            orderRecall.append(false)
-        }
+        let btnsend: UIButton = sender
         
-        count += 1
-        
-        if(count == 12){
-            //self.removeFromParentViewController()
-            checkRecall()
-            nextButton.enabled = false
-            
-            wait()
-            
-        } else {
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
+        if btnsend.tag == 1 {
+            if(curr == nameList[count]){
+                orderRecall.append(true)
+            } else {
+                orderRecall.append(false)
             }
             
-            let image = UIImage(named: imageNames[count])
-            imageView.image = image
-            self.view.addSubview(imageView)
+            count += 1
+            
+            if(count == 12){
+                //self.removeFromParentViewController()
+                checkRecall()
+                //btnsend.enabled = false
+                
+                btnsend.removeFromSuperview()
+                namePicker.removeFromSuperview()
+                
+                wait()
+                
+            } else {
+                if self.imageView.image !== nil {
+                    self.imageView.removeFromSuperview()
+                    self.imageView.image = nil
+                }
+                
+                let image = UIImage(named: imageNames[count])
+                imageView.image = image
+                self.view.addSubview(imageView)
+            }
+        }
+        
+        if btnsend.tag == 2 {
+            doneTimer = true
+            btnsend.removeFromSuperview()
+            testRecognition()
         }
         
     }
@@ -386,13 +408,125 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     
     func wait(){
         
-        testRecognition()
+        let timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
         
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        
+        let doneWait = UIButton(type: UIButtonType.System) as UIButton
+        doneWait.tag = 2
+        doneWait.frame = CGRectMake(363, 390, 300, 100)
+        doneWait.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        doneWait.setTitle("Start Recognition", forState: UIControlState.Normal)
+        doneWait.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(doneWait)
+        
+        
+    }
+    
+    func update(timer: NSTimer) {
+        
+        if doneTimer == false {
+            let currTime = NSDate.timeIntervalSinceReferenceDate()
+            var diff: NSTimeInterval = currTime - startTime
+            
+            let minutes = UInt8(diff / 60.0)
+            
+            diff -= (NSTimeInterval(minutes)*60.0)
+            
+            let seconds = UInt8(diff)
+            
+            diff = NSTimeInterval(seconds)
+            
+            let strMinutes = minutes > 9 ? String(minutes):"0"+String(minutes)
+            let strSeconds = seconds > 9 ? String(seconds):"0"+String(seconds)
+            
+            timerLabel.text = "\(strMinutes) : \(strSeconds)"
+        }
+        else {
+            timer.invalidate()
+            timerLabel.text = ""
+        }
     }
     
     func testRecognition(){
         
         print("Got here!")
+        
+        let button1 = UIButton(type: UIButtonType.System) as UIButton
+        button1.tag = 1
+        button1.frame = CGRectMake(150, 650, 100, 100)
+        button1.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        button1.setTitle("Next", forState: UIControlState.Normal)
+        button1.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(button1)
+        
+        let button2 = UIButton(type: UIButtonType.System) as UIButton
+        button2.tag = 1
+        button2.frame = CGRectMake(350, 650, 100, 100)
+        button2.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        button2.setTitle("Next", forState: UIControlState.Normal)
+        button2.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(button2)
+        
+        let button3 = UIButton(type: UIButtonType.System) as UIButton
+        button3.tag = 1
+        button3.frame = CGRectMake(550, 650, 100, 100)
+        button3.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        button3.setTitle("Next", forState: UIControlState.Normal)
+        button3.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(button3)
+        
+        let button4 = UIButton(type: UIButtonType.System) as UIButton
+        button4.tag = 1
+        button4.frame = CGRectMake(750, 650, 100, 100)
+        button4.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        button4.setTitle("Next", forState: UIControlState.Normal)
+        button4.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(button4)
+        
+        
+        if self.imageView.image !== nil {
+            self.imageView.removeFromSuperview()
+            self.imageView.image = nil
+        }
+        
+        let image = UIImage(named: imageNames[0])
+        imageView.image = image
+        self.view.addSubview(imageView)
+        
+        count = 0
+        
+    }
+    
+    func randomizeRecognizeNames(){
+        
+        for(var k=0; k<12; k++){
+            let random = Int(arc4random_uniform(4))
+            orderRecognize.append(random)
+        }
+        
+        for(var l=0; l<12; l++){
+            if(l%2==0){
+                recognizeKey[l][orderRecognize[l]] = nameList[l]
+                for(var m=0; m<4; m++){
+                    if(m != l){
+                        let r = arc4random_uniform(7);
+                        let temp = flist
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    func recognizeButton(sender:UIButton!){
+        
+        let btnsend: UIButton = sender
+        
+        
+        
+        
         
     }
     
@@ -401,6 +535,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         let m = arc4random_uniform(7)
         var flist = [String]()
         var mlist = [String]()
+        flistnum = Int(f)
+        mlistnum = Int(m)
         
         if(f==0){
             flist = f0
