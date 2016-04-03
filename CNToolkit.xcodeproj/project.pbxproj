@@ -22,6 +22,7 @@
 		1BCEE8B61B555C9B002AEE37 /* LetterCancellationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */; };
 		1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */; };
 		1BCEE8BA1B555E92002AEE37 /* TrailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEE8B91B555E92002AEE37 /* TrailsViewController.swift */; };
+		1BF3163E1CB18FA6007AF4D8 /* FaceNameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3163D1CB18FA6007AF4D8 /* FaceNameData.swift */; };
 		E11414A41B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11414A31B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift */; };
 		E1EF6D271B559D8E001037C6 /* DrawingViewCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */; };
 		E1EF6D2A1B559DE0001037C6 /* Circles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EF6D291B559DE0001037C6 /* Circles.swift */; };
@@ -70,6 +71,7 @@
 		1BCEE8B51B555C9B002AEE37 /* LetterCancellationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCancellationViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B71B555E7C002AEE37 /* CirclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
 		1BCEE8B91B555E92002AEE37 /* TrailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsViewController.swift; sourceTree = "<group>"; };
+		1BF3163D1CB18FA6007AF4D8 /* FaceNameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceNameData.swift; sourceTree = "<group>"; };
 		E11414A31B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyramidsAndPalmsViewController.swift; sourceTree = "<group>"; };
 		E1EF6D261B559D8E001037C6 /* DrawingViewCircles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewCircles.swift; sourceTree = "<group>"; };
 		E1EF6D291B559DE0001037C6 /* Circles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circles.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */,
 				F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */,
 				1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */,
+				1BF3163D1CB18FA6007AF4D8 /* FaceNameData.swift */,
 				F2DA21EC1B7D61E80048C068 /* TestSelectionTableViewController.swift */,
 				F280A3F21B80F1620071C100 /* SetupViewController.swift */,
 				F297C1481B9320C200E0F5A1 /* HomeViewController.swift */,
@@ -368,6 +371,7 @@
 				1BA4A9CD1B5556D800E3FBD4 /* ViewController.swift in Sources */,
 				1BCEE8B81B555E7C002AEE37 /* CirclesViewController.swift in Sources */,
 				E1EF6D271B559D8E001037C6 /* DrawingViewCircles.swift in Sources */,
+				1BF3163E1CB18FA6007AF4D8 /* FaceNameData.swift in Sources */,
 				F280A3EF1B7EB5E20071C100 /* ScaleView.swift in Sources */,
 				1BA503711C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift in Sources */,
 				F2DA21E91B7C11210048C068 /* ResultsViewController.swift in Sources */,
