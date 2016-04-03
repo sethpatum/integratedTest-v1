@@ -179,59 +179,62 @@ class Circles{
         
         var correctOnLeft = 0
         var correctOnRight = 0
-        var leftSemiCircles = 0
-        var rightSemiCircles = 0
-        var incorrect = 0
+        var incorrectLeftSemiOnLeft = 0
+        var incorrectRightSemiOnLeft = 0
+        var incorrectLeftSemiOnRight = 0
+        var incorrectRightSemiOnRight = 0
         
         for var i = 0; i < circlelist.count; ++i {
             let (_, _, c, _) = circlelist[i]
-            if (c == 1 || c == 2) {
+            if (c == 0) {
                 circlelist[i].3 = UIColor(hue: 0.66, saturation: 1.0, brightness: 1.0, alpha: 1.0)
             }
-            
         }
         
         for var k = 0; k < resultListIndexes.count; ++k {
             
-            circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.33, saturation: 1.0, brightness: 0.70, alpha: 1.0)
-            
             let (a, _, c) = resultListCircles[k]
             
-            if c != 0{
-                
-                if a<500{
-                    correctOnLeft += 1
-                    
-                }
-                    
-                else{
-                    correctOnRight += 1
-                }
-                
-                if c == 1{
-                    leftSemiCircles += 1
-                }
-                if c == 2{
-                    rightSemiCircles += 1
-                }
-                
+            if c == 0 && a < 500 {
+                correctOnLeft += 1
+                circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.33, saturation: 1.0, brightness: 0.70, alpha: 1.0)
             }
-                
-            else {
-                
+            
+            if c == 0 && a >= 500 {
+                correctOnRight += 1
+                circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.33, saturation: 1.0, brightness: 0.70, alpha: 1.0)
+            }
+            
+            
+            if c == 1 && a < 500 {
+                incorrectLeftSemiOnLeft += 1
                 circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.0, saturation: 1.0, brightness: 0.70, alpha: 1.0)
-                
-                incorrect += 1
             }
-
+            
+            if c == 1 && a >= 500 {
+                incorrectLeftSemiOnRight += 1
+                circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.0, saturation: 1.0, brightness: 0.70, alpha: 1.0)
+            }
+            
+            if c == 2 && a < 500 {
+                incorrectRightSemiOnLeft += 1
+                circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.0, saturation: 1.0, brightness: 0.70, alpha: 1.0)
+            }
+            
+            if c == 2 && a >= 500 {
+                incorrectRightSemiOnRight += 1
+                circlelist[resultListIndexes[k]].3 = UIColor(hue: 0.0, saturation: 1.0, brightness: 0.70, alpha: 1.0)
+            }
             
         }
         
-        result.longDescription.addObject("\(correctOnLeft) out of 12 semicircles crossed off on left half;")
-        result.longDescription.addObject("\(correctOnRight) out of 12 semicircles crossed off on right half.")
-        result.longDescription.addObject("\(leftSemiCircles) out of 12 left-halved semicircles crossed off;")
-        result.longDescription.addObject("\(rightSemiCircles) out of 12 right-halved semicircles crossed off.")
-        result.longDescription.addObject("\(incorrect) full circles incorrectly crossed off.")
+        result.longDescription.addObject("\(correctOnLeft) out of 12 complete circles crossed off on left half;")
+        result.longDescription.addObject("\(correctOnRight) out of 12 complete circles crossed off on right half.")
+        result.longDescription.addObject("\(incorrectLeftSemiOnLeft) incorrect (Left facing semicircles) crossed off on left;")
+        result.longDescription.addObject("\(incorrectRightSemiOnLeft) incorrect (Right facing semicircles) crossed off on left;")
+        result.longDescription.addObject("\(incorrectLeftSemiOnRight) incorrect (Left facing semicircles) crossed off on right.")
+        result.longDescription.addObject("\(incorrectRightSemiOnRight) incorrect (Right facing semicircles) crossed off on right.")
+
         //resultTextCircles = "\(correctOnLeft) out of 12 semicircles crossed off on left half; \(correctOnRight) out of 12 semicircles crossed off on right half. \n\(leftSemiCircles) out of 12 left-halved semicircles crossed off; \(rightSemiCircles) out of 12 right-halved semicircles crossed off. \n\(incorrect) full circles incorrectly crossed off."
         
         print(resultListTimesCircles)

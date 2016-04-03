@@ -964,7 +964,7 @@
                                     <action selector="StopButton:" destination="76o-Z3-r7u" eventType="touchUpInside" id="Ctl-3J-k1q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cross off all incomplete circles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evi-7c-BS4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cross off all complete circles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evi-7c-BS4">
                                 <rect key="frame" x="21" y="106" width="235" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1685,7 +1685,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-1F-qoc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-1F-qoc">
                                 <rect key="frame" x="53" y="143" width="919" height="364"/>
                                 <animations/>
                                 <string key="text">Both parts of the Trail Making Test consists of 25 circles distributed over a sheet of paper. In Part A, the circles are numbered 1 – 25, and the patient should draw lines to connect the numbers in ascending order. In Part B, the circles include both numbers (1 – 13) and letters (A – L); as in Part A, the patient draws lines to connect the circles in an ascending pattern, but with the added task of alternating between the numbers and letters (i.e., 1-A-2-B-3-C, etc.). The patient should be instructed to connect the circles as quickly as possible, without lifting the finger off of the iPad. The iPad will time the patient as he or she connects the "trail." If the patient makes an error the iPad will point it out immediately and allow the patient to correct it. Errors affect the patient's score only in that the correction of errors is included in the completion time for the task. </string>
@@ -2193,7 +2193,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="17" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQM-vN-MOD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="17" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQM-vN-MOD">
                                 <rect key="frame" x="110" y="133" width="817" height="384"/>
                                 <animations/>
                                 <string key="text">Both parts of the Trail Making Test consists of 25 circles distributed over a sheet of paper. In Part A, the circles are numbered 1 – 25, and the patient should draw lines to connect the numbers in ascending order. The patient should be instructed to connect the circles as quickly as possible, without lifting the finger off of the iPad. The iPad will time the patient as he or she connects the "trail." If the patient makes an error the iPad will point it out immediately and allow the patient to correct it. Errors affect the patient's score only in that the correction of errors is included in the completion time for the task. </string>
@@ -2229,7 +2229,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-AO-QqY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-AO-QqY">
                                 <rect key="frame" x="169" y="115" width="686" height="348"/>
                                 <animations/>
                                 <string key="text">The OTA cancellation task displays a page full of semi/ incomplete circles along with full circles. The patients task is to cross off or draw a line through all the semi/incomplete circles. As soon as the start button is pressed a timer will start and the pateint should start the task. The done button is pressed only after the patient expresses that they feel that they have finished the task</string>
@@ -2265,7 +2265,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-mW-coz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-mW-coz">
                                 <rect key="frame" x="52" y="161" width="921" height="320"/>
                                 <animations/>
                                 <string key="text">The backwards spatial span task consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</string>
@@ -2301,7 +2301,7 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-rd-OzH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-rd-OzH">
                                 <rect key="frame" x="47" y="150" width="930" height="300"/>
                                 <animations/>
                                 <string key="text">The forward spatial span task consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</string>
@@ -2575,17 +2575,17 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth1" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HE1-1j-NTJ"/>
-        <segue reference="md3-6k-lZH"/>
-        <segue reference="mFR-im-uC4"/>
         <segue reference="Lca-c5-giE"/>
-        <segue reference="QiM-jf-6BP"/>
-        <segue reference="rhS-v8-KdI"/>
-        <segue reference="V8q-qM-EbC"/>
-        <segue reference="fs4-pa-L87"/>
-        <segue reference="gg1-hx-kcc"/>
-        <segue reference="ShD-fn-Xek"/>
-        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="mFR-im-uC4"/>
+        <segue reference="md3-6k-lZH"/>
+        <segue reference="shN-qw-cgK"/>
         <segue reference="ajT-9n-yKn"/>
+        <segue reference="ShD-fn-Xek"/>
+        <segue reference="neN-op-hGA"/>
+        <segue reference="HE1-1j-NTJ"/>
+        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="V8q-qM-EbC"/>
+        <segue reference="DsW-ql-KM7"/>
+        <segue reference="rhS-v8-KdI"/>
     </inferredMetricsTieBreakers>
 </document>
