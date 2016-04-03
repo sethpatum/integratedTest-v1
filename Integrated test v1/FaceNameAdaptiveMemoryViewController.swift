@@ -13,12 +13,15 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     var curr = ""
     var count = 0
     var imageNames = [String]()
-    var nameList = [String]()
+    
     var orderRecall = [Bool]()
     var orderRecognize = [Int]()
     var recognizeKey = [[String]]()
-    var flistnum = -1
-    var mlistnum = -1
+    
+    var ffacenum = -1
+    var mfacenum = -1
+    var fnamenum = -1
+    var mnamenum = -1
     
     var startTime = NSTimeInterval()
     var startTime2 = NSDate()
@@ -35,6 +38,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
    
     var imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
     
+    /*
     let name1:[String] = ["Barbara", "Robert", "Eliza", "James", "Mary", "John", "Jennifer", "Michael", "Linda", "Richard", "Patricia", "Joseph"]
     let name2:[String] = ["Sarah", "Ralph", "Diane", "Andrew", "Nancy", "Fred", "Kim", "Henry", "Elizabeth", "Bill", "Joan", "Matt"]
     let name3:[String] = ["Isabella", "Ethan", "Courtney", "Jeremy", "Miriam", "Mitchell", "Jane", "Sheldon", "Dorothy", "Doug", "Carol", "Edward"]
@@ -42,6 +46,25 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     let name5:[String] = ["Michelle", "Timothy", "Carol", "Brian", "Amanda", "Kenneth", "Emily", "Ronald", "Ashley", "Kevin", "Melissa", "Edward"]
     let name6:[String] = ["Jenna", "Jackson", "Caroline", "Samuel", "Sofia", "Owen", "Ella", "Evan", "Lily", "Connor", "Nathaniel", "Zoe"]
     let name7:[String] = ["Taylor", "Joshua", "Hannah", "Ryan", "Lauren", "Jacob", "Mia", "Jack", "Abigail", "Tyler", "Alexis", "Cameron"]
+    */
+    
+    let FemaleNames : [[String]] = [["Barbara", "Eliza", "Mary", "Jennifer", "Linda", "Patricia"],
+        ["Sarah", "Diane", "Nancy", "Kim", "Elizabeth", "Joan"],
+        ["Isabella", "Courtney", "Miriam", "Jane", "Dorothy", "Carol"],
+        ["Karen", "Betty", "Jessica", "Dana", "Lisa", "Sandra"],
+        ["Michelle", "Carol", "Amanda", "Emily", "Ashley", "Melissa"],
+        ["Jenna",  "Caroline",  "Sofia", "Ella", "Lily", "Zoe"],
+        ["Taylor", "Hannah", "Lauren", "Mia", "Abigail", "Alexis",]]
+    
+    let MaleNames : [[String]] = [["Robert", "James", "John", "Michael", "Richard", "Joseph"],
+        ["Ralph", "Andrew", "Fred", "Henry", "Bill", "Matt"],
+        ["Ethan", "Jeremy", "Mitchell", "Sheldon", "Doug", "Edward"],
+        ["Chris", "Anthony", "Daniel", "Donald", "Peter", "Mark"],
+        ["Timothy", "Brian", "Kenneth", "Ronald", "Kevin","Edward"],
+        ["Jackson", "Samuel", "Owen", "Evan","Connor", "Nathaniel"],
+        ["Joshua", "Ryan", "Jacob", "Jack", "Tyler", "Cameron"]]
+    
+    
     
     let femaleFaces : [[String]] = [["F01", "F02", "F03", "F04", "F05", "F06"], ["Fa01", "Fa02", "Fa03", "Fa04", "Fa05", "Fa06"], ["Fb01", "Fb02", "Fb03", "Fb04", "Fb05", "Fb06"], ["Fc01", "Fc02", "Fc03", "Fc04", "Fc05", "Fc06"], ["Fd01", "Fd02", "Fd03", "Fd04", "Fd05", "Fd06"], ["Fe01", "Fe02", "Fe03", "Fe04", "Fe05", "Fe06"], ["Ff01", "Ff02", "Ff03", "Ff04", "Ff05", "Ff06"]]
     
@@ -90,7 +113,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         display()
         
-        delay(24){
+        delay(26){
             self.testRecall()
         }
         
@@ -130,7 +153,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         let image = UIImage(named: imageNames[0])
         imageView.image = image
         self.view.addSubview(imageView)
-        nameLabel.text = nameList[0]
+        nameLabel.text = FemaleNames[fnamenum][0]
         
    
         
@@ -147,12 +170,23 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
                 let image = UIImage(named: self.imageNames[i])
                 self.imageView.image = image
                 self.view.addSubview(self.imageView)
-                self.nameLabel.text = self.nameList[i]
+                
+                if i%2 == 1 {
+                    print("Male \(i/2)")
+                    print("\(self.imageNames[i])")
+                    self.nameLabel.text = self.MaleNames[self.mnamenum][i/2]
+                }
+                else {
+                    print("Female \(i/2)")
+                    print("\(self.imageNames[i])")
+                    self.nameLabel.text = self.FemaleNames[self.fnamenum][i/2]
+                }
+                
             }
 
         }
         
-        delay(24){
+        delay(26){
             if self.imageView.image !== nil {
                 self.imageView.removeFromSuperview()
                 self.imageView.image = nil
@@ -197,10 +231,27 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         let btnsend: UIButton = sender
         
         if btnsend.tag == 1 {
-            if(curr == nameList[count]){
-                orderRecall.append(true)
-            } else {
-                orderRecall.append(false)
+            
+            var i = -1
+            
+            if count%2 == 1{
+                i = count/2
+                if(curr == MaleNames[mnamenum][i]){
+                    orderRecall.append(true)
+                }
+                else {
+                    orderRecall.append(false)
+                }
+            }
+                
+            else{
+                i = count/2
+                if(curr == FemaleNames[fnamenum][i]){
+                    orderRecall.append(true)
+                }
+                else {
+                    orderRecall.append(false)
+                }
             }
             
             count += 1
@@ -239,8 +290,15 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         if(row == 0){
             return "--"
         }
-        else{
-            return nameList[row-1]
+        else {
+            
+            if row%2 == 1 {
+                return FemaleNames[fnamenum][(row-1)/2]
+            }
+            
+            else {
+                return MaleNames[mnamenum][(row-2)/2]
+            }
         }
     }
     
@@ -250,7 +308,13 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             curr = "--"
         }
         else{
-            curr = nameList[row-1]
+            if row%2 == 1 {
+                curr = FemaleNames[fnamenum][(row-1)/2]
+            }
+                
+            else {
+                curr = MaleNames[mnamenum][(row-2)/2]
+            }
         }
         
     }
@@ -349,7 +413,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     }
     
     func randomizeRecognizeNames(){
-        
+        /*
         for(var k=0; k<12; k++){
             let random = Int(arc4random_uniform(4))
             orderRecognize.append(random)
@@ -366,7 +430,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
                 }
             }
         }
-        
+        */
     }
     
     func recognizeButton(sender:UIButton!){
@@ -380,38 +444,17 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     }
     
     func generateList(){
-        flistnum = Int(arc4random_uniform(7))
-        mlistnum = Int(arc4random_uniform(7))
+        ffacenum = Int(arc4random_uniform(7))
+        mfacenum = Int(arc4random_uniform(7))
         imageNames = [String]()
         
         for(var k=0; k<6; k++){
-            imageNames.append(femaleFaces[flistnum][k])
-            imageNames.append(maleFaces[mlistnum][k])
+            imageNames.append(femaleFaces[ffacenum][k])
+            imageNames.append(maleFaces[mfacenum][k])
         }
         
-        let r = arc4random_uniform(7)
-        
-        if(r==0){
-            nameList = name1
-        }
-        if(r==1){
-            nameList = name2
-        }
-        if(r==2){
-            nameList = name3
-        }
-        if(r==3){
-            nameList = name4
-        }
-        if(r==4){
-            nameList = name5
-        }
-        if(r==5){
-            nameList = name6
-        }
-        if(r==6){
-            nameList = name7
-        }
+        fnamenum = Int(arc4random_uniform(7))
+        mnamenum = Int(arc4random_uniform(7))
         
     }
     
