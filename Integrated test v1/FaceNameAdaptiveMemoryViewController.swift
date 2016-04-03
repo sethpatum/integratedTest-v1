@@ -15,8 +15,12 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     var imageNames = [String]()
     
     var orderRecall = [Bool]()
-    var orderRecognize = [Int]()
-    var recognizeKey = [[String]]()
+    var orderRecognize = [Bool]()
+    
+    var recognizeKey = [Int]()
+    var FemaleRecognizeDisplay = [[String]]()
+    var MaleRecognizeDisplay = [[String]]()
+    
     
     var ffacenum = -1
     var mfacenum = -1
@@ -37,16 +41,6 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     @IBOutlet weak var Done: UIButton!
    
     var imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-    
-    /*
-    let name1:[String] = ["Barbara", "Robert", "Eliza", "James", "Mary", "John", "Jennifer", "Michael", "Linda", "Richard", "Patricia", "Joseph"]
-    let name2:[String] = ["Sarah", "Ralph", "Diane", "Andrew", "Nancy", "Fred", "Kim", "Henry", "Elizabeth", "Bill", "Joan", "Matt"]
-    let name3:[String] = ["Isabella", "Ethan", "Courtney", "Jeremy", "Miriam", "Mitchell", "Jane", "Sheldon", "Dorothy", "Doug", "Carol", "Edward"]
-    let name4:[String] = ["Karen", "Chris", "Betty", "Anthony", "Jessica", "Daniel", "Dana", "Donald", "Lisa", "Peter", "Sandra", "Mark"]
-    let name5:[String] = ["Michelle", "Timothy", "Carol", "Brian", "Amanda", "Kenneth", "Emily", "Ronald", "Ashley", "Kevin", "Melissa", "Edward"]
-    let name6:[String] = ["Jenna", "Jackson", "Caroline", "Samuel", "Sofia", "Owen", "Ella", "Evan", "Lily", "Connor", "Nathaniel", "Zoe"]
-    let name7:[String] = ["Taylor", "Joshua", "Hannah", "Ryan", "Lauren", "Jacob", "Mia", "Jack", "Abigail", "Tyler", "Alexis", "Cameron"]
-    */
     
     let FemaleNames : [[String]] = [["Barbara", "Eliza", "Mary", "Jennifer", "Linda", "Patricia"],
         ["Sarah", "Diane", "Nancy", "Kim", "Elizabeth", "Joan"],
@@ -70,25 +64,6 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     
     let maleFaces : [[String]] = [["M01", "M02", "M03", "M04", "M05", "M06"], ["Ma01", "Ma02", "Ma03", "Ma04", "Ma05", "Ma06"], ["Mb01", "Mb02", "Mb03", "Mb04", "Mb05", "Mb06"], ["Mc01", "Mc02", "Mc03", "Mc04", "Mc05", "Mc06"], ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"], ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"], ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]]
     
-    /*
-    let f0:[String] = ["F01", "F02", "F03", "F04", "F05", "F06"]
-    let f1:[String] = ["Fa01", "Fa02", "Fa03", "Fa04", "Fa05", "Fa06"]
-    let f2:[String] = ["Fb01", "Fb02", "Fb03", "Fb04", "Fb05", "Fb06"]
-    let f3:[String] = ["Fc01", "Fc02", "Fc03", "Fc04", "Fc05", "Fc06"]
-    let f4:[String] = ["Fd01", "Fd02", "Fd03", "Fd04", "Fd05", "Fd06"]
-    let f5:[String] = ["Fe01", "Fe02", "Fe03", "Fe04", "Fe05", "Fe06"]
-    let f6:[String] = ["Ff01", "Ff02", "Ff03", "Ff04", "Ff05", "Ff06"]
-    
-    let m0:[String] = ["M01", "M02", "M03", "M04", "M05", "M06"]
-    let m1:[String] = ["Ma01", "Ma02", "Ma03", "Ma04", "Ma05", "Ma06"]
-    let m2:[String] = ["Mb01", "Mb02", "Mb03", "Mb04", "Mb05", "Mb06"]
-    let m3:[String] = ["Mc01", "Mc02", "Mc03", "Mc04", "Mc05", "Mc06"]
-    let m4:[String] = ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"]
-    let m5:[String] = ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"]
-    let m6:[String] = ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]
-    */
-    
-    
     @IBAction func startButton(sender: AnyObject) {
         startTime2 = NSDate()
         
@@ -106,8 +81,6 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         startButton.enabled = false
         doneButton.enabled = true
         self.navigationItem.setHidesBackButton(true, animated:false)
-        
-        //        generateList()
         
         print(imageNames)
         
@@ -366,6 +339,12 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         print("Got here!")
         
+        FemaleRecognizeDisplay = buttonlist(FemaleNames[fnamenum])
+        MaleRecognizeDisplay = buttonlist(MaleNames[mnamenum])
+        
+        print(FemaleRecognizeDisplay)
+        print(MaleRecognizeDisplay)
+        
         let button1 = UIButton(type: UIButtonType.System) as UIButton
         button1.tag = 1
         button1.frame = CGRectMake(150, 650, 100, 100)
@@ -467,12 +446,47 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
     }
     
+    func buttonlist(names :[String]) -> [[String]] {
+        
+        var blist : [[String]] = []
+        
+        for (index, element) in names.enumerate(){
+            
+            var curr = names
+            
+            let corr = curr.removeAtIndex(index)
+            
+            var buttons:[String] = []
+            
+            buttons.append(corr)
+            
+            for i in 1...3 {
+                
+                let next = arc4random_uniform(UInt32(curr.count))
+                
+                let rest = curr.removeAtIndex(Int(next))
+                
+                buttons.append(rest)
+                
+            }
+            
+            buttons = buttons.shuffle()
+            
+            blist.append(buttons)
+            
+        }
+        
+        return blist
+        
+    }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 13
     }
+    
     
     func checkRecall(){
         
@@ -512,5 +526,49 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     // Pass the selected object to the new view controller.
     }
     */
+    
+}
+
+extension CollectionType {
+    
+    /// Return a copy of `self` with its elements shuffled
+    
+    func shuffle() -> [Generator.Element] {
+        
+        var list = Array(self)
+        
+        list.shuffleInPlace()
+        
+        return list
+        
+    }
+    
+}
+
+
+
+extension MutableCollectionType where Index == Int {
+    
+    /// Shuffle the elements of `self` in-place.
+    
+    mutating func shuffleInPlace() {
+        
+        // empty and single-element collections don't shuffle
+        
+        if count < 2 { return }
+        
+        
+        
+        for i in 0..<count - 1 {
+            
+            let j = Int(arc4random_uniform(UInt32(count - i))) + i
+            
+            guard i != j else { continue }
+            
+            swap(&self[i], &self[j])
+            
+        }
+        
+    }
     
 }
