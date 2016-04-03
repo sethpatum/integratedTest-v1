@@ -43,8 +43,11 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     let name6:[String] = ["Jenna", "Jackson", "Caroline", "Samuel", "Sofia", "Owen", "Ella", "Evan", "Lily", "Connor", "Nathaniel", "Zoe"]
     let name7:[String] = ["Taylor", "Joshua", "Hannah", "Ryan", "Lauren", "Jacob", "Mia", "Jack", "Abigail", "Tyler", "Alexis", "Cameron"]
     
+    let femaleFaces : [[String]] = [["F01", "F02", "F03", "F04", "F05", "F06"], ["Fa01", "Fa02", "Fa03", "Fa04", "Fa05", "Fa06"], ["Fb01", "Fb02", "Fb03", "Fb04", "Fb05", "Fb06"], ["Fc01", "Fc02", "Fc03", "Fc04", "Fc05", "Fc06"], ["Fd01", "Fd02", "Fd03", "Fd04", "Fd05", "Fd06"], ["Fe01", "Fe02", "Fe03", "Fe04", "Fe05", "Fe06"], ["Ff01", "Ff02", "Ff03", "Ff04", "Ff05", "Ff06"]]
     
+    let maleFaces : [[String]] = [["M01", "M02", "M03", "M04", "M05", "M06"], ["Ma01", "Ma02", "Ma03", "Ma04", "Ma05", "Ma06"], ["Mb01", "Mb02", "Mb03", "Mb04", "Mb05", "Mb06"], ["Mc01", "Mc02", "Mc03", "Mc04", "Mc05", "Mc06"], ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"], ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"], ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]]
     
+    /*
     let f0:[String] = ["F01", "F02", "F03", "F04", "F05", "F06"]
     let f1:[String] = ["Fa01", "Fa02", "Fa03", "Fa04", "Fa05", "Fa06"]
     let f2:[String] = ["Fb01", "Fb02", "Fb03", "Fb04", "Fb05", "Fb06"]
@@ -60,7 +63,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     let m4:[String] = ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"]
     let m5:[String] = ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"]
     let m6:[String] = ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]
-    
+    */
     
     
     @IBAction func startButton(sender: AnyObject) {
@@ -148,160 +151,6 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             }
 
         }
-        /*
-        delay(2){
-            
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            let image1 = UIImage(named: self.imageNames[1])
-            self.imageView.image = image1
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[1]
-        }
-        
-        delay(4){
-            
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image2 = UIImage(named: self.imageNames[2])
-            self.imageView.image = image2
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[2]
-        }
-        
-        delay(6){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image3 = UIImage(named: self.imageNames[3])
-            self.imageView.image = image3
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[3]
-        }
-        
-        delay(8){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            let image4 = UIImage(named: self.imageNames[4])
-            self.imageView.image = image4
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[4]
-        }
-        
-        delay(10){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image5 = UIImage(named: self.imageNames[5])
-            self.imageView.image = image5
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[5]
-        }
-        
-        delay(12){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image6 = UIImage(named: self.imageNames[6])
-            self.imageView.image = image6
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[6]
-        }
-        
-        delay(14){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image7 = UIImage(named: self.imageNames[7])
-            self.imageView.image = image7
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[7]
-        }
-        
-        delay(16){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image8 = UIImage(named: self.imageNames[8])
-            self.imageView.image = image8
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[8]
-        }
-        
-        delay(18){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image9 = UIImage(named: self.imageNames[9])
-            self.imageView.image = image9
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[9]
-        }
-        
-        delay(20){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image10 = UIImage(named: self.imageNames[10])
-            self.imageView.image = image10
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[10]
-        }
-        
-        delay(22){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image11 = UIImage(named: self.imageNames[11])
-            self.imageView.image = image11
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[11]
-        } */
         
         delay(24){
             if self.imageView.image !== nil {
@@ -531,62 +380,13 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     }
     
     func generateList(){
-        let f = arc4random_uniform(7)
-        let m = arc4random_uniform(7)
-        var flist = [String]()
-        var mlist = [String]()
-        flistnum = Int(f)
-        mlistnum = Int(m)
-        
-        if(f==0){
-            flist = f0
-        }
-        if(f==1){
-            flist = f1
-        }
-        if(f==2){
-            flist = f2
-        }
-        if(f==3){
-            flist = f3
-        }
-        if(f==4){
-            flist = f4
-        }
-        if(f==5){
-            flist = f5
-        }
-        if(f==6){
-            flist = f6
-        }
-        
-        if(m==0){
-            mlist = m0
-        }
-        if(m==1){
-            mlist = m1
-        }
-        if(m==2){
-            mlist = m2
-        }
-        if(m==3){
-            mlist = m3
-        }
-        if(m==4){
-            mlist = m4
-        }
-        if(m==5){
-            mlist = m5
-        }
-        if(m==6){
-            mlist = m6
-        }
-        
+        flistnum = Int(arc4random_uniform(7))
+        mlistnum = Int(arc4random_uniform(7))
         imageNames = [String]()
         
         for(var k=0; k<6; k++){
-            imageNames.append(flist[k])
-            imageNames.append(mlist[k])
+            imageNames.append(femaleFaces[flistnum][k])
+            imageNames.append(maleFaces[mlistnum][k])
         }
         
         let r = arc4random_uniform(7)
