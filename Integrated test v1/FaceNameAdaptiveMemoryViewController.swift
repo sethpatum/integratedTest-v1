@@ -12,19 +12,14 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
    
     var curr = ""
     var count = 0
-    var imageNames = [String]()
-    
     var orderRecall = [Bool]()
     var orderRecognize = [Bool]()
     
     var recognizeKey = [Int]()
-    var FemaleRecognizeDisplay = [[String]]()
     var MaleRecognizeDisplay = [[String]]()
     
     
-    var ffacenum = -1
     var mfacenum = -1
-    var fnamenum = -1
     var mnamenum = -1
     
     var startTime = NSTimeInterval()
@@ -41,15 +36,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     @IBOutlet weak var Done: UIButton!
    
     var imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-    
-    let FemaleNames : [[String]] = [["Barbara", "Eliza", "Mary", "Jennifer", "Linda", "Patricia"],
-        ["Sarah", "Diane", "Nancy", "Kim", "Elizabeth", "Joan"],
-        ["Isabella", "Courtney", "Miriam", "Jane", "Dorothy", "Carol"],
-        ["Karen", "Betty", "Jessica", "Dana", "Lisa", "Sandra"],
-        ["Michelle", "Carol", "Amanda", "Emily", "Ashley", "Melissa"],
-        ["Jenna",  "Caroline",  "Sofia", "Ella", "Lily", "Zoe"],
-        ["Taylor", "Hannah", "Lauren", "Mia", "Abigail", "Alexis",]]
-    
+
     let MaleNames : [[String]] = [["Robert", "James", "John", "Michael", "Richard", "Joseph"],
         ["Ralph", "Andrew", "Fred", "Henry", "Bill", "Matt"],
         ["Ethan", "Jeremy", "Mitchell", "Sheldon", "Doug", "Edward"],
@@ -57,11 +44,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         ["Timothy", "Brian", "Kenneth", "Ronald", "Kevin","Edward"],
         ["Jackson", "Samuel", "Owen", "Evan","Connor", "Nathaniel"],
         ["Joshua", "Ryan", "Jacob", "Jack", "Tyler", "Cameron"]]
-    
-    
-    
-    let femaleFaces : [[String]] = [["F01", "F02", "F03", "F04", "F05", "F06"], ["Fa01", "Fa02", "Fa03", "Fa04", "Fa05", "Fa06"], ["Fb01", "Fb02", "Fb03", "Fb04", "Fb05", "Fb06"], ["Fc01", "Fc02", "Fc03", "Fc04", "Fc05", "Fc06"], ["Fd01", "Fd02", "Fd03", "Fd04", "Fd05", "Fd06"], ["Fe01", "Fe02", "Fe03", "Fe04", "Fe05", "Fe06"], ["Ff01", "Ff02", "Ff03", "Ff04", "Ff05", "Ff06"]]
-    
+
     let maleFaces : [[String]] = [["M01", "M02", "M03", "M04", "M05", "M06"], ["Ma01", "Ma02", "Ma03", "Ma04", "Ma05", "Ma06"], ["Mb01", "Mb02", "Mb03", "Mb04", "Mb05", "Mb06"], ["Mc01", "Mc02", "Mc03", "Mc04", "Mc05", "Mc06"], ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"], ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"], ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]]
     
     @IBAction func startButton(sender: AnyObject) {
@@ -82,11 +65,11 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         doneButton.enabled = true
         self.navigationItem.setHidesBackButton(true, animated:false)
         
-        print(imageNames)
+        print(maleFaces[mfacenum])
         
         display()
         
-        delay(26){
+        delay(12){
             self.testRecall()
         }
         
@@ -96,8 +79,11 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         startButton.enabled = true
         doneButton.enabled = false
         self.navigationItem.setHidesBackButton(false, animated:true)
-        namePicker.hidden = true
-        
+        /*
+        if namePicker.hidden == false {
+            namePicker.hidden = true
+        }
+        */
     }
     
     
@@ -123,14 +109,14 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         namePicker.hidden = true
         
-        let image = UIImage(named: imageNames[0])
+        let image = UIImage(named: maleFaces[mfacenum][0])
         imageView.image = image
         self.view.addSubview(imageView)
-        nameLabel.text = FemaleNames[fnamenum][0]
+        nameLabel.text = MaleNames[mnamenum][0]
         
    
         
-        for i in 1...11 {
+        for i in 1...5 {
             let d = Double(i)*2.0
             delay(d){
                 
@@ -140,26 +126,18 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
                 }
                 
                 self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-                let image = UIImage(named: self.imageNames[i])
+                let image = UIImage(named: self.maleFaces[self.mfacenum][i])
                 self.imageView.image = image
                 self.view.addSubview(self.imageView)
                 
-                if i%2 == 1 {
-                    print("Male \(i/2)")
-                    print("\(self.imageNames[i])")
-                    self.nameLabel.text = self.MaleNames[self.mnamenum][i/2]
-                }
-                else {
-                    print("Female \(i/2)")
-                    print("\(self.imageNames[i])")
-                    self.nameLabel.text = self.FemaleNames[self.fnamenum][i/2]
-                }
-                
+                print("Male \(i)")
+                print("\(self.maleFaces[self.mfacenum][i])")
+                self.nameLabel.text = self.MaleNames[self.mnamenum][i]
             }
 
         }
         
-        delay(26){
+        delay(12){
             if self.imageView.image !== nil {
                 self.imageView.removeFromSuperview()
                 self.imageView.image = nil
@@ -168,8 +146,6 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         
     }
-    
-//    var nextButton : UIButton!
     
     func testRecall(){
         
@@ -191,7 +167,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             self.imageView.image = nil
         }
         
-        let image = UIImage(named: imageNames[0])
+        let image = UIImage(named: maleFaces[mfacenum][0])
         imageView.image = image
         self.view.addSubview(imageView)
         
@@ -205,31 +181,17 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         if btnsend.tag == 1 {
             
-            var i = -1
-            
-            if count%2 == 1{
-                i = count/2
-                if(curr == MaleNames[mnamenum][i]){
+           
+                if(curr == MaleNames[mnamenum][count]){
                     orderRecall.append(true)
                 }
                 else {
                     orderRecall.append(false)
                 }
-            }
-                
-            else{
-                i = count/2
-                if(curr == FemaleNames[fnamenum][i]){
-                    orderRecall.append(true)
-                }
-                else {
-                    orderRecall.append(false)
-                }
-            }
             
             count += 1
             
-            if(count == 12){
+            if(count == 6){
                 //self.removeFromParentViewController()
                 checkRecall()
                 //btnsend.enabled = false
@@ -245,7 +207,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
                     self.imageView.image = nil
                 }
                 
-                let image = UIImage(named: imageNames[count])
+                let image = UIImage(named: maleFaces[mfacenum][count])
                 imageView.image = image
                 self.view.addSubview(imageView)
             }
@@ -264,14 +226,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             return "--"
         }
         else {
-            
-            if row%2 == 1 {
-                return FemaleNames[fnamenum][(row-1)/2]
-            }
-            
-            else {
-                return MaleNames[mnamenum][(row-2)/2]
-            }
+            return MaleNames[mnamenum][row-1]
         }
     }
     
@@ -281,13 +236,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             curr = "--"
         }
         else{
-            if row%2 == 1 {
-                curr = FemaleNames[fnamenum][(row-1)/2]
-            }
-                
-            else {
-                curr = MaleNames[mnamenum][(row-2)/2]
-            }
+            curr = MaleNames[mnamenum][row-1]
         }
         
     }
@@ -338,11 +287,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     func testRecognition(){
         
         print("Got here!")
-        
-        FemaleRecognizeDisplay = buttonlist(FemaleNames[fnamenum])
         MaleRecognizeDisplay = buttonlist(MaleNames[mnamenum])
-        
-        print(FemaleRecognizeDisplay)
         print(MaleRecognizeDisplay)
         
         let button1 = UIButton(type: UIButtonType.System) as UIButton
@@ -383,7 +328,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             self.imageView.image = nil
         }
         
-        let image = UIImage(named: imageNames[0])
+        let image = UIImage(named: maleFaces[mfacenum][0])
         imageView.image = image
         self.view.addSubview(imageView)
         
@@ -391,48 +336,21 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
     }
     
-    func randomizeRecognizeNames(){
-        /*
-        for(var k=0; k<12; k++){
-            let random = Int(arc4random_uniform(4))
-            orderRecognize.append(random)
-        }
-        
-        for(var l=0; l<12; l++){
-            if(l%2==0){
-                recognizeKey[l][orderRecognize[l]] = nameList[l]
-                for(var m=0; m<4; m++){
-                    if(m != l){
-                        let r = arc4random_uniform(7);
-                        let temp = flist
-                    }
-                }
-            }
-        }
-        */
-    }
-    
     func recognizeButton(sender:UIButton!){
         
         let btnsend: UIButton = sender
         
-        
-        
-        
-        
     }
     
     func generateList(){
-        ffacenum = Int(arc4random_uniform(7))
         mfacenum = Int(arc4random_uniform(7))
+        /*
         imageNames = [String]()
         
         for(var k=0; k<6; k++){
-            imageNames.append(femaleFaces[ffacenum][k])
             imageNames.append(maleFaces[mfacenum][k])
         }
-        
-        fnamenum = Int(arc4random_uniform(7))
+        */
         mnamenum = Int(arc4random_uniform(7))
         
     }
@@ -484,7 +402,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 13
+        return 7
     }
     
     
