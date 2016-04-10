@@ -12,11 +12,21 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
    
     var curr = ""
     var count = 0
-    var imageNames = [String]()
-    var nameList = [String]()
     var orderRecall = [Bool]()
+    var orderRecognize = [Bool]()
     
+    var recognizeKey = [Int]()
+    var MaleRecognizeDisplay = [[String]]()
+    
+    
+    var mfacenum = -1
+    var mnamenum = -1
+    
+    var startTime = NSTimeInterval()
     var startTime2 = NSDate()
+    var doneTimer = false
+    
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
@@ -26,34 +36,16 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     @IBOutlet weak var Done: UIButton!
    
     var imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-    
-    let name1:[String] = ["Barbara", "Robert", "Eliza", "James", "Mary", "John", "Jennifer", "Michael", "Linda", "Richard", "Patricia", "Joseph"]
-    let name2:[String] = ["Sarah", "Ralph", "Diane", "Andrew", "Nancy", "Fred", "Kim", "Henry", "Elizabeth", "Bill", "Joan", "Matt"]
-    let name3:[String] = ["Isabella", "Ethan", "Courtney", "Jeremy", "Miriam", "Mitchell", "Jane", "Sheldon", "Dorothy", "Doug", "Carol", "Edward"]
-    let name4:[String] = ["Karen", "Chris", "Betty", "Anthony", "Jessica", "Daniel", "Dana", "Donald", "Lisa", "Peter", "Sandra", "Mark"]
-    let name5:[String] = ["Michelle", "Timothy", "Carol", "Brian", "Amanda", "Kenneth", "Emily", "Ronald", "Ashley", "Kevin", "Melissa", "Edward"]
-    let name6:[String] = ["Jenna", "Jackson", "Caroline", "Samuel", "Sofia", "Owen", "Ella", "Evan", "Lily", "Connor", "Nathaniel", "Zoe"]
-    let name7:[String] = ["Taylor", "Joshua", "Hannah", "Ryan", "Lauren", "Jacob", "Mia", "Jack", "Abigail", "Tyler", "Alexis", "Cameron"]
-    
-    
-    
-    let f0:[String] = ["F01", "F02", "F03", "F04", "F05", "F06"]
-    let f1:[String] = ["Fa01", "Fa02", "Fa03", "Fa04", "Fa05", "Fa06"]
-    let f2:[String] = ["Fb01", "Fb02", "Fb03", "Fb04", "Fb05", "Fb06"]
-    let f3:[String] = ["Fc01", "Fc02", "Fc03", "Fc04", "Fc05", "Fc06"]
-    let f4:[String] = ["Fd01", "Fd02", "Fd03", "Fd04", "Fd05", "Fd06"]
-    let f5:[String] = ["Fe01", "Fe02", "Fe03", "Fe04", "Fe05", "Fe06"]
-    let f6:[String] = ["Ff01", "Ff02", "Ff03", "Ff04", "Ff05", "Ff06"]
-    
-    let m0:[String] = ["M01", "M02", "M03", "M04", "M05", "M06"]
-    let m1:[String] = ["Ma01", "Ma02", "Ma03", "Ma04", "Ma05", "Ma06"]
-    let m2:[String] = ["Mb01", "Mb02", "Mb03", "Mb04", "Mb05", "Mb06"]
-    let m3:[String] = ["Mc01", "Mc02", "Mc03", "Mc04", "Mc05", "Mc06"]
-    let m4:[String] = ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"]
-    let m5:[String] = ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"]
-    let m6:[String] = ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]
-    
-    
+
+    let MaleNames : [[String]] = [["Robert", "James", "John", "Michael", "Richard", "Joseph"],
+        ["Ralph", "Andrew", "Fred", "Henry", "Bill", "Matt"],
+        ["Ethan", "Jeremy", "Mitchell", "Sheldon", "Doug", "Edward"],
+        ["Chris", "Anthony", "Daniel", "Donald", "Peter", "Mark"],
+        ["Timothy", "Brian", "Kenneth", "Ronald", "Kevin","Edward"],
+        ["Jackson", "Samuel", "Owen", "Evan","Connor", "Nathaniel"],
+        ["Joshua", "Ryan", "Jacob", "Jack", "Tyler", "Cameron"]]
+
+    let maleFaces : [[String]] = [["M01", "M02", "M03", "M04", "M05", "M06"], ["Ma01", "Ma02", "Ma03", "Ma04", "Ma05", "Ma06"], ["Mb01", "Mb02", "Mb03", "Mb04", "Mb05", "Mb06"], ["Mc01", "Mc02", "Mc03", "Mc04", "Mc05", "Mc06"], ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"], ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"], ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]]
     
     @IBAction func startButton(sender: AnyObject) {
         startTime2 = NSDate()
@@ -73,13 +65,11 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         doneButton.enabled = true
         self.navigationItem.setHidesBackButton(true, animated:false)
         
-        //        generateList()
-        
-        print(imageNames)
+        print(maleFaces[mfacenum])
         
         display()
         
-        delay(24){
+        delay(12){
             self.testRecall()
         }
         
@@ -89,8 +79,11 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         startButton.enabled = true
         doneButton.enabled = false
         self.navigationItem.setHidesBackButton(false, animated:true)
-        namePicker.hidden = true
-        
+        /*
+        if namePicker.hidden == false {
+            namePicker.hidden = true
+        }
+        */
     }
     
     
@@ -116,14 +109,14 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         namePicker.hidden = true
         
-        let image = UIImage(named: imageNames[0])
+        let image = UIImage(named: maleFaces[mfacenum][0])
         imageView.image = image
         self.view.addSubview(imageView)
-        nameLabel.text = nameList[0]
+        nameLabel.text = MaleNames[mnamenum][0]
         
    
         
-        for i in 1...11 {
+        for i in 1...5 {
             let d = Double(i)*2.0
             delay(d){
                 
@@ -133,169 +126,18 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
                 }
                 
                 self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-                let image = UIImage(named: self.imageNames[i])
+                let image = UIImage(named: self.maleFaces[self.mfacenum][i])
                 self.imageView.image = image
                 self.view.addSubview(self.imageView)
-                self.nameLabel.text = self.nameList[i]
+                
+                print("Male \(i)")
+                print("\(self.maleFaces[self.mfacenum][i])")
+                self.nameLabel.text = self.MaleNames[self.mnamenum][i]
             }
 
         }
-        /*
-        delay(2){
-            
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            let image1 = UIImage(named: self.imageNames[1])
-            self.imageView.image = image1
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[1]
-        }
-        
-        delay(4){
-            
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image2 = UIImage(named: self.imageNames[2])
-            self.imageView.image = image2
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[2]
-        }
-        
-        delay(6){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image3 = UIImage(named: self.imageNames[3])
-            self.imageView.image = image3
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[3]
-        }
-        
-        delay(8){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            let image4 = UIImage(named: self.imageNames[4])
-            self.imageView.image = image4
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[4]
-        }
-        
-        delay(10){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image5 = UIImage(named: self.imageNames[5])
-            self.imageView.image = image5
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[5]
-        }
         
         delay(12){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image6 = UIImage(named: self.imageNames[6])
-            self.imageView.image = image6
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[6]
-        }
-        
-        delay(14){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image7 = UIImage(named: self.imageNames[7])
-            self.imageView.image = image7
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[7]
-        }
-        
-        delay(16){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image8 = UIImage(named: self.imageNames[8])
-            self.imageView.image = image8
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[8]
-        }
-        
-        delay(18){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image9 = UIImage(named: self.imageNames[9])
-            self.imageView.image = image9
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[9]
-        }
-        
-        delay(20){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image10 = UIImage(named: self.imageNames[10])
-            self.imageView.image = image10
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[10]
-        }
-        
-        delay(22){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
-            
-            let image11 = UIImage(named: self.imageNames[11])
-            self.imageView.image = image11
-            self.view.addSubview(self.imageView)
-            self.nameLabel.text = self.nameList[11]
-        } */
-        
-        delay(24){
             if self.imageView.image !== nil {
                 self.imageView.removeFromSuperview()
                 self.imageView.image = nil
@@ -305,15 +147,14 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
     }
     
-    var nextButton : UIButton! 
-    
     func testRecall(){
         
         nameLabel.text = ""
         
         namePicker.hidden = false
         
-        nextButton = UIButton(type: UIButtonType.System) as UIButton
+        let nextButton = UIButton(type: UIButtonType.System) as UIButton
+        nextButton.tag = 1
         nextButton.frame = CGRectMake(750, 580, 100, 100)
         nextButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         nextButton.setTitle("Next", forState: UIControlState.Normal)
@@ -326,7 +167,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             self.imageView.image = nil
         }
         
-        let image = UIImage(named: imageNames[0])
+        let image = UIImage(named: maleFaces[mfacenum][0])
         imageView.image = image
         self.view.addSubview(imageView)
         
@@ -336,30 +177,46 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     
     func buttonAction(sender:UIButton!){
         
-        if(curr == nameList[count]){
-            orderRecall.append(true)
-        } else {
-            orderRecall.append(false)
+        let btnsend: UIButton = sender
+        
+        if btnsend.tag == 1 {
+            
+           
+                if(curr == MaleNames[mnamenum][count]){
+                    orderRecall.append(true)
+                }
+                else {
+                    orderRecall.append(false)
+                }
+            
+            count += 1
+            
+            if(count == 6){
+                //self.removeFromParentViewController()
+                checkRecall()
+                //btnsend.enabled = false
+                
+                btnsend.removeFromSuperview()
+                namePicker.removeFromSuperview()
+                
+                wait()
+                
+            } else {
+                if self.imageView.image !== nil {
+                    self.imageView.removeFromSuperview()
+                    self.imageView.image = nil
+                }
+                
+                let image = UIImage(named: maleFaces[mfacenum][count])
+                imageView.image = image
+                self.view.addSubview(imageView)
+            }
         }
         
-        count += 1
-        
-        if(count == 12){
-            //self.removeFromParentViewController()
-            checkRecall()
-            nextButton.enabled = false
-            
-            wait()
-            
-        } else {
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
-            }
-            
-            let image = UIImage(named: imageNames[count])
-            imageView.image = image
-            self.view.addSubview(imageView)
+        if btnsend.tag == 2 {
+            doneTimer = true
+            btnsend.removeFromSuperview()
+            testRecognition()
         }
         
     }
@@ -368,8 +225,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         if(row == 0){
             return "--"
         }
-        else{
-            return nameList[row-1]
+        else {
+            return MaleNames[mnamenum][row-1]
         }
     }
     
@@ -379,103 +236,122 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             curr = "--"
         }
         else{
-            curr = nameList[row-1]
+            curr = MaleNames[mnamenum][row-1]
         }
         
     }
     
     func wait(){
         
-        testRecognition()
+        let timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
         
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        
+        let doneWait = UIButton(type: UIButtonType.System) as UIButton
+        doneWait.tag = 2
+        doneWait.frame = CGRectMake(363, 390, 300, 100)
+        doneWait.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        doneWait.setTitle("Start Recognition", forState: UIControlState.Normal)
+        doneWait.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(doneWait)
+        
+        
+    }
+    
+    func update(timer: NSTimer) {
+        
+        if doneTimer == false {
+            let currTime = NSDate.timeIntervalSinceReferenceDate()
+            var diff: NSTimeInterval = currTime - startTime
+            
+            let minutes = UInt8(diff / 60.0)
+            
+            diff -= (NSTimeInterval(minutes)*60.0)
+            
+            let seconds = UInt8(diff)
+            
+            diff = NSTimeInterval(seconds)
+            
+            let strMinutes = minutes > 9 ? String(minutes):"0"+String(minutes)
+            let strSeconds = seconds > 9 ? String(seconds):"0"+String(seconds)
+            
+            timerLabel.text = "\(strMinutes) : \(strSeconds)"
+        }
+        else {
+            timer.invalidate()
+            timerLabel.text = ""
+        }
     }
     
     func testRecognition(){
         
         print("Got here!")
+        MaleRecognizeDisplay = buttonlist(MaleNames[mnamenum])
+        print(MaleRecognizeDisplay)
+        
+        let button1 = UIButton(type: UIButtonType.System) as UIButton
+        button1.tag = 1
+        button1.frame = CGRectMake(150, 650, 100, 100)
+        button1.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        button1.setTitle("Next", forState: UIControlState.Normal)
+        button1.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(button1)
+        
+        let button2 = UIButton(type: UIButtonType.System) as UIButton
+        button2.tag = 1
+        button2.frame = CGRectMake(350, 650, 100, 100)
+        button2.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        button2.setTitle("Next", forState: UIControlState.Normal)
+        button2.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(button2)
+        
+        let button3 = UIButton(type: UIButtonType.System) as UIButton
+        button3.tag = 1
+        button3.frame = CGRectMake(550, 650, 100, 100)
+        button3.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        button3.setTitle("Next", forState: UIControlState.Normal)
+        button3.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(button3)
+        
+        let button4 = UIButton(type: UIButtonType.System) as UIButton
+        button4.tag = 1
+        button4.frame = CGRectMake(750, 650, 100, 100)
+        button4.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        button4.setTitle("Next", forState: UIControlState.Normal)
+        button4.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        self.view.addSubview(button4)
+        
+        
+        if self.imageView.image !== nil {
+            self.imageView.removeFromSuperview()
+            self.imageView.image = nil
+        }
+        
+        let image = UIImage(named: maleFaces[mfacenum][0])
+        imageView.image = image
+        self.view.addSubview(imageView)
+        
+        count = 0
+        
+    }
+    
+    func recognizeButton(sender:UIButton!){
+        
+        let btnsend: UIButton = sender
         
     }
     
     func generateList(){
-        let f = arc4random_uniform(7)
-        let m = arc4random_uniform(7)
-        var flist = [String]()
-        var mlist = [String]()
-        
-        if(f==0){
-            flist = f0
-        }
-        if(f==1){
-            flist = f1
-        }
-        if(f==2){
-            flist = f2
-        }
-        if(f==3){
-            flist = f3
-        }
-        if(f==4){
-            flist = f4
-        }
-        if(f==5){
-            flist = f5
-        }
-        if(f==6){
-            flist = f6
-        }
-        
-        if(m==0){
-            mlist = m0
-        }
-        if(m==1){
-            mlist = m1
-        }
-        if(m==2){
-            mlist = m2
-        }
-        if(m==3){
-            mlist = m3
-        }
-        if(m==4){
-            mlist = m4
-        }
-        if(m==5){
-            mlist = m5
-        }
-        if(m==6){
-            mlist = m6
-        }
-        
+        mfacenum = Int(arc4random_uniform(7))
+        /*
         imageNames = [String]()
         
         for(var k=0; k<6; k++){
-            imageNames.append(flist[k])
-            imageNames.append(mlist[k])
+            imageNames.append(maleFaces[mfacenum][k])
         }
-        
-        let r = arc4random_uniform(7)
-        
-        if(r==0){
-            nameList = name1
-        }
-        if(r==1){
-            nameList = name2
-        }
-        if(r==2){
-            nameList = name3
-        }
-        if(r==3){
-            nameList = name4
-        }
-        if(r==4){
-            nameList = name5
-        }
-        if(r==5){
-            nameList = name6
-        }
-        if(r==6){
-            nameList = name7
-        }
+        */
+        mnamenum = Int(arc4random_uniform(7))
         
     }
     
@@ -488,12 +364,47 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
     }
     
+    func buttonlist(names :[String]) -> [[String]] {
+        
+        var blist : [[String]] = []
+        
+        for (index, element) in names.enumerate(){
+            
+            var curr = names
+            
+            let corr = curr.removeAtIndex(index)
+            
+            var buttons:[String] = []
+            
+            buttons.append(corr)
+            
+            for i in 1...3 {
+                
+                let next = arc4random_uniform(UInt32(curr.count))
+                
+                let rest = curr.removeAtIndex(Int(next))
+                
+                buttons.append(rest)
+                
+            }
+            
+            buttons = buttons.shuffle()
+            
+            blist.append(buttons)
+            
+        }
+        
+        return blist
+        
+    }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 13
+        return 7
     }
+    
     
     func checkRecall(){
         
@@ -533,5 +444,49 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     // Pass the selected object to the new view controller.
     }
     */
+    
+}
+
+extension CollectionType {
+    
+    /// Return a copy of `self` with its elements shuffled
+    
+    func shuffle() -> [Generator.Element] {
+        
+        var list = Array(self)
+        
+        list.shuffleInPlace()
+        
+        return list
+        
+    }
+    
+}
+
+
+
+extension MutableCollectionType where Index == Int {
+    
+    /// Shuffle the elements of `self` in-place.
+    
+    mutating func shuffleInPlace() {
+        
+        // empty and single-element collections don't shuffle
+        
+        if count < 2 { return }
+        
+        
+        
+        for i in 0..<count - 1 {
+            
+            let j = Int(arc4random_uniform(UInt32(count - i))) + i
+            
+            guard i != j else { continue }
+            
+            swap(&self[i], &self[j])
+            
+        }
+        
+    }
     
 }
