@@ -340,17 +340,11 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         let btnsend: UIButton = sender
         
+        
     }
     
     func generateList(){
         mfacenum = Int(arc4random_uniform(7))
-        /*
-        imageNames = [String]()
-        
-        for(var k=0; k<6; k++){
-            imageNames.append(maleFaces[mfacenum][k])
-        }
-        */
         mnamenum = Int(arc4random_uniform(7))
         
     }
