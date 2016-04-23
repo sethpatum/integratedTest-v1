@@ -2149,9 +2149,9 @@ While the authors and producers of this program strive to provide you with usefu
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLC-Eh-PJb">
                                 <rect key="frame" x="204" y="168" width="708" height="301"/>
-                                <mutableString key="text">The naming pictures task consists of 15 different images in order of naming difficulty. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
+                                <string key="text">The naming pictures task consists of 15 different images in order of naming difficulty. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2336,11 +2336,11 @@ While the authors and producers of this program strive to provide you with usefu
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-wQ-vIS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-wQ-vIS">
                                 <rect key="frame" x="72" y="125" width="869" height="301"/>
-                                <string key="text">The famous faces task consists of 15 different images. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
+                                <mutableString key="text">The famous faces task consists of 15 different images. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
 
-</string>
+</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2373,14 +2373,14 @@ While the authors and producers of this program strive to provide you with usefu
         <segue reference="md3-6k-lZH"/>
         <segue reference="mFR-im-uC4"/>
         <segue reference="Lca-c5-giE"/>
+        <segue reference="rhS-v8-KdI"/>
         <segue reference="DsW-ql-KM7"/>
         <segue reference="V8q-qM-EbC"/>
-        <segue reference="rhS-v8-KdI"/>
-        <segue reference="fs4-pa-L87"/>
-        <segue reference="dk3-Hv-CAU"/>
-        <segue reference="Ovp-gb-IO2"/>
-        <segue reference="gg1-hx-kcc"/>
-        <segue reference="84T-KC-0pV"/>
-        <segue reference="DXj-KH-ajy"/>
+        <segue reference="ajT-9n-yKn"/>
+        <segue reference="shN-qw-cgK"/>
+        <segue reference="HE1-1j-NTJ"/>
+        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="ShD-fn-Xek"/>
+        <segue reference="neN-op-hGA"/>
     </inferredMetricsTieBreakers>
 </document>
