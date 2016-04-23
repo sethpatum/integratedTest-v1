@@ -62,6 +62,20 @@ class TapInOrderViewController: ViewController {
     
     //allow buttons to be pressed
     func enableButtons() {
+        if let wnd = self.view{
+            
+            var v = UIView(frame: wnd.bounds)
+            v.backgroundColor = UIColor.whiteColor()
+            v.alpha = 1
+            
+            wnd.addSubview(v)
+            UIView.animateWithDuration(1, animations: {
+                v.alpha = 0.0
+                }, completion: {(finished:Bool) in
+                    print("inside")
+                    v.removeFromSuperview()
+            })
+        }
         for (index, _) in order.enumerate() {
             buttonList[index].addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         }
