@@ -919,7 +919,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsR-tc-oWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7553" y="298"/>
+            <point key="canvasLocation" x="7553" y="306"/>
         </scene>
         <!--Letter Cancellation-->
         <scene sceneID="ZnD-yQ-p0S">
@@ -1090,12 +1090,20 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksx-C4-d7w">
+                                <rect key="frame" x="707" y="138" width="139" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Start Recall">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="Recall" destination="ksx-C4-d7w" id="rLo-5l-xnn"/>
                         <outlet property="endButton" destination="xdU-cO-zDB" id="PnQ-2T-nfh"/>
                         <outlet property="helpButton" destination="8dF-gl-s6U" id="shv-A0-bYq"/>
                         <outlet property="resetButton" destination="hgm-Kp-zhs" id="9b0-8L-F0e"/>
