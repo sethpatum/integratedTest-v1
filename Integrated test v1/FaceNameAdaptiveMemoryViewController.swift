@@ -324,12 +324,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     
     func setbuttonnames(num:Int) {
         for i in 0...3 {
-            
             buttonarray[i].setTitle(buttondisplaylist[num][i], forState: UIControlState.Normal)
-
-            
         }
-        
     }
     
     func recognizeButton(sender:UIButton!){
@@ -353,17 +349,15 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             let image = UIImage(named: maleFaces[mfacenum][count])
             imageView.image = image
             self.view.addSubview(imageView)
+        } else {
+             for i in 0...3 {
+                buttonarray[i].hidden = true
+            }
         }
-        
-        else {
-            
-            
-            
-        }
-        
-        
     }
     
+    
+    // Create all the lists needed
     func generateList(){
         mfacenum = Int(arc4random_uniform(7))
         mnamenum = Int(arc4random_uniform(7))
@@ -378,18 +372,20 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         dispatch_after(
             dispatch_time( DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
         
-        
     }
     
+    
+    // given a list of names, create a list of lists where each sublist k is garuntee to have the kth input name plus 
+    // 3 other names, all randomly arranged
     func buttonlist(names :[String]) -> [[String]] {
         
         var blist : [[String]] = []
-        for (index, element) in names.enumerate(){
+        for (index, _) in names.enumerate(){
             var curr = names
             let corr = curr.removeAtIndex(index)
             var buttons:[String] = []
             buttons.append(corr)
-            for i in 1...3 {
+            for _ in 1...3 {
                 let next = arc4random_uniform(UInt32(curr.count))
                 let rest = curr.removeAtIndex(Int(next))
                 buttons.append(rest)
@@ -400,9 +396,10 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         return blist
     }
     
+    // The list is a list of list, each list k has the name[k] as an element, output list indicates the index of it
     func findinlist(list :[[String]], name:[String]) -> [Int] {
         var ret : [Int] = []
-        for (index, element) in name.enumerate() {
+        for (index, _) in name.enumerate() {
             ret.append(list[index].indexOf(name[index])!)
         }
         return ret
