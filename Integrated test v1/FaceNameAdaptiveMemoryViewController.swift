@@ -18,6 +18,10 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     var recognizeKey = [Int]()
     var MaleRecognizeDisplay = [[String]]()
     
+    var buttonarray = [UIButton]()
+    
+    var recognizeCorrect = 0
+    
     
     var mfacenum = -1
     var mnamenum = -1
@@ -44,8 +48,11 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         ["Timothy", "Brian", "Kenneth", "Ronald", "Kevin","Edward"],
         ["Jackson", "Samuel", "Owen", "Evan","Connor", "Nathaniel"],
         ["Joshua", "Ryan", "Jacob", "Jack", "Tyler", "Cameron"]]
+    
 
     let maleFaces : [[String]] = [["M01", "M02", "M03", "M04", "M05", "M06"], ["Ma01", "Ma02", "Ma03", "Ma04", "Ma05", "Ma06"], ["Mb01", "Mb02", "Mb03", "Mb04", "Mb05", "Mb06"], ["Mc01", "Mc02", "Mc03", "Mc04", "Mc05", "Mc06"], ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"], ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"], ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]]
+    
+    var buttondisplaylist : [[String]] = []
     
     @IBAction func startButton(sender: AnyObject) {
         startTime2 = NSDate()
@@ -289,39 +296,17 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         print("Got here!")
         MaleRecognizeDisplay = buttonlist(MaleNames[mnamenum])
         print(MaleRecognizeDisplay)
-        
-        let button1 = UIButton(type: UIButtonType.System) as UIButton
-        button1.tag = 1
-        button1.frame = CGRectMake(150, 650, 100, 100)
-        button1.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
-        button1.setTitle("Next", forState: UIControlState.Normal)
-        button1.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
-        self.view.addSubview(button1)
-        
-        let button2 = UIButton(type: UIButtonType.System) as UIButton
-        button2.tag = 1
-        button2.frame = CGRectMake(350, 650, 100, 100)
-        button2.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
-        button2.setTitle("Next", forState: UIControlState.Normal)
-        button2.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
-        self.view.addSubview(button2)
-        
-        let button3 = UIButton(type: UIButtonType.System) as UIButton
-        button3.tag = 1
-        button3.frame = CGRectMake(550, 650, 100, 100)
-        button3.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
-        button3.setTitle("Next", forState: UIControlState.Normal)
-        button3.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
-        self.view.addSubview(button3)
-        
-        let button4 = UIButton(type: UIButtonType.System) as UIButton
-        button4.tag = 1
-        button4.frame = CGRectMake(750, 650, 100, 100)
-        button4.addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
-        button4.setTitle("Next", forState: UIControlState.Normal)
-        button4.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
-        self.view.addSubview(button4)
-        
+        0
+        for i in 0...3 {
+            
+            buttonarray.append(UIButton(type: UIButtonType.System) as UIButton)
+            buttonarray[i].tag = i
+            buttonarray[i].frame = CGRectMake(CGFloat(150 + 200*i), 650, 100, 100)
+            buttonarray[i].addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
+            buttonarray[i].titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+            self.view.addSubview(buttonarray[i])
+            
+        }
         
         if self.imageView.image !== nil {
             self.imageView.removeFromSuperview()
@@ -329,6 +314,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         }
         
         let image = UIImage(named: maleFaces[mfacenum][0])
+        setbuttonnames(0)
         imageView.image = image
         self.view.addSubview(imageView)
         
@@ -336,22 +322,53 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
     }
     
+    func setbuttonnames(num:Int) {
+        for i in 0...3 {
+            
+            buttonarray[i].setTitle(buttondisplaylist[num][i], forState: UIControlState.Normal)
+
+            
+        }
+        
+    }
+    
     func recognizeButton(sender:UIButton!){
         
         let btnsend: UIButton = sender
+        
+        if (btnsend.tag == recognizeKey[count]){
+            recognizeCorrect += 1
+        }
+        
+        count += 1
+        
+        if(count < 6) {
+            setbuttonnames(count)
+            
+            if self.imageView.image !== nil {
+                self.imageView.removeFromSuperview()
+                self.imageView.image = nil
+            }
+            
+            let image = UIImage(named: maleFaces[mfacenum][count])
+            imageView.image = image
+            self.view.addSubview(imageView)
+        }
+        
+        else {
+            
+            
+            
+        }
+        
         
     }
     
     func generateList(){
         mfacenum = Int(arc4random_uniform(7))
-        /*
-        imageNames = [String]()
-        
-        for(var k=0; k<6; k++){
-            imageNames.append(maleFaces[mfacenum][k])
-        }
-        */
         mnamenum = Int(arc4random_uniform(7))
+        buttondisplaylist = buttonlist(MaleNames[mnamenum])
+        recognizeKey = findinlist(buttondisplaylist, name : MaleNames[mnamenum])
         
     }
     
@@ -367,35 +384,28 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     func buttonlist(names :[String]) -> [[String]] {
         
         var blist : [[String]] = []
-        
         for (index, element) in names.enumerate(){
-            
             var curr = names
-            
             let corr = curr.removeAtIndex(index)
-            
             var buttons:[String] = []
-            
             buttons.append(corr)
-            
             for i in 1...3 {
-                
                 let next = arc4random_uniform(UInt32(curr.count))
-                
                 let rest = curr.removeAtIndex(Int(next))
-                
                 buttons.append(rest)
-                
             }
-            
             buttons = buttons.shuffle()
-            
             blist.append(buttons)
-            
         }
-        
         return blist
-        
+    }
+    
+    func findinlist(list :[[String]], name:[String]) -> [Int] {
+        var ret : [Int] = []
+        for (index, element) in name.enumerate() {
+            ret.append(list[index].indexOf(name[index])!)
+        }
+        return ret
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -433,6 +443,10 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         //}
         resultsArray.add(result)
 
+    }
+    
+    func checkRecognition(){
+        resultLabel.text = "\(recognizeCorrect) faces recognized correctly"
     }
     
     /*
