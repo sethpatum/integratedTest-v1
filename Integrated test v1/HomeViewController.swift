@@ -7,6 +7,8 @@
 //
 
 import UIKit
+var screenSize : CGRect?
+
 
 class HomeViewController: ViewController {
     
@@ -20,6 +22,7 @@ class HomeViewController: ViewController {
         let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String
         
         versionLabel.text = "Version " + version! + " (build " + build! + ")"
+        screenSize = UIScreen.mainScreen().bounds
     }
     
     
