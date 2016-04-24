@@ -23,6 +23,7 @@ class HomeViewController: ViewController {
         
         versionLabel.text = "Version " + version! + " (build " + build! + ")"
         screenSize = UIScreen.mainScreen().bounds
+        print(screenSize)
     }
     
     

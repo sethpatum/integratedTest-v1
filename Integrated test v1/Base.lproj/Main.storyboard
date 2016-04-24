@@ -438,16 +438,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1uL-EN-LZf" id="LL4-NS-uaZ">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIh-XA-cI2">
-                                                    <rect key="frame" x="91" y="7" width="332" height="30"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="Word-Object Associative Memory Task Part 2"/>
-                                                    <connections>
-                                                        <segue destination="byE-k5-hyQ" kind="show" identifier="Face2" id="rhS-v8-KdI"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WZd-9S-V6Q">
@@ -658,10 +648,10 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVs-0l-8UX">
-                                <rect key="frame" x="0.0" y="660" width="1024" height="56"/>
+                                <rect key="frame" x="0.0" y="624" width="1024" height="119"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srw-iy-urr">
-                                <rect key="frame" x="415" y="667" width="194" height="42"/>
+                                <rect key="frame" x="415" y="650" width="194" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2378,17 +2368,16 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth1" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rhS-v8-KdI"/>
-        <segue reference="Lca-c5-giE"/>
-        <segue reference="mFR-im-uC4"/>
         <segue reference="md3-6k-lZH"/>
-        <segue reference="ajT-9n-yKn"/>
-        <segue reference="HE1-1j-NTJ"/>
         <segue reference="neN-op-hGA"/>
-        <segue reference="shN-qw-cgK"/>
         <segue reference="k5O-0U-7Tk"/>
         <segue reference="ShD-fn-Xek"/>
-        <segue reference="V8q-qM-EbC"/>
+        <segue reference="HE1-1j-NTJ"/>
+        <segue reference="ajT-9n-yKn"/>
+        <segue reference="Lca-c5-giE"/>
+        <segue reference="kBo-Bx-fAG"/>
         <segue reference="DsW-ql-KM7"/>
+        <segue reference="V8q-qM-EbC"/>
+        <segue reference="gg1-hx-kcc"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -132,7 +132,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
                     self.imageView.image = nil
                 }
                 
-                self.imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
+                self.imageView = UIImageView(frame:CGRectMake(350.0, 165.0, 315.0, 475.0))
                 let image = UIImage(named: self.maleFaces[self.mfacenum][i])
                 self.imageView.image = image
                 self.view.addSubview(self.imageView)
@@ -260,7 +260,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         doneWait.frame = CGRectMake(363, 390, 300, 100)
         doneWait.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         doneWait.setTitle("Start Recognition", forState: UIControlState.Normal)
-        doneWait.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+        doneWait.titleLabel!.font = UIFont(name: "Helvetica Neue", size: 24.0)
         self.view.addSubview(doneWait)
         
         
@@ -301,9 +301,9 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             
             buttonarray.append(UIButton(type: UIButtonType.System) as UIButton)
             buttonarray[i].tag = i
-            buttonarray[i].frame = CGRectMake(CGFloat(150 + 200*i), 650, 100, 100)
+            buttonarray[i].frame = CGRectMake(CGFloat(150 + 200*i), 650, 120, 100)
             buttonarray[i].addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
-            buttonarray[i].titleLabel!.font = UIFont(name: "Helvetica Neue", size: 29.0)
+            buttonarray[i].titleLabel!.font = UIFont(name: "Helvetica Neue", size: 24.0)
             self.view.addSubview(buttonarray[i])
             
         }
@@ -380,7 +380,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     func buttonlist(names :[String]) -> [[String]] {
         
         var blist : [[String]] = []
-        for (index, _) in names.enumerate(){
+        for index in names.indices {
             var curr = names
             let corr = curr.removeAtIndex(index)
             var buttons:[String] = []
@@ -399,7 +399,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     // The list is a list of list, each list k has the name[k] as an element, output list indicates the index of it
     func findinlist(list :[[String]], name:[String]) -> [Int] {
         var ret : [Int] = []
-        for (index, _) in name.enumerate() {
+        for index in name.indices {
             ret.append(list[index].indexOf(name[index])!)
         }
         return ret
@@ -421,7 +421,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         }
         
         var wrong = 0
-        for(var k = 0; k < orderRecall.count; k++){
+        for k in orderRecall.indices {
             if (orderRecall[k] == false){
                 wrong += 1
             }

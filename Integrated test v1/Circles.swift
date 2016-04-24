@@ -87,7 +87,12 @@ class Circles{
             
             let i = array[Int(random)]
             
-            circlelist.append((a,b,i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
+            
+            
+            
+            circlelist.append((Int(CGFloat(a)*screenSize!.maxX/1024.0),
+                               Int(CGFloat(b)*screenSize!.maxY/768.0),
+                               i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
             print(i)
             
@@ -111,7 +116,9 @@ class Circles{
             
             let i = array2[Int(random)]
             
-            circlelist.append((a,b,i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
+            circlelist.append((Int(CGFloat(a)*screenSize!.maxX/1024.0),
+                               Int(CGFloat(b)*screenSize!.maxY/768.0),
+                               i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
             let r = Int(random)
             

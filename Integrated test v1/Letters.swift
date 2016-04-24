@@ -81,7 +81,9 @@ class Letters{
             
             let i = array[Int(random)]
             
-            letterlist.append((a,b,i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
+            letterlist.append((Int(CGFloat(a)*screenSize!.maxX/1024.0),
+                               Int(CGFloat(b)*screenSize!.maxY/768.0),
+                               i, UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
             print(i)
             
@@ -106,7 +108,9 @@ class Letters{
             
             let i = array2[Int(random)]
             
-            letterlist.append((a,b,i,UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
+            letterlist.append((Int(CGFloat(a)*screenSize!.maxX/1024.0),
+                               Int(CGFloat(b)*screenSize!.maxY/768.0),
+                               i,UIColor(hue: 0.66, saturation: 0.7, brightness: 0.4, alpha: 1.0)))
             
             print(i)
             
