@@ -134,15 +134,14 @@
 				1BA4A9CA1B5556D800E3FBD4 /* AppDelegate.swift */,
 				1BA4A9CC1B5556D800E3FBD4 /* ViewController.swift */,
 				F2DA21CF1B74249D0048C068 /* PatientUIViewController.swift */,
-				1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */,
-				1BF3163D1CB18FA6007AF4D8 /* FaceNameData.swift */,
 				F2DA21EC1B7D61E80048C068 /* TestSelectionTableViewController.swift */,
 				F280A3F21B80F1620071C100 /* SetupViewController.swift */,
 				F297C1481B9320C200E0F5A1 /* HomeViewController.swift */,
 				1BA4A9CE1B5556D800E3FBD4 /* Main.storyboard */,
 				1BA503761C0A4A980021F216 /* CreditsViewController.swift */,
-				E11414A31B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift */,
 				F2DA21E71B7BFCE20048C068 /* Results */,
+				F28F37841CCD076600E2C8B1 /* PyramidsAnd Palms */,
+				F28F37831CCD06EC00E2C8B1 /* FaceName */,
 				F2DA21D71B76469F0048C068 /* TapInOrder */,
 				E1EF6D361B56E83C001037C6 /* Trails */,
 				E1EF6D281B559DA3001037C6 /* Circles */,
@@ -216,6 +215,23 @@
 			name = Trails;
 			path = "Integrated test v1";
 			sourceTree = SOURCE_ROOT;
+		};
+		F28F37831CCD06EC00E2C8B1 /* FaceName */ = {
+			isa = PBXGroup;
+			children = (
+				1BA503701C0A2FD50021F216 /* FaceNameAdaptiveMemoryViewController.swift */,
+				1BF3163D1CB18FA6007AF4D8 /* FaceNameData.swift */,
+			);
+			name = FaceName;
+			sourceTree = "<group>";
+		};
+		F28F37841CCD076600E2C8B1 /* PyramidsAnd Palms */ = {
+			isa = PBXGroup;
+			children = (
+				E11414A31B8D92D200289FF0 /* PyramidsAndPalmsViewController.swift */,
+			);
+			name = "PyramidsAnd Palms";
+			sourceTree = "<group>";
 		};
 		F2DA21D71B76469F0048C068 /* TapInOrder */ = {
 			isa = PBXGroup;
