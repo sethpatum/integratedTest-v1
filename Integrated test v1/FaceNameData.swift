@@ -30,11 +30,11 @@ let objectFiles : [[String]] = [["X00", "X10", "X20", "X30", "X40", "X50"], ["X6
 
 
 
-let ObjectWords : [[String]] = [["IDEA", "WAIT", "ANXIETY", "WELFARE", "LEVEL", "EXTREME"],
-    ["EXPOSURE", "FLOW", "EMISSION", "DEAR", "CURE", "REMOVAL"],
-    ["PERCEPTION", "REACH", "REVIEW", "USUAL", "CHANCE", "STAY"],
-    ["JUNIOR", "BACKGROUND", "TERM", "ILLUSION", "FILL", "SPITE"],
-    ["ATTITUDE", "POPULATION", "HEAR", "FUTURE", "JOIN","ROLE"],
-    ["REALITY", "DEVICE", "APPROACH", "OBSERVATION","ADDITION", "SERIES"],
-    ["BELIEF", "UNIQUE", "BLAME", "REPUBLIC", "VIEW", "ADMISSION"]]
+let ObjectWords : [[String]] = [["Idea", "Wait", "Anxiety", "Welfare", "Level", "Extreme"],
+    ["Exposure", "Flow", "Emission", "Dear", "Cure", "Removal"],
+    ["Perception", "Reach", "Review", "Usual", "Chance", "Stay"],
+    ["Junior", "Background", "Term", "Illusion", "Fill", "Spite"],
+    ["Attitude", "Population", "Hear", "Future", "Join","Role"],
+    ["Reality", "Device", "Approach", "Observation","Addition", "Series"],
+    ["Belief", "Unique", "Blame", "Republic", "View", "Admission"]]
 
