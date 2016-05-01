@@ -240,9 +240,11 @@ class DrawingViewTrails: UIView {
                     
                 }
                 else {
+        
                     var p = UIBezierPath()
                     p = UIBezierPath(CGPath: currPath.CGPath)
                     errorPath.appendPath(p)
+                    
                 }
                 
                 currPath.removeAllPoints()
@@ -260,7 +262,7 @@ class DrawingViewTrails: UIView {
 //                print("countSinceCorrect = \(countSinceCorrect)")
                 
 //                if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
-                    delay(500.0) {
+                delay(1000.0) {
                 
                         self.errorPath.appendPath(UIBezierPath(CGPath: self.currPath.CGPath))
                     
@@ -276,7 +278,7 @@ class DrawingViewTrails: UIView {
                     
                         self.incorrect += 1
                     
-//                      }
+//                    }
                 }
                 
             }
