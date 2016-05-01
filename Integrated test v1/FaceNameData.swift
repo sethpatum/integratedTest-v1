@@ -23,3 +23,18 @@ let MaleNames : [[String]] = [["Robert", "James", "John", "Michael", "Richard", 
                               ["Timothy", "Brian", "Kenneth", "Ronald", "Kevin","Edward"],
                               ["Jackson", "Samuel", "Owen", "Evan","Connor", "Nathaniel"],
                               ["Joshua", "Ryan", "Jacob", "Jack", "Tyler", "Cameron"]]
+
+
+
+let objectFiles : [[String]] = [["X00", "X10", "X20", "X30", "X40", "X50"], ["X60", "X70", "X80", "X90", "X01", "X11"], ["X21", "X31", "X41", "X51", "X61", "X71"], ["X81", "X91", "X02", "X12", "X22", "X32"], ["X42", "X522", "X62", "X72", "X82", "X92"], ["X03", "X13", "X23", "X33", "X43", "X53"], ["X63", "X73", "X83", "X93", "X04", "X14"]]
+
+
+
+let ObjectWords : [[String]] = [["IDEA", "WAIT", "ANXIETY", "WELFARE", "LEVEL", "EXTREME"],
+    ["EXPOSURE", "FLOW", "EMISSION", "DEAR", "CURE", "REMOVAL"],
+    ["PERCEPTION", "REACH", "REVIEW", "USUAL", "CHANCE", "STAY"],
+    ["JUNIOR", "BACKGROUND", "TERM", "ILLUSION", "FILL", "SPITE"],
+    ["ATTITUDE", "POPULATION", "HEAR", "FUTURE", "JOIN","ROLE"],
+    ["REALITY", "DEVICE", "APPROACH", "OBSERVATION","ADDITION", "SERIES"],
+    ["BELIEF", "UNIQUE", "BLAME", "REPUBLIC", "VIEW", "ADMISSION"]]
+
