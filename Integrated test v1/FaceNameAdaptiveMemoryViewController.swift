@@ -64,7 +64,10 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             //DO FACE 2 STUFF
         }
         self.title = selectedTest
+        
         namePicker.hidden = true
+        
+        
     }
     
     func startTest(){
@@ -174,6 +177,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             self.imageView.image = nil
         }
         
+        //namePicker.hidden = true
+        
         let image = UIImage(named: maleFaces[mfacenum][0])
         imageView.image = image
         self.view.addSubview(imageView)
@@ -204,7 +209,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
                 //btnsend.enabled = false
                 
                 btnsend.removeFromSuperview()
-                namePicker.removeFromSuperview()
+                namePicker.hidden = true
                 
                 wait()
                 
@@ -304,6 +309,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             buttonarray[i].frame = CGRectMake(CGFloat(150 + 200*i), 650, 120, 100)
             buttonarray[i].addTarget(self, action: "recognizeButton:", forControlEvents: UIControlEvents.TouchUpInside)
             buttonarray[i].titleLabel!.font = UIFont(name: "Helvetica Neue", size: 24.0)
+            buttonarray[i].hidden = false
             self.view.addSubview(buttonarray[i])
             
         }
