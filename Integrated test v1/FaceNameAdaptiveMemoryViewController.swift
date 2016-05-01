@@ -73,6 +73,9 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     func startTest(){
         startButton.enabled = false
         doneButton.enabled = true
+        
+        orderRecall = []
+        
         self.navigationItem.setHidesBackButton(true, animated:false)
         
         print(maleFaces[mfacenum])
@@ -82,6 +85,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         delay(12){
             self.testRecall()
         }
+        
+        resultLabel.text = ""
         
     }
     
@@ -94,6 +99,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             namePicker.hidden = true
         }
         */
+        
+        resultLabel.text = ""
     }
     
     
@@ -158,6 +165,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     }
     
     func testRecall(){
+        
+        resultLabel.text = ""
         
         nameLabel.text = ""
         
@@ -298,7 +307,12 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     
     func testRecognition(){
         
+        resultLabel.text = ""
+        
         print("Got here!")
+        
+        self.navigationItem.setHidesBackButton(true, animated:false)
+        
         MaleRecognizeDisplay = buttonlist(MaleNames[mnamenum])
         print(MaleRecognizeDisplay)
         0
@@ -356,9 +370,15 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             imageView.image = image
             self.view.addSubview(imageView)
         } else {
+            if self.imageView.image !== nil {
+                self.imageView.removeFromSuperview()
+                self.imageView.image = nil
+            }
+
              for i in 0...3 {
                 buttonarray[i].hidden = true
             }
+            checkRecognition()
         }
     }
     
@@ -450,6 +470,11 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     
     func checkRecognition(){
         resultLabel.text = "\(recognizeCorrect) faces recognized correctly"
+        
+        let result = Results()
+        result.name = self.title
+        result.longDescription.addObject("\(recognizeCorrect) faces recognized correctly")
+        resultsArray.add(result)
     }
     
     /*
