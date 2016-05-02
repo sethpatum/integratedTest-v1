@@ -41,7 +41,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
    
     var imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
 
-    let MaleNames : [[String]] = [["Robert", "James", "John", "Michael", "Richard", "Joseph"],
+/*    let MaleNames : [[String]] = [["Robert", "James", "John", "Michael", "Richard", "Joseph"],
         ["Ralph", "Andrew", "Fred", "Henry", "Bill", "Matt"],
         ["Ethan", "Jeremy", "Mitchell", "Sheldon", "Doug", "Edward"],
         ["Chris", "Anthony", "Daniel", "Donald", "Peter", "Mark"],
@@ -50,7 +50,21 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         ["Joshua", "Ryan", "Jacob", "Jack", "Tyler", "Cameron"]]
     
 
-    let maleFaces : [[String]] = [["M01", "M02", "M03", "M04", "M05", "M06"], ["Ma01", "Ma02", "Ma03", "Ma04", "Ma05", "Ma06"], ["Mb01", "Mb02", "Mb03", "Mb04", "Mb05", "Mb06"], ["Mc01", "Mc02", "Mc03", "Mc04", "Mc05", "Mc06"], ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"], ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"], ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]]
+    let maleFaces : [[String]] = [["M01", "M02", "M03", "M04", "M05", "M06"], ["Ma01", "Ma02", "Ma03", "Ma04", "Ma05", "Ma06"], ["Mb01", "Mb02", "Mb03", "Mb04", "Mb05", "Mb06"], ["Mc01", "Mc02", "Mc03", "Mc04", "Mc05", "Mc06"], ["Md01", "Md02", "Md03", "Md04", "Md05", "Md06"], ["Me01", "Me02", "Me03", "Me04", "Me05", "Me06"], ["Mf01", "Mf02", "Mf03", "Mf04", "Mf05", "Mf06"]] */
+    
+    
+    let maleFaces : [[String]] = [["X00", "X10", "X20", "X30", "X40", "X50"], ["X60", "X70", "X80", "X90", "X01", "X11"], ["X21", "X31", "X41", "X51", "X61", "X71"], ["X81", "X91", "X02", "X12", "X22", "X32"], ["X42", "X52", "X62", "X72", "X82", "X92"], ["X03", "X13", "X23", "X33", "X43", "X53"], ["X63", "X73", "X83", "X93", "X04", "X14"]]
+    
+    
+    
+    let MaleNames : [[String]] = [["Idea", "Wait", "Anxiety", "Welfare", "Level", "Extreme"],
+                                  ["Exposure", "Flow", "Emission", "Dear", "Cure", "Removal"],
+                                  ["Perception", "Reach", "Review", "Usual", "Chance", "Stay"],
+                                  ["Junior", "Background", "Term", "Illusion", "Fill", "Spite"],
+                                  ["Attitude", "Population", "Hear", "Future", "Join","Role"],
+                                  ["Reality", "Device", "Approach", "Observation","Addition", "Series"],
+                                  ["Belief", "Unique", "Blame", "Republic", "View", "Admission"]]
+    
     
     var buttondisplaylist : [[String]] = []
     
