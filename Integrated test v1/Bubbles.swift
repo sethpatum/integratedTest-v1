@@ -210,7 +210,8 @@ class BubblesA {
     
     func inCorrectBubble()->Bool{
         
-        if currentBubble==nextBubble {
+        // the path has to start with the previous end of selection and go to the one higher than that
+        if (currentBubble == nextBubble) && (lastBubble == nextBubble - 1){
             
             nextBubble += 1
             
