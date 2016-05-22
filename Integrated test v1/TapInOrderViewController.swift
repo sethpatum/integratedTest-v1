@@ -71,7 +71,7 @@ class TapInOrderViewController: ViewController {
             v.alpha = 1
             
             wnd.addSubview(v)
-            UIView.animateWithDuration(1, animations: {
+            UIView.animateWithDuration(2, animations: {
                 v.alpha = 0.0
                 }, completion: {(finished:Bool) in
                     print("inside")
@@ -208,6 +208,7 @@ class TapInOrderViewController: ViewController {
         startButton.enabled = true
         endButton.enabled = false
         resetButton.enabled = false
+        Recall.hidden = true
         
         donetest()
         
