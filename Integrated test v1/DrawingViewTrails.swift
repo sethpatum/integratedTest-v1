@@ -16,7 +16,6 @@ class DrawingViewTrails: UIView {
     private var currPath = UIBezierPath()
    
     var errorPath = UIBezierPath()
-    //var deletePath = UIBezierPath()
     
     var mainPath = UIBezierPath()
     
@@ -64,15 +63,8 @@ class DrawingViewTrails: UIView {
         mainPath.lineWidth = 5
         mainPath.lineCapStyle = CGLineCap.Round
         
-        //deletePath.lineWidth = 5
-        //deletePath.lineCapStyle = CGLineCap.Round
-        
         errorPath.lineWidth = 3
         errorPath.lineCapStyle = CGLineCap.Round
-        
-        //deletePath.lineWidth = 5
-        //deletePath.lineCapStyle = CGLineCap.Round
-        
     }
     
     
@@ -123,7 +115,6 @@ class DrawingViewTrails: UIView {
         opaque = false
         backgroundColor = nil
         currPath.stroke()
-        //deletePath.stroke()
         mainPath.stroke()
         UIColor.blueColor().set()
         errorPath.stroke()
@@ -248,8 +239,7 @@ class DrawingViewTrails: UIView {
                     
                     nextBubb += 1
                     
-                }
-                else {
+                } else {
         
                     var p = UIBezierPath()
                     p = UIBezierPath(CGPath: currPath.CGPath)
@@ -278,19 +268,11 @@ class DrawingViewTrails: UIView {
                 
                 
                 
-                        //deletePath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                         currPath.removeAllPoints()
-                
-                        /* delay(5.0) {
-                            self.deletePath.removeAllPoints()
-                            self.setNeedsDisplay()
-                        } */
 
 //                      countSinceCorrect = 0
                     
                         self.canDraw = false
-                    
-            
                     
                         self.incorrect += 1
                     
@@ -364,13 +346,7 @@ class DrawingViewTrails: UIView {
                         
 //                        print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
                     
-                    //deletePath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                     currPath.removeAllPoints()
-                    
-                    /*delay(5.0) {
-                        self.deletePath.removeAllPoints()
-                        self.setNeedsDisplay()
-                    } */
                     
 //                        countSinceCorrect = 0
                         
