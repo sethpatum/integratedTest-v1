@@ -16,6 +16,7 @@ class DrawingViewTrails: UIView {
     private var currPath = UIBezierPath()
    
     var errorPath = UIBezierPath()
+    var deletePath = UIBezierPath()
     
     var mainPath = UIBezierPath()
     
@@ -63,8 +64,14 @@ class DrawingViewTrails: UIView {
         mainPath.lineWidth = 5
         mainPath.lineCapStyle = CGLineCap.Round
         
+        deletePath.lineWidth = 5
+        deletePath.lineCapStyle = CGLineCap.Round
+        
         errorPath.lineWidth = 3
         errorPath.lineCapStyle = CGLineCap.Round
+        
+        deletePath.lineWidth = 5
+        deletePath.lineCapStyle = CGLineCap.Round
         
     }
     
@@ -116,6 +123,7 @@ class DrawingViewTrails: UIView {
         opaque = false
         backgroundColor = nil
         currPath.stroke()
+        deletePath.stroke()
         mainPath.stroke()
         
     }
@@ -240,9 +248,11 @@ class DrawingViewTrails: UIView {
                     
                 }
                 else {
+        
                     var p = UIBezierPath()
                     p = UIBezierPath(CGPath: currPath.CGPath)
                     errorPath.appendPath(p)
+                    
                 }
                 
                 currPath.removeAllPoints()
@@ -252,32 +262,37 @@ class DrawingViewTrails: UIView {
                 
                 print("in correct bubble")
                 
-            }
-                
-            else {
+            } else {
                 
 //                countSinceCorrect += 1
 //                print("countSinceCorrect = \(countSinceCorrect)")
                 
 //                if countSinceCorrect > 1 || (countSinceCorrect == 1 && (selectedTest == "Trails A Practice" || selectedTest == "Trails B Practice")) {
-                    delay(500.0) {
+//                delay(1000.0) {
                 
                         self.errorPath.appendPath(UIBezierPath(CGPath: self.currPath.CGPath))
                     
 //                      print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
-                    
-                        self.currPath.removeAllPoints()
-                    
+                
+                
+                
+                        deletePath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
+                        currPath.removeAllPoints()
+                        delay(5.0) {
+                            self.deletePath.removeAllPoints()
+                            self.setNeedsDisplay()
+                        }
+
 //                      countSinceCorrect = 0
                     
                         self.canDraw = false
                     
-                        print("should have removed all pts")
+            
                     
                         self.incorrect += 1
                     
-//                      }
-                }
+//                    }
+//
                 
             }
             
@@ -345,12 +360,18 @@ class DrawingViewTrails: UIView {
                         errorPath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
                         
 //                        print("countSinceCorrect = \(countSinceCorrect); removing all pts and resetting")
-                        
-                        currPath.removeAllPoints()
-                        
+                    
+                    deletePath.appendPath(UIBezierPath(CGPath: currPath.CGPath))
+                    currPath.removeAllPoints()
+                    delay(5.0) {
+                        self.deletePath.removeAllPoints()
+                        self.setNeedsDisplay()
+                    }
+                    
 //                        countSinceCorrect = 0
                         
                         canDraw = false
+                    
                         
                         print("should have removed all pts")
                         
