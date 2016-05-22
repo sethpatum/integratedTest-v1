@@ -30,6 +30,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     
+    @IBOutlet weak var Recall: UIButton!
     @IBOutlet weak var resultsLabel: UILabel!
     
     //start from 1st button; reset all info
@@ -57,6 +58,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     
     //allow buttons to be pressed
     func enableButtons() {
+        Recall.hidden = false
         for (index, _) in order.enumerate() {
             buttonList[index].addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         }
@@ -64,6 +66,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     
     //stop buttons from being pressed
     func disableButtons() {
+        Recall.hidden = true
         for (index, _) in order.enumerate() {
             buttonList[index].removeTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
             print("buttons disabled")
@@ -142,6 +145,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         
         endButton.enabled = false
         resetButton.enabled = false
+        Recall.hidden = true
         
         randomizeBoard()
         
@@ -178,6 +182,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         StartButton.enabled = true
         endButton.enabled = false
         resetButton.enabled = false
+        Recall.hidden = true
         
         donetest()
 
