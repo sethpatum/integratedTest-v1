@@ -1274,6 +1274,13 @@
                                     <action selector="StartTest:" destination="3ez-fa-Egv" eventType="touchUpInside" id="Yll-eg-p1s"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="iRL-UP-uU4">
+                                <rect key="frame" x="396" y="34" width="139" height="97"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                                <state key="normal" title="Begin Recall">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2602,16 +2609,16 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth1" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="md3-6k-lZH"/>
-        <segue reference="neN-op-hGA"/>
-        <segue reference="k5O-0U-7Tk"/>
-        <segue reference="ShD-fn-Xek"/>
-        <segue reference="HE1-1j-NTJ"/>
-        <segue reference="ajT-9n-yKn"/>
         <segue reference="Lca-c5-giE"/>
         <segue reference="kBo-Bx-fAG"/>
-        <segue reference="DsW-ql-KM7"/>
         <segue reference="V8q-qM-EbC"/>
+        <segue reference="DsW-ql-KM7"/>
         <segue reference="gg1-hx-kcc"/>
+        <segue reference="dk3-Hv-CAU"/>
+        <segue reference="Ovp-gb-IO2"/>
+        <segue reference="md3-6k-lZH"/>
+        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="ajT-9n-yKn"/>
+        <segue reference="neN-op-hGA"/>
     </inferredMetricsTieBreakers>
 </document>
