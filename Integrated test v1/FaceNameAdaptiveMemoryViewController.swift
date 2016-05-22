@@ -39,7 +39,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     @IBOutlet weak var namePicker: UIPickerView!
     @IBOutlet weak var Done: UIButton!
    
-    var imageView = UIImageView(frame:CGRectMake(350.0, 171.0, 315.0, 475.0))
+    var imageView = UIImageView()
 
 /*    let MaleNames : [[String]] = [["Robert", "James", "John", "Michael", "Richard", "Joseph"],
         ["Ralph", "Andrew", "Fred", "Henry", "Bill", "Matt"],
@@ -126,6 +126,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         namePicker.dataSource = self
         namePicker.delegate = self
+        //namePicker.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.95]
+        namePicker.backgroundColor = UIColor.whiteColor()
         
         // Do any additional setup after loading the view.
         namePicker.hidden = true
@@ -141,6 +143,19 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         namePicker.hidden = true
         
         let image = UIImage(named: maleFaces[mfacenum][0])
+        
+        var x = CGFloat()
+        var y = CGFloat()
+        if image!.size.width < image!.size.height {
+            y = 475.0
+            x = (475.0*(image!.size.width)/(image!.size.height))
+        }
+        else {
+            x = 475.0
+            y = (475.0*(image!.size.height)/(image!.size.width))
+        }
+        
+        imageView = UIImageView(frame:CGRectMake((512.0-(x/2)), 165.0, x, y))
         imageView.image = image
         self.view.addSubview(imageView)
         nameLabel.text = MaleNames[mnamenum][0]
@@ -156,8 +171,25 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
                     self.imageView.image = nil
                 }
                 
-                self.imageView = UIImageView(frame:CGRectMake(350.0, 165.0, 315.0, 475.0))
+                //self.imageView = UIImageView(frame:CGRectMake(350.0, 165.0, 315.0, 475.0))
                 let image = UIImage(named: self.maleFaces[self.mfacenum][i])
+                
+                //self.imageView = UIImageView(frame:CGRectMake(350.0, 165.0, image!.size.width, image!.size.height))
+                
+                var x = CGFloat()
+                var y = CGFloat()
+                if image!.size.width < image!.size.height {
+                    y = 475.0
+                    x = (475.0*(image!.size.width)/(image!.size.height))
+                }
+                else {
+                    x = 475.0
+                    y = (475.0*(image!.size.height)/(image!.size.width))
+                }
+                
+                self.imageView = UIImageView(frame:CGRectMake((512.0-(x/2)), 165.0, x, y))
+                
+                //print("\(image!.size)")
                 self.imageView.image = image
                 self.view.addSubview(self.imageView)
                 
