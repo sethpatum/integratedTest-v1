@@ -36,7 +36,7 @@ class TapInOrderViewController: ViewController {
     
     @IBOutlet weak var resultsLabel: UILabel!
     
-    @IBOutlet weak var Recall: UIButton!
+
 
     
     //start from 1st button; reset all info
@@ -92,15 +92,13 @@ class TapInOrderViewController: ViewController {
                     v.removeFromSuperview()
             })
         }*/
-        Recall.hidden = false
-        for (index, _) in order.enumerate() {
+                for (index, _) in order.enumerate() {
             buttonList[index].addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         }
     }
     
     //stop buttons from being pressed
     func disableButtons() {
-        Recall.hidden = true
         for (index, _) in order.enumerate() {
             buttonList[index].removeTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
             print("buttons disabled")
@@ -184,7 +182,6 @@ class TapInOrderViewController: ViewController {
         endButton.enabled = false
         resetButton.enabled = false
         
-        Recall.hidden = true
         
         randomizeBoard()
         
@@ -240,8 +237,6 @@ class TapInOrderViewController: ViewController {
         startButton.enabled = true
         endButton.enabled = false
         resetButton.enabled = false
-        Recall.hidden = true
-        
         donetest()
         
     }
