@@ -711,10 +711,6 @@
                                     <action selector="doneButton:" destination="byE-k5-hyQ" eventType="touchUpInside" id="9gy-bm-N29"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVs-0l-8UX">
-                                <rect key="frame" x="0.0" y="624" width="1024" height="119"/>
-                                <animations/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srw-iy-urr">
                                 <rect key="frame" x="415" y="650" width="194" height="66"/>
                                 <animations/>
@@ -736,6 +732,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVs-0l-8UX">
+                                <rect key="frame" x="0.0" y="655" width="1024" height="82"/>
+                                <animations/>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
