@@ -216,9 +216,6 @@ class BubblesA {
             nextBubble += 1
             
             if nextBubble == bubblelist.count {
-                
-                timedConnectionsA.append(timePassedTrailsA)
-                
                 print("Done")
                 nextBubble = 0
                 stopTrailsA = true

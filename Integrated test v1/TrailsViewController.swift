@@ -15,6 +15,7 @@ var displayImgTrailsA = false
 var bubbleColor:UIColor?
 
 
+
 class TrailsAViewController: ViewController {
     
     var drawingView: DrawingViewTrails!
@@ -200,7 +201,7 @@ class TrailsAViewController: ViewController {
             let seconds = UInt8(num)
             num = NSTimeInterval(seconds)
             
-            result.longDescription.addObject("\(drawingView.incorrect) incorrect in \(minutes) minutes and \(seconds) seconds")
+            result.longDescription.addObject("\(drawingView.incorrect) incorrect in \(minutes) minutes and \(seconds) seconds\n, The time between segments are \(drawingView.segmenttimes)\n")
             
             resultsArray.add(result)
         }

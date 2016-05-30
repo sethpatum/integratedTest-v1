@@ -24,6 +24,8 @@ class DrawingViewTrails: UIView {
     var nextBubb = 0
     
     var incorrect = 0
+    var segmenttimes:[(Int, Int, Bool)] = []
+    var incorrectlist = []
     
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
@@ -83,12 +85,12 @@ class DrawingViewTrails: UIView {
         
         if (timedConnectionsA.count > 0){
             
-            for var k = 2; k < timedConnectionsA.count; ++k {
-                let z = timedConnectionsA[k-1] - timedConnectionsA[k-2]
+            for var k = 1; k < timedConnectionsA.count; ++k {
+                let z = timedConnectionsA[k] - timedConnectionsA[k-1]
                 
                 getColor2(z, alpha: 0.8).set()
                 
-                let path : UIBezierPath = paths[k-1]
+                let path : UIBezierPath = paths[k]
                 
                 path.lineWidth = 7
                 path.lineCapStyle = CGLineCap.Round
@@ -221,6 +223,10 @@ class DrawingViewTrails: UIView {
         //var currentPath = UIBezierPath()
         
         if bubbles.inNewBubble(touch.locationInView(self).x, y:touch.locationInView(self).y) == true {
+        
+            let cb = bubbles.currentBubble
+            let lb = bubbles.lastBubble
+            segmenttimes.append((lb, cb, bubbles.inCorrectBubble()))
             
             if bubbles.inCorrectBubble() == true {
                 
