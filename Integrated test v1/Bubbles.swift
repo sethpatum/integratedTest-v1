@@ -20,6 +20,8 @@ class BubblesA {
     
     var nextBubble = 0
     
+    var segmenttimes:[(Int, String)] = []
+    
     
     //Rotate (180 degrees) or mirror (on x or y) the point
     var xt:Bool = true
@@ -203,6 +205,8 @@ class BubblesA {
         
         lastBubble = currentBubble
         currentBubble = curr
+        
+        segmenttimes.append((Int(timePassedTrailsA), "\(lastBubble)->\(currentBubble)"))
         
         return true
         

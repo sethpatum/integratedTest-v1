@@ -24,8 +24,7 @@ class DrawingViewTrails: UIView {
     var nextBubb = 0
     
     var incorrect = 0
-    var segmenttimes:[(Int, Int, Bool)] = []
-    var incorrectlist = []
+    var incorrectlist:[String] = []
     
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
@@ -224,9 +223,6 @@ class DrawingViewTrails: UIView {
         
         if bubbles.inNewBubble(touch.locationInView(self).x, y:touch.locationInView(self).y) == true {
         
-            let cb = bubbles.currentBubble
-            let lb = bubbles.lastBubble
-            segmenttimes.append((lb, cb, bubbles.inCorrectBubble()))
             
             if bubbles.inCorrectBubble() == true {
                 
@@ -362,6 +358,7 @@ class DrawingViewTrails: UIView {
                         print("should have removed all pts")
                         
                         incorrect += 1
+                        incorrectlist.append("\(bubbles.lastBubble)->\(bubbles.currentBubble)")
                         
 //                    }
                     
