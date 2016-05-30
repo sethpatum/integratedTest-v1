@@ -362,6 +362,10 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         return pickerLabel
     }
     
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 48.0
+    }
+    
     func wait(){
         
         let timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
