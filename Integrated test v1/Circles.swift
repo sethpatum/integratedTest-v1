@@ -30,9 +30,9 @@ class Circles{
         
         circlelist = [(Int, Int, Int, UIColor)]()
         
-        circlelist1.append((70, 30, 0)) //CHANGED
-        circlelist1.append((320, 40, 2)) //left
-        circlelist1.append((480, 80, 1)) //left
+        circlelist1.append((70, 40, 0)) //CHANGED
+        circlelist1.append((320, 50, 2)) //left
+        circlelist1.append((480, 90, 1)) //left
         circlelist1.append((140, 110, 0))
         circlelist1.append((250, 90, 2)) //left
         circlelist1.append((395, 140, 0))
