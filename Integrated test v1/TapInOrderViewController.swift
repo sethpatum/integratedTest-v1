@@ -107,7 +107,8 @@ class TapInOrderViewController: ViewController {
         if yt {
             y = 850 - y
         }
-        return (x, y)
+        
+        return (Int(CGFloat(x)*screenSize!.maxX/1024.0), Int(CGFloat(y)*screenSize!.maxY/768.0))
     }
 
     

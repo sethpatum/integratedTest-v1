@@ -56,7 +56,7 @@ class CirclesViewController: ViewController {
             print("should have removed image")
         }
         
-        let imageSize = CGSize(width: 1024, height: 638)
+        let imageSize = CGSize(width: screenSize!.maxX, height: screenSize!.maxY - 130)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 130), size: imageSize))
         result.displayLocal(self.view, imageView:imageView, results:self.resultsLabel)
         let image = drawCustomImage(imageSize)
@@ -141,7 +141,7 @@ class CirclesViewController: ViewController {
             print("should have removed image")
         }
         
-        let imageSize = CGSize(width: 1024, height: 638)
+        let imageSize = CGSize(width: screenSize!.maxX, height: screenSize!.maxY - 130)
         imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 130), size: imageSize))
         result.displayLocal(self.view, imageView:imageView, results:self.resultsLabel)
         let image = drawCustomImage(imageSize)

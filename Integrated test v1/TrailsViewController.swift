@@ -179,7 +179,7 @@ class TrailsAViewController: ViewController {
     func done() {
         if drawingView != nil {
             drawingView.canDraw = false
-            let imageSize = CGSize(width: 1024, height: 618)
+            let imageSize = CGSize(width: screenSize!.maxX, height: screenSize!.maxY - 135)
             imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 135), size: imageSize))
             if resultsDisplayOn == true {
                 self.view.addSubview(imageView)
