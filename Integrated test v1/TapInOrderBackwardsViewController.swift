@@ -30,7 +30,7 @@ class TapInOrderBackwardsViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     
-    @IBOutlet weak var Recall: UIButton!
+   
     @IBOutlet weak var resultsLabel: UILabel!
     
     //start from 1st button; reset all info
@@ -58,31 +58,14 @@ class TapInOrderBackwardsViewController: UIViewController {
     
     //allow buttons to be pressed
     func enableButtons() {
-        if let wnd = self.view{
-            
-            var v = UIView(frame: wnd.bounds)
-            v.backgroundColor = UIColor.whiteColor()
-            v.alpha = 1
-            
-            wnd.addSubview(v)
-            UIView.animateWithDuration(2, animations: {
-                v.alpha = 0.0
-                }, completion: {(finished:Bool) in
-                    print("inside")
-                    v.removeFromSuperview()
-            })
-        }
-
-        Recall.hidden = false
-        for (index, _) in order.enumerate() {
+                for (index, _) in order.enumerate() {
             buttonList[index].addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         }
     }
     
     //stop buttons from being pressed
     func disableButtons() {
-        Recall.hidden = true
-        for (index, _) in order.enumerate() {
+                for (index, _) in order.enumerate() {
             buttonList[index].removeTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
             print("buttons disabled")
             
@@ -160,7 +143,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         
         endButton.enabled = false
         resetButton.enabled = false
-        Recall.hidden = true
+        
         
         randomizeBoard()
         
@@ -183,11 +166,28 @@ class TapInOrderBackwardsViewController: UIViewController {
         
         randomizeOrder()
         
-        drawSequenceRecursively(numplaces)
-        startTime2 = NSDate()
-        currpressed = 0
+        if let wnd = self.view{
+            
+            var v = UIView(frame: wnd.bounds)
+            v.backgroundColor = UIColor.whiteColor()
+            v.alpha = 1
+            
+            wnd.addSubview(v)
+            UIView.animateWithDuration(2, animations: {
+                v.alpha = 0.0
+                }, completion: {(finished:Bool) in
+                    print("inside")
+                    v.removeFromSuperview()
+            })
+        }
 
-        self.resultsLabel.text = ""
+        delay(1.0){
+            self.drawSequenceRecursively(self.numplaces)
+            self.startTime2 = NSDate()
+            self.currpressed = 0
+
+            self.resultsLabel.text = ""
+        }
     }
     
     
@@ -197,7 +197,7 @@ class TapInOrderBackwardsViewController: UIViewController {
         StartButton.enabled = true
         endButton.enabled = false
         resetButton.enabled = false
-        Recall.hidden = true
+       
         
         donetest()
 
@@ -414,13 +414,31 @@ class TapInOrderBackwardsViewController: UIViewController {
         numplaces = numplaces + 1
         delay(1) {
             if self.ended == false {
-                print("next")
+                print("next; DRAWING RECURSIVE SEQUENCE")
                 self.numRepeats = 0
                 self.currpressed = 0
                 self.randomizeOrder()
-                self.drawSequenceRecursively(self.numplaces)
+                if let wnd = self.view{
+                    
+                    var v = UIView(frame: wnd.bounds)
+                    v.backgroundColor = UIColor.whiteColor()
+                    v.alpha = 1
+                    
+                    wnd.addSubview(v)
+                    UIView.animateWithDuration(2, animations: {
+                        v.alpha = 0.0
+                        }, completion: {(finished:Bool) in
+                            print("inside")
+                            v.removeFromSuperview()
+                    })
+                    
+                }
+                self.delay(1.0){
+                    self.drawSequenceRecursively(0)
+                }
             }
         }
+
         
     }
     

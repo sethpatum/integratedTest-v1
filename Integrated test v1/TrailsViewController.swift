@@ -201,7 +201,9 @@ class TrailsAViewController: ViewController {
             let seconds = UInt8(num)
             num = NSTimeInterval(seconds)
             
-            result.longDescription.addObject("\(drawingView.incorrect) incorrect in \(minutes) minutes and \(seconds) seconds\n, The time between segments are \(drawingView.segmenttimes)\n")
+            result.longDescription.addObject("\(drawingView.incorrect) incorrect in \(minutes) minutes and \(seconds) second")
+            result.longDescription.addObject("The of segments are \(drawingView.bubbles.segmenttimes)\n")
+            result.longDescription.addObject("The incorrect segments are \(drawingView.incorrectlist)")
             
             resultsArray.add(result)
         }

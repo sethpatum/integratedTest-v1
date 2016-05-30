@@ -36,7 +36,7 @@ class TapInOrderViewController: ViewController {
     
     @IBOutlet weak var resultsLabel: UILabel!
     
-    @IBOutlet weak var Recall: UIButton!
+
 
     
     //start from 1st button; reset all info
@@ -56,6 +56,20 @@ class TapInOrderViewController: ViewController {
         }
         
         delay(1.5){
+            if let wnd = self.view{
+                
+                var v = UIView(frame: wnd.bounds)
+                v.backgroundColor = UIColor.redColor()
+                v.alpha = 1
+                
+                wnd.addSubview(v)
+                UIView.animateWithDuration(2, animations: {
+                    v.alpha = 0.0
+                    }, completion: {(finished:Bool) in
+                        print("inside")
+                        v.removeFromSuperview()
+                })
+            }
             self.drawSequenceRecursively(0)
             self.startTime2 = NSDate()
         }
@@ -64,7 +78,7 @@ class TapInOrderViewController: ViewController {
     
     //allow buttons to be pressed
     func enableButtons() {
-        if let wnd = self.view{
+        /*if let wnd = self.view{
             
             var v = UIView(frame: wnd.bounds)
             v.backgroundColor = UIColor.whiteColor()
@@ -77,16 +91,14 @@ class TapInOrderViewController: ViewController {
                     print("inside")
                     v.removeFromSuperview()
             })
-        }
-        Recall.hidden = false
-        for (index, _) in order.enumerate() {
+        }*/
+                for (index, _) in order.enumerate() {
             buttonList[index].addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         }
     }
     
     //stop buttons from being pressed
     func disableButtons() {
-        Recall.hidden = true
         for (index, _) in order.enumerate() {
             buttonList[index].removeTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
             print("buttons disabled")
@@ -170,7 +182,6 @@ class TapInOrderViewController: ViewController {
         endButton.enabled = false
         resetButton.enabled = false
         
-        Recall.hidden = true
         
         randomizeBoard()
         
@@ -181,6 +192,7 @@ class TapInOrderViewController: ViewController {
     
     @IBAction func StartTest(sender: AnyObject) {
         
+        delay(1.5){}
         ended = false
         
         self.navigationItem.setHidesBackButton(true, animated:true)
@@ -196,9 +208,25 @@ class TapInOrderViewController: ViewController {
         
         randomizeOrder()
         
-        drawSequenceRecursively(0)
-        startTime2 = NSDate()
-        currpressed = 0
+        if let wnd = self.view{
+            
+            var v = UIView(frame: wnd.bounds)
+            v.backgroundColor = UIColor.whiteColor()
+            v.alpha = 1
+            
+            wnd.addSubview(v)
+            UIView.animateWithDuration(2, animations: {
+                v.alpha = 0.0
+                }, completion: {(finished:Bool) in
+                    print("inside")
+                    v.removeFromSuperview()
+            })
+        }
+        delay(1.0){
+            self.drawSequenceRecursively(0)
+            self.startTime2 = NSDate()
+            self.currpressed = 0
+        }
         
         self.resultsLabel.text = ""
     }
@@ -209,9 +237,11 @@ class TapInOrderViewController: ViewController {
         startButton.enabled = true
         endButton.enabled = false
         resetButton.enabled = false
-        Recall.hidden = true
-        
         donetest()
+        
+    }
+    
+    func drawstart() {
         
     }
     
@@ -285,7 +315,10 @@ class TapInOrderViewController: ViewController {
     */
     func drawSequenceRecursively(num:Int){
         
+        
         if num > numplaces {
+            
+
             print("...enabling buttons...numplaces = \(self.numplaces+2)")
             self.enableButtons()
         }
@@ -293,6 +326,7 @@ class TapInOrderViewController: ViewController {
         else {
             
             if ended == false{
+                
                 delay(0.4){
                     if self.ended == false {
                         self.buttonList[num].backgroundColor = UIColor.greenColor()
@@ -302,6 +336,7 @@ class TapInOrderViewController: ViewController {
                                 print("Drawing \(index)")
                                 
                                 let num2 = num+1
+                                
                                 self.drawSequenceRecursively(num2)
                             }
                             
@@ -400,6 +435,7 @@ class TapInOrderViewController: ViewController {
                 self.currpressed = 0
                 self.numRepeats += 1
                 self.drawSequenceRecursively(0)
+                
             }
             
         }
@@ -409,6 +445,7 @@ class TapInOrderViewController: ViewController {
     
     //user completed sequence; reset repeats, increase numplaces so 1 more button lights up
     func next(){
+
         numplaces = numplaces + 1
         delay(1) {
             if self.ended == false {
@@ -416,7 +453,25 @@ class TapInOrderViewController: ViewController {
                 self.numRepeats = 0
                 self.currpressed = 0
                 self.randomizeOrder()
-                self.drawSequenceRecursively(0)
+                if let wnd = self.view{
+                    
+                    var v = UIView(frame: wnd.bounds)
+                    v.backgroundColor = UIColor.whiteColor()
+                    v.alpha = 1
+                    
+                    wnd.addSubview(v)
+                    UIView.animateWithDuration(2, animations: {
+                        v.alpha = 0.0
+                        }, completion: {(finished:Bool) in
+                            print("inside")
+                            v.removeFromSuperview()
+                    })
+                    
+                }
+                self.delay(1.0){
+                    self.drawSequenceRecursively(0)
+                }
+                
             }
         }
         
