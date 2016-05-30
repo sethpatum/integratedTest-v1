@@ -29,6 +29,7 @@ class PicturesViewController: ViewController {
     
     var wrongList = [String]()
     
+    
     @IBAction func HelpButton(sender: AnyObject) {
         if(selectedTest == "Naming Pictures") {
             let vc = storyboard!.instantiateViewControllerWithIdentifier("Naming Pictures Help") as UIViewController

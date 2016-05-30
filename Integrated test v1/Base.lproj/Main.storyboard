@@ -1364,6 +1364,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="End:" destination="34v-JF-kvs" eventType="touchUpInside" id="kjH-Gw-1Pp"/>
                                     <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="kD0-qa-s1T"/>
                                 </connections>
                             </button>
