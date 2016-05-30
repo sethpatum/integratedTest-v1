@@ -577,6 +577,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         let result = Results()
         result.name = self.title
+        result.startTime = startTime2
+        result.endTime = NSDate()
         result.longDescription.addObject("\(recognizeCorrect) faces recognized correctly")
         resultsArray.add(result)
     }
