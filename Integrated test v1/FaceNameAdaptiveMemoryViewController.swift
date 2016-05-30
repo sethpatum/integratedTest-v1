@@ -135,6 +135,9 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameLabel.font = nameLabel.font.fontWithSize(42.0)
+        
         doneButton.enabled = false
         
         generateList()
@@ -318,10 +321,14 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+
+        
         if(row == 0){
+            
             return "--"
         }
         else {
+            
             return MaleNames[mnamenum][row-1]
         }
     }
