@@ -650,12 +650,6 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVs-0l-8UX">
                                 <rect key="frame" x="0.0" y="624" width="1024" height="119"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srw-iy-urr">
-                                <rect key="frame" x="415" y="650" width="194" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuQ-5q-XSQ">
                                 <rect key="frame" x="532" y="72" width="215" height="82"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -665,6 +659,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6i-SB-N5e">
                                 <rect key="frame" x="339" y="312" width="347" height="143"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srw-iy-urr">
+                                <rect key="frame" x="322" y="650" width="381" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -704,7 +704,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJp-ZD-eJ0">
                                 <rect key="frame" x="98" y="72" width="829" height="227"/>
-                                <string key="text">Patient will be shown a series of pictures of an object and a word. They should be instructed to read out loud and try to remember the word that goes with each object. There will be 2 learning trials followed by a delay. After the delay, patients will be initially asked to recall the word associated with the object, then given a recognition test.</string>
+                                <string key="text">Patient should be instructed to read out loud and try to remember the name that goes with each face. There will be 2 learning trials followed by a delay. After the delay, patients will initially be asked to recall the name associated with the face then given a recognition test. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1214,7 +1214,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1T-MC-dKm">
-                                <rect key="frame" x="529" y="57" width="371" height="140"/>
+                                <rect key="frame" x="542" y="57" width="358" height="140"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1239,17 +1239,6 @@
                                     <action selector="back:" destination="34v-JF-kvs" eventType="touchUpInside" id="Myq-wQ-lqT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGr-qg-ue7">
-                                <rect key="frame" x="475" y="84" width="95" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="End">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="End:" destination="34v-JF-kvs" eventType="touchUpInside" id="kjH-Gw-1Pp"/>
-                                    <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="kD0-qa-s1T"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdG-el-aYh">
                                 <rect key="frame" x="647" y="90" width="178" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -1266,6 +1255,14 @@
                                     <action selector="correct:" destination="34v-JF-kvs" eventType="touchUpInside" id="5fj-Gf-tCZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-yn-Hdi">
+                                <rect key="frame" x="466" y="90" width="79" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="T0C-Qu-BNM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1279,7 +1276,7 @@
                         <outlet property="correctButton" destination="2Zc-nR-hll" id="r10-Vm-eZp"/>
                         <outlet property="incorrectButton" destination="OhR-Sx-REv" id="cBf-se-QwQ"/>
                         <outlet property="placeLabel" destination="BdG-el-aYh" id="bwf-Pc-3HU"/>
-                        <outlet property="resetButton" destination="bGr-qg-ue7" id="sey-OI-GNX"/>
+                        <outlet property="resetButton" destination="dDm-yn-Hdi" id="uKS-wb-k0A"/>
                         <outlet property="resultsLabel" destination="A1T-MC-dKm" id="uea-t2-fQC"/>
                     </connections>
                 </viewController>

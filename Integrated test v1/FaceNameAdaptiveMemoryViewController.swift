@@ -30,6 +30,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     var startTime2 = NSDate()
     var doneTimer = false
     
+    var ended = false
+    
     @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -69,6 +71,8 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     var buttondisplaylist : [[String]] = []
     
     @IBAction func startButton(sender: AnyObject) {
+        
+        ended = false
         startTime2 = NSDate()
         
         if(selectedTest == "Face1") {
@@ -81,10 +85,15 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         namePicker.hidden = true
         
+        recognizeCorrect = 0
+        orderRecall = []
+        
         
     }
     
     func startTest(){
+        
+        ended = false
         startButton.enabled = false
         doneButton.enabled = true
         
@@ -96,11 +105,16 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         display()
         
-        delay(12){
-            self.testRecall()
+        if ended == false{
+            delay(12){
+                if self.ended == false{
+                    self.testRecall()
+                }
+            }
         }
         
         resultLabel.text = ""
+        recognizeCorrect = 0
         
     }
     
@@ -114,12 +128,16 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         }
         */
         
+        ended = true
         resultLabel.text = ""
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameLabel.font = nameLabel.font.fontWithSize(42.0)
+        
         doneButton.enabled = false
         
         generateList()
@@ -131,6 +149,9 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         
         // Do any additional setup after loading the view.
         namePicker.hidden = true
+        
+        ended = false
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -161,49 +182,60 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         nameLabel.text = MaleNames[mnamenum][0]
         
    
-        
-        for i in 1...5 {
-            let d = Double(i)*2.0
-            delay(d){
-                
-                if self.imageView.image !== nil {
-                    self.imageView.removeFromSuperview()
-                    self.imageView.image = nil
+        if ended == false{
+            for i in 1...5 {
+                let d = Double(i)*2.0
+                if ended == false{
+                    delay(d){
+                        if self.ended == false{
+                            if self.imageView.image !== nil {
+                                self.imageView.removeFromSuperview()
+                                self.imageView.image = nil
+                            }
+                            
+                            //self.imageView = UIImageView(frame:CGRectMake(350.0, 165.0, 315.0, 475.0))
+                            let image = UIImage(named: self.maleFaces[self.mfacenum][i])
+                            
+                            //self.imageView = UIImageView(frame:CGRectMake(350.0, 165.0, image!.size.width, image!.size.height))
+                            
+                            var x = CGFloat()
+                            var y = CGFloat()
+                            if image!.size.width < image!.size.height {
+                                y = 475.0
+                                x = (475.0*(image!.size.width)/(image!.size.height))
+                            }
+                            else {
+                                x = 475.0
+                                y = (475.0*(image!.size.height)/(image!.size.width))
+                            }
+                            
+                            self.imageView = UIImageView(frame:CGRectMake((512.0-(x/2)), 165.0, x, y))
+                            
+                            //print("\(image!.size)")
+                            self.imageView.image = image
+                            self.view.addSubview(self.imageView)
+                            
+                            print("Male \(i)")
+                            print("\(self.maleFaces[self.mfacenum][i])")
+                            self.nameLabel.text = self.MaleNames[self.mnamenum][i]
+
+                        }
+                    }
+
                 }
                 
-                //self.imageView = UIImageView(frame:CGRectMake(350.0, 165.0, 315.0, 475.0))
-                let image = UIImage(named: self.maleFaces[self.mfacenum][i])
-                
-                //self.imageView = UIImageView(frame:CGRectMake(350.0, 165.0, image!.size.width, image!.size.height))
-                
-                var x = CGFloat()
-                var y = CGFloat()
-                if image!.size.width < image!.size.height {
-                    y = 475.0
-                    x = (475.0*(image!.size.width)/(image!.size.height))
-                }
-                else {
-                    x = 475.0
-                    y = (475.0*(image!.size.height)/(image!.size.width))
-                }
-                
-                self.imageView = UIImageView(frame:CGRectMake((512.0-(x/2)), 165.0, x, y))
-                
-                //print("\(image!.size)")
-                self.imageView.image = image
-                self.view.addSubview(self.imageView)
-                
-                print("Male \(i)")
-                print("\(self.maleFaces[self.mfacenum][i])")
-                self.nameLabel.text = self.MaleNames[self.mnamenum][i]
             }
 
         }
         
-        delay(12){
-            if self.imageView.image !== nil {
-                self.imageView.removeFromSuperview()
-                self.imageView.image = nil
+        if ended == false{
+            delay(12){
+                if self.ended == false{
+                    if self.imageView.image !== nil {
+                        self.imageView.removeFromSuperview()
+                        self.imageView.image = nil
+                    }
+                }
             }
         }
         
@@ -289,14 +321,18 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+
+        
         if(row == 0){
+            
             return "--"
         }
         else {
+            
             return MaleNames[mnamenum][row-1]
         }
     }
-    
+    /*
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if(row == 0){
@@ -306,6 +342,24 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             curr = MaleNames[mnamenum][row-1]
         }
         
+    }
+    */
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
+    {
+        let pickerLabel = UILabel()
+        pickerLabel.textColor = UIColor.blackColor()
+        
+        if(row == 0){
+            pickerLabel.text = "--"
+        }
+        else{
+            pickerLabel.text = MaleNames[mnamenum][row-1]
+        }
+        
+        pickerLabel.font = UIFont(name: "Helvetica", size: 42) // In this use your custom font
+        pickerLabel.textAlignment = NSTextAlignment.Center
+        return pickerLabel
     }
     
     func wait(){
