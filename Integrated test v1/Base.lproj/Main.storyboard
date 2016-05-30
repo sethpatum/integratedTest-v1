@@ -1328,7 +1328,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1T-MC-dKm">
-                                <rect key="frame" x="529" y="57" width="371" height="140"/>
+                                <rect key="frame" x="542" y="57" width="358" height="140"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1356,18 +1356,6 @@
                                     <action selector="back:" destination="34v-JF-kvs" eventType="touchUpInside" id="Myq-wQ-lqT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGr-qg-ue7">
-                                <rect key="frame" x="475" y="84" width="95" height="47"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="End">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="End:" destination="34v-JF-kvs" eventType="touchUpInside" id="kjH-Gw-1Pp"/>
-                                    <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="kD0-qa-s1T"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdG-el-aYh">
                                 <rect key="frame" x="647" y="90" width="178" height="35"/>
                                 <animations/>
@@ -1386,6 +1374,15 @@
                                     <action selector="correct:" destination="34v-JF-kvs" eventType="touchUpInside" id="5fj-Gf-tCZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-yn-Hdi">
+                                <rect key="frame" x="466" y="90" width="79" height="35"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="T0C-Qu-BNM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1400,7 +1397,7 @@
                         <outlet property="correctButton" destination="2Zc-nR-hll" id="r10-Vm-eZp"/>
                         <outlet property="incorrectButton" destination="OhR-Sx-REv" id="cBf-se-QwQ"/>
                         <outlet property="placeLabel" destination="BdG-el-aYh" id="bwf-Pc-3HU"/>
-                        <outlet property="resetButton" destination="bGr-qg-ue7" id="sey-OI-GNX"/>
+                        <outlet property="resetButton" destination="dDm-yn-Hdi" id="uKS-wb-k0A"/>
                         <outlet property="resultsLabel" destination="A1T-MC-dKm" id="uea-t2-fQC"/>
                     </connections>
                 </viewController>

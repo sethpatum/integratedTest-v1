@@ -42,19 +42,18 @@ class PicturesViewController: ViewController {
     
     
     @IBAction func reset(sender: AnyObject) {
+        
         resetButton.enabled = false
         backButton.enabled = false
         self.navigationItem.setHidesBackButton(false, animated:true)
-        if(count > 0) {
-            done()
-        }
+        
+        done()
         
         order = [Bool]()
         wrongList = [String]()
         count = 0
         corr = 0
         imageName = getImageName()
-        resultsLabel.text = ""
         
         var imageView4 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
         
@@ -78,6 +77,9 @@ class PicturesViewController: ViewController {
     }
     
     @IBAction func correct(sender: AnyObject) {
+        
+        resultsLabel.text = ""
+        
         if(count == 0) {
             startTime2 = NSDate()
             self.navigationItem.setHidesBackButton(true, animated:true)
@@ -120,6 +122,9 @@ class PicturesViewController: ViewController {
     }
     
     @IBAction func incorrect(sender: AnyObject) {
+        
+        resultsLabel.text = ""
+        
         if(count == 0) {
             startTime2 = NSDate()
             self.navigationItem.setHidesBackButton(true, animated:true)
@@ -202,6 +207,8 @@ class PicturesViewController: ViewController {
     }
     
     func done() {
+        
+        print("getting here")
         
         placeLabel.text = ""
         
