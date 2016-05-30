@@ -332,7 +332,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             return MaleNames[mnamenum][row-1]
         }
     }
-    
+    /*
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if(row == 0){
@@ -342,6 +342,24 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
             curr = MaleNames[mnamenum][row-1]
         }
         
+    }
+    */
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
+    {
+        let pickerLabel = UILabel()
+        pickerLabel.textColor = UIColor.blackColor()
+        
+        if(row == 0){
+            pickerLabel.text = "--"
+        }
+        else{
+            pickerLabel.text = MaleNames[mnamenum][row-1]
+        }
+        
+        pickerLabel.font = UIFont(name: "Helvetica", size: 42) // In this use your custom font
+        pickerLabel.textAlignment = NSTextAlignment.Center
+        return pickerLabel
     }
     
     func wait(){
