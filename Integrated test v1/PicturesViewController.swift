@@ -27,6 +27,8 @@ class PicturesViewController: ViewController {
     
     @IBOutlet weak var resultsLabel: UILabel!
     
+    var totalCount = Int()
+    
     var wrongList = [String]()
     
     
@@ -42,6 +44,8 @@ class PicturesViewController: ViewController {
     
     
     @IBAction func reset(sender: AnyObject) {
+        
+        
         
         resetButton.enabled = false
         backButton.enabled = false
@@ -78,6 +82,7 @@ class PicturesViewController: ViewController {
     
     @IBAction func correct(sender: AnyObject) {
         
+        
         resultsLabel.text = ""
         
         if(count == 0) {
@@ -90,7 +95,7 @@ class PicturesViewController: ViewController {
         count += 1
         corr += 1
         
-        if(count==15){
+        if(count==totalCount-1){
             done()
         }
         
@@ -134,7 +139,7 @@ class PicturesViewController: ViewController {
         
         count += 1
         
-        if(count==15){
+        if(count==totalCount-1){
             done()
         }
         wrongList.append(imageName)
@@ -210,6 +215,11 @@ class PicturesViewController: ViewController {
         
         print("getting here")
         
+        backButton.enabled = false
+        correctButton.enabled = false
+        incorrectButton.enabled = false
+        self.navigationItem.setHidesBackButton(false, animated:true)
+        
         placeLabel.text = ""
         
         let result = Results()
@@ -230,11 +240,6 @@ class PicturesViewController: ViewController {
             self.resultsLabel.text = str
         }
         
-        backButton.enabled = false
-        correctButton.enabled = false
-        incorrectButton.enabled = false
-        self.navigationItem.setHidesBackButton(false, animated:true)
-        
     }
     
     override func viewDidLoad() {
@@ -243,8 +248,10 @@ class PicturesViewController: ViewController {
         print(selectedTest, terminator: "")
         if(selectedTest == "Naming Pictures") {
             self.title = "Naming Pictures"
+            totalCount = namingImages.count
         } else {
             self.title = "Famous People"
+            totalCount = namingImages2.count
         }
         
         count = 0

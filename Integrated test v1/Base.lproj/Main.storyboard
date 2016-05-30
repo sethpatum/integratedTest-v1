@@ -1219,48 +1219,48 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhR-Sx-REv">
-                                <rect key="frame" x="187" y="90" width="129" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Incorrect">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="incorrect:" destination="34v-JF-kvs" eventType="touchUpInside" id="s3t-DR-Tf0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5W-Si-CB6">
-                                <rect key="frame" x="355" y="90" width="86" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="34v-JF-kvs" eventType="touchUpInside" id="Myq-wQ-lqT"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdG-el-aYh">
                                 <rect key="frame" x="647" y="90" width="178" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-nR-hll">
-                                <rect key="frame" x="43" y="90" width="116" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9N-af-RhR">
+                                <rect key="frame" x="27" y="90" width="116" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Correct">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="correct:" destination="34v-JF-kvs" eventType="touchUpInside" id="5fj-Gf-tCZ"/>
+                                    <action selector="correct:" destination="34v-JF-kvs" eventType="touchUpInside" id="5eh-1P-xxd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-yn-Hdi">
-                                <rect key="frame" x="466" y="90" width="79" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc6-21-hW6">
+                                <rect key="frame" x="182" y="90" width="129" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Incorrect">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incorrect:" destination="34v-JF-kvs" eventType="touchUpInside" id="zEH-cj-ErH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFZ-iH-7a9">
+                                <rect key="frame" x="347" y="90" width="86" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="34v-JF-kvs" eventType="touchUpInside" id="chl-BI-WAd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxf-tH-mcb">
+                                <rect key="frame" x="462" y="90" width="79" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="End"/>
                                 <connections>
-                                    <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="T0C-Qu-BNM"/>
+                                    <action selector="reset:" destination="34v-JF-kvs" eventType="touchUpInside" id="3Fh-zj-iZx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1272,11 +1272,11 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="backButton" destination="c5W-Si-CB6" id="8ae-wY-0bk"/>
-                        <outlet property="correctButton" destination="2Zc-nR-hll" id="r10-Vm-eZp"/>
-                        <outlet property="incorrectButton" destination="OhR-Sx-REv" id="cBf-se-QwQ"/>
+                        <outlet property="backButton" destination="uFZ-iH-7a9" id="Jct-SP-4md"/>
+                        <outlet property="correctButton" destination="j9N-af-RhR" id="ul3-44-wvQ"/>
+                        <outlet property="incorrectButton" destination="Wc6-21-hW6" id="LXV-nq-rIh"/>
                         <outlet property="placeLabel" destination="BdG-el-aYh" id="bwf-Pc-3HU"/>
-                        <outlet property="resetButton" destination="dDm-yn-Hdi" id="uKS-wb-k0A"/>
+                        <outlet property="resetButton" destination="kxf-tH-mcb" id="qVk-FW-k0w"/>
                         <outlet property="resultsLabel" destination="A1T-MC-dKm" id="uea-t2-fQC"/>
                     </connections>
                 </viewController>
