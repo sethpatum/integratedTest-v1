@@ -72,10 +72,10 @@ class PicturesViewController: ViewController {
         incorrectButton.enabled = true
         
         if selectedTest == "Naming Pictures" {
-            placeLabel.text = "\(count+1)/\(namingImages.count-1)"
+            placeLabel.text = "\(count+1)/\(namingImages.count)"
         }
         else {
-            placeLabel.text = "\(count+1)/\(namingImages2.count-1)"
+            placeLabel.text = "\(count+1)/\(namingImages2.count)"
         }
         
     }
@@ -95,33 +95,37 @@ class PicturesViewController: ViewController {
         count += 1
         corr += 1
         
-        if(count==totalCount-1){
+        if(count==totalCount){
             done()
         }
         
-        imageName = getImageName()
-        
-        var imageView1 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
-        
-        if(selectedTest == "Famous Faces") {
-            imageView1 = UIImageView(frame:CGRectMake(207.0, 171.0, 600.0, 600.0))
-        }
-        
-        let image1 = UIImage(named: imageName)
-        imageView1.image = image1
-        self.view.addSubview(imageView1)
-        
-        order.append(true)
-        
-        if selectedTest == "Naming Pictures" {
-            if count != namingImages.count-1 {
-                placeLabel.text = "\(count+1)/\(namingImages.count-1)"
+        else{
+            
+            imageName = getImageName()
+            
+            var imageView1 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
+            
+            if(selectedTest == "Famous Faces") {
+                imageView1 = UIImageView(frame:CGRectMake(207.0, 171.0, 600.0, 600.0))
             }
-        }
-        else {
-            if count != namingImages2.count-1 {
-                placeLabel.text = "\(count+1)/\(namingImages2.count-1)"
+            
+            let image1 = UIImage(named: imageName)
+            imageView1.image = image1
+            self.view.addSubview(imageView1)
+            
+            order.append(true)
+            
+            if selectedTest == "Naming Pictures" {
+                if count != namingImages.count {
+                    placeLabel.text = "\(count+1)/\(namingImages.count)"
+                }
             }
+            else {
+                if count != namingImages2.count {
+                    placeLabel.text = "\(count+1)/\(namingImages2.count)"
+                }
+            }
+            
         }
         
     }
@@ -138,35 +142,37 @@ class PicturesViewController: ViewController {
         }
         
         count += 1
+        wrongList.append(imageName)
         
-        if(count==totalCount-1){
+        if(count==totalCount){
             done()
         }
-        wrongList.append(imageName)
-        imageName = getImageName()
         
-        
-        var imageView2 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
-        
-        if(selectedTest == "Famous Faces") {
-            imageView2 = UIImageView(frame:CGRectMake(207.0, 171.0, 600.0, 600.0))
-        }
-        
-        let image2 = UIImage(named: imageName)
-        imageView2.image = image2
-        self.view.addSubview(imageView2)
-        
-        order.append(false)
-        
-        if selectedTest == "Naming Pictures" {
-            if count != namingImages.count-1 {
-                placeLabel.text = "\(count+1)/\(namingImages.count-1)"
+        else{
+            imageName = getImageName()
+            var imageView2 = UIImageView(frame:CGRectMake(107.0, 171.0, 800.0, 600.0))
+            
+            if(selectedTest == "Famous Faces") {
+                imageView2 = UIImageView(frame:CGRectMake(207.0, 171.0, 600.0, 600.0))
             }
-        }
-        else {
-            if count != namingImages2.count-1 {
-                placeLabel.text = "\(count+1)/\(namingImages2.count-1)"
+            
+            let image2 = UIImage(named: imageName)
+            imageView2.image = image2
+            self.view.addSubview(imageView2)
+            
+            order.append(false)
+            
+            if selectedTest == "Naming Pictures" {
+                if count != namingImages.count-1 {
+                    placeLabel.text = "\(count+1)/\(namingImages.count)"
+                }
             }
+            else {
+                if count != namingImages2.count-1 {
+                    placeLabel.text = "\(count+1)/\(namingImages2.count)"
+                }
+            }
+            
         }
         
     }
@@ -203,10 +209,10 @@ class PicturesViewController: ViewController {
         self.view.addSubview(imageView3)
         
         if selectedTest == "Naming Pictures" {
-            placeLabel.text = "\(count+1)/\(namingImages.count-1)"
+            placeLabel.text = "\(count+1)/\(namingImages.count)"
         }
         else {
-            placeLabel.text = "\(count+1)/\(namingImages2.count-1)"
+            placeLabel.text = "\(count+1)/\(namingImages2.count)"
         }
         
     }
@@ -272,10 +278,10 @@ class PicturesViewController: ViewController {
         resetButton.enabled = false
         
         if selectedTest == "Naming Pictures" {
-            placeLabel.text = "\(count+1)/\(namingImages.count-1)"
+            placeLabel.text = "\(count+1)/\(namingImages.count)"
         }
         else {
-            placeLabel.text = "\(count+1)/\(namingImages2.count-1)"
+            placeLabel.text = "\(count+1)/\(namingImages2.count)"
         }
     }
     
