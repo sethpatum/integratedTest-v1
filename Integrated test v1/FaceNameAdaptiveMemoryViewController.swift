@@ -185,7 +185,7 @@ class FaceNameAdaptiveMemoryViewController: UIViewController, UIPickerViewDataSo
         if ended == false{
             for i in 1...5 {
                 let d = Double(i)*2.0
-                if ended == false{
+                if ended == false{ 
                     delay(d){
                         if self.ended == false{
                             if self.imageView.image !== nil {

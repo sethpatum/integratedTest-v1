@@ -289,9 +289,6 @@
                                                     <state key="normal" title="          Forward Spatial Span Task">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="aMc-eE-pqC" kind="show" identifier="Tap In Order" id="Gdd-ap-LTk"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -309,9 +306,6 @@
                                                     <state key="normal" title="          Backward Spatial Span Task">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="3ez-fa-Egv" kind="show" identifier="Tap In Order Backwards" id="bWf-cg-5Hp"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -329,9 +323,6 @@
                                                     <state key="normal" title="          Letter Cancellation Task">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="V47-eX-aHh" kind="show" identifier="Letter Cancellation" id="2D2-4D-zMh"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -349,9 +340,6 @@
                                                     <state key="normal" title="          OTA Cancellation Task">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="76o-Z3-r7u" kind="show" identifier="Circles" id="FSy-R5-zu5"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -369,9 +357,6 @@
                                                     <state key="normal" title="          Trails A Task">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="rGF-LE-KyD" kind="show" identifier="Trails A" id="V8q-qM-EbC"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -389,9 +374,6 @@
                                                     <state key="normal" title="          Trails B Task">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="rGF-LE-KyD" kind="show" identifier="Trails B" id="MHg-ok-Ccm"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -407,9 +389,6 @@
                                                     <rect key="frame" x="60" y="0.0" width="1071" height="43"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="          Pyramids and Palm Trees Task"/>
-                                                    <connections>
-                                                        <segue destination="ENC-Gu-dJo" kind="show" identifier="Pyramids and palms" id="V1f-Yx-kVS"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -425,9 +404,6 @@
                                                     <rect key="frame" x="84" y="5" width="298" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="Word-Object Associative Memory Task"/>
-                                                    <connections>
-                                                        <segue destination="byE-k5-hyQ" kind="show" identifier="Face1" id="EC3-Ff-iUm"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -542,638 +518,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uh5-YZ-sQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="720" y="2089"/>
-        </scene>
-        <!--Pyramids And Palms View Controller-->
-        <scene sceneID="FRV-r3-bt9">
-            <objects>
-                <viewController id="ENC-Gu-dJo" customClass="PyramidsAndPalmsViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9C5-9G-i4y"/>
-                        <viewControllerLayoutGuide type="bottom" id="pBZ-vy-LnR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uQV-3m-OmL">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-Og-gLE">
-                                <rect key="frame" x="231" y="104" width="347" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKq-LM-Xae">
-                                <rect key="frame" x="231" y="404" width="586" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RS7-5d-Asz">
-                                <rect key="frame" x="106" y="97" width="108" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Start:" destination="ENC-Gu-dJo" eventType="touchUpInside" id="gvJ-lP-iLh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-E2-LvU">
-                                <rect key="frame" x="839" y="97" width="92" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Help">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Siw-zc-zif" kind="show" id="84T-KC-0pV"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXi-bd-9WT">
-                                <rect key="frame" x="653" y="106" width="178" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="bSQ-E2-LvU" secondAttribute="trailing" constant="73" id="k9B-MG-W1i"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="Counter" destination="cXi-bd-9WT" id="KRy-Eu-vNt"/>
-                        <outlet property="promptLabel" destination="fKq-LM-Xae" id="zhv-vF-2Vy"/>
-                        <outlet property="resultLabel" destination="z4A-Og-gLE" id="hmV-Na-ZwC"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lDV-9f-D1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8705" y="306"/>
-        </scene>
-        <!--Face-Name Associative Memory Task-->
-        <scene sceneID="AmG-QK-3ur">
-            <objects>
-                <viewController title="Face-Name Associative Memory Task" id="byE-k5-hyQ" customClass="FaceNameAdaptiveMemoryViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6pm-FP-XaS"/>
-                        <viewControllerLayoutGuide type="bottom" id="V36-w9-w9T"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PlP-cR-sQc">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkR-Kf-1ti">
-                                <rect key="frame" x="766" y="103" width="174" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Help"/>
-                                <connections>
-                                    <segue destination="d7D-pO-YQu" kind="show" id="gg1-hx-kcc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lim-h9-hEG">
-                                <rect key="frame" x="146" y="100" width="104" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startButton:" destination="byE-k5-hyQ" eventType="touchUpInside" id="Zoi-dW-3Pb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNF-J2-30d">
-                                <rect key="frame" x="271" y="93" width="99" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <action selector="doneButton:" destination="byE-k5-hyQ" eventType="touchUpInside" id="9gy-bm-N29"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srw-iy-urr">
-                                <rect key="frame" x="339" y="650" width="347" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuQ-5q-XSQ">
-                                <rect key="frame" x="384" y="72" width="426" height="119"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6i-SB-N5e">
-                                <rect key="frame" x="339" y="312" width="347" height="143"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVs-0l-8UX">
-                                <rect key="frame" x="0.0" y="655" width="1024" height="82"/>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="SkR-Kf-1ti" secondAttribute="trailing" constant="64" id="F6o-dI-hFg"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="Done" destination="uNF-J2-30d" id="392-DK-dst"/>
-                        <outlet property="doneButton" destination="uNF-J2-30d" id="xra-4s-ebM"/>
-                        <outlet property="nameLabel" destination="srw-iy-urr" id="gYJ-LI-mGd"/>
-                        <outlet property="namePicker" destination="eVs-0l-8UX" id="hyI-Zz-xrG"/>
-                        <outlet property="resultLabel" destination="cuQ-5q-XSQ" id="STC-jm-C0Y"/>
-                        <outlet property="startButton" destination="lim-h9-hEG" id="moQ-P6-ntl"/>
-                        <outlet property="timerLabel" destination="y6i-SB-N5e" id="qXp-ha-auq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HlH-rG-TeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9826" y="306"/>
-        </scene>
-        <!--Face-Name Associative Memory Task Help-->
-        <scene sceneID="SrH-u7-RQZ">
-            <objects>
-                <viewController title="Face-Name Associative Memory Task Help" id="d7D-pO-YQu" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mhj-zw-jzg"/>
-                        <viewControllerLayoutGuide type="bottom" id="lnk-IS-o2P"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="E8f-xE-ZG3">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJp-ZD-eJ0">
-                                <rect key="frame" x="98" y="72" width="829" height="227"/>
-                                <string key="text">Patient should be instructed to read out loud and try to remember the name that goes with each face. There will be 2 learning trials followed by a delay. After the delay, patients will initially be asked to recall the name associated with the face then given a recognition test. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6hX-Lv-tBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9826" y="1201"/>
-        </scene>
-        <!--Pyramids and Palm Trees Help-->
-        <scene sceneID="7bO-85-GMO">
-            <objects>
-                <viewController title="Pyramids and Palm Trees Help" id="Siw-zc-zif" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="X4Z-yB-YBC"/>
-                        <viewControllerLayoutGuide type="bottom" id="nuT-t5-Mle"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VHz-Qd-gXT">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instruct the patient to choose which of the two pictures on the bottom is more closely associated with the picture on top. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmR-bI-azd">
-                                <rect key="frame" x="49" y="93" width="926" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="par-fq-yNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8705" y="1207"/>
-        </scene>
-        <!--Trails-->
-        <scene sceneID="8cD-Kf-I6U">
-            <objects>
-                <viewController title="Trails" id="rGF-LE-KyD" customClass="TrailsAViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hdW-ur-mNy"/>
-                        <viewControllerLayoutGuide type="bottom" id="TmG-Ix-urm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dm9-7g-lfr">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmb-M8-alp">
-                                <rect key="frame" x="457" y="87" width="110" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G06-RH-wg0">
-                                <rect key="frame" x="44" y="82" width="82" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StartButton:" destination="rGF-LE-KyD" eventType="touchUpInside" id="oUh-za-Af2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHb-GL-Dl7">
-                                <rect key="frame" x="587" y="75" width="293" height="101"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC6-KN-UvJ">
-                                <rect key="frame" x="346" y="80" width="74" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StopButton:" destination="rGF-LE-KyD" eventType="touchUpInside" id="C5p-pz-pny"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub1-RI-FqD">
-                                <rect key="frame" x="177" y="82" width="125" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Practice">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="PracticeButton:" destination="rGF-LE-KyD" eventType="touchUpInside" id="rDA-yu-WRT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cro-oL-65e">
-                                <rect key="frame" x="888" y="88" width="80" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Help">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="HelpButton:" destination="rGF-LE-KyD" eventType="touchUpInside" id="oMO-dn-8U0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="cro-oL-65e" secondAttribute="trailing" constant="36" id="0EU-HJ-FVr"/>
-                            <constraint firstItem="G06-RH-wg0" firstAttribute="leading" secondItem="Dm9-7g-lfr" secondAttribute="leadingMargin" constant="30" id="eex-tP-evt"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="doneButton" destination="dC6-KN-UvJ" id="xM0-2Q-8yp"/>
-                        <outlet property="practiceButton" destination="ub1-RI-FqD" id="7tl-8j-ndA"/>
-                        <outlet property="resultsLabel" destination="MHb-GL-Dl7" id="uFs-TN-w6M"/>
-                        <outlet property="startButton" destination="G06-RH-wg0" id="xeZ-eJ-7Ub"/>
-                        <outlet property="timerLabel" destination="wmb-M8-alp" id="CGF-lH-QVG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5dm-no-BGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1990" y="298"/>
-        </scene>
-        <!--Circles-->
-        <scene sceneID="yHj-ko-7ng">
-            <objects>
-                <viewController title="Circles" id="76o-Z3-r7u" customClass="CirclesViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="axa-jU-bw7"/>
-                        <viewControllerLayoutGuide type="bottom" id="fAp-3c-Lde"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xEH-HA-S44">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXe-uo-2eK">
-                                <rect key="frame" x="16" y="72" width="75" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StartButton:" destination="76o-Z3-r7u" eventType="touchUpInside" id="FJA-n1-djX"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLD-2k-esF">
-                                <rect key="frame" x="270" y="72" width="100" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMF-8v-AH5">
-                                <rect key="frame" x="138" y="72" width="75" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StopButton:" destination="76o-Z3-r7u" eventType="touchUpInside" id="Ctl-3J-k1q"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cross off all complete circles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evi-7c-BS4">
-                                <rect key="frame" x="21" y="106" width="235" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKR-nO-cK5">
-                                <rect key="frame" x="405" y="45" width="464" height="187"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gt-ts-pE1">
-                                <rect key="frame" x="887" y="75" width="77" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Help">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ZYE-ki-VFT" kind="show" id="fs4-pa-L87"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="8Gt-ts-pE1" secondAttribute="trailing" constant="40" id="BQZ-gu-tyk"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="doneButton" destination="dMF-8v-AH5" id="gAT-vG-210"/>
-                        <outlet property="resultsLabel" destination="BKR-nO-cK5" id="2bP-uv-22r"/>
-                        <outlet property="startButton" destination="PXe-uo-2eK" id="IYp-2T-C7Q"/>
-                        <outlet property="timerLabel" destination="DLD-2k-esF" id="oOf-gy-FG4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jsR-tc-oWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7553" y="306"/>
-        </scene>
-        <!--Letter Cancellation-->
-        <scene sceneID="ZnD-yQ-p0S">
-            <objects>
-                <viewController title="Letter Cancellation" id="V47-eX-aHh" customClass="LetterCancellationViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="s3U-Wp-x8R"/>
-                        <viewControllerLayoutGuide type="bottom" id="ORD-GX-sJE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1YY-rp-HYp">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Font size: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdr-L3-lLy">
-                                <rect key="frame" x="375" y="74" width="181" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaT-8N-oAD">
-                                <rect key="frame" x="59" y="74" width="66" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StartButton:" destination="V47-eX-aHh" eventType="touchUpInside" id="nUc-k3-Gre"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew8-yG-tYn">
-                                <rect key="frame" x="186" y="74" width="82" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StopButton:" destination="V47-eX-aHh" eventType="touchUpInside" id="d5Z-ou-9vz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0c-zX-AxU">
-                                <rect key="frame" x="889" y="74" width="80" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Help">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="n4n-Q1-TJy" kind="show" id="DXj-KH-ajy"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="35" minValue="20" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="zb1-Zl-JAM">
-                                <rect key="frame" x="568" y="74" width="300" height="31"/>
-                                <connections>
-                                    <action selector="sizeChanged:" destination="V47-eX-aHh" eventType="valueChanged" id="NGr-7T-ixH"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krb-QW-eyc">
-                                <rect key="frame" x="582" y="112" width="394" height="74"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cross off every letter E and R" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNk-Bh-4tI">
-                                <rect key="frame" x="59" y="122" width="439" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A D J U S T   F O N T   S I Z E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBI-Mp-Aty">
-                                <rect key="frame" x="190" y="333" width="645" height="102"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="35"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="X0c-zX-AxU" secondAttribute="trailing" constant="35" id="ZVF-Sr-DwF"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="doneButton" destination="Ew8-yG-tYn" id="sDg-ig-psu"/>
-                        <outlet property="fontLabel" destination="mdr-L3-lLy" id="bz8-hD-GLN"/>
-                        <outlet property="fontSample" destination="dBI-Mp-Aty" id="oCC-sd-gif"/>
-                        <outlet property="helpButton" destination="X0c-zX-AxU" id="Dih-fb-w9c"/>
-                        <outlet property="resultsLabel" destination="krb-QW-eyc" id="GFU-me-ahD"/>
-                        <outlet property="slider" destination="zb1-Zl-JAM" id="HCH-ek-bic"/>
-                        <outlet property="startButton" destination="oaT-8N-oAD" id="ksK-uC-SaY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H1t-gt-USf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6434" y="298"/>
-        </scene>
-        <!--Tap In Order-->
-        <scene sceneID="5QU-nd-mYw">
-            <objects>
-                <viewController title="Tap In Order" id="aMc-eE-pqC" customClass="TapInOrderViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zW2-Cp-KfG"/>
-                        <viewControllerLayoutGuide type="bottom" id="0xx-6z-tAF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mb1-ri-idM">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dF-gl-s6U">
-                                <rect key="frame" x="854" y="93" width="74" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Help">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="LJW-cf-FV7" kind="show" id="dk3-Hv-CAU"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2p-zT-jU6">
-                                <rect key="frame" x="602" y="92" width="244" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdU-cO-zDB">
-                                <rect key="frame" x="257" y="86" width="50" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="End">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="EndTest:" destination="aMc-eE-pqC" eventType="touchUpInside" id="EPD-qs-Dox"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIk-IK-Axm">
-                                <rect key="frame" x="577" y="67" width="293" height="101"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lE-pG-0gr">
-                                <rect key="frame" x="587" y="77" width="293" height="101"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjG-ot-Iq5">
-                                <rect key="frame" x="77" y="93" width="92" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StartTest:" destination="aMc-eE-pqC" eventType="touchUpInside" id="V8c-Bk-Qib"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5hh-zD-Ken">
-                                <rect key="frame" x="478" y="93" width="73" height="47"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgm-Kp-zhs">
-                                        <rect key="frame" x="0.0" y="0.0" width="73" height="47"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <state key="normal" title="Reset">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="Reset:" destination="aMc-eE-pqC" eventType="touchUpInside" id="meQ-IF-AHJ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="endButton" destination="xdU-cO-zDB" id="PnQ-2T-nfh"/>
-                        <outlet property="helpButton" destination="8dF-gl-s6U" id="shv-A0-bYq"/>
-                        <outlet property="resetButton" destination="hgm-Kp-zhs" id="9b0-8L-F0e"/>
-                        <outlet property="resultsLabel" destination="HIk-IK-Axm" id="H6P-q6-mKl"/>
-                        <outlet property="startButton" destination="QjG-ot-Iq5" id="ZfN-QU-ZFE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Klf-71-dqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3075" y="292"/>
-        </scene>
-        <!--Tap In Order Backwards-->
-        <scene sceneID="7eY-Lg-n3b">
-            <objects>
-                <viewController title="Tap In Order Backwards" id="3ez-fa-Egv" customClass="TapInOrderBackwardsViewController" customModule="CNToolkit" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="n0u-dI-7Dj"/>
-                        <viewControllerLayoutGuide type="bottom" id="oOy-mh-Xor"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bGz-uN-Fmb">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isx-Fl-uac">
-                                <rect key="frame" x="902" y="91" width="76" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Help">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="HDC-iK-Prx" kind="show" id="Ovp-gb-IO2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-c2-AAR">
-                                <rect key="frame" x="543" y="91" width="96" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Reset:" destination="3ez-fa-Egv" eventType="touchUpInside" id="xiO-YJ-eRw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Es-zV-oyd">
-                                <rect key="frame" x="318" y="92" width="68" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="End">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="endButton:" destination="3ez-fa-Egv" eventType="touchUpInside" id="s2E-fe-G46"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBq-Vi-FGC">
-                                <rect key="frame" x="647" y="81" width="229" height="101"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="js0-Cy-TKm">
-                                <rect key="frame" x="87" y="91" width="93" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StartTest:" destination="3ez-fa-Egv" eventType="touchUpInside" id="Yll-eg-p1s"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="isx-Fl-uac" secondAttribute="trailing" constant="26" id="0rZ-JP-gG5"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="StartButton" destination="js0-Cy-TKm" id="bZ6-Cb-XF9"/>
-                        <outlet property="endButton" destination="5Es-zV-oyd" id="Nij-6d-hKb"/>
-                        <outlet property="helpButton" destination="isx-Fl-uac" id="oAT-Wt-Isy"/>
-                        <outlet property="resetButton" destination="Zvw-c2-AAR" id="Uyj-Hw-gRu"/>
-                        <outlet property="resultsLabel" destination="eBq-Vi-FGC" id="8wR-6U-2KZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="55P-Mn-pQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4184" y="292"/>
         </scene>
         <!--Pictures-->
         <scene sceneID="kDn-YC-7pR">
@@ -1499,80 +843,6 @@ While the authors and producers of this program strive to provide you with usefu
             </objects>
             <point key="canvasLocation" x="-2730" y="1207"/>
         </scene>
-        <!--Letter Cancellation Help-->
-        <scene sceneID="h4e-I6-4fZ">
-            <objects>
-                <viewController title="Letter Cancellation Help" id="n4n-Q1-TJy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UMK-1B-sfz"/>
-                        <viewControllerLayoutGuide type="bottom" id="N4z-md-j2g"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KP0-aq-Pqa">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKl-F2-2qD">
-                                <rect key="frame" x="-76" y="145" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW8-hQ-r96">
-                                <rect key="frame" x="179" y="302" width="667" height="163"/>
-                                <string key="text">The Letter Cancellation task displays a page full letters of the alphabet. The patients task is to cross off or draw a line through all of the letters E and R. As soon as the start button is pressed a timer will start and the pateint should start the task. The done button is pressed only after the patient expresses that they feel that they have finished the task.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gW8-hQ-r96" firstAttribute="top" secondItem="UMK-1B-sfz" secondAttribute="bottom" constant="60" id="7dF-W7-A7F"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gW8-hQ-r96" secondAttribute="trailing" constant="80" id="tGM-fU-0nH"/>
-                            <constraint firstItem="gW8-hQ-r96" firstAttribute="leading" secondItem="KP0-aq-Pqa" secondAttribute="leadingMargin" constant="80" id="uMu-Wd-oAd"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f0C-tf-6cN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6434" y="1201"/>
-        </scene>
-        <!--Trails B Help-->
-        <scene sceneID="1j1-bW-u3v">
-            <objects>
-                <viewController storyboardIdentifier="Trails B Help" title="Trails B Help" id="AaW-sI-DMo" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cL6-4p-FxY"/>
-                        <viewControllerLayoutGuide type="bottom" id="crb-Rk-euN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="daf-wh-sPu">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-1F-qoc">
-                                <rect key="frame" x="53" y="143" width="919" height="364"/>
-                                <string key="text">Both parts of the Trail Making Test consists of 25 circles distributed over a sheet of paper. In Part A, the circles are numbered 1 – 25, and the patient should draw lines to connect the numbers in ascending order. In Part B, the circles include both numbers (1 – 13) and letters (A – L); as in Part A, the patient draws lines to connect the circles in an ascending pattern, but with the added task of alternating between the numbers and letters (i.e., 1-A-2-B-3-C, etc.). The patient should be instructed to connect the circles as quickly as possible, without lifting the finger off of the iPad. The iPad will time the patient as he or she connects the "trail." If the patient makes an error the iPad will point it out immediately and allow the patient to correct it. Errors affect the patient's score only in that the correction of errors is included in the completion time for the task. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dbZ-1F-qoc" firstAttribute="leading" secondItem="daf-wh-sPu" secondAttribute="leadingMargin" constant="80" id="QlV-53-TLx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dbZ-1F-qoc" secondAttribute="trailing" constant="80" id="bv3-bh-eaX"/>
-                            <constraint firstItem="dbZ-1F-qoc" firstAttribute="top" secondItem="cL6-4p-FxY" secondAttribute="bottom" constant="60" id="mcw-RA-3Rj"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4TU-B7-hj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1990" y="2089"/>
-        </scene>
         <!--Help -->
         <scene sceneID="rDg-iH-1iW">
             <objects>
@@ -1643,9 +913,6 @@ While the authors and producers of this program strive to provide you with usefu
                                                     <state key="normal" title="Famous Faces Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="XQU-MM-VSg" kind="show" id="ohm-Mx-NjY"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1662,9 +929,6 @@ While the authors and producers of this program strive to provide you with usefu
                                                     <state key="normal" title="Forward Spatial Span Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="LJW-cf-FV7" kind="show" id="HE1-1j-NTJ"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1681,9 +945,6 @@ While the authors and producers of this program strive to provide you with usefu
                                                     <state key="normal" title="Backward Spatial Span Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="HDC-iK-Prx" kind="show" id="ShD-fn-Xek"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1700,9 +961,6 @@ While the authors and producers of this program strive to provide you with usefu
                                                     <state key="normal" title="Letter Cancellation Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="n4n-Q1-TJy" kind="show" id="k5O-0U-7Tk"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1719,9 +977,6 @@ While the authors and producers of this program strive to provide you with usefu
                                                     <state key="normal" title="OTA Cancellation Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="ZYE-ki-VFT" kind="show" id="neN-op-hGA"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1738,9 +993,6 @@ While the authors and producers of this program strive to provide you with usefu
                                                     <state key="normal" title="Trails A Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="Qve-Dv-dg3" kind="show" id="dgF-2V-gAS"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1757,9 +1009,6 @@ While the authors and producers of this program strive to provide you with usefu
                                                     <state key="normal" title="Trails B Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="AaW-sI-DMo" kind="show" id="bFb-zp-0B9"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1776,9 +1025,6 @@ While the authors and producers of this program strive to provide you with usefu
                                                     <state key="normal" title="Pyramids and Palm Trees Help">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="Siw-zc-zif" kind="show" id="ajT-9n-yKn"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1793,9 +1039,6 @@ While the authors and producers of this program strive to provide you with usefu
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXi-Nm-pN6">
                                                     <rect key="frame" x="300" y="5" width="360" height="30"/>
                                                     <state key="normal" title="Word-Object Associative Memory Parts 1 and 2 Help"/>
-                                                    <connections>
-                                                        <segue destination="d7D-pO-YQu" kind="show" id="shN-qw-cgK"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1987,142 +1230,6 @@ While the authors and producers of this program strive to provide you with usefu
             </objects>
             <point key="canvasLocation" x="-2730" y="2089"/>
         </scene>
-        <!--Trails A Help-->
-        <scene sceneID="1b6-cM-sbe">
-            <objects>
-                <viewController storyboardIdentifier="Trails A Help" title="Trails A Help" id="Qve-Dv-dg3" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L32-Xh-EP6"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hgr-fZ-jMW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="m4E-zD-5XL">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="17" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQM-vN-MOD">
-                                <rect key="frame" x="110" y="133" width="817" height="384"/>
-                                <string key="text">Both parts of the Trail Making Test consists of 25 circles distributed over a sheet of paper. In Part A, the circles are numbered 1 – 25, and the patient should draw lines to connect the numbers in ascending order. The patient should be instructed to connect the circles as quickly as possible, without lifting the finger off of the iPad. The iPad will time the patient as he or she connects the "trail." If the patient makes an error the iPad will point it out immediately and allow the patient to correct it. Errors affect the patient's score only in that the correction of errors is included in the completion time for the task. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="cQM-vN-MOD" secondAttribute="trailing" constant="80" id="QVi-PY-lTn"/>
-                            <constraint firstItem="cQM-vN-MOD" firstAttribute="top" secondItem="L32-Xh-EP6" secondAttribute="bottom" constant="60" id="klC-lW-aRn"/>
-                            <constraint firstItem="cQM-vN-MOD" firstAttribute="leading" secondItem="m4E-zD-5XL" secondAttribute="leadingMargin" constant="80" id="tyR-2s-Q2x"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4g6-6x-VR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1990" y="1201"/>
-        </scene>
-        <!--Circles Help-->
-        <scene sceneID="XyF-0F-apI">
-            <objects>
-                <viewController title="Circles Help" id="ZYE-ki-VFT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vOW-2a-dTj"/>
-                        <viewControllerLayoutGuide type="bottom" id="C81-4G-jHB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ovC-Z1-86U">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-AO-QqY">
-                                <rect key="frame" x="169" y="115" width="686" height="348"/>
-                                <string key="text">The OTA cancellation task displays a page full of semi/ incomplete circles along with full circles. The patients task is to cross off or draw a line through all the semi/incomplete circles. As soon as the start button is pressed a timer will start and the pateint should start the task. The done button is pressed only after the patient expresses that they feel that they have finished the task</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Iyg-AO-QqY" firstAttribute="leading" secondItem="ovC-Z1-86U" secondAttribute="leadingMargin" constant="80" id="Evi-FA-Tck"/>
-                            <constraint firstItem="Iyg-AO-QqY" firstAttribute="top" secondItem="vOW-2a-dTj" secondAttribute="bottom" constant="60" id="MGc-HN-lSf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Iyg-AO-QqY" secondAttribute="trailing" constant="80" id="pwd-o6-7Ci"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kcm-Pp-YCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7553" y="1201"/>
-        </scene>
-        <!--Tap In Order Backwards Help-->
-        <scene sceneID="fVM-dY-Olu">
-            <objects>
-                <viewController title="Tap In Order Backwards Help" id="HDC-iK-Prx" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OpX-Gw-cMk"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pi4-m4-WJE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Gl7-Jh-P78">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-mW-coz">
-                                <rect key="frame" x="52" y="161" width="921" height="320"/>
-                                <string key="text">The backwards spatial span task consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="xXj-mW-coz" firstAttribute="leading" secondItem="Gl7-Jh-P78" secondAttribute="leadingMargin" constant="80" id="TqK-4g-hVg"/>
-                            <constraint firstItem="xXj-mW-coz" firstAttribute="top" secondItem="OpX-Gw-cMk" secondAttribute="bottom" constant="60" id="u14-Zo-eC3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xXj-mW-coz" secondAttribute="trailing" constant="80" id="vZ1-q9-e8r"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nn8-XV-xw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4184" y="1207"/>
-        </scene>
-        <!--Tap In Order Help-->
-        <scene sceneID="qYG-g1-Sof">
-            <objects>
-                <viewController title="Tap In Order Help" id="LJW-cf-FV7" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="95I-0B-o2J"/>
-                        <viewControllerLayoutGuide type="bottom" id="O8w-4y-B9Q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="scV-Q0-7Kq">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-rd-OzH">
-                                <rect key="frame" x="47" y="150" width="930" height="300"/>
-                                <string key="text">The forward spatial span task consists of 10 different squares that light up in different patterns. The objective is for the patient to be able to recognize and remember progressively more complex patterns presented to them through the squares. When start is pressed 1 square will light as green up. The patient should press that same square after the light reverts to its original red. If an incorrect answer is given the screen will light up as grey. If the patient fails the same level (1 tap, 2 taps, 3 taps….ect) 3 times that is the level that the patient is at. The tap in order backwards is the same test accepts the patient is not only asked to identify and repeat the pattern, but they must do it backwards. The grading system is the exact same.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="3wd-rd-OzH" firstAttribute="top" secondItem="95I-0B-o2J" secondAttribute="bottom" constant="60" id="Yi0-eU-fCs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3wd-rd-OzH" secondAttribute="trailing" constant="80" id="gg5-kd-Zdf"/>
-                            <constraint firstItem="3wd-rd-OzH" firstAttribute="leading" secondItem="scV-Q0-7Kq" secondAttribute="leadingMargin" constant="80" id="uU7-hA-xHg"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rvP-bC-yes" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3075" y="1201"/>
-        </scene>
         <!--Naming Pictures Help-->
         <scene sceneID="gCF-OP-gQ7">
             <objects>
@@ -2312,42 +1419,6 @@ While the authors and producers of this program strive to provide you with usefu
             </objects>
             <point key="canvasLocation" x="-1593" y="306"/>
         </scene>
-        <!--Famous Faces Help-->
-        <scene sceneID="ubB-og-Yva">
-            <objects>
-                <viewController storyboardIdentifier="Famous Faces Help" title="Famous Faces Help" id="XQU-MM-VSg" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dff-5X-0I9"/>
-                        <viewControllerLayoutGuide type="bottom" id="niw-rJ-8du"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="R6K-mZ-ux7">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-wQ-vIS">
-                                <rect key="frame" x="72" y="125" width="869" height="301"/>
-                                <string key="text">The famous faces task consists of 15 different images. The administrator of the test should be holding the iPad in a way that they have accessibility to the correct / incorrect buttons. The iPad screen should also be facing the patient. The administrator should display an image to the patient and ask them to identify it. If the image is identified correctly the correct button should be pressed. If the image is misidentified or unidentified, the incorrect button should be pressed. There is also a back button in case of user error. 
-
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pbe-wQ-vIS" firstAttribute="top" secondItem="Dff-5X-0I9" secondAttribute="bottom" constant="60" id="24v-2G-3qF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pbe-wQ-vIS" secondAttribute="trailing" constant="80" id="R02-8Y-22q"/>
-                            <constraint firstItem="pbe-wQ-vIS" firstAttribute="leading" secondItem="R6K-mZ-ux7" secondAttribute="leadingMargin" constant="80" id="mkC-9E-JvL"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fH2-fq-ZJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5301" y="2089"/>
-        </scene>
     </scenes>
     <resources>
         <image name="app-challenge" width="600" height="115"/>
@@ -2358,16 +1429,9 @@ While the authors and producers of this program strive to provide you with usefu
         <image name="photo-seth1" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mFR-im-uC4"/>
         <segue reference="md3-6k-lZH"/>
-        <segue reference="neN-op-hGA"/>
-        <segue reference="ajT-9n-yKn"/>
-        <segue reference="k5O-0U-7Tk"/>
+        <segue reference="mFR-im-uC4"/>
         <segue reference="Lca-c5-giE"/>
-        <segue reference="V8q-qM-EbC"/>
-        <segue reference="DsW-ql-KM7"/>
-        <segue reference="gg1-hx-kcc"/>
-        <segue reference="dk3-Hv-CAU"/>
-        <segue reference="Ovp-gb-IO2"/>
+        <segue reference="QiM-jf-6BP"/>
     </inferredMetricsTieBreakers>
 </document>
