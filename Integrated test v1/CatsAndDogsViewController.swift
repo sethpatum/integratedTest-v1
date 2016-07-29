@@ -46,16 +46,12 @@ class CatsAndDogsViewController: ViewController {
     
     @IBOutlet weak var endButton: UIButton!
     
-    @IBOutlet weak var resetButton: UIButton!
-    
-    @IBOutlet weak var helpButton: UIButton!
-    
     @IBOutlet weak var selectionDoneButton: UIButton!
     
     @IBOutlet weak var resultsLabel: UILabel!
     
     //start from 1st button; reset all info
-    
+    /*
     @IBAction func Reset(sender: AnyObject) {
         print("in reset")
         
@@ -78,7 +74,7 @@ class CatsAndDogsViewController: ViewController {
         }
         
     }
-    
+    */
     //allow buttons to be pressed
     func enableButtons() {
         
@@ -154,9 +150,73 @@ class CatsAndDogsViewController: ViewController {
         
         self.navigationItem.title = "Cats And Dogs"
         
+        startButton.enabled = true
         endButton.enabled = false
-        resetButton.enabled = false
         selectionDoneButton.enabled = false
+        
+        /*
+        randomizeBoard()
+        
+        randomizeOrder()
+        
+        for(var i = 0; i < order.count; i++) {
+            let(a,b) = places[order[i]]
+            
+            let x : CGFloat = CGFloat(a)
+            let y : CGFloat = CGFloat(b)
+            
+            if(i <= dogs - 1) {
+                
+                let image = UIImage(named: "dogpic")!
+                let imageView = UIImageView(frame:CGRectMake(x, y, 100.0*(image.size.width)/(image.size.height), 100.0))
+                imageView.image = image
+                self.view.addSubview(imageView)
+                imageList.append(imageView)
+                
+            }
+                
+            else {
+                if(i <= cats + dogs - 1) {
+                    
+                    let image = UIImage(named: "catpic")!
+                    let imageView = UIImageView(frame:CGRectMake(x, y, 100.0*(image.size.width)/(image.size.height), 100.0))
+                    imageView.image = image
+                    self.view.addSubview(imageView)
+                    imageList.append(imageView)
+                    
+                }
+            }
+            
+            let button = UIButton(type: UIButtonType.System)
+            buttonList.append(button)
+            button.frame = CGRectMake(x, y, 100, 100)
+            button.backgroundColor = UIColor.blueColor()
+            self.view.addSubview(button)
+            
+        }
+*/
+        
+    }
+    
+    
+    @IBAction func StartTest(sender: AnyObject) {
+        delay(1.5){}
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
+        
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        ended = false
+        
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        
+        startButton.enabled = false
+        selectionDoneButton.enabled = false
+        endButton.enabled = true
+        
+        level = 0
+        cats = 0
+        dogs = 1
         
         randomizeBoard()
         
@@ -198,30 +258,6 @@ class CatsAndDogsViewController: ViewController {
             
         }
         
-    }
-    
-    
-    @IBAction func StartTest(sender: AnyObject) {
-        delay(1.5){}
-        
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "update:", userInfo: nil, repeats: true)
-        
-        startTime = NSDate.timeIntervalSinceReferenceDate()
-        
-        ended = false
-        
-        self.navigationItem.setHidesBackButton(true, animated:true)
-        
-        helpButton.enabled = false
-        startButton.enabled = false
-        selectionDoneButton.enabled = false
-        endButton.enabled = true
-        resetButton.enabled = true
-        
-        level = 0
-        cats = 0
-        dogs = 1
-        
         delay(1.0){
             self.display()
             self.startTime2 = NSDate()
@@ -233,10 +269,8 @@ class CatsAndDogsViewController: ViewController {
     
     @IBAction func EndTest(sender: AnyObject) {
         self.navigationItem.setHidesBackButton(false, animated:true)
-        helpButton.enabled = true
         startButton.enabled = true
         endButton.enabled = false
-        resetButton.enabled = false
         selectionDoneButton.enabled = false
         donetest()
         
@@ -260,10 +294,8 @@ class CatsAndDogsViewController: ViewController {
         
         delay(0.5) {
             self.navigationItem.setHidesBackButton(false, animated:true)
-            self.helpButton.enabled = true
             self.startButton.enabled = true
             self.endButton.enabled = false
-            self.resetButton.enabled = false
             self.selectionDoneButton.enabled = false
             
             for (index, _) in self.order.enumerate() {
