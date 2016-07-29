@@ -156,6 +156,7 @@ class CatsAndDogsViewController: ViewController {
         
         endButton.enabled = false
         resetButton.enabled = false
+        selectionDoneButton.enabled = false
         
         randomizeBoard()
         
@@ -213,6 +214,7 @@ class CatsAndDogsViewController: ViewController {
         
         helpButton.enabled = false
         startButton.enabled = false
+        selectionDoneButton.enabled = false
         endButton.enabled = true
         resetButton.enabled = true
         
@@ -235,6 +237,7 @@ class CatsAndDogsViewController: ViewController {
         startButton.enabled = true
         endButton.enabled = false
         resetButton.enabled = false
+        selectionDoneButton.enabled = false
         donetest()
         
     }
@@ -260,6 +263,7 @@ class CatsAndDogsViewController: ViewController {
             self.startButton.enabled = true
             self.endButton.enabled = false
             self.resetButton.enabled = false
+            self.selectionDoneButton.enabled = false
             
             for (index, _) in self.order.enumerate() {
                 self.buttonList[index].backgroundColor = UIColor.darkGrayColor()
@@ -282,14 +286,14 @@ class CatsAndDogsViewController: ViewController {
     func display(){
         print("Displaying...")
         for(var index = 0; index < order.count; index++){
-            UIView.animateWithDuration(0.6, animations:{
+            UIView.animateWithDuration(0.5, animations:{
                 self.buttonList[index].frame = CGRectMake(self.buttonList[index].frame.origin.x - 110, self.buttonList[index].frame.origin.y, self.buttonList[index].frame.size.width, self.buttonList[index].frame.size.height)
             })
         }
         
-        delay(1.1){
+        delay(1.25){
             for(var index = 0; index < self.order.count; index++){
-                UIView.animateWithDuration(0.6, animations:{
+                UIView.animateWithDuration(0.5, animations:{
                     self.buttonList[index].frame = CGRectMake(self.buttonList[index].frame.origin.x + 110, self.buttonList[index].frame.origin.y, self.buttonList[index].frame.size.width, self.buttonList[index].frame.size.height)
                 })
             }
@@ -302,6 +306,7 @@ class CatsAndDogsViewController: ViewController {
     @IBAction func selectionDone(sender: AnyObject) {
         
         disableButtons()
+        selectionDoneButton.enabled = false
         
         times.append(timePassed)
         timePassed = 0
@@ -532,6 +537,8 @@ class CatsAndDogsViewController: ViewController {
     {
         
         //print("Button tapped")
+        
+        selectionDoneButton.enabled = true
         
         timePassed = findTime()
         
