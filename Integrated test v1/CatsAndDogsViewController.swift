@@ -248,6 +248,7 @@ class CatsAndDogsViewController: ViewController {
     
     func donetest() {
         
+        
         ended = true
         
         for(var k = 0; k < buttonList.count; k++){

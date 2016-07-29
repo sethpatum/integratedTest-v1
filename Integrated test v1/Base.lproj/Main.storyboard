@@ -272,6 +272,7 @@
                         <outlet property="endButton" destination="pHi-D2-PPq" id="ZSI-e8-WB0"/>
                         <outlet property="helpButton" destination="1PF-V5-1Na" id="ilH-tY-wrM"/>
                         <outlet property="resetButton" destination="dFz-my-mg7" id="fQA-qm-a8s"/>
+                        <outlet property="resultLabel" destination="Z7Y-0L-Wfy" id="cOB-Bf-6kR"/>
                         <outlet property="resultsLabel" destination="Z7Y-0L-Wfy" id="4D0-eD-oFb"/>
                         <outlet property="selectionDoneButton" destination="7UK-2W-riP" id="gQa-Ce-u7s"/>
                         <outlet property="startButton" destination="IU1-Pv-Mcg" id="G59-8c-6kL"/>
